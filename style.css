@@ -1,0 +1,13 @@
+canvas {
+    display:inline;
+}
+
+#canvas-container {
+    text-align:center;
+}
+.game {
+    text-align:center;
+    margin-left:auto;
+    margin-left:auto;
+    background-color: #5f5f5f;
+}
