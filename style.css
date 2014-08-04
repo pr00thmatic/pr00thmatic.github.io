@@ -1,13 +1,37 @@
-canvas {
-    display:inline;
+body {
+    font-family: sans;
+    padding: 2em;
+    padding-right: 20%;
+    padding-left: 20%;
+    background-color: #f0f0f0;
 }
 
-#canvas-container {
-    text-align:center;
+.header, .description, .chapters, .chapter {
+    margin: 1em;
+    padding: 1.5em;
+    border-radius: 1em;
 }
-.game {
-    text-align:center;
-    margin-left:auto;
-    margin-left:auto;
-    background-color: #5f5f5f;
+
+.header, .description {
+    text-align: center;
+    font-weight:900;
+}
+
+.header {
+    background-color: #d93636;
+    font-size: 2em;
+}
+
+.description {
+    background-color: #d9cf36;
+}
+
+.chapters {
+    background-color: black;
+    color:white;
+}
+
+.chapter {
+    background-color: white;
+    color:black;
 }
