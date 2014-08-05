@@ -2,11 +2,132 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Phaser's First Step</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <script type = "text/javascript" src="../js/phaser.min.js"></script>
+    <title>Capítulo 1: Primeros Pasos</title>
+    <script type = "text/javascript" src="js/phaser.min.js"></script>
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
   </head>
-  <body class="game">
-    <script type="text/javascript" src="first-step.js"></script>
+  <body>
+    <div class="header">
+      Somos Multitud <br />
+      Capítulo 1: Primeros Pasos
+    </div>
+    <div class="description">
+      <ul>
+	<li>Creamos el mundo y sus reglas</li>
+	<li>Creamos "el grupo de los muros" y le asignamos imágenes</li>
+	<li>Creamos al personaje y le asignamos sprites de movimiento</li>
+	<li>Ponemos un obstáculo al medio del mapa</li>
+	<li>Le damos "movimiento" a uno con las flechitas del teclado</li>
+	<li>Perfeccionamos el movimiento, para que funcione también en diagonales</li>
+      </ul>
+
+      Creamos un obstáculo al medio del mapa, y un personaje llamado "uno". Le damos movimiento, le añadimos sprites de movimiento y movimiento hacia las 4 direcciones. Y vemos que el movimiento en diagonal no quede buggy.
+      <a href="1/game.html">Prueba la versión finalizada de este capítulo!</a>    </div>
+
+      <div class="warning">
+	<p><b>DISCLAIMER: </b> Yo también estoy aprendiendo, así que el tutorial *podría* ser algo inaccurate... pero la información contenida en él, evolucionará junto a mi experiencia :D</p>
+
+	<p><b>DISCLAIMER2: </b> Este tutorial no está hecho pensando en que el lector entienda todos los métodos y sus parámetros, con solo leer este artículo. Si quieres saber qué es lo que hace un método, o para qué sirven sus parámetros, te recomiendo que lo busques en la documentación de Phaser (que será mucho más completa y legible que este tutorial, al menos, en ese aspecto).</p>
+      </div>
+
+    <div class="content">
+      Primero, necesitarás 3 cosas:
+      <ul>
+	<li>Una página html donde poner tu juego, recomiendo este esqueleto: <a href="http://pastebin.com/wYkbaL9T">Esqueleto de HTML, contenedor del juego</a></li>
+	<li>Un script de JavaScript en donde irá el código de tu juego, que podría estar "inline" en la página html, pero que recomiendo fuertemente que esté en su propio archivo .js</li>
+	<li> Sprites!
+	  <ul>
+	    <li>Uno para el piso</li>
+	    <li>Otro para el muñequito que camina (se llama "uno")</li>
+	    <li>y uno más para el obstáculo del centro</li>
+	  </ul>
+	  Puedes dibujarlos si quieres, pero si no quieres dibujar, puedes descargar los sprites oficiales siguiendo este link: <a href="https://github.com/VengadoraVG/VengadoraVG.github.io/tree/master/1/assets">Sprites Oficiales</a>
+	</li>	
+      </ul>
+
+      <p>De hecho, puedes clonar el <a href="https://github.com/VengadoraVG/VengadoraVG.github.io">repositorio en github</a>! </p>
+
+      Todo esto debe estar en una carpeta que puedas abrir mediante tu localhost ;)
+
+      <p>¿Tienes todo esto? que comience la pre-acción! ÒuÓ</p>
+
+      <h1>Entendiendo a Phaser</h1>
+      <p>En Phaser, todas las cosas son consideradas sprites (los personajes, el piso, los obstáculos, todo!). Hay grupos, que tienen propiedades en común, y esos grupos pueden crear sprites a partir de las propiedades.</p>
+
+      <p>El protagonista de todo, es el Phaser.Game, no sé mucho de él, duh! pero es necesario.</p>
+
+      Así que lo primero que tenemos que hacer, es "crear al game":
+      
+      <script src="http://pastebin.com/embed_js.php?i=L3Nx7HPG"></script>
+
+      Este código va al principio de todo! y por ahora, solo cópialo ;) los primeros 2 parámetros indican el tamaño del juego.
+
+      <p>Phaser tiene 3 métodos principales:</p>
+
+      <code>
+	function preload() {} <br />
+
+	function create() {} <br />
+
+	function update() {} <br />
+      </code>
+
+      <p>preload sirve para cargar todos los recursos que usarás en el juego: imágenes, sonidos, etc...</p>
+
+      <p>Aquí cargaremos las imágenes de los sprites que necesitaremos...</p>
+
+      <p><script src="http://pastebin.com/embed_js.php?i=vLKWE3SZ"></script></p>
+      <b>Todo lo que hemos cargado son solo imágenes, a excepción del último recurso, que es un spritesheet</b>
+      
+      <p>Si abres la imagen uno.png, verás que son varios muñequitos, todos en diferentes posiciones. Eso se llama <i>sprite</i>, y deberías googlearlo si no sabes lo que es XD (añadiré algún tutorial sobre diseño más adelante, pero por ahora, solo googléalo XD).</p>
+
+      <p>La función create(), es donde crearemos al mundo y sus reglas</p>      
+
+      <h1>Creando el Mundo y sus Reglas</h1>
+
+      <p><b>Todo el código de esta sección, está dentro de la función preload() ;) </b></p>
+
+      <h2>Las leyes Físicas</h2>
+
+      <p>Queremos que haya leyes de la física en nuestro juego (¿Quién no querría? las leyes de la física molan!!). Phaser tiene 3 sistemas de física: arcade, ninja, y p2. Por ahora, enfoquémonos en el arcade... no voy a profundizar mucho en esto, porque sé que te pican las manos por comenzar a codificar, y crear todas las leyes del mundo.</p>
+
+      <p>Lo más importante del sistema de física, por ahora, es que nos permitirá que haya colisiones entre cuerpos, con solo habilitar la propiedad correcta... de hecho, incluso permite que los objetos se empujen entre sí! permite darles aceleración, velocidad y fuerza de rebote a los cuerpos, y configurar todas estas opciones: tanto en qué eje actúan, como su magnitud.</p>
+
+      <p>Así que, habilitaremos el sistema de física:</p>
+
+      <code>
+	game.physics.startSystem(Phaser.Physics.ARCADE);
+      </code>
+
+      <h2>El piso</h2>
+
+      <p>Le añadiremos un piso a nuestro mundo:</p>
+
+      <p><script src="http://pastebin.com/embed_js.php?i=e8SarZqV"></script></p>
+
+      <p>Con "tileSprite" estamos creando un sprite cuya imagen se repite ("tile"). No estamos habilitando ninguna propiedad para este sprite, de hecho, ni siquiera lo estoy guardando en una variable! por eso puedo pasar sobre él, y es como si las leyes físicas no lo afectaran</p>
+
+      <h2>Obstáculos</h2>
+      <p>Probablemente, querramos crear más obstáculos más adelante. Así que, crearemos un <i>grupo</i> para los obstáculos, le llamaremos "wall".</p>
+
+      <code>
+	walls = game.add.group();
+      </code>
+
+      <p>Las paredes deberían tener "cuerpo" XD después de todo, queremos que el personaje se golpée la cara si intenta correr a través de una muralla! una muralla no es como el piso, que "uno" puede pisar sin que nada le interrumpa. Así que habilitaremos las leyes de la física para las paredes</p>
+
+      <code>
+	walls.enableBody = true;
+      </code>
+
+      <p>Ya tenemos definidas las leyes que rigen al grupo de murallas, ahora vamos a crear un obstáculo: el obstáculo que irá al centro del mapa.</p>
+
+      <code>
+	var center = walls.create(game.world.width/2, game.world.height/2, 'wall')
+      </code>
+
+      walls.create solamente acepta 2 parámetros: la posición inicial de la esquina superior izquierda del obstáculo en x y en y. No acepta un tamaño, porque el tamaño está implícito en la imagen de su sprite que cargamos en preload().
+
+    </div>
   </body>
 </html>

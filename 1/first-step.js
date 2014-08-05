@@ -1,10 +1,3 @@
-////////////////////////////////////////////////////////////////////////
-// TODO: Cómo poner el juego online para que todos puedan jugarlo? //
-// Comparte tus logros!! //
-////////////////////////////////////////////////////////////////////////
-
-
-
 
 var velocity=40;
 var fps = 12;
@@ -17,7 +10,8 @@ var game = new Phaser.Game(800, 600,
 			  );
 
 
-function preload() { //phaser necesita esta función
+// función indispensable para phaser.
+function preload() { //Cargando los recursos que necesitaremos.
     game.load.image('wall', 'assets/wall.png');
     game.load.image('acera', 'assets/acera.png');
     game.load.spritesheet('uno', 'assets/uno.png', 16, 16);

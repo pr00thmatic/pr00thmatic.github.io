@@ -1,3 +1,13 @@
+button {
+    background-color: black;
+    color: white;
+    border-style: none;
+    font-size: 1em;
+    font-family: sans;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin: 0.5em;
+}
 body {
     font-family: sans;
     padding: 2em;
@@ -12,14 +22,11 @@ body {
     border-radius: 1em;
 }
 
-.header, .description {
-    text-align: center;
-    font-weight:900;
-}
-
 .header {
+    text-align: center;
     background-color: #d93636;
     font-size: 2em;
+    font-weight:900;
 }
 
 .description {
