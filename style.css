@@ -16,10 +16,23 @@ body {
     background-color: #f0f0f0;
 }
 
-.header, .description, .chapters, .chapter {
+.content, .checkpoint, .header, .description, .chapters, .chapter, .warning {
     margin: 1em;
     padding: 1.5em;
     border-radius: 1em;
+}
+
+.content {
+    background-color: #f9f9f9;
+}
+
+.checkpoint {
+    background-color: #6aba64;
+}
+
+.warning {
+    background-color: #771b1b;
+    color: #cbc67b;
 }
 
 .header {
@@ -41,4 +54,23 @@ body {
 .chapter {
     background-color: white;
     color:black;
+}
+
+.content {
+    line-height:1.9em;
+}
+
+p {
+    margin: 2em;
+}
+
+.code {
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+code {
+    background-color: white;
+    width: 100%;
 }

@@ -28,12 +28,13 @@ function create() {
 		       );
 
     // creando obstáculos
-    walls = game.add.group();
-    walls.enableBody = true; //habilitar la física para el grupo "walls"
+    walls = game.add.group(); //el nuevo grupo de obstáculos
+    walls.enableBody = true; /* habilitar la física para el grupo "walls"
+				murallas con "cuerpo" */    
     var center = walls.create(game.world.width/2,
 			      game.world.height/2, 
-			      'wall');
-    center.body.immovable = true;
+			      'wall'); //el obstáculo del centro
+    center.body.immovable = true; //murallas con posición permanente
 
     //creando al personaje
     uno = game.add.sprite(game.world.width/2-16, 

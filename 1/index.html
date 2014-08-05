@@ -24,11 +24,11 @@
       Creamos un obstáculo al medio del mapa, y un personaje llamado "uno". Le damos movimiento, le añadimos sprites de movimiento y movimiento hacia las 4 direcciones. Y vemos que el movimiento en diagonal no quede buggy.
       <a href="1/game.html">Prueba la versión finalizada de este capítulo!</a>    </div>
 
-      <div class="warning">
-	<p><b>DISCLAIMER: </b> Yo también estoy aprendiendo, así que el tutorial *podría* ser algo inaccurate... pero la información contenida en él, evolucionará junto a mi experiencia :D</p>
+    <div class="warning">
+      <p><b>DISCLAIMER: </b> Yo también estoy aprendiendo, así que el tutorial *podría* ser algo inaccurate... pero la información contenida en él, evolucionará junto a mi experiencia :D</p>
 
-	<p><b>DISCLAIMER2: </b> Este tutorial no está hecho pensando en que el lector entienda todos los métodos y sus parámetros, con solo leer este artículo. Si quieres saber qué es lo que hace un método, o para qué sirven sus parámetros, te recomiendo que lo busques en la documentación de Phaser (que será mucho más completa y legible que este tutorial, al menos, en ese aspecto).</p>
-      </div>
+      <p><b>DISCLAIMER2: </b> Este tutorial no está hecho pensando en que el lector entienda todos los métodos y sus parámetros, con solo leer este artículo. Si quieres saber qué es lo que hace un método, o para qué sirven sus parámetros, te recomiendo que lo busques en la documentación de Phaser (que será mucho más completa y legible que este tutorial, al menos, en ese aspecto).</p>
+    </div>
 
     <div class="content">
       Primero, necesitarás 3 cosas:
@@ -64,13 +64,13 @@
 
       <p>Phaser tiene 3 métodos principales:</p>
 
-      <code>
-	function preload() {} <br />
+      <div class="code"> <code>
+	  function preload() {} <br />
 
-	function create() {} <br />
+	  function create() {} <br />
 
-	function update() {} <br />
-      </code>
+	  function update() {} <br />
+      </code> </div>
 
       <p>preload sirve para cargar todos los recursos que usarás en el juego: imágenes, sonidos, etc...</p>
 
@@ -95,9 +95,9 @@
 
       <p>Así que, habilitaremos el sistema de física:</p>
 
-      <code>
-	game.physics.startSystem(Phaser.Physics.ARCADE);
-      </code>
+      <div class="code"> <code>
+	  game.physics.startSystem(Phaser.Physics.ARCADE);
+      </code> </div>
 
       <h2>El piso</h2>
 
@@ -110,24 +110,21 @@
       <h2>Obstáculos</h2>
       <p>Probablemente, querramos crear más obstáculos más adelante. Así que, crearemos un <i>grupo</i> para los obstáculos, le llamaremos "wall".</p>
 
-      <code>
-	walls = game.add.group();
-      </code>
-
       <p>Las paredes deberían tener "cuerpo" XD después de todo, queremos que el personaje se golpée la cara si intenta correr a través de una muralla! una muralla no es como el piso, que "uno" puede pisar sin que nada le interrumpa. Así que habilitaremos las leyes de la física para las paredes</p>
 
-      <code>
-	walls.enableBody = true;
-      </code>
+      <p>Y luego de definir las leyes que rigen al grupo de obstáculos, ya podemos crear un obstáculo, en este caso, el único obstáculo que crearemos, será el obstáculo del medio.</p>
 
-      <p>Ya tenemos definidas las leyes que rigen al grupo de murallas, ahora vamos a crear un obstáculo: el obstáculo que irá al centro del mapa.</p>
+      <p>Además, la muralla debería estar allí, pegada al suelo, no queremos que "uno" la empuje! queremos que "uno" no pueda pasar a través de ella. Para eso, habilitamos la propiedad "immovable" del "body" de la muralla.</p>
 
-      <code>
-	var center = walls.create(game.world.width/2, game.world.height/2, 'wall')
-      </code>
+      <p><script src="http://pastebin.com/embed_js.php?i=1em8UigM"></script></p>
 
-      walls.create solamente acepta 2 parámetros: la posición inicial de la esquina superior izquierda del obstáculo en x y en y. No acepta un tamaño, porque el tamaño está implícito en la imagen de su sprite que cargamos en preload().
+      <p>walls.create solamente acepta 2 parámetros: la posición inicial de la esquina superior izquierda del obstáculo en x y en y. No acepta un tamaño, porque el tamaño está implícito en la imagen de su sprite que cargamos en preload().</p>
 
-    </div>
+
+      <div class="checkpoint">
+	<p>El mundo está creado con todas sus reglas! Ahora solamente falta el personaje, hoy es 08/04/2014, y dejo este capítulo a medias. En esta semana concluiré éste capítulo! ya solo falta añadir al personaje, y su movimiento.</p>
+
+	<p>En el movimiento del personaje está la diversión! aquí sí se necesitan algóritmos y lógica. Si no quieren esperar, pueden ver el código en github en el repositorio del juego que hay en el índice ;)</p>
+      </div>
   </body>
 </html>
