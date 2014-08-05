@@ -60,60 +60,33 @@ function create() {
     uno.anchor.setTo(.5,.5);
 }
 
-function move_x(alguien, dir) {
-    alguien.scale.x = dir;
-    alguien.body.velocity.x = dir*velocity;    
-    lastDirection = 'right'; //right will be flipped if left
-}
-
-function move_y(alguien, dir) {
-    uno.body.velocity.y = dir*velocity;
-    
-    if (dir > 0) 
-	lastDirection = 'front';
-    else
-	lastDirection = 'back';
-    
-}
-
-function move(alguien, dir, axis) {
-    var wasmoving = ismoving;
-    ismoving = true;
-
-    if (axis == 'x') {
-	move_x(alguien, dir);
-    } else {
-	move_y(alguien, dir);
-    }
-
-    if(!wasmoving)
-	uno.animations.play(lastDirection);
-}
-
 function update() {
-    ismoving=false;
+
     game.physics.arcade.collide(uno, walls);
     cursores = game.input.keyboard.createCursorKeys();
-    uno.body.velocity.x=0;	
-    uno.body.velocity.y=0;
-
-    if (cursores.right.isDown) {
-	move(uno, 1, 'x');
-    }
+    uno.animations.play('stand_front'); // importante!! "uno" se queda quieto.
 
     if(cursores.left.isDown) {
-	move(uno, -1, 'x');
+	lastDirection = 'left';
+	uno.scale.x = -1;
+	uno.body.velocity.x = -1*velocity;
+	uno.animations.play('right'); // importante!! reproducir animación de caminar hacia la izquierda
+    } else if (cursores.right.isDown) {
+	lastDirection = 'right';
+	uno.scale.x = 1;
+	uno.body.velocity.x = 1*velocity;
+	uno.animations.play('right'); // importante!! reproducir animación de caminar hacia la derecha
+    } else if (cursores.up.isDown) {
+	lastDirection = 'up';
+	uno.body.velocity.y = -1*velocity;
+	uno.animations.play('back') // importante!! reproducir animación de caminar hacia abajo
+    } else if (cursores.down.isDown) {
+	lastDirection = 'down';
+	uno.body.velocity.y = 1*velocity;
+	uno.animations.play('front'); // importante!! reproducir animación de caminar hacia arriba
+    } else {
+	uno.body.velocity.x = 0;
+	uno.body.velocity.y = 0;
     }
 
-    if(cursores.up.isDown) {
-	move(uno, -1, 'y');
-    }
-
-    if(cursores.down.isDown) {
-	move(uno, 1, 'y');
-    } 
-
-    if(!ismoving) {
-	uno.animations.play('stand_' + lastDirection);	
-    }
 }

@@ -42,7 +42,7 @@ function create() {
 			  game.world.height/2-16, 
 			  'uno');
 
-    uno.animations.add('stand_front', [0], fps, true);
+    uno.animations.add('stand_front', [15], fps, true);
     uno.animations.add('stand_right', [5], fps, true);
     uno.animations.add('stand_back', [10], fps, true);
     uno.animations.add('front', [1,2,3,4], fps, true);
@@ -58,36 +58,6 @@ function create() {
 
 
     uno.anchor.setTo(.5,.5);
-}
-
-function move_x(alguien, dir) {
-    alguien.scale.x = dir;
-    alguien.body.velocity.x = dir*velocity;    
-    lastDirection = 'right'; //right will be flipped if left
-}
-
-function move_y(alguien, dir) {
-    uno.body.velocity.y = dir*velocity;
-    
-    if (dir > 0) 
-	lastDirection = 'front';
-    else
-	lastDirection = 'back';
-    
-}
-
-function move(alguien, dir, axis) {
-    var wasmoving = ismoving;
-    ismoving = true;
-
-    if (axis == 'x') {
-	move_x(alguien, dir);
-    } else {
-	move_y(alguien, dir);
-    }
-
-    if(!wasmoving)
-	uno.animations.play(lastDirection);
 }
 
 function update() {
