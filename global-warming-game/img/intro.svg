@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="600"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="intro.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.97430297"
+     inkscape:cx="330.1261"
+     inkscape:cy="303.46723"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="761"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="0"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-452.36218)"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-size:39.49814987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="152.27834"
+       y="762.48743"
+       id="text2985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="152.27834"
+         y="762.48743"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono Bold">A Global Warming Game</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-size:39.49814987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="401.09933"
+       y="310.12524"
+       id="text2985-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987-8"
+         x="401.09933"
+         y="310.12524"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono Bold">As a Global Game Jam Warming</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="2">
+    <text
+       xml:space="preserve"
+       style="font-size:39.49814987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="401.09933"
+       y="285.815"
+       id="text2985-8-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="401.09933"
+         y="285.815"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono Bold"
+         id="tspan3090">(A)ttack the refineries</tspan><tspan
+         sodipodi:role="line"
+         x="401.09933"
+         y="335.18768"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono Bold"
+         id="tspan3094">to save the ozone layer</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="gameover"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="color:#000000;fill:#666666;fill-opacity:0.67878789;fill-rule:nonzero;stroke:none;stroke-width:5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3063"
+       width="809.61725"
+       height="604.80334"
+       x="0"
+       y="0.015778711" />
+    <g
+       id="g3943"
+       transform="translate(-1.6971885,87.558247)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2985-8-1"
+         y="190.85127"
+         x="401.09933"
+         style="font-size:39.49814987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono Bold"
+           y="190.85127"
+           x="401.09933"
+           id="tspan2987-8-2"
+           sodipodi:role="line">the damage can't be undone</tspan></text>
+      <path
+         id="path3897"
+         d="m 244.34375,216.21875 c -3.17552,4e-5 -5.91846,0.51866 -8.28125,1.53125 -2.35661,1.01001 -4.35207,2.51789 -5.90625,4.5 -1.52911,1.95639 -2.67926,4.34563 -3.40625,7.1875 -0.72619,2.81677 -1.06251,6.04658 -1.0625,9.65625 -1e-5,3.31602 0.33884,6.38992 1.0625,9.21875 0.74845,2.81775 1.93106,5.27123 3.46875,7.34375 1.54271,2.07932 3.48409,3.75091 5.8125,4.9375 2.36906,1.17326 5.11325,1.75 8.21875,1.75 1.84056,0 3.59014,-0.24132 5.21875,-0.6875 1.59858,-0.43798 3.09676,-0.99239 4.46875,-1.65625 1.37175,-0.67499 2.60363,-1.38463 3.71875,-2.1875 1.10612,-0.78081 2.07838,-1.55287 2.90625,-2.25 a 0.82878139,0.82878139 0 0 0 0.3125,-0.625 l 0,-17.84375 A 0.82878139,0.82878139 0 0 0 260.03125,236.25 l -17.40625,0 a 0.82878139,0.82878139 0 0 0 -0.84375,0.84375 l 0,6.96875 a 0.82878139,0.82878139 0 0 0 0.84375,0.84375 l 7.90625,0 0,6.28125 c -0.16951,0.12416 -0.3011,0.23633 -0.5625,0.40625 -0.36635,0.23137 -0.81954,0.48405 -1.34375,0.71875 -0.01,0.004 -0.0217,-0.004 -0.0312,0 -0.4806,0.20113 -1.09792,0.38084 -1.78125,0.5625 -0.0109,0.003 -0.0204,-0.003 -0.0312,0 -0.62331,0.14853 -1.28704,0.21875 -2.03125,0.21875 -2.68005,0 -4.50259,-1.04055 -5.8125,-3.40625 -1.32425,-2.3915 -2.03126,-5.92631 -2.03125,-10.59375 -1e-5,-2.34724 0.14773,-4.42824 0.4375,-6.1875 0.28739,-1.7654 0.74107,-3.17308 1.34375,-4.28125 0.59962,-1.12186 1.35804,-1.93326 2.28125,-2.46875 a 0.82878139,0.82878139 0 0 0 0.0312,0 c 0.92306,-0.55381 2.02178,-0.84372 3.4375,-0.84375 1.15385,3e-5 2.10067,0.37628 2.96875,1.28125 a 0.82878139,0.82878139 0 0 0 0,0.0312 c 0.85402,0.87224 1.60398,2.32968 2.15625,4.375 a 0.82878139,0.82878139 0 0 0 0.96875,0.59375 l 8.75,-1.71875 a 0.82878139,0.82878139 0 0 0 0.625,-1.03125 c -0.52782,-1.8472 -1.2211,-3.56586 -2.0625,-5.09375 -0.84736,-1.53853 -1.92446,-2.85951 -3.1875,-3.96875 l 0,-0.0312 c -1.25835,-1.13884 -2.7406,-1.99085 -4.4375,-2.59375 -1.70524,-0.61383 -3.66636,-0.93746 -5.875,-0.9375 z m 195.53125,0 c -5.76574,4e-5 -10.3682,1.96288 -13.53125,5.84375 -3.15343,3.89676 -4.65625,9.63023 -4.65625,17.09375 0,7.46356 1.50989,13.20963 4.65625,17.1875 a 0.82878139,0.82878139 0 0 0 0,0.0312 c 3.16024,3.96712 7.76158,5.96875 13.53125,5.96875 5.76964,0 10.36082,-2.03122 13.5,-6 3.14457,-3.97566 4.68746,-9.7216 4.6875,-17.1875 -4e-5,-7.46586 -1.53589,-13.19919 -4.6875,-17.09375 -3.14203,-3.88257 -7.73429,-5.84371 -13.5,-5.84375 z M 277.28125,216.875 a 0.82878139,0.82878139 0 0 0 -0.6875,0.59375 l -14.15625,43.125 a 0.82878139,0.82878139 0 0 0 0.78125,1.09375 l 9.4375,0 a 0.82878139,0.82878139 0 0 0 0.8125,-0.625 l 2.75,-9.90625 13.3125,0 2.75,9.90625 a 0.82878139,0.82878139 0 0 0 0.8125,0.625 l 9.40625,0 a 0.82878139,0.82878139 0 0 0 0.78125,-1.09375 l -14.125,-43.125 A 0.82878139,0.82878139 0 0 0 288.375,216.875 l -11,0 a 0.82878139,0.82878139 0 0 0 -0.0937,0 z m 28.1875,0 a 0.82878139,0.82878139 0 0 0 -0.6875,0.84375 l 0,43.125 a 0.82878139,0.82878139 0 0 0 0.84375,0.84375 l 7.03125,0 A 0.82878139,0.82878139 0 0 0 313.5,260.84375 l 0,-27.4375 c 0.13639,0.52292 0.27085,0.91433 0.34375,1.1875 l 4.03125,14.96875 a 0.82878139,0.82878139 0 0 0 0.8125,0.625 l 6.96875,0 a 0.82878139,0.82878139 0 0 0 0.8125,-0.625 l 3.9375,-14.96875 -0.0312,0 c 0.0802,-0.25343 0.18979,-0.59192 0.28125,-0.90625 l 0,27.15625 a 0.82878139,0.82878139 0 0 0 0.8437,0.84375 l 7.09375,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-43.125 a 0.82878139,0.82878139 0 0 0 -0.84375,-0.84375 l -10.71875,0 a 0.82878139,0.82878139 0 0 0 -0.8125,0.625 l -4.34375,16 c -0.15513,0.57616 -0.29108,1.25201 -0.4375,2.0625 -0.13116,-0.82635 -0.29604,-1.5289 -0.46875,-2.09375 l 0.0312,0 L 317.5312,217.5 a 0.82878139,0.82878139 0 0 0 -0.8125,-0.625 l -11.09375,0 a 0.82878139,0.82878139 0 0 0 -0.15625,0 z m 40.46875,0 a 0.82878139,0.82878139 0 0 0 -0.6875,0.84375 l 0,43.125 a 0.82878139,0.82878139 0 0 0 0.84375,0.84375 l 32.25,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-7.28125 a 0.82878139,0.82878139 0 0 0 -0.84375,-0.84375 l -21.96875,0 0,-9.21875 18.71875,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-7.28125 a 0.82878139,0.82878139 0 0 0 -0.84375,-0.84375 l -18.71875,0 0,-8.65625 20.65625,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-7.3125 a 0.82878139,0.82878139 0 0 0 -0.84375,-0.84375 l -30.9375,0 a 0.82878139,0.82878139 0 0 0 -0.15625,0 z m 113.46875,0 a 0.82878139,0.82878139 0 0 0 -0.625,1.125 l 14.84375,43.125 a 0.82878139,0.82878139 0 0 0 0.78125,0.5625 l 9.5625,0 A 0.82878139,0.82878139 0 0 0 484.75,261.125 L 499.46875,218 a 0.82878139,0.82878139 0 0 0 -0.78125,-1.125 l -9.75,0 a 0.82878139,0.82878139 0 0 0 -0.78125,0.59375 L 480.75,242.25 c -0.29696,0.9969 -0.60571,2.03203 -0.90625,3.0625 a 0.82878139,0.82878139 0 0 0 -0.0312,0 c -0.23479,0.84882 -0.41081,1.57833 -0.59375,2.28125 -0.21157,-0.74247 -0.44983,-1.51565 -0.6875,-2.375 -0.27679,-1.00062 -0.57113,-1.99195 -0.875,-2.96875 l -7.46875,-24.78125 A 0.82878139,0.82878139 0 0 0 469.4063,216.875 l -9.84375,0 a 0.82878139,0.82878139 0 0 0 -0.15625,0 z m 43.5625,0 a 0.82878139,0.82878139 0 0 0 -0.6875,0.84375 l 0,43.125 a 0.82878139,0.82878139 0 0 0 0.84375,0.84375 l 32.25,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-7.28125 a 0.82878139,0.82878139 0 0 0 -0.84375,-0.84375 l -22,0 0,-9.21875 18.71875,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-7.28125 a 0.82878139,0.82878139 0 0 0 -0.84375,-0.84375 l -18.71875,0 0,-8.65625 20.6875,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-7.3125 A 0.82878139,0.82878139 0 0 0 534.0625,216.875 l -30.9375,0 a 0.82878139,0.82878139 0 0 0 -0.15625,0 z m 39.25,0 a 0.82878139,0.82878139 0 0 0 -0.6875,0.84375 l 0,43.125 a 0.82878139,0.82878139 0 0 0 0.84375,0.84375 l 9.40625,0 a 0.82878139,0.82878139 0 0 0 0.84375,-0.84375 l 0,-15.59375 4.21875,0 9.03125,16 a 0.82878139,0.82878139 0 0 0 0.71875,0.4375 l 10.625,0 a 0.82878139,0.82878139 0 0 0 0.71875,-1.28125 L 567.25,242.625 c 0.98002,-0.36139 1.95062,-0.70921 2.8125,-1.25 1.15638,-0.74824 2.15729,-1.63135 3,-2.65625 a 0.82878139,0.82878139 0 0 0 0.0312,0 c 0.85063,-1.05756 1.49359,-2.26751 1.96875,-3.625 0.4804,-1.37267 0.74996,-2.90147 0.75,-4.5625 -4e-5,-4.32063 -1.54036,-7.80456 -4.53125,-10.15625 -3.00224,-2.36046 -7.38946,-3.49995 -13.125,-3.5 l -15.78125,0 a 0.82878139,0.82878139 0 0 0 -0.15625,0 z M 439.875,225.3125 c 2.31773,3e-5 3.9016,0.97916 5.09375,3.1875 1.18826,2.20128 1.84372,5.76548 1.84375,10.65625 -3e-5,4.82591 -0.67252,8.43538 -1.875,10.78125 -1.19679,2.31507 -2.74872,3.28125 -5.0625,3.28125 -2.31381,0 -3.9075,-0.96404 -5.125,-3.28125 l 0.0312,0 c -1.20006,-2.34106 -1.84376,-5.95182 -1.84375,-10.78125 -1e-5,-4.82939 0.62317,-8.37106 1.8125,-10.59375 1.21533,-2.25424 2.81149,-3.24997 5.125,-3.25 z m 112.75,0.59375 4.53125,0 c 1.27965,3e-5 2.42707,0.0838 3.375,0.28125 0.95447,0.17534 1.72041,0.48031 2.3125,0.875 a 0.82878139,0.82878139 0 0 0 0.0312,0 c 0.58447,0.37197 0.98251,0.85377 1.28125,1.46875 0.30512,0.59334 0.46873,1.37918 0.46875,2.375 -2e-5,1.81886 -0.52488,3.0372 -1.59375,3.9375 -1.04415,0.85273 -2.91391,1.37502 -5.625,1.375 l -4.78125,0 0,-10.3125 z M 282.875,227.25 c 0.1372,0.53012 0.26646,1.0661 0.40625,1.65625 a 0.82878139,0.82878139 0 0 0 0,0.0312 c 0.21066,0.77956 0.40827,1.56364 0.625,2.34375 l 3.15625,11.09375 -8.375,0 3.15625,-11.09375 c 0.21575,-0.77675 0.40477,-1.56659 0.59375,-2.34375 0.002,-0.01 -0.002,-0.0215 0,-0.0312 0.15818,-0.60204 0.30715,-1.13365 0.4375,-1.65625 z"
+         style="font-size:65.46411896px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.65699995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono Bold"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

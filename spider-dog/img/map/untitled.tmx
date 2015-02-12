@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="25" tileheight="25">
+ <tileset firstgid="1" name="tile" tilewidth="25" tileheight="25">
+  <image source="tile.png" width="425" height="25"/>
+ </tileset>
+ <layer name="asdf" width="32" height="24" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzVloEKgCAMRGeWFRHl//9sjoRkmKYNVwcHwswn1xgqANiErJ13kNPubYX5UqL8XA6pek2N8le4emOJ7E/Va2pfy7+lrDBfORshPrInJn7p7ED27Ncc+eN54UxN9f4WsLn4b77/G59mTfO809P5l1NuL96vi1g34vfOQ8Smkk/zzmXNzS/trRHOuUJ9d29ufqli/HBePOltbn5L1fK53ovIxp6Ren/j/z0AAJ0J4w==
+  </data>
+ </layer>
+ <layer name="lvl2" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzNlt0KgDAIRu13RVTr/V+2SQkiBdaaJpy74Ljtm6sCgNWJJhHBryLzb87+xdnvUdI/w5GLyclvXXd+q33Qrr9K1ILG0B8SA6M7ye3h7fkH1kPOnuTkr2U9EL2hX54JMopvKMeEzPNf71/povvk4Uc35cXaz93Wfunmfu3bfzUHtUj30/Vf9Z/Lk/n/tVvrL+XW+Eu6yY9z1Ov/G+f1DmbBCdc=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Capítulo 1: Primeros Pasos</title>
+    <script type = "text/javascript" src="js/phaser.min.js"></script>
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div class="header">
+      Somos Multitud <br />
+      Capítulo 1: Primeros Pasos
+    </div>
+    <div class="description">
+      <ul>
+	<li>Creamos el mundo y sus reglas</li>
+	<li>Creamos "el grupo de los muros" y le asignamos imágenes</li>
+	<li>Creamos al personaje y le asignamos sprites de movimiento</li>
+	<li>Ponemos un obstáculo al medio del mapa</li>
+	<li>Le damos "movimiento" a uno con las flechitas del teclado</li>
+	<li>Perfeccionamos el movimiento, para que funcione también en diagonales</li>
+      </ul>
+
+      Creamos un obstáculo al medio del mapa, y un personaje llamado "uno". Le damos movimiento, le añadimos sprites de movimiento y movimiento hacia las 4 direcciones. Y vemos que el movimiento en diagonal no quede buggy.
+      <a href="1/game.html">Prueba la versión finalizada de este capítulo!</a>    </div>
+
+    <div class="warning">
+      <p><b>DISCLAIMER: </b> Yo también estoy aprendiendo, así que el tutorial *podría* ser algo inaccurate... pero la información contenida en él, evolucionará junto a mi experiencia :D</p>
+
+      <p><b>DISCLAIMER2: </b> Este tutorial no está hecho pensando en que el lector entienda todos los métodos y sus parámetros, con solo leer este artículo. Si quieres saber qué es lo que hace un método, o para qué sirven sus parámetros, te recomiendo que lo busques en la documentación de Phaser (que será mucho más completa y legible que este tutorial, al menos, en ese aspecto).</p>
+    </div>
+
+    <div class="content">
+      Primero, necesitarás 3 cosas:
+      <ul>
+	<li>Una página html donde poner tu juego, recomiendo este esqueleto: <a href="http://pastebin.com/wYkbaL9T">Esqueleto de HTML, contenedor del juego</a></li>
+	<li>Un script de JavaScript en donde irá el código de tu juego, que podría estar "inline" en la página html, pero que recomiendo fuertemente que esté en su propio archivo .js</li>
+	<li> Sprites!
+	  <ul>
+	    <li>Uno para el piso</li>
+	    <li>Otro para el muñequito que camina (se llama "uno")</li>
+	    <li>y uno más para el obstáculo del centro</li>
+	  </ul>
+	  Puedes dibujarlos si quieres, pero si no quieres dibujar, puedes descargar los sprites oficiales siguiendo este link: <a href="https://github.com/VengadoraVG/VengadoraVG.github.io/tree/master/1/assets">Sprites Oficiales</a>
+	</li>	
+      </ul>
+
+      <p>De hecho, puedes clonar el <a href="https://github.com/VengadoraVG/VengadoraVG.github.io">repositorio en github</a>! </p>
+
+      Todo esto debe estar en una carpeta que puedas abrir mediante tu localhost ;)
+
+      <p>¿Tienes todo esto? que comience la pre-acción! ÒuÓ</p>
+
+      <h1>Entendiendo a Phaser</h1>
+      <p>En Phaser, todas las cosas son consideradas sprites (los personajes, el piso, los obstáculos, todo!). Hay grupos, que tienen propiedades en común, y esos grupos pueden crear sprites a partir de las propiedades.</p>
+
+      <p>El protagonista de todo, es el Phaser.Game, no sé mucho de él, duh! pero es necesario.</p>
+
+      Así que lo primero que tenemos que hacer, es "crear al game":
+
+      <script src="https://gist.github.com/VengadoraVG/47d723b807d61729ff36.js"></script>
+
+      Este código va al principio de todo! y por ahora, solo cópialo ;) los primeros 2 parámetros indican el tamaño del juego.
+
+      <p>Phaser tiene 3 métodos principales:</p>
+
+      <div class="code"> <code>
+	  function preload() {} <br />
+
+	  function create() {} <br />
+
+	  function update() {} <br />
+      </code> </div>
+
+      <p>preload sirve para cargar todos los recursos que usarás en el juego: imágenes, sonidos, etc...</p>
+
+      <p>Aquí cargaremos las imágenes de los sprites que necesitaremos...</p>
+
+      <p><script src="https://gist.github.com/VengadoraVG/2937f6855d3068644e78.js"></script></p>
+
+      <b>Todo lo que hemos cargado son solo imágenes, a excepción del último recurso, que es un spritesheet</b>
+      
+      <p>Si abres la imagen uno.png, verás que son varios muñequitos, todos en diferentes posiciones. Eso se llama <i>sprite</i>, y deberías googlearlo si no sabes lo que es XD (añadiré algún tutorial sobre diseño más adelante, pero por ahora, solo googléalo XD).</p>
+
+      <p>La función create(), es donde crearemos al mundo y sus reglas</p>      
+
+      <h1>Creando el Mundo y sus Reglas</h1>
+
+      <p><b>Todo el código de esta sección, está dentro de la función preload() ;) </b></p>
+
+      <h2>Las leyes Físicas</h2>
+
+      <p>Queremos que haya leyes de la física en nuestro juego (¿Quién no querría? las leyes de la física molan!!). Phaser tiene 3 sistemas de física: arcade, ninja, y p2. Por ahora, enfoquémonos en el arcade... no voy a profundizar mucho en esto, porque sé que te pican las manos por comenzar a codificar, y crear todas las leyes del mundo.</p>
+
+      <p>Lo más importante del sistema de física, por ahora, es que nos permitirá que haya colisiones entre cuerpos, con solo habilitar la propiedad correcta... de hecho, incluso permite que los objetos se empujen entre sí! permite darles aceleración, velocidad y fuerza de rebote a los cuerpos, y configurar todas estas opciones: tanto en qué eje actúan, como su magnitud.</p>
+
+      <p>Así que, habilitaremos el sistema de física:</p>
+
+      <div class="code"> <code>
+	  game.physics.startSystem(Phaser.Physics.ARCADE);
+      </code> </div>
+
+      <h2>El piso</h2>
+
+      <p>Le añadiremos un piso a nuestro mundo:</p>
+
+      <p><script src="https://gist.github.com/VengadoraVG/57db2b6ab3154e71c162.js"></script></p>
+
+      <p>Con "tileSprite" estamos creando un sprite cuya imagen se repite ("tile"). No estamos habilitando ninguna propiedad para este sprite, de hecho, ni siquiera lo estoy guardando en una variable! por eso puedo pasar sobre él, y es como si las leyes físicas no lo afectaran</p>
+
+      <h2>Obstáculos</h2>
+      <p>Probablemente, querramos crear más obstáculos más adelante. Así que, crearemos un <i>grupo</i> para los obstáculos, le llamaremos "wall".</p>
+      
+      <p>Para que el obstáculo esté pegado al piso, y el personaje no pueda empujarlo, debemos habilitar una opción llamada "immovable", que está dentro del "body" del objeto. Por eso, habilitamos el "body" de todo el grupo de obstáculos</p>
+
+      <p>Y luego de definir las leyes que rigen al grupo de obstáculos, ya podemos crear un obstáculo, en este caso, el único obstáculo que crearemos, será el obstáculo del medio.</p>
+
+      <p>Por último, habilitamos la opción "immovable" del obstáculo para que el personaje no pueda arrastrarlo </p>
+
+      <p><script src="https://gist.github.com/VengadoraVG/6b29fcd2af2752a6a9db.js"></script></p>
+
+      <p>walls.create solamente acepta 2 parámetros: la posición inicial de la esquina superior izquierda del obstáculo en x y en y. No acepta un tamaño, porque el tamaño está implícito en la imagen de su sprite que cargamos en preload().</p>
+
+
+      <h2>El Personaje</h2>
+      <p>Vamos a crear a "uno". Como se explicó en <b>Entendiendo a Phaser</b>, todo es un sprite! el personaje es un sprite.</p>
+
+      <script src="https://gist.github.com/VengadoraVG/d166f7e19878830fce97.js"></script>
+
+      <h3>Animaciones</h3>      
+
+      <p>En Phaser, los sprites tienen "animaciones", estas animaciones, son secuencias de imágenes que se recorren de forma secuencial. ¿Recuerdas la imagen del sprite de uno? (uno.png), es una matriz de imágenes, donde sus imágenes están enumeradas.</p>
+
+      <p>Para evitar errores tontos, es aconsejable usar variables en vez de números dentro del código. El valor de la variable "fps" es 12. </p>
+
+      <img src="img/matrix.png" class="img" alt="La imagen está compuesta por una matriz de imágenes pequeñas, cada una de ellas del mismo tamaño, y enumeradas ascendentemente, de izquierda a derecha, de arriba a abajo" />
+
+      <p>En el juego Somos Multitud no hay protagonista! manejaremos una multitud hecha de "unos", por eso la imagen tiene a tantos unos de diferentes colores.</p>
+
+      <p>La 1ra línea, el sprite #0 está parado de frente. En la 2da línea el sprite #0 también está parado de frente, cada línea. De esta forma, será mucho más fácil animar a los unos, independientemente de su color, pero nos preocuparemos de eso en otra sección, cuando le demos vida a la multitud. Por ahora, solo nos preocuparemos de <i>uno</i></p>
+
+      <script src="https://gist.github.com/VengadoraVG/6f01c4e3eb40ea517218.js"></script>
+
+      <h3>Física</h3>
+      
+      <p>Cuando el personaje avanza (hacia arriba, abajo, izquierda o derecha), en realidad le estamos imprimiendo una velocidad, en determinado eje, con cierta magnitud, por eso necesitamos habilitar a uno dentro del motor de física</p>
+
+      <p>La segunda línea del código, es para que el personaje no se salga del área delimitada. </p>
+
+      <p>Los obstáculos no están habilitados dentro del motor de física, porque no necesitamos modificar manualmente sus propiedades físicas</p>
+      
+      <script src="https://gist.github.com/VengadoraVG/ff6cba1768d1578094db.js"></script>
+
+      <h1>Dándole Vida al Juego</h1>
+
+      <h2>La Función update()</h2>
+      <p>Es una función que se está ejecutando, una y otra vez, en el juego, aquí suele ir toda la lógica... <b>es aquí donde comienza la acción!! >:)</b></p>
+
+      <h2>Eventos del Teclado</h2>
+      <p>Para escuchar los eventos del teclado, phaser usa el objeto Keyboard. Hay uno en nuestro juego, y podemos acceder a él así:</p>
+
+      <div class="code">
+	<code>
+	  game.input.keyboard
+	</code>
+      </div>
+
+      <p>uno se manejará con los cursores del teclado. Primero nos concentraremos en hacer que se mueva en el eje x.</p>
+
+      <h2>Movimiento en el Eje x</h2>
+
+      Para evitar errores tontos, es aconsejable no usar números constantes! la variable "velocity" indica la velocidad con la que "uno" avanza, y su valor es 40.
+
+      <script src="https://gist.github.com/VengadoraVG/1b9485f9751ff898399a.js"></script>
+
+      <p>La línea 5 y la 10 son bastante interesantes. Sirven para darle la vuelta al sprite al rededor del eje x. El punto alrededor del que gira la imagen, está en uno de sus bordes, por eso se verá como si el personaje "salta" cada vez que se da la vuelta. Para arreglar esto, necesitas indicarle al sprite que su punto de anclaje será en su centro.</p>
+
+      <div class="code">
+	<code>
+	  uno.anchor.setTo(.5,.5);
+	</code>	
+      </div>
+
+      <p>Esta línea de código debería ir en la función create(), también puede ir antes de cada línea en la que cambiemos la escala del sprite (pero esto no sería eficiente, ya que solo necesita ocurrir una vez, y el sprite ya sabe que su punto de anclaje es ese ;)</p>
+
+      <h2>Movimiento en el Eje y</h2>
+
+      <p>No hay mucha magia aquí...</p>
+
+      <script src="https://gist.github.com/VengadoraVG/127362bceb68c198b076.js"></script>
+      
+      <h2>Movimiento en Diagonales</h2>
+      
+      <p>Hasta ahora, uno se mueve en las 4 direcciones que definimos, para que se mueva en diagonales, hay que eliminar los "else" y hacer unos cuantos ajustes más... <b>esto es magia! magia y lógica... bueno... más lógica que magia... de hecho, olvida la magia! XD</b></p>
+
+      <p>Es aquí donde creas tu juego, y explotas tu habilidad de programador. Ya no hay recetas, ni trucos (bueno, talvez hayan unos cuantos trucos por allí), solo estás tú, con las reglas que defines, los sprites que creas, y los eventos.</p>
+
+      <p>El código que creamos para el movimiento del personaje, no nos deja avanzar en diagonales, hay que pensar en otra cosa. Aquí está mi solución:</p>
+
+      <script src="https://gist.github.com/VengadoraVG/0d9ad74651d27e23d3f9.js"></script>
+
+      <p>Crea la tuya! pero ten en cuenta este problema: </p>
+
+      <h3>El problema del sprite inanimado</h3>
+      
+      <p>Cuando cambias de una animación a otra, la animación que el sprite estaba reproduciendo se reinicia. El resultado es algo así: <a href="inanimado.html">animación del movimiento bugueado</a></p>
+
+      <p>El código de este movimiento bugueado es este: </p>
+
+      <script src="https://gist.github.com/VengadoraVG/fb277a6dde31b7a4ca22.js"></script>
+
+      <p>Y sucede porque, cada vez que le pedimos al sprite que reproduzca la animación de cuando camina hacia algún lugar, inmediatamente antes, le hemos pedido que reproduzca otra animación (de modo que, en la función update(), le hemos pedido al sprite que reproduzca dos animaciones), obligándolo a que se resetee, e impidiéndole que se mueva "suavemente"</p>
+
+      <div class="checkpoint">
+	<p>Es todo por este capítulo! no olvides revisar el código del videojuego, disponible en el repositorio <a href="https://github.com/VengadoraVG/VengadoraVG.github.io/blob/master/1/first-step.js"></a>. Además, puedes ver el código de cualquier juego hecho con phaser, haciendo clic derecho -> inspect element (en firefox).</p>
+	
+	<p>Hoy es 5 de agosto, y estaré trabajando en el siguiente capítulo! :D</p>
+
+      </div>
+      
+  </body>
+</html>

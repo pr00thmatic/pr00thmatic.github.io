@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="25" tileheight="25">
+ <tileset firstgid="1" name="tile" tilewidth="25" tileheight="25">
+  <image source="tile.png" width="450" height="25"/>
+ </tileset>
+ <tileset firstgid="19" name="tutorial" tilewidth="25" tileheight="25">
+  <image source="tutorial.png" width="150" height="50"/>
+ </tileset>
+ <layer name="layer" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzNluEKwjAMhDPndEXEDfXH9P3f04RVDLFtthIXAwcbafrB9ejWAMDFSS1qAL8aokZnvldJvuZDqV/Tk/wzfLJxSqwv9Wt6/+b/ljU68xvUwYlP7N6IL7NNe++Y2kQ/xGcL/2k/fqd2qCvqhrrHd94PbNaCL+f3qAn1QD1h9rg0a80/wny2b4WviXq+9Fr6maul959W2lqZvVwGf8Wns+8SymVA40u/Na+t+WuzKbOnZdCav7ZSfP6tXJJta/6WVcu3+l8kNmXG6/+bzvcFHmkKmw==
+  </data>
+ </layer>
+ <layer name="hidden" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAC8GDAAAAQ==
+  </data>
+ </layer>
+</map>
