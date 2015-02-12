@@ -1,5 +1,4 @@
 var mainState = ( function () {
-    var scale = 5;
 
     var preload = function () {
         game.load.spritesheet('student', 'assets/student.png', 12, 26);
@@ -9,15 +8,20 @@ var mainState = ( function () {
     var create = function () {
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.stage.backgroundColor = '#eee';
-        var student = new Student();
+        this.student = new Student(this);
+        this.student.spawn(game.world.centerX, game.world.centerY);
     }
 
     var update = function () {
+        this.student.update();
     };
 
-    return { preload : preload,
-             create : create,
-             update : update };
+    return {
+        preload : preload,
+        create : create,
+        update : update,
+        globalScale : 5
+    };
 
 })();
 
