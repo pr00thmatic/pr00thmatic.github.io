@@ -18,7 +18,6 @@ var mainState = ( function () {
 
         this.student.sprite.bringToTop();
         this.student.spawn(game.world.centerX, game.world.centerY);
-        this.student.sprite.body.acceleration.y = 461;
     }
 
     var update = function () {
