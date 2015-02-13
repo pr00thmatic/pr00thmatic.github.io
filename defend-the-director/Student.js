@@ -32,6 +32,7 @@ var Student = function (level) {
     // legs
     this.bodyPart[bpi.LEGS].animations.add('stand', [3]);
     this.bodyPart[bpi.LEGS].animations.add('walk', [3,4], 3,  true);
+    game.physics.arcade.enable(this.bodyPart[bpi.LEGS]);
 
     // body
     this.bodyPart[bpi.BODY].animations.add('stand', [6]);
