@@ -5,6 +5,7 @@ var Student = function (level) {
     MALE = 0,
     quantityBodyParts;
 
+    this.goUpstairs = false;
     this.level = level;
 
     this.bodyPart = [];
@@ -14,19 +15,22 @@ var Student = function (level) {
 
     for (i=0; i<quantityBodyParts; i++) {
         this.bodyPart[i] = game.add.sprite(0,0, 'student');
+        this.bodyPart[i].anchor.set(.5, 0);
     }
 
     // setting up animations for each bodyPart
     this.setHead();
     this.setHair();
     this.setBody();
-
     if (this.gender == FEMALE) {
         this.setBoobs();
     }
-
     this.setLegs();
+
+    // the main sprite of a student are his legs.
+    // All the other sprites are legs children
     this.sprite = this.legs;
+    this.sprite.anchor.set(.5,0);
     this.sprite.kill();
 };
 
@@ -108,13 +112,34 @@ Student.prototype.stand = function () {
     }
 };
 
+Student.prototype.getViewDirection = function () {
+    var scaleX = this.sprite.scale.x;
+    return scaleX / Math.abs(scaleX);
+};
 
 
 Student.prototype.update = function () {
-    this.sprite.scale.set(this.level.globalScale, this.level.globalScale);
+    var building;
+
+    this.sprite.scale.set(this.level.globalScale * this.getViewDirection(),
+                          this.level.globalScale);
+
+    building = this.level.building;
+    game.physics.arcade.collide(this.sprite, building.floor);
+    game.physics.arcade.collide(this.sprite, building.walls,
+                                this.turnBack, null, this);
+
+    // fix this!
     if (this.sprite.body.velocity.x === 0) {
         this.stand();
     } else {
         this.walk();
     }
+};
+
+Student.prototype.turnBack = function (student, wall) {
+    var viewDirection = this.getViewDirection();
+    viewDirection -= 2*viewDirection;
+    this.sprite.scale.set(viewDirection * this.level.globalScale,
+                          this.level.globalScale);
 };

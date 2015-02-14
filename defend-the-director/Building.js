@@ -4,7 +4,16 @@ var Building = function () {
 
     this.background = this.tilemap.createLayer('background');
 
-    this.floor = this.tilemap.createLayer('floor');
-    game.physics.arcade.enable(this.floor);
-    this.tilemap.setCollisionByExclusion([], true, this.floor);
+    this.floor =  this.addCollisionLayer('floor');
+    this.walls =  this.addCollisionLayer('walls');
+    this.stairs = this.addCollisionLayer('stairs');
+
+};
+
+Building.prototype.addCollisionLayer = function (name) {
+    var layer = this.tilemap.createLayer(name);
+    game.physics.arcade.enable(layer);
+    this.tilemap.setCollisionByExclusion([], true, layer);
+
+    return layer;
 };

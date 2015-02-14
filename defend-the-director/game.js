@@ -17,12 +17,12 @@ var mainState = ( function () {
         this.building = new Building();
 
         this.student.sprite.bringToTop();
-        this.student.spawn(game.world.centerX, game.world.centerY);
+        this.student.spawn(40*16, 34*16);
     }
 
     var update = function () {
         this.student.update();
-        game.physics.arcade.collide(this.student.sprite, this.building.floor);
+        // game.physics.arcade.collide(this.student.sprite, this.building.floor);
     };
 
     return {
