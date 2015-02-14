@@ -3,6 +3,7 @@ var mainState = ( function () {
 
     var preload = function () {
         game.load.spritesheet('student', 'assets/student.png', 12, 26);
+        game.load.image('principal', 'assets/principal-office.png');
         game.load.tilemap('building', 'assets/map.json',
                           null, Phaser.Tilemap.TILED_JSON);
         game.load.image('informatica', 'assets/informatica.png');
@@ -18,6 +19,7 @@ var mainState = ( function () {
 
         this.student.sprite.bringToTop();
         this.student.spawn(40*16, 34*16);
+        this.principal = game.add.sprite(16, 16, 'principal');
     }
 
     var update = function () {

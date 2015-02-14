@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="informatica.svg">
+   sodipodi:docname="informatica.xcf">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,10 +25,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="20.22073"
-     inkscape:cx="5.4316057"
+     inkscape:cx="-1.7392531"
      inkscape:cy="7.278793"
      inkscape:document-units="px"
-     inkscape:current-layer="g3168"
+     inkscape:current-layer="g3770"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="761"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -82,7 +82,8 @@
      inkscape:label="stairs"
      inkscape:groupmode="layer"
      id="g3168"
-     transform="translate(0,-1036.3622)">
+     transform="translate(0,-1036.3622)"
+     sodipodi:insensitive="true">
     <rect
        style="color:#000000;fill:#322320;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3170"
@@ -96,10 +97,9 @@
      inkscape:groupmode="layer"
      id="g3770"
      transform="translate(0,-1036.3622)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <rect
-       style="color:#000000;fill:#702d20;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#c3725e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3772"
        width="16"
        height="16"

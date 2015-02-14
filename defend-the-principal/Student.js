@@ -6,6 +6,10 @@ var Student = function (level) {
     quantityBodyParts;
 
     this.goUpstairs = false;
+    this.speed = 40;
+    this.stairCounter = 0;
+    this.climbCooldown = 0;
+
     this.level = level;
 
     this.bodyPart = [];
@@ -121,6 +125,8 @@ Student.prototype.getViewDirection = function () {
 Student.prototype.update = function () {
     var building;
 
+    this.sprite.body.velocity.x = this.getViewDirection() * this.speed;
+
     this.sprite.scale.set(this.level.globalScale * this.getViewDirection(),
                           this.level.globalScale);
 
@@ -129,11 +135,19 @@ Student.prototype.update = function () {
     game.physics.arcade.collide(this.sprite, building.walls,
                                 this.turnBack, null, this);
 
-    // fix this!
     if (this.sprite.body.velocity.x === 0) {
         this.stand();
     } else {
         this.walk();
+    }
+
+    if (this.goUpstairs) {
+        game.physics.arcade.collide(this.sprite, building.stairs,
+                                    this.climbStair, null, this);
+        if (this.stairCounter == 6) {
+            this.goUpstairs = false;
+            this.climbCooldown = 0;
+        }
     }
 };
 
@@ -142,4 +156,17 @@ Student.prototype.turnBack = function (student, wall) {
     viewDirection -= 2*viewDirection;
     this.sprite.scale.set(viewDirection * this.level.globalScale,
                           this.level.globalScale);
+    this.goUpstairs = true;
+    this.stairCounter = 0;
+};
+
+Student.prototype.climbStair = function (student, stair) {
+    this.climbCooldown--;
+
+    if (this.climbCooldown <= 0) {
+        this.stairCounter++;
+        this.sprite.position.y -= 20;
+        this.climbCooldown = 20;
+    }
+
 };
