@@ -33,7 +33,7 @@ var mainState = ( function () {
         this.principal = game.add.sprite(16, 16, 'principal');
 
         offices.push(new Office(this, 'kardex'));
-        offices[0].spawn(21*16 - 40, 37*16 - 68);
+        offices[0].spawn(21*16 - 40, 31*16 - 68);
     }
 
     var update = function () {

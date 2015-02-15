@@ -194,7 +194,7 @@ Student.prototype.climbStair = function (student, stair) {
     this.climbCooldown--;
 
     if (this.climbCooldown <= 0 &&
-        (this.sprite.blocked.left || this.sprite.blocked.right)) {
+        (this.sprite.body.blocked.left || this.sprite.body.blocked.right)) {
         this.stairCounter++;
         this.sprite.position.y -= 20;
         this.climbCooldown = 20;
