@@ -213,6 +213,7 @@ Student.prototype.goAway = function () {
 
 Student.prototype.officeCollision = function (student, office) {
     this.atCounter = true;
+    office.giveAttention(this);
 };
 
 Student.prototype.getAttention = function () {

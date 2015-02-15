@@ -1,14 +1,20 @@
 var Office = function (level, type) {
+    var dad = this;
     this.flipCooldown = 25;
     this.flipCounter = 0;
     this.level = level;
 
     this.office = game.add.sprite(0,0,'office');
+
+    this.office.giveAttention = function (student) {
+        dad.giveAttention(student);
+    };
+
     this.officeMan = game.add.sprite(20,5,'oficinista');
     this.officeMan.anchor.set(.5, 0);
     SpriteGestor.coherentlyScale(this.officeMan);
 
-    this.officeMan.animations.add('stand', [0], 1, true);
+    this.officeMan.animations.add('stand', [0,1], 2, true);
     this.officeMan.animations.play('stand');
 
     if (type == 'kardex') {
@@ -17,7 +23,7 @@ var Office = function (level, type) {
         this.swear.animations.play('attend');
         this.swear.anchor.set(.5, 0);
         this.officeMan.addChild(this.swear);
-        this.officeMan.animations.add('attend', [0,1], 6, true);
+        this.officeMan.animations.add('attend', [0,1], 8, true);
 
         this.flipCooldown *= 2;
     } else {
@@ -45,7 +51,25 @@ Office.prototype.updateFlip = function () {
     }
 };
 
+Office.prototype.giveAttention = function (student) {
+    this.student = student;
+    this.officeMan.animations.play('attend');
+
+    if (this.swear) {
+        this.swear.reset(0,0);
+        this.swear.animations.play('attend');
+    }
+};
+
 
 Office.prototype.update = function () {
-    this.updateFlip();
+    if (this.student && this.student.atCounter) {
+        this.updateFlip();
+    } else {
+        console.log('ding');
+        this.officeMan.animations.play('stand');
+        if (this.swear){
+            this.swear.kill();
+        }
+    }
 };
