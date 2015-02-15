@@ -1,5 +1,6 @@
 var x = false;
 var mainState = ( function () {
+    var offices = [];
 
     var preload = function () {
         game.load.spritesheet('student', 'assets/student.png', 12, 26);
@@ -18,19 +19,21 @@ var mainState = ( function () {
     var create = function () {
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        this.student = new Student(this);
         this.building = new Building();
 
-        this.student.sprite.bringToTop();
-        this.student.spawn(40*16, 34*16);
+        this.student = new Student(this, offices);
+        this.student.spawn(10*16, 34*16);
+
         this.principal = game.add.sprite(16, 16, 'principal');
-        this.office = new Office(this, 'kardex');
-        this.office.spawn(21*16 - 40, 31*16 - 68);
+
+        offices.push(new Office(this, 'kardex'));
+        offices[0].spawn(21*16 - 40, 37*16 - 68);
+        this.student.sprite.bringToTop();
     }
 
     var update = function () {
         this.student.update();
-        // game.physics.arcade.collide(this.student.sprite, this.building.floor);
+        offices[0].update();
     };
 
     return {

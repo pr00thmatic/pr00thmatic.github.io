@@ -1,17 +1,21 @@
-var Student = function (level) {
+var Student = function (level, offices) {
     var i,
     max,
     FEMALE = 1,
     MALE = 0,
     quantityBodyParts;
 
+    this.level = level;
+    this.offices = offices;
+    this.problem = 100;
+
+    // properties
     this.goUpstairs = false;
     this.speed = 40;
     this.stairCounter = 0;
     this.climbCooldown = 0;
 
-    this.level = level;
-
+    // bodyParts...
     this.bodyPart = [];
     // 1: female, 0: male
     this.gender = Math.round(Math.random());
@@ -53,7 +57,7 @@ Student.prototype.setLegs = function () {
 
     this.legs = this.bodyPart[2];
     this.legs.animations.add('stand', [3]);
-    this.legs.animations.add('walk', [3,4], 3, true);
+    this.legs.animations.add('walk', [4,3], 3, true);
     game.physics.arcade.enable(this.legs);
 
     for (i=0, max=this.bodyPart.length; i<max; i++) {
@@ -86,9 +90,13 @@ Student.prototype.spawn = function (posX, posY) {
     this.sprite.reset(posX, posY);
     this.sprite.body.acceleration.y = 481;
     this.sprite.body.velocity.x = 50;
+    this.sprite.alpha = 1;
 };
 
 Student.prototype.walk = function () {
+
+    this.sprite.body.velocity.x = this.speed;
+    this.sprite.body.velocity.x *= SpriteGestor.xDirection(this.sprite);
 
     if (this.legs.animations.currentAnim.name != 'walk') {
         this.legs.animations.play('walk');
@@ -111,51 +119,36 @@ Student.prototype.moveHeadTo = function (posX, posY) {
 Student.prototype.stand = function () {
     var i;
 
+    this.sprite.body.velocity.x = 0;
+
     for (i=this.bodyPart.length-1; i>=0; i--) {
         this.bodyPart[i].animations.play('stand');
     }
 };
 
-Student.prototype.getViewDirection = function () {
-    var scaleX = this.sprite.scale.x;
-    return scaleX / Math.abs(scaleX);
-};
+Student.prototype.collisionsUpdate = function () {
+    var building = this.level.building,
+    i;
 
-
-Student.prototype.update = function () {
-    var building;
-
-    this.sprite.body.velocity.x = this.getViewDirection() * this.speed;
-
-    this.sprite.scale.set(this.level.globalScale * this.getViewDirection(),
-                          this.level.globalScale);
-
-    building = this.level.building;
     game.physics.arcade.collide(this.sprite, building.floor);
     game.physics.arcade.collide(this.sprite, building.walls,
                                 this.turnBack, null, this);
+    for (i=this.offices.length-1; i>=0; i--) {
+        game.physics.arcade.collide(this.sprite, this.offices[i].office,
+                                    this.officeCollision, null, this);
+    }
 
-    if (this.sprite.body.velocity.x === 0) {
+    if (this.atCounter) {
         this.stand();
+        this.getAttention();
     } else {
         this.walk();
     }
 
-    if (this.goUpstairs) {
-        game.physics.arcade.collide(this.sprite, building.stairs,
-                                    this.climbStair, null, this);
-        if (this.stairCounter == 6) {
-            this.goUpstairs = false;
-            this.climbCooldown = 0;
-        }
-    }
 };
 
 Student.prototype.turnBack = function (student, wall) {
-    var viewDirection = this.getViewDirection();
-    viewDirection -= 2*viewDirection;
-    this.sprite.scale.set(viewDirection * this.level.globalScale,
-                          this.level.globalScale);
+    SpriteGestor.flipX(this.sprite);
     this.goUpstairs = true;
     this.stairCounter = 0;
 };
@@ -169,4 +162,50 @@ Student.prototype.climbStair = function (student, stair) {
         this.climbCooldown = 20;
     }
 
+};
+
+Student.prototype.goAway = function () {
+    this.sprite.alpha -= .05;
+
+    if (this.sprite.alpha <= 0) {
+        this.sprite.kill();
+    }
+};
+
+
+Student.prototype.officeCollision = function (student, office) {
+    this.atCounter = true;
+};
+
+Student.prototype.getAttention = function () {
+    this.problem--;
+
+    if (this.problem <= 0) {
+        this.goAway();
+        this.atCounter = false;
+    }
+};
+
+
+
+Student.prototype.update = function () {
+    if (this.sprite.alive) {
+        if (this.problem <= 0) {
+            this.goAway();
+        } else {
+            var building = this.level.building;
+            this.collisionsUpdate();
+            SpriteGestor.coherentlyScale(this.sprite);
+
+
+            if (this.goUpstairs) {
+                game.physics.arcade.collide(this.sprite, building.stairs,
+                                            this.climbStair, null, this);
+                if (this.stairCounter == 6) {
+                    this.goUpstairs = false;
+                    this.climbCooldown = 0;
+                }
+            }
+        }
+    }
 };
