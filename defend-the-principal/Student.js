@@ -1,4 +1,4 @@
-var Student = function (level, offices) {
+var Student = function (level, offices, students) {
     var i,
     max,
     FEMALE = 1,
@@ -7,13 +7,16 @@ var Student = function (level, offices) {
 
     this.level = level;
     this.offices = offices;
-    this.problem = 100;
+    this.students = students;
 
     // properties
     this.goUpstairs = false;
     this.speed = 40;
     this.stairCounter = 0;
     this.climbCooldown = 0;
+    this.problem = 200;
+    this.patience = 300;
+    this.toleratedDistance = 30;
 
     // bodyParts...
     this.bodyPart = [];
@@ -70,7 +73,7 @@ Student.prototype.setLegs = function () {
         this.bodyPart[i].bringToTop();
     }
 
-}
+};
 
 Student.prototype.setBody = function () {
     this.body = this.bodyPart[3];
@@ -83,9 +86,6 @@ Student.prototype.setBoobs = function () {
     this.boobs.animations.add('stand', [8]);
 };
 
-
-
-
 Student.prototype.spawn = function (posX, posY) {
     this.sprite.reset(posX, posY);
     this.sprite.body.acceleration.y = 481;
@@ -95,14 +95,17 @@ Student.prototype.spawn = function (posX, posY) {
 
 Student.prototype.walk = function () {
 
+    // movement
     this.sprite.body.velocity.x = this.speed;
     this.sprite.body.velocity.x *= SpriteGestor.xDirection(this.sprite);
 
+    // walking legs and arms
     if (this.legs.animations.currentAnim.name != 'walk') {
         this.legs.animations.play('walk');
         this.body.animations.play('walk');
     }
 
+    // bobbing head
     if (this.legs.animations.currentAnim.frame == 3) {
         this.moveHeadTo(0,1);
     } else {
@@ -138,7 +141,10 @@ Student.prototype.collisionsUpdate = function () {
                                     this.officeCollision, null, this);
     }
 
-    if (this.atCounter) {
+    if (this.hasStudentAtFront()) {
+        this.patience--;
+        this.stand();
+    } else if (this.atCounter) {
         this.stand();
         this.getAttention();
     } else {
@@ -146,6 +152,37 @@ Student.prototype.collisionsUpdate = function () {
     }
 
 };
+
+// this can be optimized
+/*
+ * has a student at front iif there is an student (on the same floor)
+ * in front of him and this student is looking in the same direction
+*/
+Student.prototype.hasStudentAtFront = function () {
+    var i,
+    xDistance=0,
+    yDistance=0,
+    xDirection=SpriteGestor.xDirection(this.sprite);
+
+    for (i = this.students.length-1; i >= 0; i--) {
+        yDistance = this.students[i].sprite.y - this.sprite.y;
+
+        if (this.students[i] != this && yDistance === 0 &&
+            SpriteGestor.xDirection(this.students[i].sprite) == xDirection) {
+
+            xDistance = this.students[i].sprite.x - this.sprite.x;
+            xDistance *= SpriteGestor.xDirection(this.sprite);
+            if (xDistance <= this.toleratedDistance && xDistance >= 0) {
+                return true;
+            }
+
+        }
+
+    }
+
+    return false;
+};
+
 
 Student.prototype.turnBack = function (student, wall) {
     SpriteGestor.flipX(this.sprite);
@@ -156,7 +193,8 @@ Student.prototype.turnBack = function (student, wall) {
 Student.prototype.climbStair = function (student, stair) {
     this.climbCooldown--;
 
-    if (this.climbCooldown <= 0) {
+    if (this.climbCooldown <= 0 &&
+        (this.sprite.blocked.left || this.sprite.blocked.right)) {
         this.stairCounter++;
         this.sprite.position.y -= 20;
         this.climbCooldown = 20;

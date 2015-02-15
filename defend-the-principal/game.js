@@ -1,4 +1,3 @@
-var x = false;
 var mainState = ( function () {
     var offices = [];
 
@@ -21,18 +20,27 @@ var mainState = ( function () {
 
         this.building = new Building();
 
-        this.student = new Student(this, offices);
-        this.student.spawn(10*16, 34*16);
+        this.students = [];
+        this.students.push(new Student(this, offices, this.students));
+        this.students[0].spawn(10*16, 34*16);
+
+        this.students.push(new Student(this, offices, this.students));
+        this.students[1].spawn(2*16, 34*16);
+
+        this.students.push(new Student(this, offices, this.students));
+        this.students[2].spawn(6*16, 34*16);
 
         this.principal = game.add.sprite(16, 16, 'principal');
 
         offices.push(new Office(this, 'kardex'));
         offices[0].spawn(21*16 - 40, 37*16 - 68);
-        this.student.sprite.bringToTop();
     }
 
     var update = function () {
-        this.student.update();
+        for (var i=0; i<this.students.length; i++) {
+            this.students[i].update();
+            this.students[0].sprite.bringToTop();
+        }
         offices[0].update();
     };
 

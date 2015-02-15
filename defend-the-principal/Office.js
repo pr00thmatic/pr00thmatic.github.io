@@ -1,5 +1,5 @@
 var Office = function (level, type) {
-    this.flipCooldown = 50;
+    this.flipCooldown = 25;
     this.flipCounter = 0;
     this.level = level;
 
@@ -17,11 +17,11 @@ var Office = function (level, type) {
         this.swear.animations.play('attend');
         this.swear.anchor.set(.5, 0);
         this.officeMan.addChild(this.swear);
-        this.officeMan.animations.add('attend', [0,1], 3, true);
+        this.officeMan.animations.add('attend', [0,1], 6, true);
 
         this.flipCooldown *= 2;
     } else {
-        this.officeMan.animations.add('attend', [0,1], 5, true);
+        this.officeMan.animations.add('attend', [0,1], 10, true);
     }
 
     this.officeMan.animations.play('attend');
