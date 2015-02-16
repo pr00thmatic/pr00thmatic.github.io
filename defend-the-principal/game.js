@@ -22,28 +22,36 @@ var mainState = ( function () {
         this.building = new Building();
 
         this.students = [];
-        this.students.push(new Student(this, this.offices, this.students));
-        this.students[0].spawn(10*16, 34*16);
-
-        this.students.push(new Student(this, this.offices, this.students));
-        this.students[1].spawn(2*16, 34*16);
-
-        this.students.push(new Student(this, this.offices, this.students));
-        this.students[2].spawn(6*16, 34*16);
+        this.spawner = new StudentSpawner( 2*16, 34*16,
+                                           this.students, this, this.offices );
 
         this.principal = game.add.sprite(16, 16, 'principal');
 
         this.offices.push(new Office(this, 'kardex'));
         // offices[0].spawn(21*16 - 40, 31*16 - 68);
         this.offices[0].spawn(21*16-40, 37*16-68);
+        this.offices[0].setHp(1200);
     }
 
     var update = function () {
-        for (var i=0; i<this.students.length; i++) {
-            this.students[i].update();
-            this.students[0].sprite.bringToTop();
+        var i;
+        this.spawner.update();
+
+        for (i = this.students.length - 1; i >= 0; i--) {
+            if (!this.students[i].sprite.alive) {
+                var x = this.students[i];
+                this.students.splice(i, 1);
+                delete x;
+            } else {
+                this.students[i].update();
+                this.students[i].sprite.bringToTop();
+            }
         }
-        this.offices[0].update();
+
+        for (i = this.offices.length - 1; i >= 0; i--) {
+            this.offices[i].update();
+        }
+
     };
 
     return {

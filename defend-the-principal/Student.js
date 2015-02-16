@@ -5,6 +5,9 @@ var Student = function (level, offices, students) {
     MALE = 0,
     quantityBodyParts;
 
+    this.color = Math.round(Math.random() * (this.colors.length - 0) + 0);
+    this.color = this.colors[this.color];
+
     this.level = level;
     this.offices = offices;
     this.students = students;
@@ -14,15 +17,18 @@ var Student = function (level, offices, students) {
     this.speed = 40;
     this.stairCounter = 0;
     this.climbCooldown = 0;
-    this.problem = 200;
-    this.patience = 300;
-    this.toleratedDistance = 30;
+    this.problem = Math.round(Math.random() * (150 - 300) + 300);;
+    this.patience = Math.round(Math.random() * (600 - 50) + 50);;
+    this.toleratedDistance = Math.round(Math.random() * (30 - 23) + 23);;
     /*
      * when a student started to walk inmediatly after the student in
      * front started to walk, the student behind would stop on little
      * intervals, causing it's patience to lower, even though he wasn't
      * queueing. A little waitDelay before continue walking when he
-     * realises there is any student in front of him, fixed this ;)
+     * realises there is any student in front of him, almost fixed this ;)
+     * in the patience controller, i have to verify if the student in front
+     * is moving.
+     * also it is visualy cool XD
      */
     this.waitDelay = 0;
 
@@ -30,7 +36,7 @@ var Student = function (level, offices, students) {
     this.bodyPart = [];
     // 1: female, 0: male
     this.gender = Math.round(Math.random());
-    quantityBodyParts = 4 + this.gender;
+    quantityBodyParts = 5 + this.gender;
 
     for (i=0; i<quantityBodyParts; i++) {
         this.bodyPart[i] = game.add.sprite(0,0, 'student');
@@ -38,6 +44,7 @@ var Student = function (level, offices, students) {
     }
 
     // setting up animations for each bodyPart
+    this.setHands();
     this.setHead();
     this.setHair();
     this.setBody();
@@ -50,8 +57,16 @@ var Student = function (level, offices, students) {
     // All the other sprites are legs children
     this.sprite = this.legs;
     this.sprite.anchor.set(.5,0);
+    this.hands.bringToTop();
     this.sprite.kill();
 };
+
+// singleton, i guess...
+Student.prototype.colors = [0xcc3333, 0x33cc33, 0x3333cc,
+                            0x883333, 0x338833, 0x333388,
+                            0x33bbbb, 0xbb33bb, 0xbbbb33,
+                            0x338888, 0x883388, 0x888833,
+                            0x888888, 0xcccccc];
 
 Student.prototype.setHead = function () {
     this.head = this.bodyPart[0];
@@ -61,6 +76,7 @@ Student.prototype.setHead = function () {
 Student.prototype.setHair = function () {
     this.hair = this.bodyPart[1];
     this.hair.animations.add('stand', [1+this.gender]);
+    this.hair.tint = this.color;
 }
 
 Student.prototype.setLegs = function () {
@@ -68,7 +84,8 @@ Student.prototype.setLegs = function () {
 
     this.legs = this.bodyPart[2];
     this.legs.animations.add('stand', [3]);
-    this.legs.animations.add('walk', [4,3], 3, true);
+    this.legs.animations.add('walk', [4,3],
+                             Math.round(Math.random() * (4 - 3) + 3), true);
     game.physics.arcade.enable(this.legs);
 
     for (i=0, max=this.bodyPart.length; i<max; i++) {
@@ -85,13 +102,20 @@ Student.prototype.setLegs = function () {
 
 Student.prototype.setBody = function () {
     this.body = this.bodyPart[3];
-    this.body.animations.add('stand', [6]);
-    this.body.animations.add('walk', [5,6,7,6], 3, true);
+    this.body.tint = this.color;
+    this.body.animations.add('stand', [8]);
+};
+
+Student.prototype.setHands = function () {
+    this.hands = this.bodyPart[4];
+    this.hands.animations.add('walk', [5,6,7,6], Math.round(Math.random() * (4 - 3) + 3), true);
+    this.hands.animations.add('stand', [6], 1, true);
 };
 
 Student.prototype.setBoobs = function () {
-    this.boobs = this.bodyPart[4];
-    this.boobs.animations.add('stand', [8]);
+    this.boobs = this.bodyPart[5];
+    this.boobs.animations.add('stand', [9]);
+    this.boobs.tint = this.color;
 };
 
 Student.prototype.spawn = function (posX, posY) {
@@ -110,7 +134,7 @@ Student.prototype.walk = function () {
     // walking legs and arms
     if (this.legs.animations.currentAnim.name != 'walk') {
         this.legs.animations.play('walk');
-        this.body.animations.play('walk');
+        this.hands.animations.play('walk');
     }
 
     // bobbing head
@@ -139,7 +163,7 @@ Student.prototype.stand = function () {
 
 Student.prototype.collisionsUpdate = function () {
     var building = this.level.building,
-    i;
+    studentInFront = this.findStudentAtFront();
 
     game.physics.arcade.collide(this.sprite, building.floor);
     game.physics.arcade.collide(this.sprite, building.walls,
@@ -149,10 +173,12 @@ Student.prototype.collisionsUpdate = function () {
                                     this.officeCollision, null, this);
     }
 
-    if (this.hasStudentAtFront()) {
-        this.patience--;
+    if (studentInFront) {
+        if (studentInFront.sprite.body.velocity.x == 0) {
+            this.patience--;
+        }
         this.stand();
-        this.waitDelay = 30;
+        this.waitDelay = Math.round(Math.random() * (60 - 40) + 40);
     } else if (this.atCounter && this.office.alive) {
         this.stand();
         this.getAttention();
@@ -170,7 +196,7 @@ Student.prototype.collisionsUpdate = function () {
  * has a student at front iif there is an student (on the same floor)
  * in front of him and this student is looking in the same direction
 */
-Student.prototype.hasStudentAtFront = function () {
+Student.prototype.findStudentAtFront = function () {
     var i,
     xDistance=0,
     yDistance=0,
@@ -179,16 +205,24 @@ Student.prototype.hasStudentAtFront = function () {
     for (i = this.students.length-1; i >= 0; i--) {
         yDistance = this.students[i].sprite.y - this.sprite.y;
 
-        if (this.students[i] != this && yDistance === 0 &&
+        if (this.students[i] != this && yDistance <= 32 &&
             SpriteGestor.xDirection(this.students[i].sprite) == xDirection) {
 
             xDistance = this.students[i].sprite.x - this.sprite.x;
             xDistance *= SpriteGestor.xDirection(this.sprite);
-            if (xDistance <= this.toleratedDistance && xDistance >= 0) {
-                return true;
+
+            if (xDistance == 0) {
+                // otherwise, students would get stuck
+                this.students[i].sprite.x += 5 *
+                    Math.pow(-1, Math.round(Math.random())); // random [0,1]
+            }
+
+            if (xDistance <= this.toleratedDistance && xDistance > 0) {
+                return this.students[i];
             }
 
         }
+
 
     }
 

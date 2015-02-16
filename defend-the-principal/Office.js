@@ -6,8 +6,7 @@ var Office = function (level, type) {
     // properties
     this.flipCooldown = 30;
     this.flipCounter = 0;
-    this.totalHp = 300;
-    this.hp = 300;
+    this.hp = this.totalHp = 300;
     this.totalLives = 3;
     this.lives = [];
 
@@ -85,6 +84,10 @@ Office.prototype.giveAttention = function (student) {
         this.swear.reset(0,0);
         this.swear.animations.play('attend');
     }
+};
+
+Office.prototype.setHp = function (hp) {
+    this.totalHp = this.hp = hp;
 };
 
 Office.prototype.update = function () {
