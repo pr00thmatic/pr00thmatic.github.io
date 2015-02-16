@@ -163,6 +163,34 @@ Student.prototype.stand = function () {
     }
 };
 
+Student.prototype.isCloseToOffice = function () {
+    var i, atCounter;
+
+    for (i=this.offices.length-1; i>=0; i--) {
+        if (Math.abs(this.sprite.x - this.offices[i].office.x) <= 100 &&
+            Math.abs(this.sprite.y - this.offices[i].office.y) <= 30) {
+            atCounter = true;
+            break;
+        }
+    }
+
+    return atCounter;
+};
+
+Student.prototype.rage = function () {
+    if (this.studentInFront || this.isCloseToOffice()) {
+        this.walk();
+    } else {
+        this.calmDown();
+    }
+
+};
+
+Student.prototype.calmDown = function () {
+    this.enraged = false;
+    this.head.tint = 0xffffff;
+};
+
 Student.prototype.collisionsUpdate = function () {
     var building = this.level.building,
     atCounter = false,
@@ -173,29 +201,17 @@ Student.prototype.collisionsUpdate = function () {
     game.physics.arcade.collide(this.sprite, building.floor);
     game.physics.arcade.collide(this.sprite, building.walls,
                                 this.turnBack, null, this);
+
     if (this.enraged === true) {
-
-        for (i=this.offices.length-1; i>=0; i--) {
-            if (Math.abs(this.sprite.x - this.offices[i].office.x) <= 100 &&
-                Math.abs(this.sprite.y - this.offices[i].office.y) <= 30) {
-                atCounter = true;
-                break;
-            }
-        }
-
-        if (this.studentInFront || atCounter) {
-            this.walk();
-        } else {
-            this.enraged = false;
-            this.head.tint = 0xffffff;
-        }
-
+        this.rage();
     } else {
+        // checking collision with offices
         for (i=this.offices.length-1; i>=0; i--) {
             game.physics.arcade.collide(this.sprite, this.offices[i].office,
                                         this.officeCollision, null, this);
         }
 
+        // walk, get attention or queue up?
         if (this.studentInFront) {
             if (this.studentInFront.sprite.body.velocity.x == 0) {
                 this.patience--;
@@ -215,42 +231,46 @@ Student.prototype.collisionsUpdate = function () {
 
 };
 
+Student.prototype.getToleratedDistance = function () {
+    if (!this.enraged) {
+        return this.toleratedDistance;
+    } else {
+        return this.enragedToleratedDistance;
+    }
+};
+
 // this can be optimized
 /*
- * has a student at front iif there is an student (on the same floor)
- * in front of him and this student is looking in the same direction
+ * has a student at front iif there is an "alive" student (on the same floor)
+ * in front of him, this student is looking in the same direction and
+ * this student is not enraged
 */
 Student.prototype.findStudentAtFront = function () {
     var i,
     xDistance=0,
     yDistance=0,
-    xDirection=SpriteGestor.xDirection(this.sprite),
-    toleratedDistance;
+    xDirection=SpriteGestor.xDirection(this.sprite);
 
-    // computing correct toleratedDistance
-    if (!this.enraged) {
-        toleratedDistance = this.toleratedDistance;
-    } else {
-        toleratedDistance = this.enragedToleratedDistance;
-    }
 
     for (i = this.students.length-1; i >= 0; i--) {
         yDistance = Math.abs(this.students[i].sprite.y - this.sprite.y);
+        xDistance = this.students[i].sprite.x - this.sprite.x;
+        xDistance *= SpriteGestor.xDirection(this.sprite);
 
+
+        // is this a possible obstacle?
         if (this.students[i] != this && yDistance <= 20 &&
             this.students[i].sprite.alpha == 1 &&
-            SpriteGestor.xDirection(this.students[i].sprite) == xDirection) {
+            SpriteGestor.xDirection(this.students[i].sprite) == xDirection &&
+            !this.students[i].enraged) {
 
-            xDistance = this.students[i].sprite.x - this.sprite.x;
-            xDistance *= SpriteGestor.xDirection(this.sprite);
-
+            // otherwise, students would get stuck
             if (xDistance == 0) {
-                // otherwise, students would get stuck
                 this.students[i].sprite.x += 5 *
                     Math.pow(-1, Math.round(Math.random())); // random [0,1]
             }
 
-            if (xDistance <= toleratedDistance && xDistance > 0) {
+            if (xDistance <= this.getToleratedDistance() && xDistance > 0) {
                 return this.students[i];
             }
 
