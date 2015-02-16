@@ -17,6 +17,13 @@ var Student = function (level, offices, students) {
     this.problem = 200;
     this.patience = 300;
     this.toleratedDistance = 30;
+    /*
+     * when a student started to walk inmediatly after the student in
+     * front started to walk, the student behind would stop on little
+     * intervals, causing it's patience to lower, even though he wasn't
+     * queueing. A little waitDelay before continue walking when he
+     * realises there is any student in front of him, fixed this ;)
+     */
     this.waitDelay = 0;
 
     // bodyParts...
