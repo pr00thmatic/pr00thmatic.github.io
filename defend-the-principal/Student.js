@@ -13,12 +13,13 @@ var Student = function (level, offices, students) {
     this.students = students;
 
     // properties
+    this.enraged = false;
     this.goUpstairs = false;
-    this.speed = 40;
+    this.speed = 100;
     this.stairCounter = 0;
     this.climbCooldown = 0;
     this.problem = Math.round(Math.random() * (150 - 300) + 300);;
-    this.patience = Math.round(Math.random() * (600 - 50) + 50);;
+    this.enragedToleratedDistance = 50;
     this.toleratedDistance = Math.round(Math.random() * (30 - 23) + 23);;
     /*
      * when a student started to walk inmediatly after the student in
@@ -123,6 +124,7 @@ Student.prototype.spawn = function (posX, posY) {
     this.sprite.body.acceleration.y = 481;
     this.sprite.body.velocity.x = 50;
     this.sprite.alpha = 1;
+    this.resetPatience();
 };
 
 Student.prototype.walk = function () {
@@ -162,32 +164,53 @@ Student.prototype.stand = function () {
 };
 
 Student.prototype.collisionsUpdate = function () {
-    var building = this.level.building;
+    var building = this.level.building,
+    atCounter = false,
+    i;
 
     this.studentInFront = this.findStudentAtFront();
 
     game.physics.arcade.collide(this.sprite, building.floor);
     game.physics.arcade.collide(this.sprite, building.walls,
                                 this.turnBack, null, this);
-    for (i=this.offices.length-1; i>=0; i--) {
-        game.physics.arcade.collide(this.sprite, this.offices[i].office,
-                                    this.officeCollision, null, this);
-    }
+    if (this.enraged === true) {
 
-    if (this.studentInFront) {
-        if (this.studentInFront.sprite.body.velocity.x == 0) {
-            this.patience--;
+        for (i=this.offices.length-1; i>=0; i--) {
+            if (Math.abs(this.sprite.x - this.offices[i].office.x) <= 100 &&
+                Math.abs(this.sprite.y - this.offices[i].office.y) <= 30) {
+                atCounter = true;
+                break;
+            }
         }
-        this.stand();
-        this.waitDelay = Math.round(Math.random() * (60 - 40) + 40);
-    } else if (this.atCounter && this.office.alive) {
-        this.stand();
-        this.getAttention();
-    } else if (this.waitDelay == 0) {
-        this.walk();
+
+        if (this.studentInFront || atCounter) {
+            this.walk();
+        } else {
+            this.enraged = false;
+            this.head.tint = 0xffffff;
+        }
+
     } else {
-        this.waitDelay--;
-        this.stand();
+        for (i=this.offices.length-1; i>=0; i--) {
+            game.physics.arcade.collide(this.sprite, this.offices[i].office,
+                                        this.officeCollision, null, this);
+        }
+
+        if (this.studentInFront) {
+            if (this.studentInFront.sprite.body.velocity.x == 0) {
+                this.patience--;
+            }
+            this.stand();
+            this.waitDelay = Math.round(Math.random() * (60 - 40) + 40);
+        } else if (this.atCounter && this.office.alive) {
+            this.stand();
+            this.getAttention();
+        } else if (this.waitDelay == 0) {
+            this.walk();
+        } else {
+            this.waitDelay--;
+            this.stand();
+        }
     }
 
 };
@@ -201,7 +224,15 @@ Student.prototype.findStudentAtFront = function () {
     var i,
     xDistance=0,
     yDistance=0,
-    xDirection=SpriteGestor.xDirection(this.sprite);
+    xDirection=SpriteGestor.xDirection(this.sprite),
+    toleratedDistance;
+
+    // computing correct toleratedDistance
+    if (!this.enraged) {
+        toleratedDistance = this.toleratedDistance;
+    } else {
+        toleratedDistance = this.enragedToleratedDistance;
+    }
 
     for (i = this.students.length-1; i >= 0; i--) {
         yDistance = Math.abs(this.students[i].sprite.y - this.sprite.y);
@@ -219,7 +250,7 @@ Student.prototype.findStudentAtFront = function () {
                     Math.pow(-1, Math.round(Math.random())); // random [0,1]
             }
 
-            if (xDistance <= this.toleratedDistance && xDistance > 0) {
+            if (xDistance <= toleratedDistance && xDistance > 0) {
                 return this.students[i];
             }
 
@@ -274,9 +305,20 @@ Student.prototype.getAttention = function () {
     }
 };
 
+Student.prototype.resetPatience = function () {
+    this.patience = Math.round(Math.random() * (600 - 50) + 50);
+};
 
+Student.prototype.enrage = function () {
+    this.head.tint = 0xff7777;
+    this.resetPatience();
+    this.enraged = true;
+};
 
 Student.prototype.update = function () {
+    if (this.patience === 0) {
+        this.enrage();
+    }
     if (this.sprite.alive) {
         if (this.problem <= 0) {
             this.goAway();
