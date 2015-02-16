@@ -17,6 +17,7 @@ var Student = function (level, offices, students) {
     this.problem = 200;
     this.patience = 300;
     this.toleratedDistance = 30;
+    this.waitDelay = 0;
 
     // bodyParts...
     this.bodyPart = [];
@@ -144,11 +145,15 @@ Student.prototype.collisionsUpdate = function () {
     if (this.hasStudentAtFront()) {
         this.patience--;
         this.stand();
-    } else if (this.atCounter) {
+        this.waitDelay = 30;
+    } else if (this.atCounter && this.office.alive) {
         this.stand();
         this.getAttention();
-    } else {
+    } else if (this.waitDelay == 0) {
         this.walk();
+    } else {
+        this.waitDelay--;
+        this.stand();
     }
 
 };
@@ -214,6 +219,7 @@ Student.prototype.goAway = function () {
 Student.prototype.officeCollision = function (student, office) {
     this.atCounter = true;
     office.giveAttention(this);
+    this.office = office;
 };
 
 Student.prototype.getAttention = function () {
