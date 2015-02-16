@@ -38,14 +38,8 @@ var mainState = ( function () {
         this.spawner.update();
 
         for (i = this.students.length - 1; i >= 0; i--) {
-            if (!this.students[i].sprite.alive) {
-                var x = this.students[i];
-                this.students.splice(i, 1);
-                delete x;
-            } else {
-                this.students[i].update();
-                this.students[i].sprite.bringToTop();
-            }
+            this.students[i].update();
+            this.students[i].sprite.bringToTop();
         }
 
         for (i = this.offices.length - 1; i >= 0; i--) {

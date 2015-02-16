@@ -162,8 +162,9 @@ Student.prototype.stand = function () {
 };
 
 Student.prototype.collisionsUpdate = function () {
-    var building = this.level.building,
-    studentInFront = this.findStudentAtFront();
+    var building = this.level.building;
+
+    this.studentInFront = this.findStudentAtFront();
 
     game.physics.arcade.collide(this.sprite, building.floor);
     game.physics.arcade.collide(this.sprite, building.walls,
@@ -173,8 +174,8 @@ Student.prototype.collisionsUpdate = function () {
                                     this.officeCollision, null, this);
     }
 
-    if (studentInFront) {
-        if (studentInFront.sprite.body.velocity.x == 0) {
+    if (this.studentInFront) {
+        if (this.studentInFront.sprite.body.velocity.x == 0) {
             this.patience--;
         }
         this.stand();
@@ -203,9 +204,10 @@ Student.prototype.findStudentAtFront = function () {
     xDirection=SpriteGestor.xDirection(this.sprite);
 
     for (i = this.students.length-1; i >= 0; i--) {
-        yDistance = this.students[i].sprite.y - this.sprite.y;
+        yDistance = Math.abs(this.students[i].sprite.y - this.sprite.y);
 
-        if (this.students[i] != this && yDistance <= 32 &&
+        if (this.students[i] != this && yDistance <= 20 &&
+            this.students[i].sprite.alpha == 1 &&
             SpriteGestor.xDirection(this.students[i].sprite) == xDirection) {
 
             xDistance = this.students[i].sprite.x - this.sprite.x;
