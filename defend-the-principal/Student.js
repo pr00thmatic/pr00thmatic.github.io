@@ -6,8 +6,7 @@ var Student = function (level, offices, students) {
     quantityBodyParts,
     dad = this;
 
-    this.color = Math.round(Math.random() * (this.colors.length - 0) + 0);
-    this.color = this.colors[this.color];
+    this.color = this.randomColor();
 
     this.level = level;
     this.offices = offices;
@@ -17,12 +16,10 @@ var Student = function (level, offices, students) {
     this.enraged = false;
     this.goUpstairs = false;
     this.stairCounter = 0;
+    this.problem = this.randomProperty(this.properties.problem);
+    this.toleratedDistance = this.randomProperty(this.properties.toleratedDistance);
+    this.patience = this.properties.patience.max;
     this.climbCooldown = 0;
-    this.problem = Math.round(Math.random() * (150 - 300) + 300);;
-    this.enragedToleratedDistance = 50;
-    this.toleratedDistance = Math.round(Math.random() * (30 - 23) + 23);;
-    this.speed = this.calmSpeed = 50;
-    this.rageSpeed = 90;
     /*
      * when a student started to walk inmediatly after the student in
      * front started to walk, the student behind would stop on little
@@ -60,20 +57,64 @@ var Student = function (level, offices, students) {
     // All the other sprites are legs children
     this.sprite = this.legs;
     this.sprite.anchor.set(.5,0);
-    this.hands.bringToTop();
     this.sprite.kill();
 
     this.sprite.goAway = function () {
         dad.goAway();
     }
+
+    this.hands.bringToTop();
 };
 
-// singleton, i guess...
-Student.prototype.colors = [0xcc3333, 0x33cc33, 0x3333cc,
-                            0x883333, 0x338833, 0x333388,
-                            0x33bbbb, 0xbb33bb, 0xbbbb33,
-                            0x338888, 0x883388, 0x888833,
-                            0x888888, 0xcccccc];
+// singleton, i guess o_O
+Student.prototype.properties = {
+    patience: {
+        max: 1200,
+        min: 500
+    },
+
+    toleratedDistance: {
+        max: 33,
+        min: 23,
+        rage: 50
+    },
+
+    speed: {
+        normal: 50,
+        rage: 90
+    },
+
+    problem: {
+        max: 300,
+        min: 150
+    },
+
+    waitDelay: {
+        max: 60,
+        min: 40
+    },
+
+    colors: [0xcc3333, 0x33cc33, 0x3333cc,
+             0x883333, 0x338833, 0x333388,
+             0x33bbbb, 0xbb33bb, 0xbbbb33,
+             0x338888, 0x883388, 0x888833,
+             0x888888, 0xcccccc]
+};
+
+Student.prototype.getSpeed = function () {
+    if (this.enraged) {
+        return this.properties.speed.rage;
+    }
+    return this.properties.speed.normal;
+};
+
+Student.prototype.randomProperty = function(property) {
+    return Math.round(Math.random() * (property.max - property.min) + property.min);
+}
+
+Student.prototype.randomColor = function () {
+    return this.properties.colors[Math.round(Math.random() * this.properties.colors.length)];
+};
 
 Student.prototype.setHead = function () {
     this.head = this.bodyPart[0];
@@ -91,6 +132,7 @@ Student.prototype.setLegs = function () {
 
     this.legs = this.bodyPart[2];
     this.legs.animations.add('stand', [3]);
+    // irregular animation of legs
     this.legs.animations.add('walk', [4,3],
                              Math.round(Math.random() * (4 - 3) + 3), true);
     game.physics.arcade.enable(this.legs);
@@ -134,9 +176,10 @@ Student.prototype.spawn = function (posX, posY) {
 };
 
 Student.prototype.walk = function () {
+    var speed;
 
     // movement
-    this.sprite.body.velocity.x = this.speed;
+    this.sprite.body.velocity.x = this.getSpeed();
     this.sprite.body.velocity.x *= SpriteGestor.xDirection(this.sprite);
 
     // walking legs and arms
@@ -169,11 +212,18 @@ Student.prototype.stand = function () {
     }
 };
 
-Student.prototype.isCloseToOffice = function () {
-    var i, atCounter;
+Student.prototype.isCloseToOccupiedOffice = function () {
+    var i,
+    atCounter = false,
+    studentAtCounter,
+    dx;
 
     for (i=this.offices.length-1; i>=0; i--) {
-        if (Math.abs(this.sprite.x - this.offices[i].office.x) <= 100 &&
+        dx = this.offices[i].office.x - this.sprite.x;
+        dx *= SpriteGestor.xDirection(this.sprite);
+        studentAtCounter = this.offices[i].getStudentAtCounter();
+        if (studentAtCounter && studentAtCounter != this &&
+            dx >= -20 && dx <= 150 &&
             Math.abs(this.sprite.y - this.offices[i].office.y) <= 30) {
             atCounter = true;
             break;
@@ -184,7 +234,7 @@ Student.prototype.isCloseToOffice = function () {
 };
 
 Student.prototype.rage = function () {
-    if (this.studentInFront || this.isCloseToOffice()) {
+    if (this.studentInFront || this.isCloseToOccupiedOffice()) {
         this.walk();
     } else {
         this.calmDown();
@@ -210,41 +260,13 @@ Student.prototype.collisionsUpdate = function () {
     game.physics.arcade.collide(this.sprite, building.floor);
     game.physics.arcade.collide(this.sprite, building.walls,
                                 this.turnBack, null, this);
-
-    if (this.enraged === true) {
-        this.rage();
-    } else {
-        // checking collision with offices
-        for (i=this.offices.length-1; i>=0; i--) {
-            game.physics.arcade.collide(this.sprite, this.offices[i].office,
-                                        this.officeCollision, null, this);
-        }
-
-        // walk, get attention or queue up?
-        if (this.studentInFront) {
-            if (this.studentInFront.sprite.body.velocity.x == 0) {
-                this.patience--;
-            }
-            this.stand();
-            this.waitDelay = Math.round(Math.random() * (60 - 40) + 40);
-        } else if (this.atCounter && this.office.alive) {
-            this.stand();
-            this.getAttention();
-        } else if (this.waitDelay == 0) {
-            this.walk();
-        } else {
-            this.waitDelay--;
-            this.stand();
-        }
-    }
-
 };
 
 Student.prototype.getToleratedDistance = function () {
     if (!this.enraged) {
         return this.toleratedDistance;
     } else {
-        return this.enragedToleratedDistance;
+        return this.properties.toleratedDistance.rage;
     }
 };
 
@@ -265,7 +287,6 @@ Student.prototype.findStudentAtFront = function () {
         yDistance = Math.abs(this.students[i].sprite.y - this.sprite.y);
         xDistance = this.students[i].sprite.x - this.sprite.x;
         xDistance *= SpriteGestor.xDirection(this.sprite);
-
 
         // is this a possible obstacle?
         if (this.students[i] != this && yDistance <= 20 &&
@@ -298,12 +319,12 @@ Student.prototype.turnBack = function (student, wall) {
 Student.prototype.climbStair = function (student, stair) {
     this.climbCooldown--;
 
-    if ((this.climbCooldown <= 0 && !this.studentInFront || this.enraged) &&
+    if (this.climbCooldown <= 0 &&(!this.studentInFront || this.enraged) &&
         (this.sprite.body.blocked.left || this.sprite.body.blocked.right)) {
         this.stairCounter++;
-        this.sprite.position.y -= 20;
-        this.sprite.position.x += 10*SpriteGestor.xDirection(this.sprite);
-        this.climbCooldown = 20;
+        this.sprite.position.y -= 17;
+        this.sprite.position.x += 7*SpriteGestor.xDirection(this.sprite);
+        this.climbCooldown = 10;
     }
 
 };
@@ -333,17 +354,18 @@ Student.prototype.getAttention = function () {
 };
 
 Student.prototype.resetPatience = function () {
-    this.patience = Math.round(Math.random() * (600 - 50) + 50);
+    this.patience = this.randomProperty(this.properties.patience);
 };
 
 Student.prototype.enrage = function () {
     this.head.tint = 0xff7777;
     this.resetPatience();
     this.enraged = true;
-    this.speed = this.rageSpeed;
 };
 
 Student.prototype.update = function () {
+    SpriteGestor.coherentlyScale(this.sprite);
+
     if (this.patience === 0) {
         this.enrage();
     }
@@ -353,8 +375,34 @@ Student.prototype.update = function () {
         } else {
             var building = this.level.building;
             this.collisionsUpdate();
-            SpriteGestor.coherentlyScale(this.sprite);
 
+            if (this.enraged === true) {
+                this.rage();
+            } else {
+                // checking for attention
+                for (i=this.offices.length-1; i>=0; i--) {
+                    game.physics.arcade.collide(this.sprite,
+                                                this.offices[i].office,
+                                                this.officeCollision, null, this);
+                }
+
+                // walk, get attention or queue up?
+                if (this.studentInFront) {
+                    if (this.studentInFront.sprite.body.velocity.x == 0) {
+                        this.patience--;
+                    }
+                    this.stand();
+                    this.waitDelay = this.randomProperty(this.properties.waitDelay);
+                } else if (this.atCounter && this.office.alive) {
+                    this.stand();
+                    this.getAttention();
+                } else if (this.waitDelay === 0) {
+                    this.walk();
+                } else {
+                    this.waitDelay--;
+                    this.stand();
+                }
+            }
 
             if (this.goUpstairs) {
                 game.physics.arcade.collide(this.sprite, building.stairs,

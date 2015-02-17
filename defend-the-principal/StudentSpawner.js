@@ -8,10 +8,8 @@ var StudentSpawner = function (posX, posY, students, level, offices, officeGener
     this.spawnX = posX;
     this.spawnY = posY;
 
-    this.maxTime = 600;
-    this.minTime = 400;
-    this.minTimeProblem = 100;
-    this.maxTimeProblem = 300;
+    this.maxTime = 100; // 600
+    this.minTime = 0; // 400
 
     this.time = 0;
 
@@ -21,9 +19,6 @@ var StudentSpawner = function (posX, posY, students, level, offices, officeGener
 StudentSpawner.prototype.spawn = function () {
     var student = new Student(this.level, this.offices, this.students);
     student.spawn(this.spawnX, this.spawnY);
-    student.problem = Math.round(Math.random() * (this.maxTimeProblem -
-                                                  this.minTimeProblem) +
-                                 this.minTimeProblem);
     this.students.push(student);
 };
 
@@ -53,10 +48,10 @@ StudentSpawner.prototype.update = function () {
         this.maxTime *= .8;
         this.minTime *= .8;
 
-        this.minTimeProblem *= 1.2;
-        this.maxTimeProblem *= 1.2;
+        Student.prototype.properties.problem.min *= 1.2;
+        Student.prototype.properties.problem.max *= 1.2;
+
         this.officeGenerator.totalSpawnCooldown *= .95;
-        console.log(this.officeGenerator.totalSpawnCooldown);
     }
 
     if (this.spawnCooldown <= 0) {

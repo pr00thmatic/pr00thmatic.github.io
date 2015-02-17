@@ -6,7 +6,7 @@ var Office = function (level, type) {
     // properties
     this.flipCooldown = 30;
     this.flipCounter = 0;
-    this.hp = this.totalHp = 600;
+    this.hp = this.totalHp = 1200000;
     this.totalLives = 3;
     this.lives = [];
 
@@ -74,6 +74,13 @@ Office.prototype.updateFlip = function () {
         this.flipCounter = this.flipCooldown;
         SpriteGestor.flipX(this.officeMan);
     }
+};
+
+Office.prototype.getStudentAtCounter = function () {
+    if (this.officeMan.animations.currentAnim.name == 'attend') {
+        return this.student;
+    }
+    return null;
 };
 
 Office.prototype.giveAttention = function (student) {
