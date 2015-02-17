@@ -58,8 +58,10 @@ var mainState = ( function () {
     };
 
     var bug = function (student, principal) {
-        this.hp--;
-        student.goAway();
+        if (student.alpha === 1) {
+            this.hp--;
+            student.goAway();
+        }
     };
 
     var gameOver = function () {
