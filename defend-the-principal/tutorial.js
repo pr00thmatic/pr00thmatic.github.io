@@ -10,7 +10,7 @@ var tutorial = ( function () {
         tutorial = game.add.sprite(0,0, 'tutorial');
         tutorial.scale.set(4,4);
         tutorial.animations.add('teach', [0,1,2,3]);
-        tutorial.animations.play('teach', 0.12, false, true);
+        tutorial.animations.play('teach', 0.15, false, true);
     }
 
     var update = function () {
