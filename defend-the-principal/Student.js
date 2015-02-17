@@ -3,7 +3,8 @@ var Student = function (level, offices, students) {
     max,
     FEMALE = 1,
     MALE = 0,
-    quantityBodyParts;
+    quantityBodyParts,
+    dad = this;
 
     this.color = Math.round(Math.random() * (this.colors.length - 0) + 0);
     this.color = this.colors[this.color];
@@ -15,12 +16,13 @@ var Student = function (level, offices, students) {
     // properties
     this.enraged = false;
     this.goUpstairs = false;
-    this.speed = 100;
     this.stairCounter = 0;
     this.climbCooldown = 0;
     this.problem = Math.round(Math.random() * (150 - 300) + 300);;
     this.enragedToleratedDistance = 50;
     this.toleratedDistance = Math.round(Math.random() * (30 - 23) + 23);;
+    this.speed = this.calmSpeed = 40;
+    this.rageSpeed = 80;
     /*
      * when a student started to walk inmediatly after the student in
      * front started to walk, the student behind would stop on little
@@ -60,6 +62,10 @@ var Student = function (level, offices, students) {
     this.sprite.anchor.set(.5,0);
     this.hands.bringToTop();
     this.sprite.kill();
+
+    this.sprite.goAway = function () {
+        dad.goAway();
+    }
 };
 
 // singleton, i guess...
@@ -189,6 +195,9 @@ Student.prototype.rage = function () {
 Student.prototype.calmDown = function () {
     this.enraged = false;
     this.head.tint = 0xffffff;
+    this.resetPatience();
+    this.speed = this.calmSpeed
+    this.waitDelay = 0;
 };
 
 Student.prototype.collisionsUpdate = function () {
@@ -273,10 +282,7 @@ Student.prototype.findStudentAtFront = function () {
             if (xDistance <= this.getToleratedDistance() && xDistance > 0) {
                 return this.students[i];
             }
-
         }
-
-
     }
 
     return false;
@@ -292,10 +298,11 @@ Student.prototype.turnBack = function (student, wall) {
 Student.prototype.climbStair = function (student, stair) {
     this.climbCooldown--;
 
-    if (this.climbCooldown <= 0 &&
+    if ((this.climbCooldown <= 0 && !this.studentInFront || this.enraged) &&
         (this.sprite.body.blocked.left || this.sprite.body.blocked.right)) {
         this.stairCounter++;
         this.sprite.position.y -= 20;
+        this.sprite.position.x += 10*SpriteGestor.xDirection(this.sprite);
         this.climbCooldown = 20;
     }
 
@@ -333,6 +340,7 @@ Student.prototype.enrage = function () {
     this.head.tint = 0xff7777;
     this.resetPatience();
     this.enraged = true;
+    this.speed = this.rageSpeed;
 };
 
 Student.prototype.update = function () {
@@ -340,7 +348,7 @@ Student.prototype.update = function () {
         this.enrage();
     }
     if (this.sprite.alive) {
-        if (this.problem <= 0) {
+        if (this.problem <= 0 || this.sprite.alpha < 1) {
             this.goAway();
         } else {
             var building = this.level.building;

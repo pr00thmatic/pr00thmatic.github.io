@@ -26,33 +26,56 @@ var mainState = ( function () {
                                            this.students, this, this.offices );
 
         this.principal = game.add.sprite(16, 16, 'principal');
+        game.physics.arcade.enable(this.principal);
+        this.principal.body.immovable = true;
 
         this.offices.push(new Office(this, 'kardex'));
-        // offices[0].spawn(21*16 - 40, 31*16 - 68);
-        this.offices[0].spawn(21*16-40, 37*16-68);
+        this.offices[0].spawn(21*16 - 40, 31*16 - 68);
+        // this.offices[0].spawn(21*16-40, 37*16-68);
         this.offices[0].setHp(1200);
+        this.officeSpawner = new OfficeGenerator(this.offices);
     }
 
     var update = function () {
         var i;
         this.spawner.update();
 
+        this.officeSpawner.update();
+
         for (i = this.students.length - 1; i >= 0; i--) {
             this.students[i].update();
             this.students[i].sprite.bringToTop();
+            game.physics.arcade.collide(this.students[i].sprite, this.principal,
+                                        this.bug, null, this);
         }
 
         for (i = this.offices.length - 1; i >= 0; i--) {
             this.offices[i].update();
         }
 
+        if (this.hp === 0) {
+            this.gameOver();
+        }
+
+    };
+
+    var bug = function (student, principal) {
+        this.hp--;
+        student.goAway();
+    };
+
+    var gameOver = function () {
+        alert('game over :(');
     };
 
     return {
         preload : preload,
         create : create,
         update : update,
-        globalScale : 2
+        globalScale : 2,
+        hp : 100,
+        bug : bug,
+        gameOver : gameOver
     };
 
 })();
