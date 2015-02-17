@@ -5,6 +5,7 @@ var mainState = ( function () {
         game.load.spritesheet('office', 'assets/office.png', 40, 68);
         game.load.spritesheet('oficinista', 'assets/kardex.png', 16, 26);
         game.load.spritesheet('life', 'assets/life.png', 11, 11);
+        game.load.spritesheet('tutorial', 'assets/tutorial.png', 200, 160);
 
         game.load.tilemap('building', 'assets/map.json',
                           null, Phaser.Tilemap.TILED_JSON);
@@ -27,12 +28,7 @@ var mainState = ( function () {
         game.physics.arcade.enable(this.principal);
         this.principal.body.immovable = true;
 
-        this.offices.push(new Office(this, 'kardex'));
-        this.offices[0].spawn(21*16 - 40, 31*16 - 68);
-        // this.offices[0].spawn(21*16-40, 37*16-68);
-        this.offices[0].setHp(1200);
         this.officeSpawner = new OfficeGenerator(this.offices, this);
-
         this.spawner = new StudentSpawner( 2*16, 34*16,
                                            this.students, this, this.offices,
                                            this.officeSpawner );
@@ -67,7 +63,7 @@ var mainState = ( function () {
     };
 
     var gameOver = function () {
-        alert('game over :(');
+        game.state.start('gameOver');
     };
 
     return {
@@ -75,13 +71,11 @@ var mainState = ( function () {
         create : create,
         update : update,
         globalScale : 2,
-        hp : 100,
+        hp : 3,
         bug : bug,
         gameOver : gameOver
     };
 
 })();
 
-var game = new Phaser.Game(800, 640, Phaser.AUTO, 'game');
 game.state.add('main', mainState);
-game.state.start('main');

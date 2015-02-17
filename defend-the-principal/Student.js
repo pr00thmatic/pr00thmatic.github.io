@@ -69,7 +69,7 @@ var Student = function (level, offices, students) {
 // singleton, i guess o_O
 Student.prototype.properties = {
     patience: {
-        max: 1200,
+        max: 900,
         min: 500
     },
 
@@ -80,7 +80,7 @@ Student.prototype.properties = {
     },
 
     speed: {
-        normal: 50,
+        normal: 60,
         rage: 90
     },
 

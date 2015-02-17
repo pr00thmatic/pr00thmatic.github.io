@@ -1,3 +1,5 @@
+var game = new Phaser.Game(800, 640, Phaser.AUTO, 'game');
+
 var OfficeGenerator = function (offices, level) {
     this.level = level;
     this.offices = offices;
