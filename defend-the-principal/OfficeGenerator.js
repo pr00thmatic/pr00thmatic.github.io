@@ -14,19 +14,20 @@ var OfficeGenerator = function (offices, level) {
 };
 
 OfficeGenerator.prototype.update = function () {
-    var x = game.input.x,
-    y = game.input.y,
+    var x = game.input.mousePointer.x,
+    y = game.input.mousePointer.y,
     xMin = 13*16,
     xMax = 34*16;
 
-    if (this.spawnCooldown == 0) {
-        if (x > xMin && x < xMax) {
-            x = Math.round(x/16)*16;
-            y = Math.round(y/(6*16)) * (6*16) - 16;
+    x = Math.round(x/16)*16;
+    y = Math.round(y/(6*16)) * (6*16) - 16;
+    this.demo.reset(x, y);
 
-            this.demo.reset(x, y);
-        } else {
-            this.demo.kill();
+    this.demo.tint = 0xFF0000;
+    if (this.spawnCooldown <= 0) {
+        console.log('ready');
+        if (x > xMin && x < xMax && this.emptySpot()) {
+            this.demo.tint = 0x00FF00;
         }
     } else {
         this.spawnCooldown--;
@@ -37,12 +38,13 @@ OfficeGenerator.prototype.emptySpot = function () {
     var i, dX, dY;
 
     for (i=this.offices.length-1; i>=0; i--) {
-        dX = Math.abs(this.offices[i].office.x - this.demo.x);
-        dY = Math.abs(this.offices[i].office.y - this.demo.y);
+        if (this.offices[i].office.alive) {
+            dX = Math.abs(this.offices[i].office.x - this.demo.x + 20);
+            dY = Math.abs(this.offices[i].office.y - this.demo.y);
 
-        console.log(dX, dY);
-        if (dX <= 80 && dY <= 40) {
-            return false;
+            if (dX <= 60 && dY <= 40) {
+                return false;
+            }
         }
     }
 
@@ -51,15 +53,20 @@ OfficeGenerator.prototype.emptySpot = function () {
 
 OfficeGenerator.prototype.spawn = function () {
     var office,
-    x,
-    y;
+    x = game.input.mousePointer.x,
+    y = game.input.mousePointer.y;
 
-    console.log('ding');
-    if (this.spawnCooldown == 0 && this.emptySpot()) {
+    x = Math.round(x/16)*16;
+    y = Math.round(y/(6*16)) * (6*16) - 16;
+
+    if (this.spawnCooldown <= 0 && this.demo.tint == 0x00FF00) {
+        // this.emptySpot()) {
         this.spawnCooldown = this.totalSpawnCooldown;
         office = new Office(this.level, 'kardex');
-        x = this.demo.x - this.demo.width * this.demo.anchor.x;
-        y = this.demo.y - this.demo.height * this.demo.anchor.y;
+        x -= this.demo.width * this.demo.anchor.x;
+        y -= this.demo.height * this.demo.anchor.y;
+        // x = this.demo.x - this.demo.width * this.demo.anchor.x;
+        // y = this.demo.y - this.demo.height * this.demo.anchor.y;
         office.spawn(x, y);
         this.offices.push(office);
     }

@@ -1,4 +1,6 @@
-var StudentSpawner = function (posX, posY, students, level, offices) {
+var StudentSpawner = function (posX, posY, students, level, offices, officeGenerator) {
+    this.officeGenerator = officeGenerator;
+    this.lvlUpFlag = 500;
     this.level = level;
     this.offices = offices;
 
@@ -6,8 +8,12 @@ var StudentSpawner = function (posX, posY, students, level, offices) {
     this.spawnX = posX;
     this.spawnY = posY;
 
-    this.maxTime = 50;
-    this.minTime = 0;
+    this.maxTime = 600;
+    this.minTime = 400;
+    this.minTimeProblem = 100;
+    this.maxTimeProblem = 300;
+
+    this.time = 0;
 
     this.spawnCooldown = 0;
 };
@@ -15,6 +21,9 @@ var StudentSpawner = function (posX, posY, students, level, offices) {
 StudentSpawner.prototype.spawn = function () {
     var student = new Student(this.level, this.offices, this.students);
     student.spawn(this.spawnX, this.spawnY);
+    student.problem = Math.round(Math.random() * (this.maxTimeProblem -
+                                                  this.minTimeProblem) +
+                                 this.minTimeProblem);
     this.students.push(student);
 };
 
@@ -36,6 +45,20 @@ StudentSpawner.prototype.isSpawnPointBlocked = function () {
 };
 
 StudentSpawner.prototype.update = function () {
+    this.time++;
+    if (this.time == this.lvlUpFlag) {
+        console.log('ding! ' + this.time);
+        this.lvlUpFlag *= 2;
+
+        this.maxTime *= .8;
+        this.minTime *= .8;
+
+        this.minTimeProblem *= 1.2;
+        this.maxTimeProblem *= 1.2;
+        this.officeGenerator.totalSpawnCooldown *= .95;
+        console.log(this.officeGenerator.totalSpawnCooldown);
+    }
+
     if (this.spawnCooldown <= 0) {
         if (!this.isSpawnPointBlocked()) {
             // a random number between [this.maxTime, this.minTime]

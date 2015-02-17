@@ -22,8 +22,6 @@ var mainState = ( function () {
         this.building = new Building();
 
         this.students = [];
-        this.spawner = new StudentSpawner( 2*16, 34*16,
-                                           this.students, this, this.offices );
 
         this.principal = game.add.sprite(16, 16, 'principal');
         game.physics.arcade.enable(this.principal);
@@ -34,6 +32,10 @@ var mainState = ( function () {
         // this.offices[0].spawn(21*16-40, 37*16-68);
         this.offices[0].setHp(1200);
         this.officeSpawner = new OfficeGenerator(this.offices, this);
+
+        this.spawner = new StudentSpawner( 2*16, 34*16,
+                                           this.students, this, this.offices,
+                                           this.officeSpawner );
     }
 
     var update = function () {

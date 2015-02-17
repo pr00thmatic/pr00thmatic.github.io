@@ -21,8 +21,8 @@ var Student = function (level, offices, students) {
     this.problem = Math.round(Math.random() * (150 - 300) + 300);;
     this.enragedToleratedDistance = 50;
     this.toleratedDistance = Math.round(Math.random() * (30 - 23) + 23);;
-    this.speed = this.calmSpeed = 40;
-    this.rageSpeed = 80;
+    this.speed = this.calmSpeed = 50;
+    this.rageSpeed = 90;
     /*
      * when a student started to walk inmediatly after the student in
      * front started to walk, the student behind would stop on little
