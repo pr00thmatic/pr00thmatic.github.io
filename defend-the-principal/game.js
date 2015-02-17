@@ -33,7 +33,7 @@ var mainState = ( function () {
         this.offices[0].spawn(21*16 - 40, 31*16 - 68);
         // this.offices[0].spawn(21*16-40, 37*16-68);
         this.offices[0].setHp(1200);
-        this.officeSpawner = new OfficeGenerator(this.offices);
+        this.officeSpawner = new OfficeGenerator(this.offices, this);
     }
 
     var update = function () {
