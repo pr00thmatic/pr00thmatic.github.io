@@ -6,7 +6,7 @@ var Office = function (level, type) {
     // properties
     this.flipCooldown = 30;
     this.flipCounter = 0;
-    this.hp = this.totalHp = 1200000;
+    this.hp = this.totalHp = 600;
     this.totalLives = 3;
     this.lives = [];
 

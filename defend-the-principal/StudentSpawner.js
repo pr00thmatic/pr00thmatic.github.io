@@ -8,8 +8,8 @@ var StudentSpawner = function (posX, posY, students, level, offices, officeGener
     this.spawnX = posX;
     this.spawnY = posY;
 
-    this.maxTime = 100; // 600
-    this.minTime = 0; // 400
+    this.maxTime = 600; // 600
+    this.minTime = 400; // 400
 
     this.time = 0;
 
