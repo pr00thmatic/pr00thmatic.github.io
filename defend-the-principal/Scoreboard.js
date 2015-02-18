@@ -18,9 +18,13 @@ Scoreboard.prototype.update = function () {
     this.time = Math.round(this.studentSpawner.time / 100);
     this.time *= this.studentSpawner.currentLvl;
 
-    this.sprite.text = text + ' ' + (this.time + this.problemCounter);
+    this.sprite.text = text + ' ' + this.getScore();
 };
 
 Scoreboard.prototype.problemSolved = function (problemTime) {
     this.problemCounter += Math.round(problemTime/100);
+};
+
+Scoreboard.prototype.getScore = function () {
+    return this.time + this.problemCounter;
 };

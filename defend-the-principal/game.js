@@ -1,4 +1,5 @@
 var mainState = ( function () {
+    var hp = 10;
 
     var preload = function () {
         game.load.spritesheet('student', 'assets/student.png', 12, 26);
@@ -54,7 +55,7 @@ var mainState = ( function () {
             this.offices[i].update();
         }
 
-        if (this.hp === 0) {
+        if (hp === 0) {
             this.gameOver();
         }
 
@@ -62,12 +63,13 @@ var mainState = ( function () {
 
     var bug = function (student, principal) {
         if (student.alpha === 1) {
-            this.hp--;
+            hp--;
             student.goAway();
         }
     };
 
-    var gameOver = function () {
+    var endGame = function () {
+        gameOver.setScore(this.scoreboard);
         game.state.start('gameOver');
     };
 
@@ -76,9 +78,8 @@ var mainState = ( function () {
         create : create,
         update : update,
         globalScale : 2,
-        hp : 10,
         bug : bug,
-        gameOver : gameOver
+        gameOver : endGame
     };
 
 })();
