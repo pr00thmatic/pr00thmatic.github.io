@@ -1,6 +1,8 @@
-var StudentSpawner = function (posX, posY, students, level, offices, officeGenerator) {
+var StudentSpawner = function (posX, posY, students, level, offices, officeGenerator, scoreboard) {
+    this.scoreboard = scoreboard
     this.officeGenerator = officeGenerator;
     this.lvlUpFlag = 500;
+    this.currentLvl = 1;
     this.level = level;
     this.offices = offices;
 
@@ -17,7 +19,7 @@ var StudentSpawner = function (posX, posY, students, level, offices, officeGener
 };
 
 StudentSpawner.prototype.spawn = function () {
-    var student = new Student(this.level, this.offices, this.students);
+    var student = new Student(this.level, this.offices, this.students, this.scoreboard);
     student.spawn(this.spawnX, this.spawnY);
     this.students.push(student);
 };
@@ -44,6 +46,7 @@ StudentSpawner.prototype.update = function () {
     if (this.time == this.lvlUpFlag) {
         console.log('ding! ' + this.time);
         this.lvlUpFlag *= 2;
+        this.currentLvl++;
 
         this.maxTime *= .8;
         this.minTime *= .8;

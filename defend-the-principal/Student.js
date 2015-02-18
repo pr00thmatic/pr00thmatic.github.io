@@ -1,4 +1,4 @@
-var Student = function (level, offices, students) {
+var Student = function (level, offices, students, scoreboard) {
     var i,
     max,
     FEMALE = 1,
@@ -6,6 +6,8 @@ var Student = function (level, offices, students) {
     quantityBodyParts,
     dad = this;
 
+    this.scoreboard = scoreboard;
+    console.log(this.scoreboard);
     this.color = this.randomColor();
 
     this.level = level;
@@ -16,7 +18,8 @@ var Student = function (level, offices, students) {
     this.enraged = false;
     this.goUpstairs = false;
     this.stairCounter = 0;
-    this.problem = this.randomProperty(this.properties.problem);
+    this.problemRecord = this.problem =
+        this.randomProperty(this.properties.problem);
     this.toleratedDistance = this.randomProperty(this.properties.toleratedDistance);
     this.patience = this.properties.patience.max;
     this.climbCooldown = 0;
@@ -348,6 +351,7 @@ Student.prototype.getAttention = function () {
     this.problem--;
 
     if (this.problem <= 0) {
+        this.scoreboard.problemSolved(this.problemRecord);
         this.goAway();
         this.atCounter = false;
     }

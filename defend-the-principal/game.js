@@ -32,12 +32,15 @@ var mainState = ( function () {
         this.spawner = new StudentSpawner( 2*16, 34*16,
                                            this.students, this, this.offices,
                                            this.officeSpawner );
+        this.scoreboard = new Scoreboard(this.spawner);
+        this.spawner.scoreboard = this.scoreboard;
     }
 
     var update = function () {
         var i;
-        this.spawner.update();
 
+        this.scoreboard.update();
+        this.spawner.update();
         this.officeSpawner.update();
 
         for (i = this.students.length - 1; i >= 0; i--) {
