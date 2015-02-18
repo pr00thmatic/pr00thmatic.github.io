@@ -73,7 +73,7 @@ var mainState = ( function () {
         create : create,
         update : update,
         globalScale : 2,
-        hp : 3,
+        hp : 10,
         bug : bug,
         gameOver : gameOver
     };
