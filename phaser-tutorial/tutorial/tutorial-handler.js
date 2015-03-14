@@ -28,6 +28,6 @@ angular.module('tutorialNave', [])
             }
         };
 
-        $scope.version.stepTo(1);
+        $scope.version.stepTo(0);
 
     });
