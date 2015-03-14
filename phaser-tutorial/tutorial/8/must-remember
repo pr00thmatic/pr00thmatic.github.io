@@ -1,0 +1,12 @@
+cargar imágenes, sonidos y mapas:
+  game.load
+  para cargar sprites:
+    game.load.spritesheet('nombre', 'archivo', 'tamaño-x', 'tamaño-y')
+
+teclado
+  x = game.input.keyboard.createCursorKeys()
+  x.nuevaTecla = game.input.keyboard.addKey(Phaser.Keyboard.NUEVA_TECLA)
+  x.tecla.isDown
+
+física:
+  game.physics.startSystem(Phaser.Physics.ARCADE);

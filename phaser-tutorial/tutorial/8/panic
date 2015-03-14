@@ -1,0 +1,14 @@
+start the physics system.
+explain them about the three different physics system of phaser
+show them body only exists when you enable physics for personaje.
+enable physics for personaje
+
+show them body.velocity
+show them how to move the ship left and right
+ask them to put upwards movementn
+
+show them body.acceleration:
+add gravity
+
+it would be awesome to play with the acceleration instead of the velocity
+warn them about removing the body.velocity.x = 0

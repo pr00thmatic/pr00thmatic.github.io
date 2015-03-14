@@ -1,0 +1,10 @@
+Capas (layers)
+  el nombre de la capa en el código es el mismo que el nombre de la capa en tiled?
+
+Tilesets
+  el nombre del tileset en tiled es el mismo que el nombre de la imagen que cargaste en el código mediante game.load.image?
+
+Física y colisiones
+  la física de la capa ha sido activada?
+  activaste las colisiones para algunos tiles?
+  estás seguro de que los índices del conjunto de tiles para los que activaste las colisiones es correcto?

@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>1er Paso: Armando el esqueleto</h1>
+  <h2>El HTML <code>./{{version.directory}}/index.html</code></h2>
+  <p>Phaser es una librería para hacer videojuegos para jugar en el navegador. Como el juego que harás aparecerá en el navegador, necesitamos tener un "recipiente" en dónde poner el juego. Este recipiente es una página html.</p>
+
+  <p>Pero primero necesitarás descargar phaser! <a href="http://phaser.io/download/stable">http://phaser.io/download/stable</a> (solo tienes que hacer click en el botón que dice "min.js").</p>
+
+  <p><img src="img/download-phaser.png" class="img-rounded img-responsive" /></p>
+
+  <p>Esta librería <code>phaser.min.js</code>, debes cargarla en tu página web, antes del script que contiene tu juego.</p>
+
+  <p>Dentro del body del html, debes incluir un div con un id. No olvides el nombre del id.</p>
+
+  <h2>El script con el código de tu juego <code>./{{version.directory}}/game.js</code></h2>
+
+  <p>Ya tienes un recipiente! ahora necesitas un archivo <code>.js</code> con el código que define la lógica de tu juego. Ese archivo también tiene una estructura inicial importante.</p>
+
+  <p>Primero, necesitarás indicarle a phaser, en cuál div debe "dibujar" el juego. Esto se hace mediante <code>new Phaser.game(...)</code>. <code>game</code> es el que dibuja el juego, y se encarga de ejecutar toda la lógica.</p>
+
+  <p>Al crear el juego, le estamos enviando 4 parámetros: el primero indica el ancho del juego, el segundo indica el alto del juego, y el último, el id del div en el que phaser debe dibujar el juego.</p>
+
+  <p>Phaser se maneja mediante <mark>niveles</mark>. Y es recomendable que todo nivel tenga, al menos, estos tres métodos: <code>preload</code>, <code>create</code> y <code>update</code>.</p>
+
+  <p>Pero, por hora, la variable <code>level1</code>, solo es una variable cualquiera, porque no le hemos indicado a <code>game</code>, que <code>level1</code> es un nivel, ni tampoco le hemos dicho cuándo debería comenzar.</p>
+
+  <p>Lo que hace cada uno de estos métodos, y cómo agregar el nivel al juego, lo veremos en la siguiente versión ;)</p>
+
+</div>

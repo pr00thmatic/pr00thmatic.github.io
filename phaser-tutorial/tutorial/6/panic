@@ -1,0 +1,10 @@
+add the fly animation and play it. (Explain the frame vector)
+add the open animation and play it. Explain them about the false/true loop
+ask them to put a close animation and play it.
+
+play with the animations on the update function. Warning about playing two different animations on the update
+
+explain them about the currentAnim.
+  currentAnim.name on create
+  currentAnim.isPlaying on update
+  js hack: cacheing the variable

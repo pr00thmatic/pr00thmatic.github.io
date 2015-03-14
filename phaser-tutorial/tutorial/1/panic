@@ -1,0 +1,7 @@
+html skeleton
+phaser.min.js goes with phaser.map
+game (show documentation)
+level
+   preload
+   create
+   update

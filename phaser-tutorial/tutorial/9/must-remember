@@ -1,0 +1,27 @@
+cargar imágenes, sonidos y mapas:
+  game.load
+  para cargar sprites:
+    game.load.spritesheet('nombre', 'archivo', 'tamaño-x', 'tamaño-y')
+
+teclado
+  x = game.input.keyboard.createCursorKeys()
+  x.nuevaTecla = game.input.keyboard.addKey(Phaser.Keyboard.NUEVA_TECLA)
+  x.tecla.isDown
+
+física:
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+
+tilemap:
+  cargar recursos del mapa
+    game.load.tilemap('nombre', 'archivo', null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('tileset', 'archivo');
+  crear el mapa
+    mapa = game.add.tilemap('nombre', ancho_tile, alto_tile, ancho_mapa, alto_mapa);
+    mapa.addTilesetImage('tileset');
+  crear una capa (layer)
+    capa = mapa.createLayer('layer_name');
+    activar colisiones para la capa
+      game.physics.arcade.enable(capa);
+      decidir qué tiles van a colisionar:
+        mapa.setCollisionByExclusion([indices_tiles_sin_colision], true, capa);
+        mapa.setCollision([indices_tiles_con_colision], true, capa);

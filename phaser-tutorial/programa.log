@@ -1,0 +1,81 @@
+Introducción (3 a 6 minutos)
+  ¿por qué hacer juegos?
+  gamergate
+  el futuro del gamming
+  tecnologías
+    Unity
+    OpenGL
+    Web
+      Phaser!
+
+¿Qué vamos a usar? (3 a 6 minutos)
+  Phaser
+  Tiled (para hacer los mapas)
+  JavaScript
+  servidor LAMP
+
+Lazy introduction to JavaScript (5 a 10 minutos)
+  objetos y la diferencia con Java
+  creando objetos
+  comportamientos inesperados (en papelógrafos a lo largo del módulo)
+
+Lazy introduction al diseño (opcional) (5 a 10 minutos)
+  spritesheet
+  inkscape
+  gimp
+
+// de 11 a 32 minutos hasta aquí
+
+Haciendo el juego
+  esqueleto de HTML (3 minutos)
+  game (2 a 5 minutos)
+
+  level (8 a 14 minutos)
+    preload
+    create
+    update
+
+  creando el mapa (8 a 12 minutos)
+    tilesets
+    usando tiled
+    añadiéndolo al juego
+
+  creando al astronauta (8 a 12 minutos)
+    spritesheet
+    añadiéndolo al juego
+    animaciones
+
+    comportamiento (14 a 20 minutos)
+      phaser physics
+        posición
+        velocidad
+        aceleración
+      phaser keyboard (controlando al astronauta con el teclado)
+
+// son 30 a 52  minutos más, hasta aquí.
+
+  ========== si da tiempo ==========
+
+  creando enemigos (10 a 15 minutos)
+    spritesheet
+    animaciones
+    comportamiento
+
+  ========== y si aún queda tiempo ==========
+
+  Interactuando con el mapa (10 a 15 minutos)
+    espinas
+    puertas y llaves
+
+
+  pixel art (2 a 4 minutos)
+    spritesheet y gimp
+    this.game.stage.smoothed = false;
+
+// y son 22 a 34 minutos extra hasta aquí
+
+en total:
+mínimo: (+ 11 30 22) = 63 minutos => 1hr + 15 minutos (por errores de tiempo)
+máximo: (+ 32 52 34) = 118 minutos => 2hr + 30 minutos (por errores de tiempo)
+
+podría poner todo el contenido en 45 minutos, pero habría que reducir el tiempo de los demás temas, y tal vez no se entienda bien... además habría que quitar los mapas... y los mapas son divertidos :( aún así, si hay que hacerlo en 45 sí o sí, puedo adaptarlo todo, pero tienen que avisarme con tiempo @.@

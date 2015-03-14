@@ -1,0 +1,9 @@
+show them tiled
+preload the resources of the map.
+create the map (nothing happened)
+create the sky layer (the ship is behind)
+bringToTop
+activar colisiones para el suelo
+  game.physics.arcade.collide
+  mapa.setCollisionByExclusion
+    colisiones solo para algunos ???
