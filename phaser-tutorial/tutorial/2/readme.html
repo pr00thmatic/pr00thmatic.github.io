@@ -1,15 +1,19 @@
 <p>Cada nivel, representa un <code>game.stage</code> y se manejan mediante <code>game.state</code>. Un nivel, puede ser una variable cualquiera! pero <code>game</code> espera que esta variable <mark>tenga los tres métodos</mark></p>
 
-<p>En la línea <kbd>28, 29</kbd> de <code>./{{version.directory}}/game.js</code>, es donde le indicamos a <code>game</code>, que <code>level1</code> es el primer nivel del juego.</p>
+<p>En la línea <kbd>l.28</kbd> y <kbd>l.29</kbd> de <code>./{{version.directory}}/game.js</code>, es donde le indicamos a <code>game</code>, que <code>level1</code> es el primer nivel del juego.</p>
 
 <p>Cada uno de los métodos de <code>level1</code>, tienen su función:</p>
 
-<h2><code>preload</code></h2>
+<h2><code>preload</code> <kbd>l.4</kbd></h2>
 
 En el <code>preload</code>, se cargan todos los recursos que vas a usar en el juego, y se ejecuta al principio de todo, una sola vez.
 
-<h2><code>create</code></h2>
+<h2><code>create</code> <kbd>l.9</kbd></h2>
 
 El <code>create</code> se ejecuta una sola vez, luego de que todos los recursos del preload hayan sido cargados. Es ideal para crear al personaje principal,
 
-<h2><code>update</code></h2>
+<h2><code>update</code> <kbd>l.20</kbd></h2>
+
+Este método se ejecuta una y otra vez en un ciclo infinito, después de que el create y el preload se haya ejecutado.
+
+Ideal para programar el comportamiento de los personajes!

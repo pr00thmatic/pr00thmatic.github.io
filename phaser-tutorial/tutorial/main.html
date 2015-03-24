@@ -18,45 +18,47 @@
   </head>
 
   <body>
-    <!-- header -->
-    <nav>
-      <ul class="pager">
+    <div class="container">
+      <!-- header -->
+      <nav>
+        <ul class="pager">
 
-        <li class="previous"><a ng-click="version.stepTo(version.current-1)">
-            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true">
-            </span>
-        </a></li>
-
-        <li><a>
-            <span class="badge">{{version.current+1}}</span>
-            {{version.frames[version.current].title}}
-        </a></li>
-
-        <li class="next"><a ng-click="version.stepTo(version.current+1)">
-            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
-            </span>
-        </a></li>
-
-      </ul>
-    </nav>
-    <!-- /header -->
-
-    <div data-ng-include="(version.current+1) + '/readme.html'"></div>
-
-    <!-- footer -->
-    <div class="footer navbar navbar-default navbar-static-bottom">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <p class="navbar-text"><span class="glyphicon glyphicon-gift"></span> Compártelo tú también!</p>
-          <li><a ng-href="{{version.directory}}/index.html">
-              <code>{{version.directory}}/index.html</code>
+          <li class="previous"><a ng-click="version.stepTo(version.current-1)">
+              <span class="glyphicon glyphicon-arrow-left" aria-hidden="true">
+              </span>
           </a></li>
-          <li><a ng-href="{{(version.directory)}}/game.js">
-              <code>{{version.directory}}/game.js</code>
+
+          <li><a>
+              <span class="badge">{{version.current+1}}</span>
+              {{version.frames[version.current].title}}
           </a></li>
+
+          <li class="next"><a ng-click="version.stepTo(version.current+1)">
+              <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
+              </span>
+          </a></li>
+
         </ul>
+      </nav>
+      <!-- /header -->
+
+      <div data-ng-include="(version.current+1) + '/readme.html'"></div>
+
+      <!-- footer -->
+      <div class="footer navbar navbar-default navbar-static-bottom">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <p class="navbar-text"><span class="glyphicon glyphicon-gift"></span> Compártelo tú también!</p>
+            <li><a ng-href="{{version.directory}}/index.html">
+                <code>{{version.directory}}/index.html</code>
+            </a></li>
+            <li><a ng-href="{{(version.directory)}}/game.js">
+                <code>{{version.directory}}/game.js</code>
+            </a></li>
+          </ul>
+        </div>
       </div>
+      <!-- /footer -->
     </div>
-    <!-- /footer -->
   </body>
 </html>
