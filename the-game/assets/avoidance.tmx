@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="22" height="18" tilewidth="35" tileheight="35">
+ <tileset firstgid="1" name="tile" tilewidth="35" tileheight="35">
+  <image source="tile.png" width="70" height="35"/>
+ </tileset>
+ <layer name="platforms" width="22" height="18">
+  <data encoding="base64" compression="zlib">
+   eJy9lNsKACAIQ+3/fzp6C9lqajbwoQvHNaFhZqOpdvl1Vq84KhftRzywXNTM1Hwz3pjXTi7KAd09eWHciB/UD3FZz8hMFG5FWe7tDWhuValZVdg/uCgrf87WrzP16vrPV02iEwCD
+  </data>
+ </layer>
+ <layer name="exit" width="22" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFTAPtgFEwCkbBKBgCAAAQiAAD
+  </data>
+ </layer>
+</map>

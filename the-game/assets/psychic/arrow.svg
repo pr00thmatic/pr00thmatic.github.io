@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="15.992409"
+   height="40.21875"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="arrow.svg"
+   inkscape:export-filename="/home/vg/Project/teaching/videogame/gdf/the-game/assets/psychic/arrow.png"
+   inkscape:export-xdpi="90.055107"
+   inkscape:export-ydpi="90.055107">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4"
+     inkscape:cx="2.0376641"
+     inkscape:cy="7.4307493"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3874"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.661237,11.397335)">
+    <g
+       id="g3874"
+       transform="matrix(0,-1,1,0,4.8513869,46.133915)"
+       style="fill:#00ffff">
+      <path
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.15859699;stroke-miterlimit:4;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         d="m 56.745318,21.812956 -3.490594,-3.868897 -2.669277,-2.98786 c -0.291192,-0.344998 -0.705626,-0.555861 -1.129309,-0.574589 -0.05698,-0.0033 -0.114123,-0.0033 -0.171108,0 -0.325177,0.03717 -0.639482,0.186022 -0.889759,0.421364 -0.03657,0.04902 -0.07086,0.100201 -0.102664,0.153225 l -1.163532,1.302399 c -0.590319,0.678202 -0.590319,1.888298 0,2.566497 l 1.095089,1.225789 -28.677617,0 -1.642632,0 0,3.677367 1.642632,0 28.540731,0 -0.958203,1.072565 c -0.610492,0.681124 -0.610492,1.923678 0,2.604801 l 1.163532,1.302401 c 0.608498,0.683357 1.718565,0.683357 2.327062,0 l 2.635055,-2.98786 3.490594,-3.907202 z"
+         id="path4192"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
