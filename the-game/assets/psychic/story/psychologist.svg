@@ -354,7 +354,7 @@
        sodipodi:cy="458.88016"
        sodipodi:rx="60.811184"
        sodipodi:ry="42.426407"
-       d="m 323.85492,458.88016 a 60.811184,42.426407 0 1 1 -121.62237,0 60.811184,42.426407 0 1 1 121.62237,0 z"
+       d="m 323.85492,458.88016 c 0,23.43145 -27.2261,42.4264 -60.81119,42.4264 -33.58509,0 -60.81118,-18.99495 -60.81118,-42.4264 0,-23.43146 27.22609,-42.42641 60.81118,-42.42641 33.58509,0 60.81119,18.99495 60.81119,42.42641 z"
        transform="translate(22.627417,437.91853)" />
     <path
        sodipodi:nodetypes="cccccc"
@@ -396,5 +396,49 @@
        transform="matrix(0.98391831,-0.17861902,0,1,0,0)"
        inkscape:transform-center-x="203.64675"
        inkscape:transform-center-y="329.71191" />
+    <text
+       transform="scale(0.9770515,1.0234875)"
+       id="text4710"
+       y="957.36182"
+       x="398.13101"
+       style="font-size:22.38983345000000114px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;text-anchor:start;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Cantarell;-inkscape-font-specification:Cantarell Bold"
+       xml:space="preserve"><tspan
+         id="tspan4712"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke:none"
+         y="957.36182"
+         x="398.13101"
+         sodipodi:role="line">Mi hermana me convenció de ir al psicólogo,</tspan><tspan
+         id="tspan4714"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke:none"
+         y="985.34912"
+         x="398.13101"
+         sodipodi:role="line">no quiero entrar, tengo tanto miedo...</tspan><tspan
+         id="tspan4716"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke:none"
+         y="1013.3364"
+         x="398.13101"
+         sodipodi:role="line">pero lo haré por ella! por verla sonreír de nuevo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.38983345px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Cantarell;-inkscape-font-specification:Cantarell Bold"
+       x="394.03708"
+       y="957.36182"
+       id="text4119"
+       transform="scale(0.9770515,1.0234875)"><tspan
+         sodipodi:role="line"
+         x="394.03708"
+         y="957.36182"
+         style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+         id="tspan4461">Mi hermana me convenció de ir al psicólogo,</tspan><tspan
+         sodipodi:role="line"
+         x="394.03708"
+         y="985.34912"
+         style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+         id="tspan4706">no quiero entrar, tengo tanto miedo...</tspan><tspan
+         sodipodi:role="line"
+         x="394.03708"
+         y="1013.3364"
+         style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+         id="tspan4708">pero lo haré por ella! por verla sonreír de nuevo</tspan></text>
   </g>
 </svg>

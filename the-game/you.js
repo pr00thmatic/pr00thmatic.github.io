@@ -64,7 +64,7 @@ var You = (function () {
       jump : function () {
         if (this.body.blocked.down) {
           this.body.velocity.y = -2 * this.jumpSpeed/3;
-          game.time.events.add(100, this.jumpMore, this);
+          game.time.events.add(50, this.jumpMore, this);
         }
       },
 

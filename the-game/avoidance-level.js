@@ -52,10 +52,20 @@ var avoidanceLevel = (function () {
     create.call(level);
     level.pc.energy = 1;
     level.pc.rangedAttack.arrow.alpha = 0;
+    level.tutorial = Tutorial.create([
+      {
+        text : "",
+        time : 500
+      }, {
+        text : "[Tú]: A veces es muy difícil, pero debo hacerlo... Debo evitar a toda costa que me vean",
+        time : 4000
+      }
+    ]);
   }
 
   return level;
 })();
 
+avoidanceLevel.nextLevel = 'defend0'
 game.state.add('avoidance', avoidanceLevel);
-game.state.start('avoidance');
+// game.state.start('avoidance');
