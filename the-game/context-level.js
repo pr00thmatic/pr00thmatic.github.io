@@ -48,5 +48,6 @@ var contextLevel = (function () {
   return level;
 })();
 
+contextLevel.nextLevel = 'good-ending'
 game.state.add('context-level', contextLevel);
 // game.state.start('context-level');

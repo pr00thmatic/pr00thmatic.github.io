@@ -50,7 +50,9 @@ var game = new Phaser.Game(770, 630, Phaser.AUTO, 'game');
         // game.debug.body(this.pc);
       },
       end : function () {
-        game.state.start(this.nextLevel);
+        if (this.pc.alive) {
+          game.state.start(this.nextLevel);
+        }
       },
       restart : function () {
         console.log('restart!!');

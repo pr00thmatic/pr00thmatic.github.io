@@ -48,5 +48,5 @@ var defend0 = (function () {
   return level;
 })();
 
-defend0.nextLevel = 'good-ending';
+defend0.nextLevel = 'psychic-level';
 game.state.add('defend0', defend0);

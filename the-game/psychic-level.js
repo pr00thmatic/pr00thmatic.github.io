@@ -36,5 +36,6 @@ var PsychicLevel = (function () {
   return level;
 })();
 
-// game.state.add('context-level', contextLevel);
+// PsychicLevel.nextLevel = 'good-ending';
+// game.state.add('psychic-level', PsychicLevel);
 // game.state.start('context-level');

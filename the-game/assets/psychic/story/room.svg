@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="room.svg"
-   inkscape:export-filename="/home/vg/Project/teaching/videogame/gdf/the-game/assets/psychic/story/room.png"
+   inkscape:export-filename="/home/vg/Project/github-site/the-game/assets/psychic/story/room.png"
    inkscape:export-xdpi="90.055107"
    inkscape:export-ydpi="90.055107">
   <defs
@@ -72,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
