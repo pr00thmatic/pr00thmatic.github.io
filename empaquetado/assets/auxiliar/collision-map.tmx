@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="107" height="80" tilewidth="80" tileheight="14">
+ <tileset firstgid="1" name="collision-symbols" tilewidth="80" tileheight="14">
+  <image source="collision-symbols.png" width="80" height="14"/>
+ </tileset>
+ <layer name="bottom-floor" width="107" height="80">
+  <data encoding="base64" compression="zlib">
+   eJztw7EJAAAIA7D6/9Me0UlJIAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAL+OZAAAAANBakEwAbA==
+  </data>
+ </layer>
+ <layer name="top-floor" width="107" height="80">
+  <data encoding="base64" compression="zlib">
+   eJztw7EJAAAIA7D6/9P+0E1JIAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPDReCYAAAAAANBbqRYAbA==
+  </data>
+ </layer>
+</map>

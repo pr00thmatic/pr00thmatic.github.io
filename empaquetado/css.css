@@ -1,0 +1,11 @@
+.shush-black-screen {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 99999;
+}
+.game {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
