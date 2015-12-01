@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="10" tileheight="10">
+ <tileset firstgid="1" name="collision-symbols" tilewidth="10" tileheight="10">
+  <image source="../../map/collision-symbols.png" width="10" height="10"/>
+ </tileset>
+ <layer name="layer" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztz0EKgDAQBEH9/6c9+AKFgQ5UQW4Z2L6ub+6P/0v+3K73HHo3mwq9m02F3s2mQu9mU6F3s6nQu9lU6N1sKvRuNhV6N5sKvZtNhd7NpuJv78kPAACA1wOzDQBj
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,91 @@
+\begin{section}{Antecedentes}
+  \begin{subsection}{Juegos Comerciales}
+    \begin{subsubsection}{Age of Empires (saga)}
+      Es un juego de estrategia en tiempo real, en el que el jugador puede recolectar recursos. Estos recursos son usados para construir edificios que sirven para construir unidades y mejorarlas. El jugador puede armar un ejército e invadir el imperio de otros jugadores, todo esto mientras avanza a través de las edades de la historia.
+      
+      A parte de poder ser jugado en modo de escaramusas, también se puede jugar en modo campaña; en el modo campaña, el jugador es guiado a través de la historia medieval, peleando batallas y conociendo a los personajes más influyentes de esa época. También se muestran ocasionalmente algunos videos que explican el trasfondo de cada misión.
+    \end{subsubsection}
+
+    \begin{subsubsection}{Caesar (saga)}
+      Es un videojuego de simulación de ciudades en el que el jugador construye una ciudad tomando el papel del César en la antigua Roma.
+
+      A diferencia de Age of Empires, el aspecto educativo es muy reducido, sin embargo, la lógica de construcción de ciudades es muy acertada históricamente.
+    \end{subsubsection}
+
+    \begin{subsubsection}{Valiant Hearths}
+      Es un juego de puzzle/aventura basado en cartas enviadas durante “la gran guerra” (WWI). El jugador maneja a varios personajes en el transcurso del juego, entre ellos: Karl, uno de los muchos alemanes deportados de Francia, Karl es separado de su esposa e hijo. El jugador deberá usar sus habilidades para sobrevivir, explorar el área y resolver puzzles, todo esto mientras es parte activa de su entorno, explorando cómo era el mundo durante la gran guerra en 1914.
+
+      El juego se centra más en la vida de las personas durante la gran guerra, y aunque narra parte de la historia mediante textos informativos antes de cada nivel, esta historia no es la parte central de este juego, sino la interacción entre las personas que vivieron dicha guerra, y la forma en la que vivían. \cite{webpage:ubisoft}
+    \end{subsubsection}
+  \end{subsection}
+
+  \begin{subsection}{Juegos \textit{indie}}
+    %% REF
+    Existen varias(Owens y Safley, s.f.)(CommonSense, s.f.) páginas web que contiene una gran colección de videojuegos educativos de historia. Actualmente existen 126 juegos de historia indexados en el portal playing history \footnote{Cantidad consultada el 25 de agosto de 2015}(Owens y Safley, s.f.). 1 Debido a la gran cantidad, solo se tomarán en cuenta algunos de estos videojuegos.
+
+    \begin{subsubsection}{1066: The Game}
+      %% REF
+      Es un juego de estrategia por turnos, cuya jugabilidad se asemeja al estilo de combate del juego Heroes of Might and Magic(Ubisoft, s.f.). El jugador dirige a diferentes batallones en diversas batallas, cada batalla, representa una de las batallas en la que los ingleses lucharon defendiendo su territorio de los enemigos que los asediaban durante 1066. Antes de cada combate, una animación describe
+el contexto histórico de la batalla.
+    \end{subsubsection}
+
+  \end{subsection}
+  \begin{subsection}{Edutainment}
+    %% REF
+    Pese a que a este proyecto le compete, más que nada, el edutainment en los videojuegos, he encontrado información muy valiosa en reseñas sobre todo tipo de edutainment, escritas por una gran comunidad entusiasta (CommonSense, s.f.) del uso de la tecnología en el salón de clases. Pese a que, gran parte de esta información proviene de reseñas sobre plataformas web basadas en texto y foros de debate, estas plataformas contienen ideas que podrían ser incluso más efectivas si se transmitieran explotando la interactividad, la popularidad y la experiencia inmersiva de un videojuego.
+
+    \begin{subsubsection}{Historical Scene Investigation}
+      Es una página web en la que los estudiantes pueden explorar los archivos de varios ``casos históricos'', luego de leer cartas, ver fotografías, y explorar todo tipo de ``evidencias'', deberán responder a varias preguntas planteadas, respecto al contexto, sucesos y modo de vida de la época. 
+
+      Las respuestas a estas preguntas no siempre serán obvias, muchas veces estarán ocultas implícitamente en detalles que podrían pasar desapercibidos por los jugadores. Por esta razón, es necesario que el jugador explore la evidencia, y preste mucha atención a todos los pequeños detalles.(Swan y Hofer, s.f.) 
+
+      Debido a que el jugador concluye la respuesta a las preguntas planteadas, es mucho más probable que el aprendizaje sea significativo.(CommonSense, s.f.)
+    \end{subsubsection}
+
+    \begin{subsubsection}{HistoryPin}
+      Es una aplicación web, parecida a google maps, en la que los usuarios pue- den ``pinnear'' fotografías a un mapa, estos pines son descritos mediante un sistema de crowdsourcing, en el que los usuarios pueden añadir información sobre algún pin en específico, sin importar si la información es histórica o personal.(brendan.knowlton@historypin.org, s.f.)
+    \end{subsubsection}
+
+    \begin{subsubsection}{Idea of America}
+      Es una página web dirigida a alumnos de pregrado. La idea es que los estu- diantes accedan a esta página, para aprender los principios del debate y diálogo, con el fin de aprender historia de una forma más didáctica, y con un enfoque orientado a la crítica y la autocrítica.(history.org, s.f.)
+    \end{subsubsection}    
+  \end{subsection}
+
+  \begin{subsection}{Antecedentes Teóricos}
+    \begin{subsubsection}{Juegos \textit{indie}}
+      Durante la época del nacimiento de la NES, en el año 1983, desarrollar video- juegos era muy difícil, una de las causas, era que la tecnología de almacenamiento de datos no estaba tan avanzada como en la actualidad, así que los lenguajes de programación eran rudimentarios y difíciles de manejar. Los límites para los desarrolladores y diseñadores también eran estrechos, debido a la velocidad de las computadoras de esa época y a las limitantes en el uso de sprites. 
+
+      Pero actualmente, el desarrollo de videojuegos se ha simplificado bastante. 
+
+      En la actualidad, niños de 13 años pueden desarrollar videojuegos sencillo(Meyer, 2013), y a causa de esto ha nacido una nueva industria: la industria de video- juegos indie. 
+
+      Consiste en equipos de desarrollo de videojuegos compuestos por personas que no pertenecen a ninguna corporación ``grande'' como Ubisoft o Microsoft. 
+
+      Estos pequeños equipos de desarrolladores crean pequeños juegos que, pese a que no pueden competir en gráficos y calidad de desarrollo contra corporaciones gigantes especializadas en el desarrollo de videojuegos, muchas veces tienen un gameplay innovador, o conceptos que los lanzan al éxito, como fue el caso de Minecraft de la ex-empresa Mojang, que fue comprada por Microsoft en 2014. 
+
+      Estos pequeños desarrolladores independientes, se hacen llamar a sí mismos: indie game developers, o como abreviatura: indies.
+    \end{subsubsection}
+
+    \begin{subsubsection}{Edutainment}
+      Pese al pesimismo -justificado por investigaciones- que rodea a los video- juegos en los temas de salud, y sobre todo, en los temas de pedagogía, existen investigaciones más optimistas, que afirman que los videojuegos pueden ser usa- dos como un recurso educativo, si se seleccionan de forma adecuada. 
+
+      El término edutainment es un juego de palabras entre education, que significa ``educación'' en inglés, y ``entertainment'' que significa ``entretenimiento'' en inglés. Tal vez el término ``edutrenimiento'' sería una buena traducción. 
+
+      6Se define como edutainment a cualquier contenido o sistema que además de desarrollar alguna habilidad o dejar una enseñanza práctica en sus jugadores, también es divertido. 
+
+      El término también se aplica a cualquier contenido o sistema que no ``haya sido creado'' para educar, así como para cualquiera que no ``haya sido creado'' para entretener, y por lo tanto son entretenidos pero accidentalmente educa- tivos, o son educativos pero accidentalmente entretenidos, o accidentalmente educativos y entretenidos.
+    \end{subsubsection}
+
+    \begin{subsubsection}{Videojuegos y psicología}
+      Existe una gran controversia respecto a los videojuegos, algunos de los con- flictos son: ¿cuánto tiempo debería una persona permanecer frente a una pantalla? Los resultados de una investigación realizada durante el 2012 concluyó que los niños, durante la etapa pre-escolar, permanecían más tiempo del recomendado \footnote{Según recomendaciónes australianas aprobadas por la APA} frente a una pantalla (Hinkley, Salmon, Okely, Crawford, y K., 2012) 
+
+      ¿hasta qué punto es un videojuego lo suficientemente real como para interfe- rir en las decisiones, iniciativas o salud física de una persona? una investigación conducida por Mary E. Ballard y J. Rose Wiest durante el 2006 intenta deter- minar los efectos de jugar Mortal Kombat en las respuestas cardiovasculares en una población masculina (Ballard y Wiest, 1996).
+    \end{subsubsection}
+
+    \begin{subsubsection}{Desarrollo de habilidades}
+      Algunos videojuegos desarrollan habilidades visuales espaciales ya que en muchos se requiere que el jugador rote figuras en su mente (como tétris) e incluso, que memorice el mapa de un lugar, que identifique los puntos cardinales y se dirija a varios puntos, todo esto mientras debe prestar atención a eventos auditivos y permanece bajo cierto estrés, como en el caso de los shooters que tienen una modalidad de multijugador. 
+
+      Quiroga et. al. afirman que es posible medir el factor g, un factor que mide  ́ la inteligencia, mediante juegos comerciales.( Angeles Quiroga y cols., 2015)
+    \end{subsubsection}    
+  \end{subsection}
+\end{section}

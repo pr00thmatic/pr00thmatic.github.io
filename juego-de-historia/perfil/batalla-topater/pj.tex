@@ -1,0 +1,25 @@
+\item \textbf{Mecanismos del jugador}
+  \begin{itemize} % mecanismos
+
+  \item \textbf{Energía} \indispensable (o stámina) Es un atributo del personaje manejado por el jugador.
+    
+    \begin{itemize} % energía
+    \item \indispensable Cada acción cuesta una cantidad de energía.
+    \item \indispensable Si el jugador no tiene suficiente energía, no puede realizar la acción.
+    \item \indispensable Se puede recuperar en un 50\%, instantáneamente, al realizar exitosamente la acción de tomar agua de la cantimplora.
+    \item \talvez Se puede recuperar en un 5\% por minuto, al caminar.
+    \item \talvez Se puede recuperar en un 10\% por minuto, al permanecer de pie.
+    \item \talvez Se puede recuperar en un 20\% por minuto, al permanecer agachado e inmovil.
+    \item \talvez Dentro de más baja sea la energía del jugador, todos los \textit{cooldowns}, \textit{casteos} se incrementarán, y el jugador será más lento al caminar y correr.
+    \end{itemize} % energía
+
+  \item \textbf{Vida} \indispensable (o HP) Es un atributo de todos los personajes.
+
+    \begin{itemize} % vida
+    \item \indispensable Un personaje controlado por el jugador, puede recuperar su HP en un 10\% cada minuto, después de haber realizado exitosamente la acción de comer una ración. Este efecto dura 9 minutos.
+
+    \item \talvez Un personaje controlado por el jugador, puede recuperar en un 25\% cada minuto, después de haber realizado exitosamente la acción de primeros auxilios. Este efecto dura 5 minutos, y es anulado si el personaje recibe daño.
+
+    \item \indispensable Cuando un atacante realiza exitosamente la acción de ataque contra un personaje, el HP del personaje se decrementará en función a los \textit{stats} del atacante.
+    \end{itemize} %vida
+  \end{itemize}

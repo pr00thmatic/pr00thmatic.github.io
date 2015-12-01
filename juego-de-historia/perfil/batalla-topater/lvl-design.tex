@@ -1,0 +1,75 @@
+  \paragraph{Diseño de niveles}
+
+  \textit{Advertencia: }El arte usado para el diseño de niveles no es definitivo. Es solo una maqueta
+
+  \paragraph{Especificaciones necesarias}
+
+  \begin{itemize}
+
+  \item \textbf{Duración }Al jugador debería tomarle 13 minutos pasar este nivel.
+    \begin{itemize}
+    \item \textbf{Batallas} El 60\% de este tiempo, debería tener enemigos presentes en la pantalla. (6 minutos)
+    \item \textbf{Explorando} El 20\%, el jugador, probablemente, lo pase experimentando con los comandos, y observando detalles sin avanzar en el mapa. (2.25 minutos).
+    \item \textbf{Caminando} El resto del tiempo (20\%), el jugador pasará, probablemente, avanzando hacia la derecha. (casi 6 minutos)
+    \end{itemize}
+  \item \textbf{Velocidad} Omar Quispe camina a una velocidad de $70\frac{px}{s}$
+  \item \textbf{Longitud } Por lo tanto, el juego debería poder pasarse caminando, sin enemigos, en $(15)(60\%) = 9$ minutos. En vista de la velocidad de Omar Quispe, la longitud del juego debería ser de $d = vt = 70 * (9*60) = 10920 px$. Debido al diseño, se ajustó a $14520$ pixeles de largo.
+
+  \item \textbf{Preguntas: }
+    \begin{itemize}
+    \item \textbf{¿Qué pasó con los caídos?} El jugador podrá desbloquear esta pregunta al encontrar soldados heridos a lo largo del camino e interactuar con ellos.
+    \item \textbf{¿Sembradores en el desierto?} Esta pregunta se desbloquea mientras Ladislao está dando su discurso, el jugador podrá ver entre la milicia a algunos granjeros con azadas, las azadas son importantes porque implican que los granjeros no cuidan ganado, sino sembradíos.
+    \item \textbf{¿Por qué era estratégicamente importante Calama?} Esta pregunta se desbloquea si el jugador logra sobrevivir hasta el final del nivel.
+    \end{itemize}    
+
+  \end{itemize}
+
+  \paragraph{Nivel}
+
+  En La parte inicial, el jugador permanece inmóvil, ya está equipado con una picota, y puede ver a sus compatriotas armados con armas improvisadas, algunos de ellos tienen fusiles.
+
+  Aquí se desarrolla el script.
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../prototype/01.png}
+  \end{center}
+
+  En la parte inicial, se le enseña al jugador los controles básicos: caminar, correr, la mecánica de la energía y cómo recargarla, y la mecánica de la vida y cómo recargarla.
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../prototype/02.png}
+  \end{center}
+
+
+  En la primera batalla se le enseña cómo atacar y cubrirse. Un poco más adelante el jugador consigue la Oz, junto con la pregunta: ¿Sembradores en el desierto?, descubrirá que la oz es más rápida y consume menos energía, pero hace tan poco daño que es difícil acabar con los artilleros con ella. Decidirá si seguir usando su picota, o usar la oz, o una mezcla.
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../prototype/03.png}
+  \end{center}
+
+  El primer encuentro con la milicia, está diseñado para que el jugador recuerde el funcionamiento de la oz, e intente usarla de nuevo, dándose cuenta que es efectiva contra este tipo de enemigos, pero que la picota es muy difícil de usar contra blancos móviles.
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../prototype/04.png}
+  \end{center}
+
+  
+  El primer encuentro con la caballería, está diseñado para que el jugador se de cuenta que puede esconderse de las batallas. Esta caballería es extremadamente difícil de derrotar con oz o con picota, pero no es imposible. El jugador puede decidir si esconderse, o luchar y terminar sumamente exhausto y herido.
+
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../prototype/05.png}
+  \end{center}
+
+  Más adelante, encontrará la lanza, que es ideal contra caballería. Luego, un campo abierto en el que no podrá esconderse, y deberá enfrentarse a la tropa montada con su lanza. Puede enfrentarlo con las otras armas, pero estará demasiado exhausto para hacerlo, así que será muy difícil.
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../prototype/06.png}
+  \end{center}
+
+  El resto del nivel, transcurre mezclando astutamente estos 4 diferentes tipos de enemigos para que el jugador haga uso de sus habilidades para derrotarlos.
+
+  Y por último, el jugador debería asustarse al ver tantos soldados caídos, durante todo el nivel, la cantidad de soldados caídos es proporcional a la dificultad de la siguiente batalla.
+
+  El jugador tiene la opción de esconderse, o de seguir. Debería darse cuenta que algo anda mal al ver algunos soldados caídos que parecían estar huyendo de la batalla, y más adelante, ve a 3 de ellos corriendo hacia el lado contrario, gritando ``retirada!''. El jugador también tiene la opción de huir, pero no deberá dejar que el fuego enemigo le llegue.x
+  
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../prototype/07.png}
+  \end{center}
+
+
+  

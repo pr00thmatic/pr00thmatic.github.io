@@ -1,0 +1,70 @@
+\begin{subsection}{Mundo}
+  \begin{itemize}
+  \item un tilemap incorporado al juego.
+  \item Omar Quispe puede ser controlado con el teclado.
+    \begin{itemize}
+    \item sprint
+    \item caminar
+    \item física y colisiones con el piso.
+    \end{itemize}
+  \end{itemize}
+\end{subsection}
+
+\begin{subsection}{Medio ambiente}
+  \begin{itemize}
+  \item cuerpos para lootear
+  \item lugares para cubrirse
+  \item items para lootear en los cuerpos
+  \item los items pueden equiparse
+  \item la comida se gasta al usarse
+  \item la comida tiene un cooldown y un cast time
+  \item el agua se gasta al usarse
+  \item el agua tiene un cooldown y un cast time
+  \end{itemize}
+\end{subsection}
+
+\begin{subsection}{Sistema de preguntas y respuestas}
+  \begin{itemize}
+  \item lugares que dan preguntas
+  \item lugares que dan respuestas
+  \item seleccionar una pregunta
+  \item menú para explorar preguntas y respuestas encontradas
+  \item responder una pregunta
+  \end{itemize}
+\end{subsection}
+
+\begin{subsection}{Atributos}
+  \begin{itemize}
+  \item Omar Quispe tiene vida y energía.
+  \item La energía se gasta cuando corre.
+  \item La energía se recupera (OT) cuando toma agua.
+  \item La vida se recupera (OT) cuando come una ración.
+  \end{itemize}
+\end{subsection}
+
+\begin{subsection}{Armas}
+  \begin{itemize}
+  \item picota, lanza, escopeta, oz.
+  \item tienen un cooldown y un cast time.
+  \item la escopeta se puede recargar sin usar inmediatamente.
+  \item tienen un área de daño.
+  \item tienen puntos de ataque.
+  \item tienen una probabilidad de que el ataque sea bloqueado.
+  \end{itemize}
+\end{subsection}
+
+\begin{subsection}{Enemigos}
+  \begin{itemize}
+  \item artilleros, milicia, soldado, caballería
+  \item cada uno con inteligencia artificial primitiva
+  \end{itemize}
+\end{subsection}
+
+\begin{subsection}{Script (historia)}
+  \begin{itemize}
+  \item El código soporta un script ingame con animaciones en los sprites.
+  \item el script inicial de Ladislao Cabrera.
+  \item el jugador debe tener la opción de saltarse la escena.
+  \item el script final
+  \end{itemize}
+\end{subsection}

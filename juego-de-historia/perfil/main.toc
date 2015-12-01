@@ -1,0 +1,78 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Antecedentes}{4}
+\contentsline {subsection}{\numberline {1.1}Juegos Comerciales}{4}
+\contentsline {subsubsection}{\numberline {1.1.1}Age of Empires (saga)}{4}
+\contentsline {subsubsection}{\numberline {1.1.2}Caesar (saga)}{4}
+\contentsline {subsubsection}{\numberline {1.1.3}Valiant Hearths}{4}
+\contentsline {subsection}{\numberline {1.2}Juegos \textit {indie}}{5}
+\contentsline {subsubsection}{\numberline {1.2.1}1066: The Game}{5}
+\contentsline {subsection}{\numberline {1.3}Edutainment}{5}
+\contentsline {subsubsection}{\numberline {1.3.1}Historical Scene Investigation}{5}
+\contentsline {subsubsection}{\numberline {1.3.2}HistoryPin}{6}
+\contentsline {subsubsection}{\numberline {1.3.3}Idea of America}{6}
+\contentsline {subsection}{\numberline {1.4}Antecedentes Te\IeC {\'o}ricos}{6}
+\contentsline {subsubsection}{\numberline {1.4.1}Juegos \textit {indie}}{6}
+\contentsline {subsubsection}{\numberline {1.4.2}Edutainment}{7}
+\contentsline {subsubsection}{\numberline {1.4.3}Videojuegos y psicolog\IeC {\'\i }a}{7}
+\contentsline {subsubsection}{\numberline {1.4.4}Desarrollo de habilidades}{8}
+\contentsline {section}{\numberline {2}Problema}{8}
+\contentsline {section}{\numberline {3}Objetivo General}{8}
+\contentsline {section}{\numberline {4}Objetivos Espec\IeC {\'\i }ficos}{8}
+\contentsline {section}{\numberline {5}Alcances}{9}
+\contentsline {subsection}{\numberline {5.1}Mundo}{9}
+\contentsline {subsection}{\numberline {5.2}Medio ambiente}{9}
+\contentsline {subsection}{\numberline {5.3}Sistema de preguntas y respuestas}{9}
+\contentsline {subsection}{\numberline {5.4}Atributos}{10}
+\contentsline {subsection}{\numberline {5.5}Armas}{10}
+\contentsline {subsection}{\numberline {5.6}Enemigos}{10}
+\contentsline {subsection}{\numberline {5.7}Script (historia)}{10}
+\contentsline {section}{\numberline {6}Justificaci\IeC {\'o}n}{11}
+\contentsline {subsection}{\numberline {6.1}Social}{11}
+\contentsline {paragraph}{Videojuegos educativos}{11}
+\contentsline {paragraph}{Demanda mar\IeC {\'\i }tima}{11}
+\contentsline {subsection}{\numberline {6.2}Acad\IeC {\'e}mica}{12}
+\contentsline {paragraph}{Creaci\IeC {\'o}n de videojuegos en la UMSA}{12}
+\contentsline {section}{\numberline {7}Plataforma}{12}
+\contentsline {section}{\numberline {8}Metodolog\IeC {\'\i }a}{12}
+\contentsline {subsection}{\numberline {8.1}Concepci\IeC {\'o}n}{13}
+\contentsline {subsubsection}{\numberline {8.1.1}Trinity}{13}
+\contentsline {paragraph}{Principio 1: El juego pregunta, el jugador responde}{13}
+\contentsline {paragraph}{Preguntas}{13}
+\contentsline {paragraph}{Meta preguntas}{14}
+\contentsline {paragraph}{Respuestas}{14}
+\contentsline {subsection}{\numberline {8.2}Pre-producci\IeC {\'o}n}{14}
+\contentsline {subsubsection}{\numberline {8.2.1}High Concept}{15}
+\contentsline {subsubsection}{\numberline {8.2.2}Pitch}{16}
+\contentsline {subsubsection}{\numberline {8.2.3}Concept}{16}
+\contentsline {subsubsection}{\numberline {8.2.4}Game Design Document (GDD)}{16}
+\contentsline {subsubsection}{\numberline {8.2.5}Prototype}{18}
+\contentsline {subsection}{\numberline {8.3}Producci\IeC {\'o}n}{18}
+\contentsline {subsubsection}{\numberline {8.3.1}Causas para crear una nueva metodolog\IeC {\'\i }a}{19}
+\contentsline {subsubsection}{\numberline {8.3.2}La metodolog\IeC {\'\i }a del Llanero Solitario}{20}
+\contentsline {paragraph}{Ciclo de vida}{20}
+\contentsline {paragraph}{Bosquejo en prototipos}{20}
+\contentsline {paragraph}{Definici\IeC {\'o}n del prototipo}{20}
+\contentsline {paragraph}{Dise\IeC {\~n}o}{20}
+\contentsline {paragraph}{Partici\IeC {\'o}n}{21}
+\contentsline {paragraph}{Negociaci\IeC {\'o}n de tiempo vs calidad}{21}
+\contentsline {paragraph}{Sprint}{21}
+\contentsline {paragraph}{Negociaci\IeC {\'o}n tiempo vs calidad}{21}
+\contentsline {paragraph}{Conclusiones e integraci\IeC {\'o}n}{21}
+\contentsline {paragraph}{Negociaci\IeC {\'o}n in vs out}{22}
+\contentsline {section}{\numberline {9}Glosario}{22}
+\contentsline {section}{\numberline {10}Game Design Document}{24}
+\contentsline {subsection}{\numberline {10.1}Niveles}{24}
+\contentsline {paragraph}{Protagonista: }{25}
+\contentsline {paragraph}{Desventaja}{25}
+\contentsline {paragraph}{Estrategia}{25}
+\contentsline {subsubsection}{\numberline {10.1.1}Batalla del Topater}{25}
+\contentsline {paragraph}{Antecedentes}{26}
+\contentsline {paragraph}{Jugabilidad b\IeC {\'a}sica}{26}
+\contentsline {paragraph}{Script}{27}
+\contentsline {paragraph}{Mecanismos}{28}
+\contentsline {paragraph}{Especificaciones iniciales}{29}
+\contentsline {paragraph}{Lista de enemigos}{31}
+\contentsline {paragraph}{Lista de armas}{32}
+\contentsline {paragraph}{Dise\IeC {\~n}o de niveles}{33}
+\contentsline {paragraph}{Especificaciones necesarias}{34}
+\contentsline {paragraph}{Nivel}{35}

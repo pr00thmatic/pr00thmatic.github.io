@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{setspace}
+\usepackage{xcolor}
+\lstset{inputencoding=utf8/latin1}
+
+%\usepackage[margin=1cm]{geometry}
+\setlength{\parskip}{0.5cm plus4mm minus3mm}
+%\setlength{\parindent}{0pt}
+
+%\renewcommand*{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\end{document}
