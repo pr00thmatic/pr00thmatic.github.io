@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Proceso por difamación (UMSA)</title>
+    <link rel="stylesheet" href="css.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+
+    <div class="event">
+      <div class="fecha">2015/06/04: <b>Entrada de blog</b></div>
+      <div class="description">
+        <p>Publico una entrada de blog quejándome sobre la calidad académica de la materia INF-166 impartida por el Lic. Juan Gonzalo Contreras Candia</p>
+        <div class="link-ref"><a href="https://bengalaa.wordpress.com/2015/04/06/por-que-estamos-tan-mal/">https://bengalaa.wordpress.com/2015/04/06/por-que-estamos-tan-mal/</a></div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/07/18: <b>Denuncia</b></div>
+      <div class="description">
+        <p>Lic. Contreras presenta su denuncia ante jefatura de carrera.</p>
+        <div class="ref">4</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/06: <b>Primera notificación</b></div>
+      <div class="description">
+        <p>Dirección de carrera me notifica del proceso mediante una llamada.</p>
+        <p>Quedamos en una reunión de conciliación para el lunes 2015/10/08.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/07: <b>Reunión informal</b></div>
+      <div class="description">
+        <p>Me reuno informalmente con Mg. Sc. Edgar Clavijo (director de carrera)</p>
+        <p>Pregunto si me puede dar una copia de la denuncia, a lo que responde que sólamente puede mostrármela.</p>
+
+        <p>Lic. Contreras presenta su denuncia a decanatura</p>
+        <div class="ref">47</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/10: <b>Reunión de concilación</b></div>
+      <div class="description">
+        <p>El lic. Contreras se niega a presentarse argumentando que ya presentó el caso a instancias superiores, porque ya ha pasado el tiempo plazo para la reunión de conciliación, de acuerdo al reglamento de procesos.</p>
+
+        <p>El director de carrera <a href="#clavijo">Mg.Sc. Edgar Clavijo</a> argumenta que no pudo contactarme por falta de información de contacto, pese a que:</p>
+        <ul>
+          <li>Mi información de contacto está actualizada en el sistema de la carrera.</li>
+          <li>Dado mi nombre y mi apellido, es sencillo encontrarme en facebook, no soy selectiva con las solicitudes de amistad.</li>
+        </ul>
+
+        <p>En vista de eso, pido a dirección de carrera, mediante una carta, una reunión de conciliación. No hay respuesta.</p>
+
+        <p>Tras averiguar en Asesoría Jurídica, me hablan del artículo 24 de la CPE, que me da el derecho de tener una copia de la denuncia. Mg. Sc. accede a entregarme dicha copia, con la condición de que presente una carta de solicitud.</p>
+        <div class="ref"><b>Carta de solicitud:</b>2</div>
+        <div class="ref"><b>Respuesta:</b>3-9</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/11</div>
+      <div class="description">
+        <p>Pido una copia de la denuncia que el Lic. Contreras presentó a decanatura (instanacia superior). No hay respuesta.</p>
+        <div class="ref">10</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/12: <b>Informe del caso (dirección de carrera)</b></div>
+      <div class="description">
+        <p>M. Sc. Edgar Clavijo responde a una solicitud de informe del caso que decanatura realizó (pero que no hay copia de dicha petición en el expediente)</p>
+        <div class="ref">46</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/13: <b>Citación (decanatura)</b></div>
+      <div class="description">
+        <p>Decanatura ordena una reunión de conciliación programada para el 2015/08/14</p>
+        <div class="ref">11</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/14: <b>Reunión de conciliación</b></div>
+      <div class="description">
+        <p>El M. Sc. Franz Cuevas Quiroz informa al M. Sc. Edgar Clavijo, citar al ejecutivo del CEI, y al ejecutivo del ADI a la reunión de conciliación. Dirección de carrera recibe la carta a las 11:10</p>
+        <div class="ref">45</div>
+
+        <p>Se lleva la reunión de conciliación.</p>
+        <ul>
+          <li>El Mg. Sc. Edgar Clavijo observa la reunión, su participación es poca.</li>
+          <li>El Lic. Contreras plantea sus términos de conciliación, sin explicar lo que significan, e insistiendo que no pueden ser cambiados. Los rechazo</li>
+          <li>Ofresco una disculpa pública en mi blog, explicando todo lo sucedido. Lic. Contreras lo rechaza.</li>
+        </ul>
+        <div class="ref">12</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/17: <b>Dirección de carrera presenta informe del caso</b></div>
+      <div class="description">
+        <p>Dirección de carrera envía a decanatura el acta de conciliación</p>
+        <div class="ref">43, 44</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/24: <b>Caso aprobado (decanatura)</b></div>
+      <div class="description">
+        <p>El <a href="#cuevas">M. Sc. Franz Cuevas Quiroz</a> solicita al secretario general de la UMSA que informe a la sala de admisiones sobre mi caso.</p>
+        <div class="ref">41</div>
+
+        <p>El secretario general de la UMSA informa al secretario de la Comisión de Procesos de la denuncia del Lic. Contreras</p>
+        <div class="ref">39</div>
+
+        <p>Decanatura aprueba que el caso vaya a la Sala de Admisiones</p>
+        <div class="ref">14</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/08/26: <b>Caso aprobado (notificación a carrera)</b></div>
+      <div class="description">
+        <p>Dirección de carrera recibe la notificación de que el caso irá a la Sala de admisiones.</p>
+        <div class="ref">14</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/09/07: <b>Caso aprobado (me notifican)</b></div>
+      <div class="description">
+        <p>Me notifican que el caso irá a la sala de admisiones.</p>
+        <div class="ref">13</div>
+      </div>
+    </div>
+
+    <div class="event interno admisiones">
+      <div class="fecha">2015/09/16: <b>Caso sorteado</b></div>
+      <div class="description">
+        <p>Se sortean los casos en la comisión de admisiones.</p>
+        <div class="ref">24</div>
+        <p>Mi caso (Caso C.U.P. 21/2015) queda en la Sala 1 de la Comisión de Admisiones, cuyo presidente es el Lic. Rubén Reynaldo Marín Pantoja</p>
+        <div class="ref">33</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/09/25: <b>Devolución del caso (Sala 1 a Decanatura)</b></div>
+      <div class="description">
+        <p><a href="#pantoja">Lic. Pantoja</a> devuelve el caso a M. Sc. Franz Cuevas, diciendo:</p>
+        <ul>
+          <li>Especificar el fundamento legal del Proceso Universitario.</li>
+          <li>Pronunciación del HCF si se decide instaurar el proceso.</li>
+        </ul>
+        <div class="ref">32</div>
+      </div>
+    </div>
+
+    <div class="event critical">
+      <div class="fecha">2015/10/01: <b>Respuesta devolución del caso</b></div>
+      <div class="description">
+        <p>M. Sc. Franz Cuevas Quiroz responde:</p>
+        <ul>
+          <li>Fundamento legal: Art 26 del Reglamento de Procesos Universitarios</li>
+          <li>En sesión del 2015/09/29 el HCF determinó ratificar la resolución 1440/2015 que afirma que el caso se lleve a la sala de admisiones.</li>
+          <p class="zomg">La resolución 1440/2015 se emitió el 2015/08/24</p>
+        </ul>
+        <div class="ref">
+          <p><b>Respuesta del decano: 31</b></p>
+          <p><b>Resolución 1440/2015: 42</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/11/18: <b>Solicitud antecedentes</b></div>
+      <div class="description">
+        El Lic. Pantoja pide al M. Sc. Franz Cuevas mis antecedentes universitarios.
+        <div class="ref">30</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/12/10: <b>Declaración informativa (citación)</b></div>
+      <div class="description">
+        <p>Me citan para dar una declaración informativa.</p>
+        <div class="ref">29</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/12/11: <b>Declaración informativa (Lic. Contreras)</b></div>
+      <div class="description">
+        <p>Lic. Contreras se presenta a declarar, pese a que su citación no está en el expediente del caso.</p>
+        <div class="ref">23-25</div>
+        <p>Declaro. Se lleva a cabo después de la declaración del Lic. Contreras</p>
+        <ul>
+          <li>Una abogada realiza la transcripción de mi declaración.</li>
+          <li>La abogada realiza preguntas que no son registradas en la declaración.</li>
+          <li>La abogada me comenta que cometí un delito informático al publicar información. (Su comentario no queda escrito en la declaración)</li>
+        </ul>
+        <div class="ref">26-28</div>
+
+        <p>Informalmente, me comunican que debo presentar pruebas y testigos hasta el viernes de esa semana.</p>
+        <p><b>No</b> me dan una copia de mi declaración.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/12/14: <b>Solicitud Formal de copia de expediente</b></div>
+      <div class="description">
+        <p>Solicito formalmente una copia de todo mi expediente en la Sala de Admisiones. Secretaría me informa que la copia estará lista el 2015/12/16 (fecha en la que la Sala 1 de Admisiones se reuniría para deliberar).</p>
+        <div class="ref">17</div>
+        <p>Lic. Contreras solicita una copia de su declaración y de la mía.</p>
+        <div class="ref">18</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/12/16: <b>Copia de expediente (concentimiento de la sala)</b></div>
+      <div class="description">
+        <p>La Sala 1 de admisiones aprueba concederme la copia de mi expediente. También aprueba conceder las copias que el Lic. Contreras pide.</p>
+        <div class="ref">18,19</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/12/17: <b>Copia de expediente aplazada</b></div>
+      <div class="description">
+        <p>Secretaría afirma que están demasiado ocupados como para brindarme la copia del expediente.</p>
+        <p>Piden que deje 10 Bs. para que me franqueen las copias. No me dan recibo de dicho dinero.</p>
+        <p>Piden que vuelva al día siguiente.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="fecha">2015/12/18: <b>Copia de expediente concedida</b></div>
+      <div class="description">
+        <p>Luego de esperar durante 1 hora, y de discutir con una de las secretarias, me entregan una copia de mi expediente.</p>
+      </div>
+    </div>
+
+    <div id="clavijo">
+      <p><b>Mg. Sc. Edgar Clavijo: </b> Director de la carrera de Informática</p>
+      <p><b>M. Sc. Franz Cuevas Quiroz: </b>Decano de la Facultad de Ciencias Puras y Naturales.</p>
+    </div>
+  </body>
+</html>
