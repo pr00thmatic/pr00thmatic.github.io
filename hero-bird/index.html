@@ -48,8 +48,20 @@
       </div>
 
       <div class="sauce">
-        <a href="assets/bird.svg">Imagen vectorial del pajarito</a> (descárgalo! (ctrl+s) y ábrelo con <a href="https://inkscape.org/es/download/">inkscape</a>!). Verás un montón de imágenes, una sobre otra... la imagen está dividida en capas (layers, ctrl+shift+L dentro de inkscape para abrir la ventana de capas), estas capas, fueron convertidas a spritesheet desde gimp, <a href="http://registry.gimp.org/node/20943">con una extensión</a>.
+        <a href="assets/bird.svg">Imagen vectorial del pajarito</a> (descárgalo! (ctrl+s) y ábrelo con <a href="https://inkscape.org/es/download/">inkscape</a>!). Verás un montón de imágenes, una sobre otra... la imagen está dividida en capas (layers, ctrl+shift+L dentro de inkscape para abrir la ventana de capas), estas capas, fueron convertidas a spritesheet desde gimp, <a href="http://registry.gimp.org/node/20943">con una extensión</a>.        
       </div>
+
+      <div class="sauce">
+        <a class="js" href="assets/map.json">assets/map.json</a>
+        <p class="description">El mapa (las plataformas de tierra y las púas), están en un "tilemap". Es un objeto json, en este objeto, el terreno se representa mediante números. Por ejemplo, los números 6, 20, 14, 21, 12, 5 y 19 representan púas. Phaser interpreta este tilemap, y le pone imágenes en vez de números.</p>
+
+        <p>De hecho, si descargas la imagen terrain.png y el map.json, y lo abres con tiled (descarga tiled de <a href="http://www.mapeditor.org/">su página oficial</a>, o si estás en debian: apt-get install tiled), lo podrás ver y editar!</p>
+      </div>
+
+      <div class="sauce">
+        <a class="js" href="assets/terrain.png">assets/terrain.png</a>
+        <p class="description">El spritesheet del que saca phaser las imágenes para sustituir los números del tilemap.</p>
+      </div>      
 
     </div>
 
