@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Phaser demo</title>
+    <script src="phaser.min.js"></script>
+    <script src="level.js"></script>
+    <script src="bird.js"></script>
+    <script src="tileInfo.js"></script>
+
+    <script src="game.js"></script>
+
+    <link rel="stylesheet" href="css.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <div id="game"></div>
+
+    <div class="comment">
+      <p>Este un juego para demostrar, más o menos, cómo se ve un juego hecho en phaser: su código, sus sprites, su tilemap.</p>
+
+      <p>Para jugarlo, usa las flechas para caminar, y la barra espaciadora para volar.</p>
+      
+      El código de este juego está dividido en varios scripts.
+      <div class="sauce">
+        <a class="js" href="phaser.min.js">phaser.min.js</a>
+        <p class="description">es el motor del juego, descargado de la <a href="http://phaser.io/download">página oficial de phaser</a>.</p>
+      </div>
+
+      <div class="sauce">
+        <a class="js" href="level.js">level.js</a>
+        <p class="description">La construcción del nivel: las plataformas, el pajarito, la configuración de la cámara. Todo parte de aquí. Si quieres leer el código en orden, deberías empezar leyendo este script.</p>
+      </div>
+
+      <div class="sauce">
+        <a class="js" href="bird.js">bird.js</a>
+        <p class="description">El pajarito!</p>
+      </div>
+
+      <div class="sauce">
+        <a class="js" href="tileInfo.js">tileInfo.js</a>
+        <p class="description">Información sobre el índice de los tiles</p>
+      </div>
+
+      <div class="sauce">
+        <a href="assets/bird.png">spritesheet del pajarito</a>
+      </div>
+
+      <div class="sauce">
+        <a href="assets/bird.svg">Imagen vectorial del pajarito</a> (descárgalo! (ctrl+s) y ábrelo con <a href="https://inkscape.org/es/download/">inkscape</a>!). Verás un montón de imágenes, una sobre otra... la imagen está dividida en capas (layers, ctrl+shift+L dentro de inkscape para abrir la ventana de capas), estas capas, fueron convertidas a spritesheet desde gimp, <a href="http://registry.gimp.org/node/20943">con una extensión</a>.        
+      </div>
+
+      <div class="sauce">
+        <a class="js" href="assets/map.json">assets/map.json</a>
+        <p class="description">El mapa (las plataformas de tierra y las púas), están en un "tilemap". Es un objeto json, en este objeto, el terreno se representa mediante números. Por ejemplo, los números 6, 20, 14, 21, 12, 5 y 19 representan púas. Phaser interpreta este tilemap, y le pone imágenes en vez de números.</p>
+
+        <p>De hecho, si descargas la imagen terrain.png y el map.json, y lo abres con tiled (descarga tiled de <a href="http://www.mapeditor.org/">su página oficial</a>, o si estás en debian: apt-get install tiled), lo podrás ver y editar!</p>
+      </div>
+
+      <div class="sauce">
+        <a class="js" href="assets/terrain.png">assets/terrain.png</a>
+        <p class="description">El spritesheet del que saca phaser las imágenes para sustituir los números del tilemap.</p>
+      </div>      
+
+    </div>
+
+  </body>
+</html>
