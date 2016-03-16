@@ -1,0 +1,21 @@
+body {
+    font-family: helvetica;
+    padding: 1em;
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: #ffa;
+}
+
+a:visited {
+    color: #afa;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 800;
+    max-height: 800px;
+}
