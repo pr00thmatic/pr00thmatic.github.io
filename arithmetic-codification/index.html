@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Codificación Aritmética</title>
+    <script src="ArithmeticCodification.js"></script>
+    <script src="integrator.js"></script>
+    <link rel="stylesheet" href="css.css" type="text/css" media="screen" />
+  </head>
+  
+  <body>
+    <p>El input de la izquierda es interpretado como salido de una fuente equiprobable, el de la derecha es interpretado como salido de una fuente no equiprobable</p>
+
+    <p>Si ponemos en ambos inputs el mensaje: "wawa wawa", podremos ver que el que es interpretado como fuente no equiprobable sólamente puede decodificar "wawa w", antes de alcanzar su límite de precisión, en cambio, el equiprobable, puede interpretar "wawa wawa" antes de alcanzar su límite de precisión.</p>
+
+    <p>Si ponemos en ambos inputs el mensaje: "eeeeeeeeeeeeeeeeee", ahora el de la derecha va a poder interpretar más símbolos (17) que el de la izquierda (9) antes de alcanzar el límite de precisión.</p>
+
+    <p class="warning">cuando el programa llega a su límite de precisión, se colgará durante 1 ó 2 segundos.</p>
+    <table>
+      <tr>
+        <td>
+          <label for="Equiprobable"> Equiprobable </label>
+          <input type="text" class="form-control" name="input-equiprobable" placeholder="Fuente equiprobable" />
+        </td>
+
+        <td>
+          <label for="Variable"> No Equiprobable </label>
+          <input type="text" class="form-control" name="input-variable" placeholder="Fuente no equiprobable" />
+        </td>
+      </tr>
+
+      <tr>
+        <td><p class="output" id="output-equiprobable">escribe el mensaje en el input box de arriba</p></td>
+        <td><p class="output" id="output-variable">escribe el mensaje en el input box de arriba</p></td>
+      </tr>
+
+      <tr>
+        <td><p class="limite" id="limite-equiprobable">LIMITE DE PRECISIÓN ALCANZADO!</p></td>
+        <td><p class="limite" id="limite-variable">LIMITE DE PRECISIÓN ALCANZADO!</p></td>
+      </tr>
+
+      <tr>
+        <td>
+          Existen 30 símbolos en el alfabeto considerado: {A, B, C, D, E, F, G, H, I, J, K, L, M, N, Ñ, O, P, Q, R, S, T, U, V, W, X, Y, Z} U {espacio, coma, punto, dolar}. La probabilidad asignada a cada símbolo es de 1/30.
+        </td>
+       <td>
+          Basado en la distribución de probabilidades para las letras en el idioma español disponible en la página <a href="http://www.sttmedia.com/characterfrequency-spanish">sttmedia</a>, las tildes fueron removidas, porque no sé cómo hacer para que un hashmap de javascript reconozca caracteres especiales :(, las probabilidades que sumaban las letras con tilde (2.64%) fueron destinadas para caracteres separadores (" ", ",", "." y "$" que simboliza el final del mensaje).
+        </td> 
+      </tr>
+    </table>
+
+  </body>
+</html>
