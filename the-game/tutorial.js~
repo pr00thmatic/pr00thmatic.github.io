@@ -1,4 +1,0 @@
-var Tutorial = (function () {
-  return {
-  };
-})();

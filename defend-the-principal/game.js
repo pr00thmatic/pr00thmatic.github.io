@@ -2,6 +2,8 @@ var mainState = ( function () {
     var hp = 10;
 
     var preload = function () {
+        // artificial loader
+        domGame.setLoading(true);
         game.load.spritesheet('student', 'assets/student.png', 12, 26);
         game.load.spritesheet('office', 'assets/office.png', 40, 68);
         game.load.spritesheet('oficinista', 'assets/kardex.png', 16, 26);
@@ -35,6 +37,8 @@ var mainState = ( function () {
                                            this.officeSpawner );
         this.scoreboard = new Scoreboard(this.spawner);
         this.spawner.scoreboard = this.scoreboard;
+        // artificial loader
+        domGame.setLoading(false);
     }
 
     var update = function () {

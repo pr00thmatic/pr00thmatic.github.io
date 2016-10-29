@@ -8,7 +8,7 @@ var defend0 = (function () {
     },
     enemies : [{
         x : 12,
-        y : 16,
+        y : 15,
         weapons : {
           right : true,
           left : true

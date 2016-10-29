@@ -20,9 +20,11 @@ var config = {
     skyWidth : 2000,
     floorHeight : 100
   },
+
   girl : {
     jumpHeight : 150
   },
+
   qa : [
     {
       question : {
@@ -57,13 +59,6 @@ var config = {
           y : 240,
           levelName : 'beach'
         }
-      }, {
-        question : {
-          text : 'En qué fecha fue la guerra del pacífico?',
-          place : {
-            x : 800,
-            y : 240
-          }, 
-        }
-      }]
+      }
+    }]
 };

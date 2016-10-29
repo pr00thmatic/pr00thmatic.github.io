@@ -3,7 +3,7 @@ var SpiderDog = function (game, level, spawnPoint) {
     this.digTimeElapsed = 0;
     this.speed = 150;
     this.runningLimit = 20;
-    this.jumpPower = 260;
+    this.jumpPower = 350;
 
     this.level = level;
     this.game = game;
@@ -11,12 +11,12 @@ var SpiderDog = function (game, level, spawnPoint) {
 
     this.sprite  = this.game.add.sprite(spawnPoint[0],spawnPoint[1], 'spiderdog');
     this.sprite.anchor.set(.5,.5);
-    this.sprite.animations.add('run', [3,4,5,6,6,7,8,9,10], 16, true);
+    this.sprite.animations.add('run', [3,4,5,6,6,7,8,9,10], 19, true);
     this.sprite.animations.add('jump', [9,2,2,3,3,4,4,5,5], 16, false);
     this.sprite.animations.add('fall', [6,7], 6, false);
     this.sprite.animations.add('stand', [0,1,2,1], 10, true);
     this.sprite.animations.add('dig', [11,12,13,12], 8, true);
-    this.sprite.animations.add('sniff', [14,15,16,15], 5, true);
+    this.sprite.animations.add('sniff', [14,15,16,15], 8, true);
 
     this.game.physics.enable(this.sprite, Phaser.Physics.ARCADE);
     this.sprite.body.collideWorldBounds = true;

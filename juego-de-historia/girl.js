@@ -41,7 +41,7 @@ var Girl = (function () {
     create : function (x,y, level) {
       var girl = Sentient.create(x,y, 'girl', level);
       girl.level = level;
-      girl.animations.add('run', [3,3,4,5,5,4], 9, true);
+      girl.animations.add('run', [3,4,5,4], 5, true);
       girl.animations.add('stand', [0,0,0,0,0,0,0,0,0,0,0,1,2,2,1,0,0,1,2,2,2,1],
                           8, true);
       girl.animations.add('jump-up', [6,7], 6, true);

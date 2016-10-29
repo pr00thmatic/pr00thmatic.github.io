@@ -2,6 +2,9 @@ var Level = (function () {
   var Instance = (function () {
     return {
       preload : function () {
+        // artificial loader
+        domGame.setLoading(true);
+
         game.load.tilemap('map', 'assets/ambience/' + this.key + '/map.json',
                           null, Phaser.Tilemap.TILED_JSON);
         game.load.image('collision-symbols',
@@ -27,6 +30,7 @@ var Level = (function () {
         Answer.spawn(this);
         Answer.initialize(this);
         this.qaMenu = QAMenu.create(this);
+        domGame.setLoading(false);
       },
       update : function () {
         zOrder.sort();

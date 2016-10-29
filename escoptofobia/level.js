@@ -1,10 +1,13 @@
 var game = new Phaser.Game(770, 630, Phaser.AUTO, 'game');
+domGame.init(game.width, game.height);
 
  var Level = (function () {
 
   var Instance = (function () {
     return {
       preload : function () {
+        // artificial loader
+        domGame.setLoading(true);
         game.load.spritesheet('you', 'assets/you.png', 35, 35);
         game.load.spritesheet('0hit', 'assets/0hit.png', 35, 70);
         game.load.spritesheet('1hit', 'assets/1hit.png', 35, 105);
@@ -22,6 +25,7 @@ var game = new Phaser.Game(770, 630, Phaser.AUTO, 'game');
       create : function () {
         var i,
             enemyData;
+
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.physics.arcade.gravity.y = config.world.gravity;
         game.stage.backgroundColor = '#111'
@@ -42,6 +46,9 @@ var game = new Phaser.Game(770, 630, Phaser.AUTO, 'game');
                          enemyData.weapons, this.pc, this,
                          enemyData.velocity);
         }
+
+        // artificial loader
+        domGame.setLoading(false);
       },
       update : function () {
         zOrder.sort();

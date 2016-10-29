@@ -63,14 +63,14 @@ var You = (function () {
       // TODO : a standard initial jump
       jump : function () {
         if (this.body.blocked.down) {
-          this.body.velocity.y = -2 * this.jumpSpeed/3;
-          game.time.events.add(50, this.jumpMore, this);
+          this.body.velocity.y = -1.5 * this.jumpSpeed/2;
+          game.time.events.add(150, this.jumpMore, this);
         }
       },
 
       jumpMore : function () {
         if (this.control.up.isDown) {
-          this.body.velocity.y += -1.5 * this.jumpSpeed/3
+          this.body.velocity.y += -0.8 * this.jumpSpeed/2
         }
       },
 

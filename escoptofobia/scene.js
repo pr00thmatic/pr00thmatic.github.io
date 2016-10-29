@@ -3,6 +3,12 @@ var Scene = (function () {
   var Instance = (function () {
     return {
       preload : function () {
+        // artificial loader
+        game.time.events.add(1000, function () {
+          if (!this.created) {
+            domGame.setLoading(true);
+          }
+        }, this);
         game.load.image('main', 'assets/psychic/story/' +
                         this.mainImage + '.png');
         game.load.image('fear', 'assets/psychic/story/fear.png');
@@ -13,6 +19,8 @@ var Scene = (function () {
         if (this.fear) {
           this.fear = Fear.create();
         }
+        this.created = true;
+        domGame.setLoading(false);
       },
       next : function () {
         game.state.start(this.nextState);

@@ -7,7 +7,10 @@ var Level = function (name, tilemapFile, game, dogSpawnPoint) {
 };
 
 Level.prototype.preload = function () {
-    this.gravity = 400;
+    // artificial loader
+    domGame.setLoading(true);
+
+    this.gravity = 700;
     // loading tilemap of the level
     this.game.load.tilemap( 'map', 'img/map/' + this.tilemapFile,
                        null, Phaser.Tilemap.TILED_JSON );
@@ -41,6 +44,8 @@ Level.prototype.create = function () {
         this.arrows.push(new Arrow(this.game, this.cursor, this.dog, hiddenBone));
     }, this);
 
+    // artificial loader
+    domGame.setLoading(false);
 };
 
 Level.prototype.update = function () {

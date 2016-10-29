@@ -5,6 +5,8 @@ var mainState = ( function () {
     var start = 0;
 
     var preload = function () {
+        // artificial loader
+        domGame.setLoading(true);
 	game.load.spritesheet('iceberg', 'img/iceberg.png', 70,70);
 	game.load.spritesheet('sun', 'img/sun.png', 50, 50);
 
@@ -38,7 +40,9 @@ var mainState = ( function () {
 	you.sun = sun;
 	Corporation = Corporation(); // global variable :(
 	Corporation.setPlayer(you);
-	Corporation.setGame(game);
+        Corporation.setGame(game);
+        // artificial loader
+        domGame.setLoading(false);
     };
 
     var update = function () {
@@ -61,6 +65,8 @@ var mainState = ( function () {
 })();
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game');
+// artificial loader
+domGame.init(game.width, game.height);
 game.state.add('main', mainState);
 game.state.start('main');
 game.isOver = false;

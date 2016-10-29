@@ -1,4 +1,5 @@
 var game = new Phaser.Game(800, 640, Phaser.AUTO, 'game');
+domGame.init(game.width, game.height);
 
 var OfficeGenerator = function (offices, level) {
     this.level = level;
