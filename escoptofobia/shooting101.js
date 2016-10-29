@@ -68,6 +68,5 @@ var shooting101 = (function () {
     return level;
 })();
 
-shooting101.nextLevel = 'shooting101';
+shooting101.nextLevel = 'context-level';
 game.state.add('shooting101', shooting101);
-console.log(shooting101);

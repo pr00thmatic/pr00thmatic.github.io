@@ -48,5 +48,5 @@ var defend0 = (function () {
   return level;
 })();
 
-defend0.nextLevel = 'context-level';
+defend0.nextLevel = 'defend1';
 game.state.add('defend0', defend0);
