@@ -107,7 +107,7 @@ var RangedAttack = (function () {
     var Instance = (function () {
       return {
         update : function () {
-          this.x = this.origin.x;
+          this.x = this.origin.getX();
           this.y = this.origin.y;
 
           this.body.angularVelocity = 0;

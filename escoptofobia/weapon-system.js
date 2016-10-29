@@ -1,4 +1,7 @@
 var WeaponSystem = (function () {
+  // var debug = true;
+  var debug = false;
+
   var Instance = (function () {
     return {
       getSelectedWeapon : function () {
@@ -55,19 +58,23 @@ var WeaponSystem = (function () {
           var step = 35,
               width = step,
               height = step,
+              thicknessPenalty = 17,
               x = this.owner.x, y = this.owner.y;
 
           switch (this.direction) {
           case 'up':
             height *= (this.index+2);
-            x -= step/2;
+            width -= thicknessPenalty;
+            x -= (step - thicknessPenalty)/2;
             y -= height;
             break;
           case 'down':
             height *= (this.index+2);
-            x -= step/2;            
+            width -= thicknessPenalty;
+            x -= (step - thicknessPenalty)/2;
             break;
           case 'right':
+            // it is okay for left and right to destroy enemies above and below
             width *= (this.index+2);
             y -= step/2;
             break;
@@ -80,11 +87,13 @@ var WeaponSystem = (function () {
 
           this.impactRectangle =
             new Phaser.Rectangle(x, y, width, height);
-          // var graphics = game.add.graphics(0,0);
-          // graphics.beginFill(0xffffff);
-          // graphics.drawRect(this.impactRectangle.x, this.impactRectangle.y,
-          //                   this.impactRectangle.width,
-          //                   this.impactRectangle.height);
+          var graphics = game.add.graphics(0,0);
+          if (debug) {
+            graphics.beginFill(0xffffff);
+            graphics.drawRect(this.impactRectangle.x, this.impactRectangle.y,
+                              this.impactRectangle.width,
+                              this.impactRectangle.height);
+          }
           return this.impactRectangle;
         }
       };
@@ -134,7 +143,7 @@ var WeaponSystem = (function () {
       for(i=0; i<3; i++) {
         system.weapons.push(Weapon.create(owner, i));
         owner.part.push(system.weapons[i]);
-        w.push(system.weapons[i]);        
+        w.push(system.weapons[i]);
       }
 
       system.control = {};

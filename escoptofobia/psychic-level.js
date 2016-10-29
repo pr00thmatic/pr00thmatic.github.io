@@ -2,7 +2,7 @@ var PsychicLevel = (function () {
   var Instance = (function () {
     return {
       preload : function () {
-        game.load.spritesheet('you', 'assets/psychic/psychic.png', 40, 58);
+        game.load.spritesheet('you', 'assets/psychic/psychic2.png', 40, 58);
         game.load.spritesheet('0hit', 'assets/psychic/0hit.png', 35, 70);
         game.load.spritesheet('1hit', 'assets/psychic/1hit.png', 35, 105);
         game.load.spritesheet('2hit', 'assets/psychic/2hit.png', 35, 140);

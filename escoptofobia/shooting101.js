@@ -20,7 +20,7 @@ var shooting101 = (function () {
             }
         }, {
             x : 1,
-            y : 3,
+            y : 2,
             weapons : {
                 right : true,
                 down : true
@@ -31,6 +31,32 @@ var shooting101 = (function () {
             weapons : {
                 right : true
             }
+        }, {
+          x : 19,
+          y : 14,
+          weapons : {
+            left : true
+          }
+        }, {
+          x : 17,
+          y : 8,
+          weapons : {
+            right : true
+          }
+        }, {
+          x : 18,
+          y : 8,
+          weapons : {
+            down : true
+          }
+        }, {
+          x : 16,
+          y : 16,
+          weapons : {
+            up : true,
+            right : true,
+            left : true
+          }
         }],
         tiled : true
     });

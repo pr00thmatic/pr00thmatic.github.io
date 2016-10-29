@@ -42,6 +42,13 @@ var defend1 = (function () {
       weapons : {
         right : true
       }
+    }, {
+      x : 7,
+      y : 9,
+      weapons : {
+        left : true,
+        right : true
+      }
     }],
     tiled : true
   });

@@ -28,11 +28,11 @@ var You = (function () {
     return {
       addAnimations : function () {
         this.hasAnimations = true;
-        this.animations.add('stand', [0,0,0,1,2,2,2,2,1], 5, true);
-        this.animations.add('attack', [6,7,8,9,9,9,8,7,6], 13, false);
-        this.animations.add('run', [3,4,5,4], 6, true);
-        this.animations.add('jump-up', [10]);
-        this.animations.add('jump-down', [11]);
+        this.animations.add('stand', [0,0,0,0,0,0,1,2,3,3,3,2,1,0,0,0,0,1,4,3,3,3,2,1], 6, true);
+        this.animations.add('attack', [10,11,12,13,13,13,13,13,13,12,12,11,11,10,10], 26, false);
+        this.animations.add('run', [5,6,7,8,9,8,7,6], 10, true);
+        this.animations.add('jump-up', [14]);
+        this.animations.add('jump-down', [15]);
       },
       update : function () {
         var movement = this.control;
@@ -77,6 +77,10 @@ var You = (function () {
       startDying : function () {
         this.dad.startDying.call(this);
         game.time.events.add(1000, this.level.restart, this.level);
+      },
+
+      getX : function () {
+        return this.x + Math.sign(this.body.velocity.x) * 10;
       }
     };
   })();
@@ -85,8 +89,8 @@ var You = (function () {
     var Instance = (function () {
       return {
         update : function () {
-          this.x = this.owner.x;
-          this.y = this.owner.y;
+          this.x = this.owner.getX();
+          this.y = this.owner.y-10;
           this.animations.play(this.levels[this.owner.energy-1]);
         }
       };
