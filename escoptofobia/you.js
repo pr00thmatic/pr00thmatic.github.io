@@ -29,7 +29,7 @@ var You = (function () {
       addAnimations : function () {
         this.hasAnimations = true;
         this.animations.add('stand', [0,0,0,0,0,0,1,2,3,3,3,2,1,0,0,0,0,1,4,3,3,3,2,1], 6, true);
-        this.animations.add('attack', [10,11,12,13,13,13,13,13,13,12,12,11,11,10,10], 26, false);
+        this.animations.add('attack', [10,11,12,13,13,12,12,13,13,13,13,12,12,11,11,10,10], 26, false);
         this.animations.add('run', [5,6,7,8,9,8,7,6], 10, true);
         this.animations.add('jump-up', [14]);
         this.animations.add('jump-down', [15]);

@@ -1,5 +1,5 @@
-var skipIntro = true;
-// var skipIntro = false;
+// var skipIntro = true;
+var skipIntro = false;
 
 var InitialScenes = (function () {
   return {
