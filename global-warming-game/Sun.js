@@ -1,5 +1,5 @@
 var Sun = function (game, player) {
-    this.lvlUpFlags = [0, 300, 1500, 1800, 2000, 2100];
+    this.lvlUpFlags = [0, 15, 25, 40, 70, 90];
     this.lvl = 0;
     this.power = 0;
     this.glow = [];

@@ -1,5 +1,5 @@
 var Refinery = function (x, y, iceberg, sun) {
-    this.points = 1000;
+    this.points = 100;
     this.hp = 30;
     this.iceberg = iceberg;
     this.sun = sun;
@@ -7,6 +7,7 @@ var Refinery = function (x, y, iceberg, sun) {
     this.initializeBuilding(x,y); // 'refinery' sprite
     this.initializeSmog(x,y); // 'smog' sprite
     this.reset(x,y);
+    this.harmOzone();
 };
 
 Refinery.prototype.update = function () {
@@ -25,12 +26,6 @@ Refinery.prototype.update = function () {
 	    this.exist();
 	}
 
-    }
-
-    if (this.isAlive() && !this.isDying()) {
-	if (this.points > 10)
-	    this.points--;
-	sun.powerUp();
     }
 };
 
@@ -134,3 +129,15 @@ Refinery.prototype.justDie = function () {
     this.sprite.kill();
     score.scoreUp(this.points);
 };
+
+Refinery.prototype.harmOzone = function () {
+    game.time.events.add(1000, function () {
+        if (this && this.isAlive() && !this.isDying()) {
+            if (this.points > 10) {
+                this.points--;
+            }
+            sun.powerUp();
+            this.harmOzone();
+        }
+    }, this);
+}
