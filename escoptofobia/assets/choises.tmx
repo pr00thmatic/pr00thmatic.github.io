@@ -5,7 +5,7 @@
  </tileset>
  <layer name="platforms" width="22" height="18">
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYKQRpjYYaubCzKYmYKKRuTBASbyOpodRc0fNHTzm0gIDACUPAFo=
+   eJxjZGBgYKQRpjYYaubCzKYmYKKRuTBASdyO5PRAjD8Hk3upZS458TscwoEadtHavbTAADlnAGM=
   </data>
  </layer>
  <layer name="exit" width="22" height="18">

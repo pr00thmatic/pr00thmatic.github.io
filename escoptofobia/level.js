@@ -1,9 +1,12 @@
 var game = new Phaser.Game(770, 630, Phaser.AUTO, 'game');
 domGame.init(game.width, game.height);
 
- var Level = (function () {
+var Level = (function () {
 
   var Instance = (function () {
+    // var debug = true;
+    var debug = false;
+
     return {
       preload : function () {
         // artificial loader
@@ -17,6 +20,7 @@ domGame.init(game.width, game.height);
         game.load.spritesheet('enemy', 'assets/enemy.png', 35,35);
         game.load.spritesheet('enemy-hit', 'assets/enemy-hit.png', 35,35);
         game.load.spritesheet('glow', 'assets/back-energy.png', 45, 45);
+        game.load.spritesheet('bonus', 'assets/bonus.png', 20, 20);
 
         game.load.tilemap(this.levelInfo.name, this.levelInfo.directory,
                           null, Phaser.Tilemap.TILED_JSON);
@@ -24,7 +28,8 @@ domGame.init(game.width, game.height);
       },
       create : function () {
         var i,
-            enemyData;
+            enemyData,
+            bonusData;
 
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.physics.arcade.gravity.y = config.world.gravity;
@@ -47,6 +52,15 @@ domGame.init(game.width, game.height);
                          enemyData.velocity);
         }
 
+        if (this.levelInfo.bonuses) {
+          this.bonuses = [];
+          for (i=0; i<this.levelInfo.bonuses.length; i++) {
+            bonusData = this.levelInfo.bonuses[i];
+            this.bonuses[i] = Bonus.create(bonusData.x, bonusData.y,
+                                           this.pc, true);
+          }
+        }
+
         // artificial loader
         domGame.setLoading(false);
       },
@@ -54,7 +68,12 @@ domGame.init(game.width, game.height);
         zOrder.sort();
       },
       render : function () {
-        // game.debug.body(this.pc);
+        if (debug) {
+          game.debug.body(this.pc);
+          for (var i=0; i<this.enemies.length; i++) {
+            game.debug.body(this.enemies[i]);
+          }
+        }
       },
       end : function () {
         if (this.pc.alive) {

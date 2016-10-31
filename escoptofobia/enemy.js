@@ -2,7 +2,7 @@ var Enemy = (function () {
   var Instance = (function () {
     return {
       isActive : function () {
-        return this.alpha === 1;
+        return this.alpha > .8;
       }
     };
   })();
@@ -19,6 +19,7 @@ var Enemy = (function () {
       enemy.opponent = opponent;
       enemy.body.velocity.x = velocity.x | 0;
       enemy.body.velocity.y = velocity.y | 0;
+      enemy.body.setSize(35, 35);
 
       enemy.body.allowGravity = false;
 

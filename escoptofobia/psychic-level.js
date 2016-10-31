@@ -2,6 +2,9 @@ var PsychicLevel = (function () {
   var Instance = (function () {
     return {
       preload : function () {
+        // artificial loader
+        domGame.setLoading(true);
+
         game.load.spritesheet('you', 'assets/psychic/psychic2.png', 40, 58);
         game.load.spritesheet('0hit', 'assets/psychic/0hit.png', 35, 70);
         game.load.spritesheet('1hit', 'assets/psychic/1hit.png', 35, 105);
@@ -12,6 +15,7 @@ var PsychicLevel = (function () {
         game.load.spritesheet('enemy-hit',
                               'assets/psychic/enemy-hit.png', 35,35);
         game.load.spritesheet('glow', 'assets/psychic/back-energy.png', 50,68);
+        game.load.spritesheet('bonus', 'assets/bonus.png', 20, 20);
 
         game.load.tilemap(this.levelInfo.name, this.levelInfo.directory,
                           null, Phaser.Tilemap.TILED_JSON);
@@ -21,6 +25,9 @@ var PsychicLevel = (function () {
         this.dad.create.call(this);
         game.stage.backgroundColor = "#1a1a1a";
         this.pc.addAnimations();
+
+        //artificial loader
+        domGame.setLoading(false);
       }
     };
   })();

@@ -50,6 +50,10 @@ var defend1 = (function () {
         right : true
       }
     }],
+    bonuses: [{
+      x : 16,
+      y : 16
+    }],
     tiled : true
   });
 
