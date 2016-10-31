@@ -67,7 +67,7 @@ var WeaponSystem = (function () {
             height = height*(this.index+2) - heightPenalty;
             width -= thicknessPenalty;
             x -= (step - thicknessPenalty)/2;
-            y -= height;
+            y -= (height-10);
             break;
           case 'down':
             height = height*(this.index+2) - heightPenalty;

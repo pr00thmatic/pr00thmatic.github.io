@@ -3,65 +3,40 @@ var shooting101 = (function () {
     name: 'shooting101',
     directory: 'assets/shooting101.json',
     pc : {
-      x : 12 * 35,
+      x : 3 * 35 + 10,
       y : 16 * 35
     },
-    enemies : [{
-      x : 10,
-      y : 8,
-      weapons : {
-        down : true
-      }
-    }, {
-      x : 16,
-      y : 8,
-      weapons : {
-        down : true
-      }
-    }, {
-      x : 1,
-      y : 2,
-      weapons : {
-        right : true,
-        down : true
-      }
-    }, {
-      x : 6,
-      y : 6,
-      weapons : {
-        right : true
-      }
-    }, {
-      x : 19,
-      y : 14,
-      weapons : {
-        left : true
-      }
-    }, {
-      x : 17,
-      y : 8,
-      weapons : {
-        right : true
-      }
-    }, {
-      x : 18,
-      y : 8,
-      weapons : {
-        down : true
-      }
-    }, {
-      x : 16,
-      y : 16,
-      weapons : {
-        up : true,
-        right : true,
-        left : true
-      }
-    }],
-    bonuses : [
+    enemies : [
       {
-        x : 14,
-        y : 16
+        x : 2,
+        y : 8,
+        weapons : {
+          down : true
+        }
+      }, {
+        x : 1,
+        y : 8,
+        weapons : {
+          right : true
+        }
+      }, {
+        x : 10,
+        y : 15,
+        weapons : {
+          up : true
+        }
+      }, {
+        x : 6,
+        y : 16,
+        weapons : {
+          right : true
+        }
+      }, {
+        x : 18,
+        y : 4,
+        weapons : {
+          right : true
+        }
       }
     ],
     tiled : true
@@ -100,5 +75,5 @@ var shooting101 = (function () {
   return level;
 })();
 
-shooting101.nextLevel = 'context-level';
+shooting101.nextLevel = 'shooting2';
 game.state.add('shooting101', shooting101);

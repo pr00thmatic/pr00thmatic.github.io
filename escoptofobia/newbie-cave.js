@@ -41,6 +41,6 @@ var newbieCave = (function () {
   return level;
 })();
 
-newbieCave.nextLevel = 'avoidance';
+newbieCave.nextLevel = 'jumping101';
 game.state.add('newbie-cave', newbieCave);
 

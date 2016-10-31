@@ -65,7 +65,16 @@ var defend1 = (function () {
     level.tutorial = Tutorial.create([
       {
         text : "",
-        time : 500
+        time : 250
+      }, {
+        text : "[Psicólogo]: Hay algunos miedos a los que no tienes por qué enfrentarte.",
+        time : 5000
+      }, {
+        text : "[Psicólogo]: Pero si decides enfrentarlos, eso te dará esperanza.",
+        time : 4000
+      }, {
+        text : "[Tú]: Procuraré enfrentarlos",
+        time : 3500
       }
     ]);
   }

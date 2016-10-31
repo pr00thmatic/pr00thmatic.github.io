@@ -44,7 +44,7 @@ var RangedAttack = (function () {
             this.returnToOwner();
           }
 
-          game.physics.arcade.collide(this, this.owner,
+          game.physics.arcade.overlap(this, this.owner,
                                       this.mergeWithOwner, null, this);
         },
 
@@ -77,7 +77,11 @@ var RangedAttack = (function () {
 
     return {
       create : function () {
-        var shot = game.add.sprite(this.owner.x, this.owner.y, 'shot');
+        var xPenalty = -Math.sin(Math.PI-this.arrow.rotation) * 10,
+            yPenalty = -Math.cos(Math.PI-this.arrow.rotation) * 10,
+            shot = game.add.sprite(this.owner.x + xPenalty,
+                                   this.owner.y + yPenalty, 'shot');
+
         this.owner.part.push(shot);
 
         util.inheritFunctions(shot, Instance);
