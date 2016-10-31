@@ -1,5 +1,7 @@
+var glitchingPalls = [];
 var game = new Phaser.Game(770, 630, Phaser.AUTO, 'game');
 domGame.init(game.width, game.height);
+game.goodEnding = true;
 
 var Level = (function () {
 
@@ -57,7 +59,7 @@ var Level = (function () {
           for (i=0; i<this.levelInfo.bonuses.length; i++) {
             bonusData = this.levelInfo.bonuses[i];
             this.bonuses[i] = Bonus.create(bonusData.x, bonusData.y,
-                                           this.pc, true);
+                                           this.pc, true, this);
           }
         }
 
@@ -73,16 +75,35 @@ var Level = (function () {
           for (var i=0; i<this.enemies.length; i++) {
             game.debug.body(this.enemies[i]);
           }
+
+          for (var i=0; i<glitchingPalls.length; i++) {
+            game.debug.body(glitchingPalls[i]);
+          }
         }
       },
       end : function () {
         if (this.pc.alive) {
-          game.state.start(this.nextLevel);
+          if (this.hasBonus() && !this.bonusTaken) {
+            game.goodEnding = false;
+          }
+
+          if (this.nextLevel == 'end') {
+            if (game.goodEnding) {
+              game.state.start('good-ending');
+            } else {
+              game.state.start('bad-ending');
+            }
+          } else {
+            game.state.start(this.nextLevel);
+          }
         }
       },
       restart : function () {
         console.log('restart!!');
         game.state.start(this.key, true, false);
+      },
+      hasBonus : function () {
+        return this.bonuses && this.bonuses.length > 0;
       }
     };
   })();

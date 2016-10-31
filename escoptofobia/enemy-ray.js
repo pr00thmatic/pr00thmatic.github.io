@@ -53,7 +53,7 @@ var Ray = (function () {
         game.time.events.add(500, getReady, this);
       },
       checkWallBlocked : function (ray, tile) {
-        if (tile.index > 0) {
+        if (tile.index > 0 || ray.wallBlocked) {
           ray.wallBlocked = true;
         } else if (ray.index > 0) {
           ray.wallBlocked = ray.source.ray[ray.index-1].wallBlocked;
@@ -76,8 +76,9 @@ var Ray = (function () {
 
       for (counter = 0; counter < config.ray.range; counter++) {
         ray = game.add.sprite(i,j, 'enemy-hit');
+        glitchingPalls.push(ray);
         game.physics.arcade.enable(ray);
-        ray.body.setSize(ray.width/1.5, ray.height/1.5);
+        ray.body.setSize(ray.width/1.2, ray.height/1.2, 0, 14);
         ray.body.gravity.y = -config.world.gravity;
         ray.anchor.set(0.5, 1);
         ray.rotation = weapon.rotation;

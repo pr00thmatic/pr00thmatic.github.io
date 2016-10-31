@@ -22,16 +22,16 @@ var movementTutorialLevel = (function () {
         time : 1000
       }, {
         text : "[Psicólogo]: quiero que te relajes y confíes en mí. Estás en tu interior, éste es tu mundo cognitivo",
-        time : 5000
+        time : 3000
       }, {
         text : "[Psicólogo]: Muévete con los cursores [DERECHA] e [IZQUIERDA]", 
-        time : 4000
+        time : 3000
       }, {
         text : "[Psicólogo]: A menudo te toparás con obstáculos a lo largo de esta terapia, pero debes ser fuerte, y seguir adelante.",
-        time : 4000
+        time : 3500
       }, {
         text : "[Psicólogo]: Para afrontar estos obstáculos, presiona [ARRIBA]",
-        time : 4000
+        time : 3000
       }
     ]);
   }
@@ -41,4 +41,4 @@ var movementTutorialLevel = (function () {
 
 movementTutorialLevel.nextLevel = 'newbie-cave';
 game.state.add('movement-level', movementTutorialLevel);
-game.state.start('movement-level');
+// game.state.start('movement-level');

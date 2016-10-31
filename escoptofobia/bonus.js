@@ -9,6 +9,7 @@ var Bonus = (function () {
         bonus.halos[i].kill();
       }
 
+      bonus.level.bonusTaken = true;
       bonus.kill();
     };
 
@@ -43,7 +44,7 @@ var Bonus = (function () {
   };
 
   return {
-    create : function (x,y, collector, tiled) {
+    create : function (x,y, collector, tiled, level) {
       var bonus = {};
       
       if (tiled) {
@@ -52,6 +53,7 @@ var Bonus = (function () {
       }
 
       bonus = game.add.sprite(x,y, 'bonus');
+      bonus.level = level;
       game.physics.arcade.enable(bonus);
       bonus.collector = collector;
       bonus.anchor.set(0.5);

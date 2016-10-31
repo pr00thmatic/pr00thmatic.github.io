@@ -3,8 +3,8 @@ var shooting101 = (function () {
     name: 'shooting2',
     directory: 'assets/shooting2.json',
     pc : {
-      x : 12 * 35,
-      y : 16 * 35
+      x : 12 * 35 + 10,
+      y : 16 * 35 + 10
     },
     enemies : [{
       x : 10,

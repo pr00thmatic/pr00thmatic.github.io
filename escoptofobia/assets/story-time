@@ -5,12 +5,12 @@
  </tileset>
  <layer name="platforms" width="22" height="18">
   <data encoding="base64" compression="zlib">
-   eJy9lNsKACAIQ/X/fzp6C9liajbwoQvHNSE3Mx+qU3Fd1SuOykX7GQ8sFzUzNd+KN+Z1kotyQHdvXhg34wf1Q1zWMzMThdtRlqu+Ac2tKzWrDvsHF2UVz9n6daZRU//5rgWmhwCF
+   eJxjZGBgYKQRpjYYNRe7ubjsIdV+WrgVZi4TjcwlR44Yc9HTMTXSPy3SAy3yGy3yMSnhM9jKHlqZTSt306o8B2EAWPsAfA==
   </data>
  </layer>
  <layer name="exit" width="22" height="18">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFTAPtgFEwCkbBKBgCAAAQiAAD
+   eJxjYBgFo2AUjIJRMAoIAwAGMAAB
   </data>
  </layer>
 </map>

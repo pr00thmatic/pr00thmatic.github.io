@@ -30,7 +30,7 @@ var newbieCave = (function () {
         time : 500
       }, {
         text : "[Psicólogo]: Cuando alguien podría llegar a verte, tú qué haces?",
-        time : 4000
+        time : 3500
       }, {
         text : "[Tú]: Lo evito. Me escondo porque me hace daño", 
         time : 4000

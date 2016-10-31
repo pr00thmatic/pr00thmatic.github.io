@@ -20,7 +20,7 @@ var defend0 = (function () {
         down : true
       },
     }],
-    tiled : true
+    tiled : true,
   });
 
   var create = level.create;

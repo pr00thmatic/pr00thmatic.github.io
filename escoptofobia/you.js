@@ -90,7 +90,7 @@ var You = (function () {
       return {
         update : function () {
           this.x = this.owner.getX();
-          this.y = this.owner.y-10;
+          this.y = this.owner.y;
           this.animations.play(this.levels[this.owner.energy-1]);
         }
       };
@@ -100,6 +100,7 @@ var You = (function () {
       create : function (owner) {
         var glow = game.add.sprite(owner.x, owner.y, 'glow');
         glow.anchor.set(.5);
+        glow.scale.set(1, 1.2);
         glow.owner = owner;
         util.inheritFunctions(glow, Instance);
         glow.levels = ['1', '2', '3'];
@@ -118,7 +119,7 @@ var You = (function () {
     create : function (x,y, level) {
       var you = Character.create(x,y, 'you', level);
 
-      you.body.setSize(you.width/2, you.height/1.2, 0, you.height/11);
+      you.body.setSize(you.width/1.8, you.height/1.2, 0, you.height/11);
       you.control = game.input.keyboard.createCursorKeys();
       you.jumpSpeed = Math.sqrt(2 * config.you.jumpHeight *
                                 config.world.gravity);

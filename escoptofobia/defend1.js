@@ -54,7 +54,7 @@ var defend1 = (function () {
       x : 16,
       y : 16
     }],
-    tiled : true
+    tiled : true,
   });
 
   var create = level.create;
