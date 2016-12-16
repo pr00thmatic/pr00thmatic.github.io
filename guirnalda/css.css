@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: green;
+}
+
+.centered {
+    text-align: center;
+    font-family: sans;
+}
+
+.container {
+    padding: 0;
+    line-height: 10px;
+    margin: 0;
+    font-family: mono;
+}
