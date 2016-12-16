@@ -18,10 +18,16 @@ body {
     margin: 0;
     font-family: mono;
     overflow: auto;
-    font-size: 30px;
+    font-size: 4vh;
+    height: 84vh;
 }
 .star {
+    line-height: 0.8em;
     color: yellow;
+    font-size: 10vh;
+    bottom: -25px;
+    position: relative;
+    overflow: scrollbar;
 }
 
 .light {
