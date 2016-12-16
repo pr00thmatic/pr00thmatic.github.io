@@ -12,7 +12,7 @@
         if (i > width*2 && middle-1 <= j && j <= middle+1) {
           M[i][j] = '|';
         } else if (i <= width*2 && middle - i/4 <= j && j <= middle + i/4) {
-          M[i][j] = Math.random() < 0.5 ? 'x' : 'o'
+          M[i][j] = Math.random() < 0.8 ? 'x' : 'o'
         } else {
           M[i][j] = ' ';    
         }
@@ -35,7 +35,15 @@
 
     for (var i=0; i<M.length; i++) {
       for (var j=0; j<M[i].length; j++) {
-        s += M[i][j];
+        if (M[i][j] == '*') {
+          s += '<span class="star">' + M[i][j] + '</span>';
+        } else if (M[i][j] == 'o') {
+          s += '<span class="light">' + M[i][j] + '</span>';
+        } else if (M[i][j] == 'x') {
+          s += '<span class="tree">' + M[i][j] + '</span>';
+        } else {
+          s += M[i][j];
+        }
       }
       s += '</br>';
     }

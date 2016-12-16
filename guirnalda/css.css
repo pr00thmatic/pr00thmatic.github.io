@@ -8,9 +8,26 @@ body {
     font-family: sans;
 }
 
+.title {
+    font-size: 30px;
+}
+
 .container {
     padding: 0;
-    line-height: 10px;
+    line-height: 0.7em;
     margin: 0;
     font-family: mono;
+    overflow: auto;
+    font-size: 30px;
+}
+.star {
+    color: yellow;
+}
+
+.light {
+    color: red;
+}
+
+.tree {
+    color: green;
 }
