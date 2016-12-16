@@ -18,8 +18,8 @@ body {
     margin: 0;
     font-family: mono;
     overflow: auto;
-    font-size: 4vh;
-    height: 84vh;
+    font-size: 6vh;
+    height: 100vh;
 }
 .star {
     line-height: 0.8em;
