@@ -55,3 +55,7 @@ a:visited {
     top: 270px;
     position: relative;
 }
+
+.cover {
+    max-width: 50%;
+}
