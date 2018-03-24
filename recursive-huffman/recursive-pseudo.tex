@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage[linesnumbered, ruled]{algorithm2e}
+\lstset{inputencoding=utf8/latin1}
+
+%\usepackage[margin=1cm]{geometry}
+\setlength{\parskip}{0.5cm plus4mm minus3mm}
+%\setlength{\parindent}{0pt}
+
+%\renewcommand*{\familydefault}{\sfdefault}
+
+
+\begin{document}
+Algoritmo recursivo para generar un código de Huffman dada su distribución probabilistica, junto el código asociado a cada una de sus reducciones.
+
+Sean...
+
+\begin{itemize}
+\item $R$ un vector de objetos con las propiedades: $c, p, 0$ y opcionalmente $1$, y representa una reducción.
+
+\item $R_{-1}$ la reducción anterior a $R$, y $R_{2}$ la reducción que sigue a $R$.
+
+\item $R[i].p$ la probabilidades de aparición del $i$-ésimo símbolo en $R$.
+
+\item $R[i].c$ la palabra código asignada al $i$-ésimo símbolo de $R$.
+
+\item $R[i].0$ el índice del símbolo en $R_{-1}$ del que salió $R[i].p$, es decir,
+
+  \begin{align*}
+    R[i].p = R_{-1}[R[i].0] \iff \nexists R[i].1
+  \end{align*}
+
+\item Si $R[i].p$ es el resultado de la suma de dos probabilidades de la reducción anterior, entonces $\exists R[i].1$, y por lo tanto:
+
+  \begin{align*}
+    R[i].p = R_{-1}[R[i].0] + R_{-1}[R[i].1] \iff \exists R[i].1
+  \end{align*}
+
+\end{itemize}
+
+El algoritmo asume que la distribución de probabilidades de la reducción para la que debe generar el código ya existe, por lo que, en base a ella, crea la distribución de probabilidades para la reducción siguiente, y vuelve a llamarse a si mismo, enviando como parámetro a esta distribución que creó, para encontrar el código de la siguiente reducción.
+
+Una vez encontrada la última reducción (aquella que sólamente tiene 2 símbolos, cuyas palabras código son $0$ y $1$), hace backtrack... luego el algoritmo ya conoce los códigos de las reducciones siguientes, por lo que, de acuerdo a los índices guardados en $R_2[i].0$ y $R_2[i].1$, construye el código correspondiente al símbolo en $R[R_2[i].0]$ y, si existiera en $R[R_2[i].1]$.
+
+\begin{algorithm}
+  \underline{function H} $(R, reducciones)$ \\
+  $R_2 = []$  \\
+  $a_{m_1}$ = min($R$)  \\
+  $a_{m_1}$ = 2ndMin($R$) \\
+
+  \If{$|R| == 2$} {
+    R[0].c = ``0'' \\
+    R[1].c = ``1'' \\
+    \textbf{return \{ R, reducciones \}}
+  }
+
+  \For{$r_i$ in $R$} {
+    \If{$i \notin \{m_1, m_2\}$} {
+      $R_2$.push($\{ 0: i,\ \ p: r_i.p \}$)
+    }
+  }
+
+  $R_2$.push($\{ 0: m_1,\ \ 1:m_2,\ \ p: a_{m_1} + a_{m_2} \}$) \\[2\baselineskip]
+
+  \textbf{H($R_2$, reducciones)} \\[2\baselineskip]
+
+  \For{$R_{2_i}$ in $R_2$} {
+    \eIf{$\exists R_{2_i}.1$} {
+      $R[R_{2_i}.0].c = R_{2_i}.c + ``0''$ \\
+      $R[R_{2_i}.1].c = R_{2_i}.c + ``1''$
+    }{
+      $R[R_{2_i}.0].c = R_{2_i}.c$
+    }
+  }
+
+  reducciones.push($R_2$)
+
+  \textbf{ R, reducciones }
+\end{algorithm}
+
+\end{document}
