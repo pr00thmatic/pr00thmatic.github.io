@@ -3,21 +3,18 @@ var Huffman = (function () {
     return JSON.parse(JSON.stringify(obj));
   };
 
-  var find2Min  = function (v) {
-    var a = { p: v[0].p, i: 0 };
-    var b = { p: v[1].p, i: 1 };
-
-    for (var i=2; i<v.length; i++) {
-      if (v[i].p < a.p && i != b.i) {
-        a = { p: v[i].p, i};
-      }
-
-      if (v[i].p < b.p && i != a.i) {
-        b = { p: v[i].p, i };
-      }
+  var find2Min = function (v) {
+    var c = copy(v);
+    var i;
+    for (i=0; i<c.length; i++) {
+      c[i] = {p: v[i].p, i};
     }
 
-    return [ a, b ];
+    c.sort((a, b) => {
+      return a.p - b.p;
+    });
+
+    return [c[0], c[1]];
   };
 
   var recursiveFind = function (R, reductions) {

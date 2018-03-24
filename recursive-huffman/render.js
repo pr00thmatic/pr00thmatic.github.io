@@ -3,13 +3,21 @@ var methods = {
 
 var data = {
   dist: [{
-    p: 0.1
-  }, {
-    p: 0.4
-  }, {
     p: 0.3
   }, {
     p: 0.2
+  }, {
+    p: 0.15
+  }, {
+    p: 0.1
+  }, {
+    p: 0.1
+  }, {
+    p: 0.08
+  }, {
+    p: 0.05
+  }, {
+    p: 0.02
   }, {
     p: ''
   }],
@@ -50,7 +58,6 @@ var data = {
       this.headers.push("C<sub>" + i + "</sub>");
 
       inverseI = this.huffman.reductions.length - i -1;
-      console.log(inverseI);
       for (j=0; j<this.huffman.reductions[inverseI].length; j++) {
         if (typeof(this.huffman.reductions[inverseI][j]) != "undefined") {
           this.row[j].push(Math.round(this.huffman.reductions[inverseI][j].p * 100000) / 100000);
