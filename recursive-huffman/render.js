@@ -22,6 +22,9 @@ var data = {
     p: ''
   }],
 
+  r: '',
+  alert: '',
+
   huffman: [],
 
   headers: [],
@@ -42,12 +45,20 @@ var data = {
     this.row = [];
     this.headers = [];
 
+    if (!this.r) {
+      this.alert = "aridad indefinida, asumiendo r=2";
+      this.r = 2;
+    } else {
+      this.alert = "";
+    }
+    this.r = eval(this.r);
+
     for (i=0; i<this.dist.length; i++) {
       if (this.dist[i].p)
         dist.push(eval(this.dist[i].p));
     }
 
-    this.huffman = Huffman.startRecursiveFind(dist);
+    this.huffman = Huffman.startRecursiveFind(dist, this.r);
     for (i=0; i<this.huffman.R.length; i++) {
       this.row.push([]);
       this.row[i].push(this.huffman.R[i].c);

@@ -24,6 +24,15 @@
             </a>
           </p>
 
+          <span class="label label-warning" v-if="alert">{{ alert }}</span>
+
+          <input v-model="r"
+                 name="arity"
+                 class="form-input"
+                 type="number"
+                 placeholder="aridad (entre 2 y 100)"
+                 />
+
           <table class="table table-stripped table-hover table-scroll">
             <thead>
               <th>Dist.</th>

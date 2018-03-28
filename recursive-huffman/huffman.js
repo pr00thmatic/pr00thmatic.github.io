@@ -1,90 +1,125 @@
 var Huffman = (function () {
+  var symbols = '0123456789' +
+        'abcdefghijklmnñopqrstuvwxyz' +
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZÑ' +
+        '`-=][\';/.,\\~!@#$%^&*()_+}|{":?></¡¿€';
+
+  var isIndexIn = function (item, array) {
+    var i;
+    for (i=0; i<array.length; i++) {
+      if (item === array[i].i) {
+        return true;
+      }
+    }
+
+    return false;
+  };
+
+  var getCompositeProb = function (minArray) {
+    var composite = {
+      dependencies: [],
+      p: 0
+    };
+    var i;
+
+    for (i=0; i<minArray.length; i++) {
+      composite.dependencies.push(minArray[i].i);
+      composite.p += minArray[i].p;
+    }
+
+    if (composite.dependencies.length === 0) {
+      return null;
+    }
+
+    return composite;
+  };
+
   var copy = function (obj) {
     return JSON.parse(JSON.stringify(obj));
   };
 
-  var find2Min = function (v) {
+  var findMins = function (v, r) {
     var c = copy(v);
     var i;
+
     for (i=0; i<c.length; i++) {
-      c[i] = {p: v[i].p, i};
+      c[i] = { p: v[i].p, i };
     }
 
     c.sort((a, b) => {
       return a.p - b.p;
     });
 
-    return [c[0], c[1]];
+    return c.slice(0, r);
   };
 
-  var recursiveFind = function (R, reductions) {
-    reductions = reductions || [];
+  var recursiveFind = function (R, r, reductions) {
     var R2 = [];
-    var min = find2Min(R);
+    var min = findMins(R, r);
+    var i;
+    var j;
+    var composite = {};
+    reductions = reductions || [];
 
-    for (var i=0; i<R.length; i++) {
-      if (i != min[0].i && i!= min[1].i) {
-        R2.push({ 0: i, p: R[i].p });
+    if (R.length === r) { // STOP CONDITION! :O
+      for (i=0; i<r; i++) R[i].c = symbols[i];
+      return { R, r, reductions };
+    }
+
+    for (i=0; i<R.length; i++) { // unreduced probabilities
+      if (!isIndexIn(i, min)) {
+        R2.push({ dependencies: [i], p: R[i].p });
       }
     }
 
-    if (R.length == 2) { // STOP CONDITION! :O
-      R[0].c = "0";
-      R[1].c = "1" ;
-      return { R, reductions };
-    }
+    composite = getCompositeProb(min); // reduced probability
+    if (composite) R2.push(composite);
 
-    R2.push({
-      0: min[0].i,
-      1: min[1].i,
-      p: min[0].p + min[1].p
-    });
+    recursiveFind(R2, r, reductions); // RECURSION!!!
 
-    recursiveFind(R2, reductions);
-
-    for (i=0; i<R2.length; i++) {
-      if (typeof(R2[i][1]) != "undefined") {
-        R[R2[i][0]].c = R2[i].c + "0";
-        R[R2[i][1]].c = R2[i].c + "1";
-      } else {
-        R[R2[i][0]].c = R2[i].c;
+    for (i=0; i<R2.length; i++) { // now lets find the codewords...
+      if (R2[i].dependencies.length > 1) { // <=> reduced probability
+        for (j=0; j<R2[i].dependencies.length; j++) {
+          R[R2[i].dependencies[j]].c = R2[i].c + symbols[j];
+        }
+      } else { // <=> unreduced probability
+        R[R2[i].dependencies[0]].c = R2[i].c;
       }
     }
 
     reductions.push(R2);
 
-    return { R, reductions };
+    return { R, r, reductions };
   };
 
-  var recursiveTest = function (dist, n) {
-    var R = startRecursiveFind(dist);
-    console.log(R, R.length);
-
-    for (var i=0; i<n-1; i++) {
-      R = recursiveFind(R);
-      console.log(R, R.length);
-    }
-  };
-
-  var startRecursiveFind = function (dist) {
+  var startRecursiveFind = function (dist, r) {
     var R = [];
+    var spurious;
+    var i;
 
-    for (var i=0; i<dist.length; i++) {
+    for (i=0; i<dist.length; i++) {
       R.push({
         p: dist[i],
-        0: i
+        dependencies: [i]
       });
     }
 
-    console.log(recursiveFind(R));
-    return recursiveFind(R);
+    spurious = r + Math.ceil((R.length-r) / (r-1)) * (r-1);
+
+    for (i=R.length; i<spurious; i++) {
+      R.push({
+        p: 0,
+        dependencies: [i]
+      });
+    }
+
+    return recursiveFind(R, r);
   };
 
   return {
     recursiveFind,
     startRecursiveFind,
-    recursiveTest,
-    find2Min
+    findMins
   };
 })();
 
