@@ -80,6 +80,7 @@ var Huffman = (function () {
     for (i=0; i<R2.length; i++) { // now lets find the codewords...
       if (R2[i].dependencies.length > 1) { // <=> reduced probability
         for (j=0; j<R2[i].dependencies.length; j++) {
+          R[R2[i].dependencies[j]].class = "reduced-next";
           R[R2[i].dependencies[j]].c = R2[i].c + symbols[j];
         }
       } else { // <=> unreduced probability

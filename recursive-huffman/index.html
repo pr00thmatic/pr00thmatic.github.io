@@ -4,7 +4,8 @@
   <head>
     <meta charset="utf-8" />
     <title>Huffman :O</title>
-    <link rel="stylesheet" href="spectre.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="spectre.min.css" />
+    <link rel="stylesheet" href="custom.css" />
   </head>
   
   <body>
@@ -44,15 +45,16 @@
             </thead>
 
             <tbody>
-              <tr v-for="(p, i) in dist">
+              <tr v-for="(p, i) in dist" class="tiny-row">
                 <td>
                   <input v-model="p.p"
-                         class="form-input" type="float"
+                         class="form-input tiny-input" type="float"
                          @keydown="onChange(dist)"/>
                 </td>
 
-                <td v-for="item in row[i]">
-                  {{ item }}
+                <td v-for="item in row[i]"
+                    :class="item.class">
+                  {{ item.content }}
                 </td>
               </tr>
             </tbody>

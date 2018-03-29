@@ -1,0 +1,28 @@
+.reduced {
+    background-color: #ee5;
+    border-radius: 10px;
+}
+
+.probability {
+    color: #55f;
+}
+
+.symbol {
+    color: #f55;
+}
+
+.tiny-input {
+    border: none;
+    bottom-border: solid 1 px;
+}
+
+.tiny-row td {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.reduced-next {
+    color: green;
+}

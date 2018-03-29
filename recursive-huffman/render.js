@@ -1,6 +1,3 @@
-var methods = {
-};
-
 var data = {
   dist: [{
     p: 0.3
@@ -31,9 +28,19 @@ var data = {
   row: [],
 
   onChange : function (dist) {
+    var i=0;
+
+    console.log(dist);
+    for (i=0; i<dist.length-1; i++) {
+      if (!dist[i].p) {
+        dist[i] = dist.pop();
+      }
+    }
+
     if (dist[dist.length-1].p != '') {
       dist.push({ p: '' });
     }
+
   },
 
   generate : function () {
@@ -42,6 +49,8 @@ var data = {
     var i;
     var j;
     var inverseI;
+    var reduction;
+
     this.row = [];
     this.headers = [];
 
@@ -61,7 +70,9 @@ var data = {
     this.huffman = Huffman.startRecursiveFind(dist, this.r);
     for (i=0; i<this.huffman.R.length; i++) {
       this.row.push([]);
-      this.row[i].push(this.huffman.R[i].c);
+      this.row[i].push({
+        content: this.huffman.R[i].c
+      });
     }
 
     for (i=0; i<this.huffman.reductions.length; i++) {
@@ -69,10 +80,20 @@ var data = {
       this.headers.push("C<sub>" + i + "</sub>");
 
       inverseI = this.huffman.reductions.length - i -1;
+      console.log(this.huffman.reductions);
       for (j=0; j<this.huffman.reductions[inverseI].length; j++) {
-        if (typeof(this.huffman.reductions[inverseI][j]) != "undefined") {
-          this.row[j].push(Math.round(this.huffman.reductions[inverseI][j].p * 100000) / 100000);
-          this.row[j].push(this.huffman.reductions[inverseI][j].c);
+        reduction = this.huffman.reductions[inverseI][j];
+        console.log(reduction.class);
+        if (typeof(reduction) != "undefined") {
+          this.row[j].push({
+            content: Math.round(reduction.p * 100000) / 100000,
+            class: (reduction.dependencies.length > 1? 'reduced': '') +
+              ' probability ' + reduction.class
+          });
+          this.row[j].push({
+            content: reduction.c,
+            class: 'symbol'
+          });
         }
       }
     }
