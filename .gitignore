@@ -1,3 +1,27 @@
 # emacs
 *~
 #*#
+
+
+# dependencies
+/final-project-163/node_modules
+
+# testing
+/final-project-163//coverage
+
+# production
+/final-project-163//build
+/final-project-163//local-build
+
+# misc
+/final-project-163/.DS_Store
+/final-project-163/.env.local
+/final-project-163/.env.development.local
+/final-project-163/.env.test.local
+/final-project-163/.env.production.local
+
+/final-project-163/npm-debug.log*
+/final-project-163/yarn-debug.log*
+/final-project-163/yarn-error.log*
+
+/final-project-163/src/firebase/firebase.js
