@@ -1,0 +1,7 @@
+Si tiene node instalado en su computadora, puede ejecutar el script como:
+
+$ node polinomialGFProduct
+
+Generará un archivo csv con la tabla de multiplicar para polinomios módulo el grado especificado en la variable n, en la línea 10 del rchivo polinomialGFProduct.js
+
+Si no tiene node instalado, hice un index.html muy rústico para generar tablas de multiplicar de polinomios de cualquier grado.
