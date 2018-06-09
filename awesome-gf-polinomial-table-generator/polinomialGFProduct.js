@@ -1,7 +1,9 @@
 var platform = 'node';
+var toCSV;
+var fs;
 try {
-  const toCSV = require('array-to-csv');
-  const fs = require('fs');
+  toCSV = require('array-to-csv');
+  fs = require('fs');
 } catch (error) {
   platform = 'browser';
 }
@@ -52,7 +54,7 @@ var polinomialGFProduct = (function () {
 
     for (i=0; i<a.length; i++) {
       if (a[i] === '1') {
-        product = this.sum(product, this.rotate(b, (a.length - 1 - i)));
+        product = this.sum(product, this.rotate(b, (i)));
       }
     }
 
