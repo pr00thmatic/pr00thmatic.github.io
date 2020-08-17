@@ -5,14 +5,20 @@
 ### The old site
 
 Are you looking for a very "edgy" looking website? then you are going to love my old website! (otherwise... i am sorry for what you are about to see). Here I have some of my old games (everything is in spanish tho')... aaahhh the good ol' days when I used to code in Phaser. It has been like 3? 4? years since then. Now I use Unity, and I am doing a living by developing cool stuff using it!
-<a href="https://pr00thmatic.github.io/old/index.html">edgy ol' website</a>
+
+<a href="https://pr00thmatic.github.io/old/index.html">
+<img src="images/edgy.png?raw=true"/>
+edgy ol' website
+</a>
 ---
 
 ### qeqe
 
 This is a cute litle game that means a lot to me. I hope you enjoy it as much as I enjoyed creating it!
 
-<a href="https://pr00thmatic.itch.io/qeqe">qeqe</a>
+<a href="https://pr00thmatic.itch.io/qeqe">
+<img src="images/qeqe.png?raw=true"/>
+qeqe</a>
 
 ---
 
