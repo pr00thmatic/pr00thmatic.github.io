@@ -82,7 +82,7 @@ Anyway, I have an outdated portfolio that I made to apply to the scholarship! an
 
 I know :( I am sorry :'(
 
-During 2020 I have had more work than ever! I am currently working for 3 companies as part-time, I've been working with a team of proffessionals, learning a lot about new technologies, polishing what I already knew about Unity, finding new things I didn't knew about Unity, and having a lot of fun!
+During 2020 I have had more work than ever! I am currently working for 3 companies as part-time, I've been working with a team of proffessionals, learning a lot about new technologies, polishing what I already knew about Unity, finding new things I didn't knew about Unity... overall, having a lot of fun!
 
 And I know that working 12 hours a day is a lot of work, but right now, with this pandemy, this is exactly what I need... after all... All I wanna do is become big game developer, and help others to build awesome games!
 
