@@ -1,11 +1,15 @@
-title: John Doe # your name (or website title) here
-logo: "/images/logo.png?raw=true" # your photo (or logo) here
+title: Ruth García
+logo: "/images/logo.png?raw=true"
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+  Well hello there...
   <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  I am a generalist game developer. I am a gameplay developer, but, when it comes to programming, I can make other things too (things like UI, animations and a teeny-tiny bit of multiplayer and AI programming).
+  <br>
+  I can also make 3D art (modelling, rigging, animation, texturing), I can also integrate 3D art into Unity (does that make me a junior technical artist? :O), 2D art (Illustration and animation with and without bones in Unity). I can also improvise sound effects, and make them sound cool by playing around with the AudioSource values from script.
+  <br>
+  Working for VReality I had the oportunity of learning a lot about Microsoft Kinect, Arduino, Oculus Quest and Unity, I also helped on the development of several Instagram filters using SparkAR.
+  <br>
+  Do you want to know more about my adventures on the laboral world? <a href="https://www.linkedin.com/in/pr00thmatic/">Check My LinkedIn Profile!</a> 
   
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
