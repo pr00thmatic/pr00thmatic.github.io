@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Huffman :O</title>
+    <link rel="stylesheet" href="spectre.min.css" />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  
+  <body>
+
+    <div class="container" id="huffman-table">
+      <div class="columns">
+        <div class="column col-10 col-mx-auto" >
+          
+          <p>
+            <a href="./recursive-pseudo.pdf">
+              pseudocódigo!
+            </a>
+          </p>
+          <p>
+            <a href="./recursive-pseudo.tex">
+              pseudocódigo en latex!
+            </a>
+          </p>
+
+          <span class="label label-warning" v-if="alert">{{ alert }}</span>
+
+          <input v-model="r"
+                 name="arity"
+                 class="form-input"
+                 type="number"
+                 placeholder="aridad (entre 2 y 100)"
+                 />
+
+          <table class="table table-stripped table-hover table-scroll">
+            <thead>
+              <th>Dist.</th>
+              <th>C</th>
+              <th v-for="header in headers"
+                  v-html="header">
+                
+              </th>
+            </thead>
+
+            <tbody>
+              <tr v-for="(p, i) in dist" class="tiny-row">
+                <td>
+                  <input v-model="p.p"
+                         class="form-input tiny-input" type="float"
+                         @keydown="onChange(dist)"/>
+                </td>
+
+                <td v-for="item in row[i]"
+                    :class="item.class">
+                  {{ item.content }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="button"
+                  class="btn"
+                  @click="generate()"> generar </button>
+        </div>
+      </div>
+
+
+    </div>
+    
+
+    <script src="vue.js.min"></script>
+    <script src="huffman.js"></script>
+    <script src="render.js"></script>
+  </body>
+</html>
