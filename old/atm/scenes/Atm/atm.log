@@ -1,0 +1,250 @@
+Exporter version: 6.4.6, Blender version: 2.83.5
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\compartidos-ruth\FieATMWeb\wtf\scenes\Atm\
+	Python World class constructor completed
+	processing begun of mesh:  atm
+		processing begun of material:  AtmTextured
+			processing texture atm
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  8196
+		num normals        :  8196
+		num tangents       :  32784
+		num uvs            :  16392
+		num uvs2           :  16392
+		num colors         :  0
+		num triangles      :  6388
+	processing begun of mesh:  green thing
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  1880
+		num normals        :  1880
+		num tangents       :  7520
+		num uvs            :  3760
+		num uvs2           :  3760
+		num colors         :  0
+		num triangles      :  1992
+	processing begun of camera (UniversalCamera):  camera
+	processing begun of mesh:  nope3
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  152
+		num normals        :  152
+		num tangents       :  608
+		num uvs            :  304
+		num uvs2           :  304
+		num colors         :  0
+		num triangles      :  100
+	processing begun of mesh:  one
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  145
+		num normals        :  145
+		num tangents       :  580
+		num uvs            :  290
+		num uvs2           :  290
+		num colors         :  0
+		num triangles      :  96
+	processing begun of mesh:  two
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  141
+		num normals        :  141
+		num tangents       :  564
+		num uvs            :  282
+		num uvs2           :  282
+		num colors         :  0
+		num triangles      :  94
+	processing begun of mesh:  three
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  144
+		num normals        :  144
+		num tangents       :  576
+		num uvs            :  288
+		num uvs2           :  288
+		num colors         :  0
+		num triangles      :  97
+	processing begun of mesh:  four
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  150
+		num normals        :  150
+		num tangents       :  600
+		num uvs            :  300
+		num uvs2           :  300
+		num colors         :  0
+		num triangles      :  96
+	processing begun of mesh:  five
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  94
+	processing begun of mesh:  six
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  153
+		num normals        :  153
+		num tangents       :  612
+		num uvs            :  306
+		num uvs2           :  306
+		num colors         :  0
+		num triangles      :  97
+	processing begun of mesh:  seven
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  228
+		num normals        :  228
+		num tangents       :  912
+		num uvs            :  456
+		num uvs2           :  456
+		num colors         :  0
+		num triangles      :  96
+	processing begun of mesh:  eight
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  94
+	processing begun of mesh:  nine
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  230
+		num normals        :  230
+		num tangents       :  920
+		num uvs            :  460
+		num uvs2           :  460
+		num colors         :  0
+		num triangles      :  97
+	processing begun of mesh:  zero
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  94
+	processing begun of mesh:  nope2
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  153
+		num normals        :  153
+		num tangents       :  612
+		num uvs            :  306
+		num uvs2           :  306
+		num colors         :  0
+		num triangles      :  97
+	processing begun of mesh:  nope1
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  150
+		num normals        :  150
+		num tangents       :  600
+		num uvs            :  300
+		num uvs2           :  300
+		num colors         :  0
+		num triangles      :  96
+	processing begun of mesh:  erase
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  100
+	processing begun of mesh:  cancel
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  155
+		num normals        :  155
+		num tangents       :  620
+		num uvs            :  310
+		num uvs2           :  310
+		num colors         :  0
+		num triangles      :  100
+	processing begun of mesh:  ok
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  234
+		num normals        :  234
+		num tangents       :  936
+		num uvs            :  468
+		num uvs2           :  468
+		num colors         :  0
+		num triangles      :  100
+	processing begun of mesh:  numbers screen
+		processing begun of material:  button
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+		animation processing begun
+			WARNING: action camera action has no frames, ignored.
+	processing begun of light (POINT):  light
+	processing begun of light (POINT):  ambience light
+========= Writing of JSON file started =========
+	writing mesh:  atm
+	writing mesh:  green thing
+	writing mesh:  nope3
+	writing mesh:  one
+	writing mesh:  two
+	writing mesh:  three
+	writing mesh:  four
+	writing mesh:  five
+	writing mesh:  six
+	writing mesh:  seven
+	writing mesh:  eight
+	writing mesh:  nine
+	writing mesh:  zero
+	writing mesh:  nope2
+	writing mesh:  nope1
+	writing mesh:  erase
+	writing mesh:  cancel
+	writing mesh:  ok
+	writing mesh:  numbers screen
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.1673 secs
