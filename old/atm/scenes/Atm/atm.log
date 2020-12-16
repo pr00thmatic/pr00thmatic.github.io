@@ -9,20 +9,20 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
 		Keep Z-up r-handed  :  no
-		Texture directory   :  D:\compartidos-ruth\FieATMWeb\wtf\scenes\Atm\
+		Texture directory   :  D:\compartidos-ruth\FieATMWeb\pr00thmatic.github.io\old\atm\scenes\Atm\
 	Python World class constructor completed
 	processing begun of mesh:  atm
 		processing begun of material:  AtmTextured
 			processing texture atm
 				texture type:  diffuseTexture, mapped using: "UVMap"
 		Custom split normals with tangents being used
-		num positions      :  8196
-		num normals        :  8196
-		num tangents       :  32784
-		num uvs            :  16392
-		num uvs2           :  16392
+		num positions      :  8260
+		num normals        :  8260
+		num tangents       :  33040
+		num uvs            :  16520
+		num uvs2           :  16520
 		num colors         :  0
-		num triangles      :  6388
+		num triangles      :  6426
 	processing begun of mesh:  green thing
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
@@ -221,9 +221,29 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num uvs2           :  8
 		num colors         :  0
 		num triangles      :  2
-		animation processing begun
-			WARNING: action camera action has no frames, ignored.
-	processing begun of light (POINT):  light
+	processing begun of mesh:  card
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  128
+		num normals        :  128
+		num tangents       :  512
+		num uvs            :  256
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  screen
+		processing begun of material:  Screen
+			processing texture _0
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
 	processing begun of light (POINT):  ambience light
 ========= Writing of JSON file started =========
 	writing mesh:  atm
@@ -245,6 +265,8 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  cancel
 	writing mesh:  ok
 	writing mesh:  numbers screen
+	writing mesh:  card
+	writing mesh:  screen
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 1.1673 secs
+elapsed time:  0 min, 1.206 secs
