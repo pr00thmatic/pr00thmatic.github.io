@@ -53,9 +53,6 @@ var game = (() => {
     greenThing.material.alpha = 0.7;
   }
 
-  var stickTheTarget = function (scene) {
-  }
-
   var initialize = function (scene) {
     for (var i=0; i<numpadNames.length; i++) {
       registerNumpadFunction(numpadNames[i], i, scene);
@@ -66,7 +63,7 @@ var game = (() => {
       BABYLON.ActionManager.OnPickTrigger,
       function () {
         game.card.actionManager.unregisterAction(game.card.theAction);
-        game.skeleton.beginAnimation("StickTheCard", false);
+        game.skeleton.beginAnimation("StickTheCard", false, 1, flow.initializeChip);
       }
     );
     game.card.actionManager.registerAction(game.card.theAction);
@@ -91,6 +88,7 @@ var game = (() => {
     },
     screenMaterial: screenMaterial,
     screen: screen,
+    goToScreen: goToScreen
   }
 })();
 
