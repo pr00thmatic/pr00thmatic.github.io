@@ -46,24 +46,51 @@ var game = (() => {
     screen.material.albedoTexture = new BABYLON.Texture("screens/" + screenName + ".png");
   }
 
+  var setupGreenThing = function (scene) {
+    var greenThing = scene.getMeshByName("green thing");
+    greenThing.material = new BABYLON.StandardMaterial("green thing material", scene);
+    greenThing.material.diffuseColor = new BABYLON.Color3(0,0.1,0);
+    greenThing.material.alpha = 0.7;
+  }
+
+  var stickTheTarget = function (scene) {
+  }
+
+  var initialize = function (scene) {
+    for (var i=0; i<numpadNames.length; i++) {
+      registerNumpadFunction(numpadNames[i], i, scene);
+    }
+    game.card = scene.getMeshByName("card");
+    game.card.actionManager = new BABYLON.ActionManager(scene);
+    game.card.theAction = new BABYLON.ExecuteCodeAction(
+      BABYLON.ActionManager.OnPickTrigger,
+      function () {
+        game.card.actionManager.unregisterAction(game.card.theAction);
+        game.skeleton.beginAnimation("StickTheCard", false);
+      }
+    );
+    game.card.actionManager.registerAction(game.card.theAction);
+
+    createNumbersPanel(scene);
+    setupLighting(scene);
+    setupScreenMaterial(scene);
+    setupGreenThing(scene);
+    goToScreen("0");
+    numbersPanel.setEnabled(false);
+    game.scene = scene;
+    game.skeleton = game.scene.getSkeletonByName("Armature");
+  }
+
   var screenMaterial;
   var screen;
   var numbersPanel;
 
   return {
     onSceneLoad: function (scene) {
-      for (var i=0; i<numpadNames.length; i++) {
-        registerNumpadFunction(numpadNames[i], i, scene);
-      }
-      createNumbersPanel(scene);
-      setupLighting(scene);
-      setupScreenMaterial(scene);
-      goToScreen("0");
-      numbersPanel.setEnabled(false);
-      game.scene = scene;
+      initialize(scene);
     },
     screenMaterial: screenMaterial,
-    screen: screen
+    screen: screen,
   }
 })();
 
