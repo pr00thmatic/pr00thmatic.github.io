@@ -15,7 +15,87 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing begun of bone:  Bone, index:  0
 		processing begun of bone:  Bone.001, index:  1
 		processing action StickTheCard:  in[2 - 139], out[0 - 139]
-		processing action Wtf:  in[1 - 60], out[150 - 210]
+		processing action UnstickTheCard:  in[1 - 120], out[150 - 270]
+		processing action Wtf:  in[1 - 60], out[280 - 340]
+	processing begun of mesh:  touch l 3
+		processing begun of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  touch r 0
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  touch r 1
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  touch r 2
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  touch r 3
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  touch l 0
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  touch l 1
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  touch l 2
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
 	processing begun of mesh:  atm
 		processing begun of material:  AtmTextured
 			processing texture atm
@@ -353,7 +433,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			num skeletonWeights and skeletonIndices:  512
 	processing begun of mesh:  screen
 		processing begun of material:  Screen
-			processing texture _0
+			processing texture _4
 				texture type:  diffuseTexture, mapped using: "UVMap"
 		Custom split normals with tangents being used
 		num positions      :  4
@@ -371,6 +451,14 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			num skeletonWeights and skeletonIndices:  16
 	processing begun of light (POINT):  ambience light
 ========= Writing of JSON file started =========
+	writing mesh:  touch l 3
+	writing mesh:  touch r 0
+	writing mesh:  touch r 1
+	writing mesh:  touch r 2
+	writing mesh:  touch r 3
+	writing mesh:  touch l 0
+	writing mesh:  touch l 1
+	writing mesh:  touch l 2
 	writing mesh:  atm
 	writing mesh:  green thing
 	writing mesh:  nope3
@@ -394,4 +482,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  screen
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 2.7107 secs
+elapsed time:  0 min, 2.5717 secs
