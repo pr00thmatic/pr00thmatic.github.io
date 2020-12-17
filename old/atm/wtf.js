@@ -1,3 +1,4 @@
+console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 var asdf = 5;
 var game = (() => {
   var numpadNames = [
