@@ -8,7 +8,7 @@ var flow = (() => {
   };
 
   var handlePinInput = function () {
-    if (game.numbersPanel.button.input.length >= 4) {
+    if (game.numbersPanel.isEnabled && game.numbersPanel.button.input.length >= 4) {
       if (game.numbersPanel.button.input === '0000') {
         goToScreen("7"); // code accepted, do your stuff
       } else { // wrong code!
@@ -143,12 +143,19 @@ var flow = (() => {
         game.amountPanel.setEnabled(true);
         game.amountPanel.value = 0;
         game.amountPanel.button.textBlock.text = "0.00";
+      } else {
+        game.amountPanel.setEnabled(false);
+      }
+      if (flow.toRemove) {
+        document.removeEventListener('onNumpadInput', flow.toRemove);
       }
       if (screens[screenName].onInput) {
-        document.addEventListener('onNumpadInput', screens[screenName].onInput);
+        flow.toRemove = screens[screenName].onInput;
+        document.addEventListener('onNumpadInput', flow.toRemove);
       }
     } else {
       game.numbersPanel.setEnabled(false);
+      game.amountPanel.setEnabled(false);
     }
   };
 
@@ -157,16 +164,18 @@ var flow = (() => {
   }
 
   var initializeChip = function () {
-    goToScreen("10");
-    // game.isCardInAnimationOver = false;
-    // goToScreen("1");
-    // setTimeout(() => {
-    //   goToScreen("2");
-    //   setTimeout(() => {
-    //     goToScreen("3");
-    //     game.isCardInAnimationOver = true;
-    //   }, initializeDuration/2);
-    // }, initializeDuration/2);
+    // goToScreen("10");
+    // game.isCardInAnimationOver = true;
+
+    game.isCardInAnimationOver = false;
+    goToScreen("1");
+    setTimeout(() => {
+      goToScreen("2");
+      setTimeout(() => {
+        goToScreen("3");
+        game.isCardInAnimationOver = true;
+      }, initializeDuration/2);
+    }, initializeDuration/2);
   };
 
   var retainCard = function () {
