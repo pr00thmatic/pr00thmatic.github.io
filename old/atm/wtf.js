@@ -1,4 +1,3 @@
-console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 var asdf = 5;
 var game = (() => {
   var numpadNames = [
@@ -96,7 +95,7 @@ var game = (() => {
     game.numbersPanel = numbersPanel;
 
     game.cancelButton = utils.onClick(scene, "cancel", function () {
-      if (!game.isCardInAnimationOver) return;
+      if (!game.isCardInAnimationOver && !capturedCard) return;
       flow.cancel();
     });
 
@@ -120,7 +119,9 @@ var game = (() => {
     screenMaterial: screenMaterial,
     screen: screen,
     goToScreen: goToScreen,
+    wrongCode: 0,
     isCardInside: false,
+    capturedCard: false,
     isCardInAnimationOver: false
   };
 })();

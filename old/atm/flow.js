@@ -1,8 +1,25 @@
 var flow = (() => {
   var initializeDuration = 1000;
+  var retainWarningDuration = 5000;
+  var respawnWait = 8000;
 
   var babylonAction = function (f) {
     return new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, f );
+  };
+
+  var handlePinInput = function () {
+    if (game.scene.myStuff.button.input.length >= 4) {
+      if (game.scene.myStuff.button.input === '0000') {
+        goToScreen("7"); // code accepted, do your stuff
+      } else { // wrong code!
+        goToScreen("5");
+
+        if (++game.wrongCode >= 3) {
+          game.capturedCard = true;
+          retainCard();
+        }
+      }
+    }
   };
 
   var screens = {
@@ -16,28 +33,12 @@ var flow = (() => {
     "4": { // pin
       requirePin: true,
       hidePin: true,
-      onInput: function () {
-        if (game.scene.myStuff.button.input.length >= 4) {
-          if (game.scene.myStuff.button.input === '0000') {
-            goToScreen("7"); // code accepted, do your stuff
-          } else {
-            goToScreen("5");
-          }
-        }
-      }
+      onInput: handlePinInput
     },
     "5": { // wrong pin, try again
       requirePin: true,
       hidePin: true,
-      onInput: function () {
-        if (game.scene.myStuff.button.input.length >= 4) {
-          if (game.scene.myStuff.button.input === '0000') {
-            goToScreen("7"); // code accepted, do your stuff
-          } else {
-            goToScreen("5");
-          }
-        }
-      }
+      onInput: handlePinInput
     },
     "23": { // canceled transaction
       buttons: ['touch r 1', 'touch r 2'],
@@ -108,6 +109,20 @@ var flow = (() => {
       }, initializeDuration/2);
     }, initializeDuration/2);
   };
+
+  var retainCard = function () {
+    goToScreen("6");
+    setTimeout(() => {
+      goToScreen("0");
+    }, retainWarningDuration);
+
+    setTimeout(() => {
+      game.skeleton.beginAnimation("RespawnCard", false, 1, function () {
+        game.wrongCode = 0;
+        game.capturedCard = game.isCardInAnimationOver = game.isCardInside = false;
+      });
+    }, respawnWait);
+  }
 
   return {
     initializeChip: initializeChip,

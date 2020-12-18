@@ -14,9 +14,9 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	processing begun of skeleton:  Armature, id:  0
 		processing begun of bone:  Bone, index:  0
 		processing begun of bone:  Bone.001, index:  1
-		processing action StickTheCard:  in[2 - 139], out[0 - 139]
-		processing action UnstickTheCard:  in[1 - 120], out[150 - 270]
-		processing action Wtf:  in[1 - 60], out[280 - 340]
+		processing action RespawnCard:  in[1 - 50], out[0 - 50]
+		processing action StickTheCard:  in[2 - 139], out[60 - 199]
+		processing action UnstickTheCard:  in[1 - 120], out[210 - 330]
 	processing begun of mesh:  touch l 3
 		processing begun of material:  TouchButtons
 		num positions      :  4
@@ -482,4 +482,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  screen
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 2.5717 secs
+elapsed time:  0 min, 2.5562 secs
