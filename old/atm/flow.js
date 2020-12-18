@@ -22,6 +22,38 @@ var flow = (() => {
     }
   };
 
+  var retrieve = function () {
+    var receipt = flow.scene.getMeshByName("receipt hitbox");
+    var money = flow.scene.getMeshByName("money out hitbox");
+
+    receipt.actionManager.actions = [];
+    money.actionManager.actions = [];
+
+    game.skeleton.beginAnimation("retrieve receipt and money", false);
+    setTimeout(() => {
+      goToScreen("16");
+    }, 1000);
+  }
+
+  var spit = function (requestReceipt) {
+    goToScreen("14");
+    flow.scene.getMeshByName("receipt").setEnabled(requestReceipt);
+    var receipt = flow.scene.getMeshByName("receipt hitbox");
+    receipt.setEnabled(requestReceipt);
+    var money = flow.scene.getMeshByName("money out hitbox");
+
+    game.skeleton.beginAnimation("SpitMoneyAndReceipt", false, 1, function () {
+      receipt.actionManager = new BABYLON.ActionManager(flow.scene);
+      receipt.actionManager.registerAction(babylonAction(function () {
+        retrieve();
+      }));
+      money.actionManager = new BABYLON.ActionManager(flow.scene);
+      money.actionManager.registerAction(babylonAction(function () {
+        retrieve();
+      }));
+    });
+  }
+
   var whithdrawScreen = {
     buttons: ['touch r 0', 'touch r 1', 'touch r 2', 'touch r 3'],
     actions: [
@@ -57,7 +89,10 @@ var flow = (() => {
           if (!game.isCardInside) return;
           game.isCardInside = false;
           goToScreen("0");
-          game.skeleton.beginAnimation("UnstickTheCard", false, 1);
+          game.card.setEnabled(true);
+          game.skeleton.beginAnimation("UnstickTheCard", false, 1, function () {
+            game.card.actionManager.registerAction(game.card.stickInAction);
+          });
         }),
         babylonAction(function () { goToScreen("4"); })
       ]
@@ -84,9 +119,10 @@ var flow = (() => {
       ]
     },
     "11": {
-      buttons: ['touch r 1'],
+      buttons: ['touch r 1', 'touch r 2'],
       actions: [
-        babylonAction(function () { console.log("ok?"); })
+        babylonAction(function () { game.erasePanels(); }),
+        babylonAction(function () { goToScreen("12"); }),
       ],
       requireAmount: true
     },
@@ -94,6 +130,13 @@ var flow = (() => {
       buttons: ['touch r 1'],
       actions: [
         babylonAction(function () { goToScreen("11"); })
+      ]
+    },
+    "12": { // receipt?
+      buttons: ['touch r 1', 'touch r 2'],
+      actions: [
+        babylonAction(function () { spit(false); }),
+        babylonAction(function () { spit(true); })
       ]
     },
     "45": whithdrawScreen,
@@ -167,6 +210,7 @@ var flow = (() => {
     // goToScreen("10");
     // game.isCardInAnimationOver = true;
 
+    game.card.setEnabled(false);
     game.isCardInAnimationOver = false;
     goToScreen("1");
     setTimeout(() => {
@@ -194,6 +238,7 @@ var flow = (() => {
 
   return {
     initializeChip: initializeChip,
-    cancel: cancel
+    cancel: cancel,
+    goToScreen: goToScreen
   };
 })();

@@ -5,7 +5,7 @@ var game = (() => {
     "six", "seven", "eight", "nine"
   ];
 
-  var amountPanel;
+ var amountPanel;
 
   var registerNumpadFunction = function (name, value, scene) {
     var mesh = scene.getMeshByName(name);
@@ -75,19 +75,28 @@ var game = (() => {
   };
 
   var setupTouchButtons = function (scene) {
-    var material = new BABYLON.StandardMaterial("touch buttons", scene);
-    material.alpha = 0.1;
+    game.invisibleMaterial = new BABYLON.StandardMaterial("touch buttons", scene);
+    game.invisibleMaterial.alpha = 0.1;
     for (var i=0; i<4; i++) {
       var mesh = scene.getMeshByName("touch r " + i);
-      mesh.material = material;
+      mesh.material = game.invisibleMaterial;
       var mesh = scene.getMeshByName("touch l " + i);
-      mesh.material = material;
+      mesh.material = game.invisibleMaterial;
     }
+    scene.getMeshByName("receipt hitbox").material =
+      scene.getMeshByName("money out hitbox").material = game.invisibleMaterial;
   };
 
   var cancelFunction = function () {
     if (!game.isCardInAnimationOver || game.capturedCard || game.blocked) return;
     flow.cancel();
+  };
+
+  var erasePanels = function () {
+    game.numbersPanel.button.textBlock.text = "";
+    game.numbersPanel.button.input = "";
+    game.amountPanel.value = 0
+    game.amountPanel.button.textBlock.text = "0.00";
   };
 
   var initialize = function (scene) {
@@ -102,6 +111,7 @@ var game = (() => {
       function () {
         if (game.isCardInside) return;
         game.isCardInside = true;
+        game.card.actionManager.actions = [];
         game.skeleton.beginAnimation("StickTheCard", false, 1, flow.initializeChip);
       }
     );
@@ -122,10 +132,7 @@ var game = (() => {
 
     game.cancelButton = utils.onClick(scene, "cancel", cancelFunction);
     game.okButton = scene.getMeshByName("ok");
-    game.eraseButton = utils.onClick(scene, "erase", function () {
-      game.numbersPanel.button.textBlock.text = "";
-      game.numbersPanel.button.input = "";
-    });
+    game.eraseButton = utils.onClick(scene, "erase", erasePanels);
   };
 
   var screenMaterial;
@@ -145,6 +152,7 @@ var game = (() => {
     isCardInside: false,
     capturedCard: false,
     isCardInAnimationOver: false,
-    blocked: false
+    blocked: false,
+    erasePanels: erasePanels
   };
 })();
