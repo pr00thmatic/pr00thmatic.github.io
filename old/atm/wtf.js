@@ -5,32 +5,51 @@ var game = (() => {
     "six", "seven", "eight", "nine"
   ];
 
+  var amountPanel;
+
   var registerNumpadFunction = function (name, value, scene) {
     var mesh = scene.getMeshByName(name);
     mesh.actionManager = new BABYLON.ActionManager(scene);
     mesh.actionManager.registerAction(new BABYLON.ExecuteCodeAction(
       BABYLON.ActionManager.OnPickTrigger,
       function () {
-        scene.myStuff.button.textBlock.text += game.hidePin? "X": value;
-        if (!scene.myStuff.button.input) scene.myStuff.button.input = "";
-        scene.myStuff.button.input += value;
-        document.dispatchEvent(game.onNumpadInput);
+        if (game.numbersPanel.isEnabled) {
+          game.numbersPanel.button.textBlock.text += game.hidePin? "X": value;
+          if (!game.numbersPanel.button.input) game.numbersPanel.button.input = "";
+          game.numbersPanel.button.input += value;
+          document.dispatchEvent(game.onNumpadInput);
+        }
+        if (game.amountPanel.isEnabled) {
+          if (!game.amountPanel.value) game.amountPanel.value = "";
+          game.amountPanel.value = eval(game.amountPanel.value + "" + value);
+          game.amountPanel.button.textBlock.text = (game.amountPanel.value / 100).toFixed(2);
+          document.dispatchEvent(game.onNumpadInput);
+        }
       }
     ));
   };
 
-  var createNumbersPanel = function (scene) {
-    numbersPanel = scene.getMeshByName("numbers screen");
+  var createButton = function (scene, meshName, buttonName) {
+    var mesh = scene.getMeshByName(meshName);
     var tex =
-        BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(numbersPanel);
-    var button = BABYLON.GUI.Button.CreateSimpleButton("but1", "");
-    scene.myStuff.button = button;
+        BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(mesh);
+    var button = BABYLON.GUI.Button.CreateSimpleButton(buttonName, "");
+    mesh.button = button;
     button.width = 1;
     button.height = 1;
     button.color = "white";
     button.fontSize = 100;
     tex.addControl(button);
+    return mesh;
+  }
+
+  var createNumbersPanel = function (scene) {
+    game.numbersPanel = createButton(scene, "numbers screen", "but1");
   };
+
+  var createAmountPanel = function (scene) {
+    game.amountPanel = createButton(scene, "amount", "amount  button");
+  }
 
   var setupLighting = function (scene) {
     var light = scene.getLightByName("ambience light");
@@ -66,6 +85,11 @@ var game = (() => {
     }
   };
 
+  var cancelFunction = function () {
+    if (!game.isCardInAnimationOver || game.capturedCard || game.blocked) return;
+    flow.cancel();
+  };
+
   var initialize = function (scene) {
     for (var i=0; i<numpadNames.length; i++) {
       registerNumpadFunction(numpadNames[i], i, scene);
@@ -84,26 +108,23 @@ var game = (() => {
     game.card.actionManager.registerAction(game.card.stickInAction);
 
     createNumbersPanel(scene);
+    createAmountPanel(scene);
     setupLighting(scene);
     setupScreenMaterial(scene);
     setupGreenThing(scene);
     setupTouchButtons(scene);
     goToScreen("0");
-    numbersPanel.setEnabled(false);
+    game.numbersPanel.setEnabled(false);
+    game.amountPanel.setEnabled(false);
+
     game.scene = scene;
     game.skeleton = game.scene.getSkeletonByName("Armature");
-    game.numbersPanel = numbersPanel;
 
-    game.cancelButton = utils.onClick(scene, "cancel", function () {
-      if (!game.isCardInAnimationOver && !capturedCard) return;
-      flow.cancel();
-    });
-
+    game.cancelButton = utils.onClick(scene, "cancel", cancelFunction);
     game.okButton = scene.getMeshByName("ok");
-
     game.eraseButton = utils.onClick(scene, "erase", function () {
-      scene.myStuff.button.textBlock.text = "";
-      scene.myStuff.button.input = "";
+      game.numbersPanel.button.textBlock.text = "";
+      game.numbersPanel.button.input = "";
     });
   };
 
@@ -119,9 +140,11 @@ var game = (() => {
     screenMaterial: screenMaterial,
     screen: screen,
     goToScreen: goToScreen,
+    cancelFunction : cancelFunction,
     wrongCode: 0,
     isCardInside: false,
     capturedCard: false,
-    isCardInAnimationOver: false
+    isCardInAnimationOver: false,
+    blocked: false
   };
 })();
