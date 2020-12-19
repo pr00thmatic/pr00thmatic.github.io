@@ -15,11 +15,22 @@ var flow = (() => {
     game.skeleton.beginAnimation("UnstickTheCard", false, 1, function () {
       game.card.actionManager.registerAction(game.card.stickInAction);
     });
-  }
+  };
 
   var babylonAction = function (f) {
     return new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, f );
   };
+
+  var selectCurrency = ((currency) => {
+    return babylonAction(function () {
+      game.currency = currency;
+      if (game.thirdPartyRequired) {
+        goToScreen("33");
+      } else {
+        goToScreen("30");
+      }
+    });
+  });
 
   var quickWhithdrawOption = babylonAction(function () {
     goToScreen("12");
@@ -108,12 +119,15 @@ var flow = (() => {
       ]
     },
     "7": { // whatcha gonna do?
-      buttons: ['touch l 3', 'touch l 2'],
+      buttons: ['touch l 3', 'touch l 2', 'touch l 1'],
       actions: [
         babylonAction(function () { goToScreen("8"); }),
         babylonAction(function () {
           game.quickWhithdraw = true;
           goToScreen("8");
+        }),
+        babylonAction(function () {
+          goToScreen("28");
         })
       ]
     },
@@ -190,6 +204,25 @@ var flow = (() => {
                  'touch l 0', 'touch l 1', 'touch l 2', 'touch l 3'],
       actions: [quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption,
                 quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption]
+    },
+    "28": { // a dónde quieres transferir?
+      buttons: ['touch r 1', 'touch r 2'],
+      actions: [
+        babylonAction(() => {
+          game.thirdPartyRequired = true;
+          goToScreen("29");
+        }),
+        babylonAction(() => {
+          game.thirdPartyRequired = false;
+          goToScreen("29");
+        })
+      ]
+    },
+    "29": { // type of currency
+      buttons: ['touch r 2', 'touch r 1'],
+      actions: [
+        selectCurrency("bs"), selectCurrency("$")
+      ]
     }
   };
 
