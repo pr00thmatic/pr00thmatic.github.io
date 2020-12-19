@@ -5,7 +5,7 @@
 "albedoTexture":{"name":"atm.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":true},
 {"name":"button","id":"button","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"albedo":[0.8,0.8,0.8],"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0},
 {"name":"Screen","id":"Screen","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
-"albedoTexture":{"name":"11.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":true}],
+"albedoTexture":{"name":"33.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":true}],
 "multiMaterials":[],
 "skeletons":[{"name":"Armature","id":0,"dimensionsAtRest":[1.0202,1.568,1.46],"bones":[
 {"name":"Bone","index":0,"matrix":[1,0,0,0,0,1,0,0,0,0,-1,0,0,0,0,1],"rest":[1,0,0,0,0,1,0,0,0,0,-1,0,0,0,0,1],"parentBoneIndex":-1,"length":1
@@ -554,56 +554,56 @@
 {"frame":490,"values":[0,-1,-0.0031,0,0,0.0031,-1,0,-1,0,0,0,0.4682,-0.568,0.3222,1]}],"loopBehavior":1,"name":"anim","property":"_matrix"}}]
 ,"ranges":[{"name":"RespawnCard","from":0,"to":50},{"name":"retrieve receipt and money","from":60,"to":106},{"name":"SpitMoneyAndReceipt","from":120,"to":180},{"name":"SpitMoneyAndReceipt.001","from":190,"to":191},{"name":"StickTheCard","from":200,"to":339},{"name":"UnstickTheCard","from":350,"to":490}]}],
 "meshes":[{"name":"touch l 3","id":"touch l 3","materialId":"TouchButtons","billboardMode":0,"position":[-0.6046,-0.0328,0.2361],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1.9227,0,-1,-1,0,1,-1,0,-1,1.9227,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
 ,"instances":[]}
 ,{"name":"touch r 0","id":"touch r 0","materialId":"TouchButtons","billboardMode":0,"position":[0.0655,-0.312,0.0339],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1,0,-1,-1.9227,0,1,-1.9227,0,-1,1,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
 ,"instances":[]}
 ,{"name":"touch r 1","id":"touch r 1","materialId":"TouchButtons","billboardMode":0,"position":[0.0655,-0.222,0.0991],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1,0,-1,-1.9227,0,1,-1.9227,0,-1,1,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
 ,"instances":[]}
 ,{"name":"touch r 2","id":"touch r 2","materialId":"TouchButtons","billboardMode":0,"position":[0.0655,-0.1228,0.1709],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1,0,-1,-1.9227,0,1,-1.9227,0,-1,1,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
 ,"instances":[]}
 ,{"name":"touch r 3","id":"touch r 3","materialId":"TouchButtons","billboardMode":0,"position":[0.0655,-0.0328,0.2361],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1,0,-1,-1.9227,0,1,-1.9227,0,-1,1,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
 ,"instances":[]}
 ,{"name":"touch l 0","id":"touch l 0","materialId":"TouchButtons","billboardMode":0,"position":[-0.6046,-0.312,0.0339],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1.9227,0,-1,-1,0,1,-1,0,-1,1.9227,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
 ,"instances":[]}
 ,{"name":"touch l 1","id":"touch l 1","materialId":"TouchButtons","billboardMode":0,"position":[-0.6046,-0.222,0.0991],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1.9227,0,-1,-1,0,1,-1,0,-1,1.9227,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
 ,"instances":[]}
 ,{"name":"touch l 2","id":"touch l 2","materialId":"TouchButtons","billboardMode":0,"position":[-0.6046,-0.1228,0.1709],"rotation":[-0.944,0,0],"scaling":[0.1555,0.0343,0.0474],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
-,"positions":[1,0,-1,-1,0,1,-1,0,-1,1,0,1]
+,"positions":[1.9227,0,-1,-1,0,1,-1,0,-1,1.9227,0,1]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.795,0,0,1,0,0,0.795,1]
 ,"indices":[0,1,2,0,3,1]
@@ -6272,7 +6272,7 @@
 ,"positions":[0.2227,-0.0326,-0.037,-0.2227,0.0224,0.0029,-0.2227,-0.0326,-0.037,0.2227,0.0224,0.0029]
 ,"normals":[0,0.587,-0.81,0,0.587,-0.81,0,0.587,-0.81,0,0.587,-0.81]
 ,"tangents":[1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1]
-,"uvs":[0.795,0.423,0,0.579,0,0.423,0.795,0.579]
+,"uvs":[1,0.423,0,0.579,0,0.423,1,0.579]
 ,"uvs2":[0,0,0,0,0,0,0,0]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
@@ -6346,7 +6346,16 @@
 ,"positions":[0.2227,-0.0275,-0.0199,-0.2227,0.0275,0.0199,-0.2227,-0.0275,-0.0199,0.2227,0.0275,0.0199]
 ,"normals":[0,0.587,-0.81,0,0.587,-0.81,0,0.587,-0.81,0,0.587,-0.81]
 ,"tangents":[1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1]
-,"uvs":[0.795,0.423,0,0.579,0,0.423,0.795,0.579]
+,"uvs":[1,0.423,0,0.579,0,0.423,1,0.579]
+,"uvs2":[0,0,0,0,0,0,0,0]
+,"indices":[0,1,2,0,3,1]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
+,"instances":[]}
+,{"name":"account","id":"account","materialId":"button","billboardMode":0,"position":[-0.2809,-0.0087,0.2416],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+,"positions":[0.2227,-0.0275,-0.0199,-0.2227,0.0275,0.0199,-0.2227,-0.0275,-0.0199,0.2227,0.0275,0.0199]
+,"normals":[0,0.587,-0.81,0,0.587,-0.81,0,0.587,-0.81,0,0.587,-0.81]
+,"tangents":[1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1]
+,"uvs":[1,0.423,0,0.579,0,0.423,1,0.579]
 ,"uvs2":[0,0,0,0,0,0,0,0]
 ,"indices":[0,1,2,0,3,1]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]

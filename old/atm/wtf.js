@@ -13,17 +13,20 @@ var game = (() => {
     mesh.actionManager.registerAction(new BABYLON.ExecuteCodeAction(
       BABYLON.ActionManager.OnPickTrigger,
       function () {
-        if (game.numbersPanel.isEnabled) {
+        if (game.numbersPanel.isEnabled()) {
           game.numbersPanel.button.textBlock.text += game.hidePin? "X": value;
           if (!game.numbersPanel.button.input) game.numbersPanel.button.input = "";
           game.numbersPanel.button.input += value;
           document.dispatchEvent(game.onNumpadInput);
         }
-        if (game.amountPanel.isEnabled) {
+        if (game.amountPanel.isEnabled()) {
           if (!game.amountPanel.value) game.amountPanel.value = "";
           game.amountPanel.value = eval(game.amountPanel.value + "" + value);
           game.amountPanel.button.textBlock.text = (game.amountPanel.value / 100).toFixed(2);
           document.dispatchEvent(game.onNumpadInput);
+        }
+        if (game.accountPanel.isEnabled()) {
+          game.accountPanel.button.textBlock.text += value;
         }
       }
     ));
@@ -41,15 +44,7 @@ var game = (() => {
     button.fontSize = 100;
     tex.addControl(button);
     return mesh;
-  }
-
-  var createNumbersPanel = function (scene) {
-    game.numbersPanel = createButton(scene, "numbers screen", "but1");
   };
-
-  var createAmountPanel = function (scene) {
-    game.amountPanel = createButton(scene, "amount", "amount  button");
-  }
 
   var setupLighting = function (scene) {
     var light = scene.getLightByName("ambience light");
@@ -117,8 +112,10 @@ var game = (() => {
     );
     game.card.actionManager.registerAction(game.card.stickInAction);
 
-    createNumbersPanel(scene);
-    createAmountPanel(scene);
+    game.numbersPanel = createButton(scene, "numbers screen", "but1");
+    game.amountPanel = createButton(scene, "amount", "amount button");
+    game.accountPanel = createButton(scene, "account", "account button");
+
     setupLighting(scene);
     setupScreenMaterial(scene);
     setupGreenThing(scene);

@@ -500,7 +500,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			num skeletonWeights and skeletonIndices:  512
 	processing begun of mesh:  screen
 		processing begun of material:  Screen
-			processing texture _11
+			processing texture _33
 				texture type:  diffuseTexture, mapped using: "UVMap"
 		Custom split normals with tangents being used
 		num positions      :  4
@@ -517,6 +517,17 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			exported as 1 influencers
 			num skeletonWeights and skeletonIndices:  16
 	processing begun of mesh:  amount
+		processing begun of material:  button
+		registered as also a user of material:  button
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  account
 		processing begun of material:  button
 		registered as also a user of material:  button
 		Custom split normals with tangents being used
@@ -563,6 +574,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  card
 	writing mesh:  screen
 	writing mesh:  amount
+	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 3.518 secs
+elapsed time:  0 min, 3.479 secs

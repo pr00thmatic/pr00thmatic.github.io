@@ -37,7 +37,7 @@ var flow = (() => {
   });
 
   var handlePinInput = function () {
-    if (game.numbersPanel.isEnabled && game.numbersPanel.button.input.length >= 4) {
+    if (game.numbersPanel.isEnabled() && game.numbersPanel.button.input.length >= 4) {
       if (game.numbersPanel.button.input === '0000') {
         goToScreen("7"); // code accepted, do your stuff
       } else { // wrong code!
@@ -163,7 +163,6 @@ var flow = (() => {
       actions: [
         babylonAction(function () { game.erasePanels(); }),
         babylonAction(function () {
-          console.log((game.amountPanel.value / 100) % 10);
           if (game.amountPanel.value == 0 || (game.amountPanel.value / 100) % 10 != 0 ||
               (game.amountPanel.value/100) > 3000) {
             goToScreen("57");
@@ -223,6 +222,14 @@ var flow = (() => {
       actions: [
         selectCurrency("bs"), selectCurrency("$")
       ]
+    },
+    "33": { // third party account
+      buttons: ['touch r 0', 'touch r 1'],
+      actions: [
+        babylonAction(() => cancel()),
+        babylonAction(() => goToScreen("30"))
+      ],
+      requireAccount: true
     }
   };
 
@@ -265,6 +272,12 @@ var flow = (() => {
       } else {
         game.amountPanel.setEnabled(false);
       }
+      if (screens[screenName].requireAccount) {
+        game.accountPanel.setEnabled(true);
+        game.accountPanel.button.textBlock.text = "";
+      } else {
+        game.accountPanel.setEnabled(false);
+      }
       if (flow.toRemove) {
         document.removeEventListener('onNumpadInput', flow.toRemove);
       }
@@ -276,6 +289,7 @@ var flow = (() => {
     } else {
       game.numbersPanel.setEnabled(false);
       game.amountPanel.setEnabled(false);
+      game.accountPanel.setEnabled(false);
     }
   };
 
