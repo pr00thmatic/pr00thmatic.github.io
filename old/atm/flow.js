@@ -2,6 +2,10 @@ var flow = (() => {
   var initializeDuration = 1000;
   var warningDuration = 5000;
   var respawnWait = 8000;
+  var touchButtons = [
+    'touch r 0', 'touch r 1', 'touch r 2', 'touch r 3',
+    'touch l 0', 'touch l 1', 'touch l 2', 'touch l 3',
+  ];
 
   var unstickTheCard = function () {
     if (!game.isCardInside) return;
@@ -16,6 +20,10 @@ var flow = (() => {
   var babylonAction = function (f) {
     return new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, f );
   };
+
+  var quickWhithdrawOption = babylonAction(function () {
+    goToScreen("12");
+  });
 
   var handlePinInput = function () {
     if (game.numbersPanel.isEnabled && game.numbersPanel.button.input.length >= 4) {
@@ -100,9 +108,13 @@ var flow = (() => {
       ]
     },
     "7": { // whatcha gonna do?
-      buttons: ['touch l 3'],
+      buttons: ['touch l 3', 'touch l 2'],
       actions: [
-        babylonAction(function () { goToScreen("8"); })
+        babylonAction(function () { goToScreen("8"); }),
+        babylonAction(function () {
+          game.quickWhithdraw = true;
+          goToScreen("8");
+        })
       ]
     },
     "8": { // retiro
@@ -116,8 +128,20 @@ var flow = (() => {
             game.cancelFunction();
           }, warningDuration);
         }),
-        babylonAction(function () { goToScreen("45"); }),
-        babylonAction(function () { goToScreen("47"); })
+        babylonAction(function () {
+          if (game.quickWhithdraw) {
+            goToScreen("19");
+          } else {
+            goToScreen("45");
+          }
+        }),
+        babylonAction(function () {
+          if (game.quickWhithdraw) {
+            goToScreen("19");
+          } else {
+            goToScreen("45");
+          }
+        })
       ]
     },
     "11": {
@@ -147,7 +171,10 @@ var flow = (() => {
       actions: [
         babylonAction(function () { spit(false); }),
         babylonAction(function () { spit(true); })
-      ]
+      ],
+      onCall: function () {
+        game.quickWhithdraw = false;
+      }
     },
     "45": whithdrawScreen,
     "47": whithdrawScreen,
@@ -157,6 +184,12 @@ var flow = (() => {
         babylonAction(unstickTheCard),
         babylonAction(() => goToScreen("4"))
       ]
+    },
+    "19": {
+      buttons: [ 'touch r 0', 'touch r 1', 'touch r 2', 'touch r 3',
+                 'touch l 0', 'touch l 1', 'touch l 2', 'touch l 3'],
+      actions: [quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption,
+                quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption]
     }
   };
 
@@ -206,6 +239,7 @@ var flow = (() => {
         flow.toRemove = screens[screenName].onInput;
         document.addEventListener('onNumpadInput', flow.toRemove);
       }
+      if (screens[screenName].onCall) screens[screenName].onCall();
     } else {
       game.numbersPanel.setEnabled(false);
       game.amountPanel.setEnabled(false);
@@ -213,6 +247,7 @@ var flow = (() => {
   };
 
   var cancel = function () {
+    game.quickWhithdraw = false;
     goToScreen("23");
   }
 
