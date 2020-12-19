@@ -3,6 +3,16 @@ var flow = (() => {
   var warningDuration = 5000;
   var respawnWait = 8000;
 
+  var unstickTheCard = function () {
+    if (!game.isCardInside) return;
+    game.isCardInside = false;
+    goToScreen("0");
+    game.card.setEnabled(true);
+    game.skeleton.beginAnimation("UnstickTheCard", false, 1, function () {
+      game.card.actionManager.registerAction(game.card.stickInAction);
+    });
+  }
+
   var babylonAction = function (f) {
     return new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, f );
   };
@@ -85,15 +95,7 @@ var flow = (() => {
     "23": { // canceled transaction
       buttons: ['touch r 1', 'touch r 2'],
       actions: [
-        babylonAction(function () {
-          if (!game.isCardInside) return;
-          game.isCardInside = false;
-          goToScreen("0");
-          game.card.setEnabled(true);
-          game.skeleton.beginAnimation("UnstickTheCard", false, 1, function () {
-            game.card.actionManager.registerAction(game.card.stickInAction);
-          });
-        }),
+        babylonAction(unstickTheCard),
         babylonAction(function () { goToScreen("4"); })
       ]
     },
@@ -122,7 +124,15 @@ var flow = (() => {
       buttons: ['touch r 1', 'touch r 2'],
       actions: [
         babylonAction(function () { game.erasePanels(); }),
-        babylonAction(function () { goToScreen("12"); }),
+        babylonAction(function () {
+          console.log((game.amountPanel.value / 100) % 10);
+          if (game.amountPanel.value == 0 || (game.amountPanel.value / 100) % 10 != 0 ||
+              (game.amountPanel.value/100) > 3000) {
+            goToScreen("57");
+          } else {
+            goToScreen("12");
+          }
+        }),
       ],
       requireAmount: true
     },
@@ -141,12 +151,12 @@ var flow = (() => {
     },
     "45": whithdrawScreen,
     "47": whithdrawScreen,
-    "42": { // transaction amount
+    "16": { // something else?
       buttons: ['touch r 1', 'touch r 2'],
       actions: [
-        babylonAction(function () { goToScreen("43"); }),
-        babylonAction(function () { cancel(); }),
-      ],
+        babylonAction(unstickTheCard),
+        babylonAction(() => goToScreen("4"))
+      ]
     }
   };
 
@@ -210,6 +220,7 @@ var flow = (() => {
     // goToScreen("10");
     // game.isCardInAnimationOver = true;
 
+    console.log("WTF?!");
     game.card.setEnabled(false);
     game.isCardInAnimationOver = false;
     goToScreen("1");
