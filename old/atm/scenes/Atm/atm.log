@@ -17,13 +17,16 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing begun of bone:  money out, index:  2
 		processing begun of bone:  money in, index:  3
 		processing begun of bone:  receipt, index:  4
-		processing begun of bone:  money in paper, index:  5
-		processing action RespawnCard:  in[0 - 50], out[0 - 50]
-		processing action retrieve receipt and money:  in[0 - 46], out[60 - 106]
-		processing action SpitMoneyAndReceipt:  in[0 - 60], out[120 - 180]
-		processing action SpitMoneyAndReceipt.001:  in[0 - 1], out[190 - 191]
-		processing action StickTheCard:  in[0 - 139], out[200 - 339]
-		processing action UnstickTheCard:  in[1 - 140], out[350 - 490]
+		processing begun of bone:  money out paper, index:  5
+		processing begun of bone:  money in paper, index:  6
+		processing action Action:  in[0 - 56], out[0 - 56]
+		processing action RespawnCard:  in[0 - 50], out[70 - 120]
+		processing action retrieve receipt and money:  in[0 - 46], out[130 - 176]
+		processing action SpawnMoneyUp:  in[0 - 44], out[190 - 234]
+		processing action SpitMoneyAndReceipt:  in[0 - 60], out[240 - 300]
+		processing action SpitMoneyAndReceipt.003:  in[0 - 1], out[310 - 311]
+		processing action StickTheCard:  in[0 - 139], out[320 - 459]
+		processing action UnstickTheCard:  in[1 - 140], out[470 - 610]
 	processing begun of mesh:  touch l 3
 		processing begun of material:  TouchButtons
 		num positions      :  4
@@ -142,7 +145,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			num skeletonWeights and skeletonIndices:  128
 	processing begun of mesh:  money out hitbox
 		animation processing begun
-			WARNING: action SpitMoneyAndReceipt.001 has no frames, ignored.
+			processing action SpawnMoneyUp:  in[0 - 44], out[0 - 44]
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
@@ -164,23 +167,55 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  44
+	processing begun of mesh:  money in
+		animation processing begun
+			processing action Action:  in[0 - 56], out[0 - 56]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+		Skeleton stats:  
+			Total Influencers:  32
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  32
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  128
+	processing begun of mesh:  money in hitbox
+		animation processing begun
+			WARNING: action SpitMoneyAndReceipt.003 has no frames, ignored.
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
 	processing begun of mesh:  atm
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
-		num positions      :  8258
-		num normals        :  8258
-		num tangents       :  33032
-		num uvs            :  16516
-		num uvs2           :  16516
+		num positions      :  8257
+		num normals        :  8257
+		num tangents       :  33028
+		num uvs            :  16514
+		num uvs2           :  16514
 		num colors         :  0
 		num triangles      :  6426
 		Skeleton stats:  
-			Total Influencers:  8258
+			Total Influencers:  8257
 			Avg # of influencers per vertex:  1
-			Highest # of influencers observed:  1, num vertices with this:  8258
+			Highest # of influencers observed:  1, num vertices with this:  8257
 			exported as 1 influencers
-			num skeletonWeights and skeletonIndices:  33032
+			num skeletonWeights and skeletonIndices:  33028
 	processing begun of mesh:  green thing
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
@@ -552,6 +587,8 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  money out
 	writing mesh:  money out hitbox
 	writing mesh:  receipt hitbox
+	writing mesh:  money in
+	writing mesh:  money in hitbox
 	writing mesh:  atm
 	writing mesh:  green thing
 	writing mesh:  nope3
@@ -577,4 +614,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 3.479 secs
+elapsed time:  0 min, 3.5365 secs

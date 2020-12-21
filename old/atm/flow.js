@@ -158,7 +158,7 @@ var flow = (() => {
         })
       ]
     },
-    "11": {
+    "11": { // ingrese el monto
       buttons: ['touch r 1', 'touch r 2'],
       actions: [
         babylonAction(function () { game.erasePanels(); }),
@@ -198,7 +198,7 @@ var flow = (() => {
         babylonAction(() => goToScreen("4"))
       ]
     },
-    "19": {
+    "19": { // quick whithdraw amount
       buttons: [ 'touch r 0', 'touch r 1', 'touch r 2', 'touch r 3',
                  'touch l 0', 'touch l 1', 'touch l 2', 'touch l 3'],
       actions: [quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption, quickWhithdrawOption,
@@ -230,6 +230,20 @@ var flow = (() => {
         babylonAction(() => goToScreen("30"))
       ],
       requireAccount: true
+    },
+    "30": { // insert money
+      onCall: function () {
+        game.skeleton.beginAnimation("SpawnMoneyUp", false, 1, () => {
+          var hitbox = game.scene.getMeshByName("money in hitbox");
+          hitbox.actionManager = new BABYLON.ActionManager(game.scene);
+          hitbox.actionManager.registerAction(babylonAction(() => {
+            hitbox.actionManager.actions = [];
+            game.skeleton.beginAnimation("StickTheMoney", false, 1, () => {
+              goToScreen("32"); // detalle del depósito
+            });
+          }));
+        });
+      }
     }
   };
 
