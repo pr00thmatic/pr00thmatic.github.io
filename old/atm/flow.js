@@ -234,14 +234,18 @@ var flow = (() => {
     "30": { // insert money
       onCall: function () {
         game.skeleton.beginAnimation("SpawnMoneyUp", false, 1, () => {
+          game.scene.getMeshByName("money in hitbox").setEnabled(true);
           var hitbox = game.scene.getMeshByName("money in hitbox");
           hitbox.actionManager = new BABYLON.ActionManager(game.scene);
+
           hitbox.actionManager.registerAction(babylonAction(() => {
+            game.scene.getMeshByName("money in hitbox").setEnabled(false);
             hitbox.actionManager.actions = [];
             game.skeleton.beginAnimation("StickTheMoney", false, 1, () => {
               goToScreen("32"); // detalle del depósito
             });
           }));
+
         });
       }
     }

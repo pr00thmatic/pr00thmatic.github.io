@@ -81,6 +81,7 @@ var game = (() => {
     scene.getMeshByName("receipt hitbox").material =
       scene.getMeshByName("money out hitbox").material =
       scene.getMeshByName("money in hitbox").material = game.invisibleMaterial;
+    scene.getMeshByName("money in hitbox").setEnabled(false);
   };
 
   var cancelFunction = function () {
