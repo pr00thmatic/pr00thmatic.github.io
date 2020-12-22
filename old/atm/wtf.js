@@ -32,7 +32,7 @@ var game = (() => {
     ));
   };
 
-  var createButton = function (scene, meshName, buttonName) {
+  var createButton = function (scene, meshName, buttonName, color = "white") {
     var mesh = scene.getMeshByName(meshName);
     var tex =
         BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(mesh);
@@ -40,7 +40,7 @@ var game = (() => {
     mesh.button = button;
     button.width = 1;
     button.height = 1;
-    button.color = "white";
+    button.color = color;
     button.fontSize = 100;
     tex.addControl(button);
     return mesh;
@@ -118,9 +118,10 @@ var game = (() => {
     game.amountPanel = createButton(scene, "amount", "amount button");
     game.accountPanel = createButton(scene, "account", "account button");
 
-    game.quantity = createButton(scene, "quantity", "quantity button");
-    game.multiplied = createButton(scene, "multiplied", "multiplied button");
-    game.total = createButton(scene, "total", "total button");
+    game.quantityPanel = createButton(scene, "quantity", "quantity button", "yellow");
+    game.multipliedPanel = createButton(scene, "multiplied", "multiplied button", "yellow");
+    game.totalPanel = createButton(scene, "total", "total button", "yellow");
+
 
     setupLighting(scene);
     setupScreenMaterial(scene);

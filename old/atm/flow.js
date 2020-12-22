@@ -227,6 +227,7 @@ var flow = (() => {
       ],
       onCall: function () {
         game.isDeposit = true;
+        game.numberOfBills = 0;
       }
     },
     "29": { // type of currency
@@ -258,16 +259,33 @@ var flow = (() => {
           hitbox.actionManager = new BABYLON.ActionManager(game.scene);
 
           hitbox.actionManager.registerAction(babylonAction(() => {
+            game.numberOfBills++;
             game.scene.getMeshByName("money in hitbox").setEnabled(false);
             hitbox.actionManager.actions = [];
             game.skeleton.beginAnimation("StickTheMoney", false, 1, () => {
+              game.quantityPanel.button.textBlock.text = game.numberOfBills + "";
+              game.totalPanel.button.textBlock.text = game.multipliedPanel.button.textBlock.text =
+                (game.numberOfBills * 100) + "";
               goToScreen("32"); // detalle del depósito
             });
           }));
 
         });
       }
+    },
+    "32": {
+      onCall: function () {
+        game.quantityPanel.setEnabled(true);
+        game.totalPanel.setEnabled(true);
+        game.multipliedPanel.setEnabled(true);
+      },
+      onQuit: function () {
+        game.quantityPanel.setEnabled(false);
+        game.totalPanel.setEnabled(false);
+        game.multipliedPanel.setEnabled(false);
+      }
     }
+
   };
 
   var disableAllButtons = function () {
@@ -284,7 +302,13 @@ var flow = (() => {
   }
 
   var goToScreen = function (screenName) {
+    if (flow.currentScreen && flow.currentScreen.onQuit) {
+      flow.currentScreen.onQuit();
+    }
+
     game.goToScreen(screenName);
+    console.log(screenName, screens[screenName]);
+    flow.currentScreen = screens[screenName];
     disableAllButtons(flow.scene);
     if (screens[screenName]) {
       if (screens[screenName].buttons) {
@@ -322,7 +346,10 @@ var flow = (() => {
         flow.toRemove = screens[screenName].onInput;
         document.addEventListener('onNumpadInput', flow.toRemove);
       }
-      if (screens[screenName].onCall) screens[screenName].onCall();
+      if (screens[screenName].onCall) {
+        console.log("call");
+        screens[screenName].onCall();
+      }
     } else {
       game.numbersPanel.setEnabled(false);
       game.amountPanel.setEnabled(false);
@@ -339,7 +366,6 @@ var flow = (() => {
     // goToScreen("10");
     // game.isCardInAnimationOver = true;
 
-    console.log("WTF?!");
     game.card.setEnabled(false);
     game.isCardInAnimationOver = false;
     goToScreen("1");

@@ -25,8 +25,8 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing action SpitMoneyAndReceipt:  in[0 - 60], out[170 - 230]
 		processing action SpitMoneyAndReceipt.003:  in[0 - 1], out[240 - 241]
 		processing action StickTheCard:  in[0 - 139], out[250 - 389]
-		processing action StickTheMoney:  in[0 - 103], out[400 - 503]
-		processing action UnstickTheCard:  in[0 - 140], out[510 - 650]
+		processing action StickTheMoney:  in[0 - 95], out[400 - 495]
+		processing action UnstickTheCard:  in[0 - 140], out[500 - 640]
 	processing begun of mesh:  touch l 3
 		processing begun of material:  TouchButtons
 		num positions      :  4
@@ -200,7 +200,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num colors         :  0
 		num triangles      :  12
 	processing begun of mesh:  quantity
-		WARNING: No materials have been assigned: 
+		processing begun of material:  button
 		num positions      :  4
 		num normals        :  4
 		num tangents       :  0
@@ -209,7 +209,8 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num colors         :  0
 		num triangles      :  2
 	processing begun of mesh:  multiplied
-		WARNING: No materials have been assigned: 
+		processing begun of material:  button
+		registered as also a user of material:  button
 		num positions      :  4
 		num normals        :  4
 		num tangents       :  0
@@ -218,7 +219,8 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num colors         :  0
 		num triangles      :  2
 	processing begun of mesh:  total
-		WARNING: No materials have been assigned: 
+		processing begun of material:  button
+		registered as also a user of material:  button
 		num positions      :  4
 		num normals        :  4
 		num tangents       :  0
@@ -535,6 +537,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			num skeletonWeights and skeletonIndices:  936
 	processing begun of mesh:  numbers screen
 		processing begun of material:  button
+		registered as also a user of material:  button
 		Custom split normals with tangents being used
 		num positions      :  4
 		num normals        :  4
@@ -644,4 +647,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 3.7554 secs
+elapsed time:  0 min, 3.7668 secs
