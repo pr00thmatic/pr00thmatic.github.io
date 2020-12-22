@@ -61,11 +61,18 @@ var flow = (() => {
   }
 
   var spit = function (requestReceipt) {
+    if (!requestReceipt && !game.spitsMoney) {
+      game.spitsMoney = true;
+      confirm();
+      return;
+    }
     goToScreen("14");
     flow.scene.getMeshByName("receipt").setEnabled(requestReceipt);
     var receipt = flow.scene.getMeshByName("receipt hitbox");
     receipt.setEnabled(requestReceipt);
     var money = flow.scene.getMeshByName("money out hitbox");
+    flow.scene.getMeshByName("money out").setEnabled(game.spitsMoney);
+    game.spitsMoney = true;
 
     game.skeleton.beginAnimation("SpitMoneyAndReceipt", false, 1, function () {
       receipt.actionManager = new BABYLON.ActionManager(flow.scene);
@@ -274,7 +281,7 @@ var flow = (() => {
       }
     },
     "32": {
-      buttons: [ 'touch l 0' ],
+      buttons: [ 'touch l 0', 'touch r 1', 'touch r 0' ],
       actions: [
         babylonAction(() => {
           goToScreen("14"); // por favor, retire su efectivo
@@ -291,6 +298,13 @@ var flow = (() => {
             }));
           });
         }),
+        babylonAction(() => {
+          goToScreen("30");
+        }),
+        babylonAction(() => {
+          game.spitsMoney = false;
+          goToScreen("12");
+        })
       ],
       onCall: function () {
         game.quantityPanel.setEnabled(true);
@@ -374,6 +388,11 @@ var flow = (() => {
       game.accountPanel.setEnabled(false);
     }
   };
+
+  var confirm = function () {
+    game.quickWhithdraw = false;
+    goToScreen("16");
+  }
 
   var cancel = function () {
     game.quickWhithdraw = false;

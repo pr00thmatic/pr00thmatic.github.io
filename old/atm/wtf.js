@@ -160,6 +160,7 @@ var game = (() => {
     capturedCard: false,
     isCardInAnimationOver: false,
     blocked: false,
-    erasePanels: erasePanels
+    erasePanels: erasePanels,
+    spitsMoney: true
   };
 })();
