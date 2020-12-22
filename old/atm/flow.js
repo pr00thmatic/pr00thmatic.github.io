@@ -24,11 +24,7 @@ var flow = (() => {
   var selectCurrency = ((currency) => {
     return babylonAction(function () {
       game.currency = currency;
-      if (game.thirdPartyRequired) {
-        goToScreen("33");
-      } else {
-        goToScreen("30");
-      }
+      goToScreen("22");
     });
   });
 
@@ -83,13 +79,26 @@ var flow = (() => {
     });
   }
 
+  var f = () => {
+    if (game.isDeposit) {
+      game.isDeposit = false;
+      if (game.thirdPartyRequired) {
+        goToScreen("33");
+      } else {
+        goToScreen("30");
+      }
+    } else {
+      goToScreen("10");
+    }
+  }
+
   var whithdrawScreen = {
     buttons: ['touch r 0', 'touch r 1', 'touch r 2', 'touch r 3'],
     actions: [
-      babylonAction(function () { goToScreen("10"); }),
-      babylonAction(function () { goToScreen("10"); }),
-      babylonAction(function () { goToScreen("10"); }),
-      babylonAction(function () { goToScreen("10"); }),
+      babylonAction(f),
+      babylonAction(f),
+      babylonAction(f),
+      babylonAction(f)
     ]
   };
 
@@ -189,8 +198,8 @@ var flow = (() => {
         game.quickWhithdraw = false;
       }
     },
-    "45": whithdrawScreen,
-    "47": whithdrawScreen,
+    "45": whithdrawScreen, // TODO: este es depósito también
+    "47": whithdrawScreen, // TODO: este es depósito también
     "16": { // something else?
       buttons: ['touch r 1', 'touch r 2'],
       actions: [
@@ -215,7 +224,10 @@ var flow = (() => {
           game.thirdPartyRequired = false;
           goToScreen("29");
         })
-      ]
+      ],
+      onCall: function () {
+        game.isDeposit = true;
+      }
     },
     "29": { // type of currency
       buttons: ['touch r 2', 'touch r 1'],
@@ -230,6 +242,13 @@ var flow = (() => {
         babylonAction(() => goToScreen("30"))
       ],
       requireAccount: true
+    },
+    "22": { // tipo de cuenta
+      buttons: ['touch r 1', 'touch r 2'],
+      actions: [
+        babylonAction(() => goToScreen("45")), // caja de ahorro
+        babylonAction(() => goToScreen("47")), // cuenta corriente
+      ]
     },
     "30": { // insert money
       onCall: function () {

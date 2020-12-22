@@ -199,6 +199,33 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  12
+	processing begun of mesh:  quantity
+		WARNING: No materials have been assigned: 
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  multiplied
+		WARNING: No materials have been assigned: 
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  total
+		WARNING: No materials have been assigned: 
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
 	processing begun of mesh:  atm
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
@@ -535,7 +562,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			num skeletonWeights and skeletonIndices:  512
 	processing begun of mesh:  screen
 		processing begun of material:  Screen
-			processing texture _33
+			processing texture _32
 				texture type:  diffuseTexture, mapped using: "UVMap"
 		Custom split normals with tangents being used
 		num positions      :  4
@@ -589,6 +616,9 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  receipt hitbox
 	writing mesh:  paper money in
 	writing mesh:  money in hitbox
+	writing mesh:  quantity
+	writing mesh:  multiplied
+	writing mesh:  total
 	writing mesh:  atm
 	writing mesh:  green thing
 	writing mesh:  nope3
@@ -614,4 +644,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 3.6419 secs
+elapsed time:  0 min, 3.7554 secs

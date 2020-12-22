@@ -118,6 +118,10 @@ var game = (() => {
     game.amountPanel = createButton(scene, "amount", "amount button");
     game.accountPanel = createButton(scene, "account", "account button");
 
+    game.quantity = createButton(scene, "quantity", "quantity button");
+    game.multiplied = createButton(scene, "multiplied", "multiplied button");
+    game.total = createButton(scene, "total", "total button");
+
     setupLighting(scene);
     setupScreenMaterial(scene);
     setupGreenThing(scene);
