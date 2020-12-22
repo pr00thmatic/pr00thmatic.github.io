@@ -260,6 +260,8 @@ var flow = (() => {
     },
     "30": { // insert money
       onCall: function () {
+        game.scene.getMeshByName("paper money in dollars").setEnabled(game.currency == "$");
+        game.scene.getMeshByName("paper money in bs").setEnabled(game.currency == "bs");
         game.skeleton.beginAnimation("SpawnMoneyUp", false, 1, () => {
           game.scene.getMeshByName("money in hitbox").setEnabled(true);
           var hitbox = game.scene.getMeshByName("money in hitbox");

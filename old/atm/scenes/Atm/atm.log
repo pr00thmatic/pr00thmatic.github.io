@@ -22,12 +22,13 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing action RespawnCard:  in[0 - 50], out[0 - 50]
 		processing action retrieve receipt and money:  in[0 - 46], out[60 - 106]
 		processing action SpawnMoneyUp:  in[0 - 44], out[120 - 164]
-		processing action SpitMoneyAndReceipt:  in[0 - 60], out[170 - 230]
-		processing action SpitTheDepositedMoney:  in[0 - 40], out[240 - 280]
-		processing action StickTheCard:  in[0 - 139], out[290 - 429]
-		processing action StickTheMoney:  in[0 - 95], out[440 - 535]
-		processing action TakeTheDepositedMoney:  in[1 - 55], out[540 - 595]
-		processing action UnstickTheCard:  in[0 - 140], out[600 - 740]
+		processing action SpawnMoneyUp.001:  in[0 - 44], out[170 - 214]
+		processing action SpitMoneyAndReceipt:  in[0 - 60], out[220 - 280]
+		processing action SpitTheDepositedMoney:  in[0 - 40], out[290 - 330]
+		processing action StickTheCard:  in[0 - 139], out[340 - 479]
+		processing action StickTheMoney:  in[0 - 95], out[490 - 585]
+		processing action TakeTheDepositedMoney:  in[1 - 55], out[590 - 645]
+		processing action UnstickTheCard:  in[0 - 140], out[650 - 790]
 	processing begun of mesh:  touch l 3
 		processing begun of material:  TouchButtons
 		num positions      :  4
@@ -168,7 +169,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  44
-	processing begun of mesh:  paper money in
+	processing begun of mesh:  paper money in bs
 		animation processing begun
 			processing action SpawnMoneyUp:  in[0 - 44], out[0 - 44]
 		processing begun of material:  AtmTextured
@@ -240,23 +241,42 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  12
+	processing begun of mesh:  paper money in dollars
+		animation processing begun
+			processing action SpawnMoneyUp.001:  in[0 - 44], out[0 - 44]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+		Skeleton stats:  
+			Total Influencers:  32
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  32
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  128
 	processing begun of mesh:  atm
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
-		num positions      :  8258
-		num normals        :  8258
-		num tangents       :  33032
-		num uvs            :  16516
-		num uvs2           :  16516
+		num positions      :  8260
+		num normals        :  8260
+		num tangents       :  33040
+		num uvs            :  16520
+		num uvs2           :  16520
 		num colors         :  0
 		num triangles      :  6426
 		Skeleton stats:  
-			Total Influencers:  8258
+			Total Influencers:  8260
 			Avg # of influencers per vertex:  1
-			Highest # of influencers observed:  1, num vertices with this:  8258
+			Highest # of influencers observed:  1, num vertices with this:  8260
 			exported as 1 influencers
-			num skeletonWeights and skeletonIndices:  33032
+			num skeletonWeights and skeletonIndices:  33040
 	processing begun of mesh:  green thing
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
@@ -629,12 +649,13 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  money out
 	writing mesh:  money out hitbox
 	writing mesh:  receipt hitbox
-	writing mesh:  paper money in
+	writing mesh:  paper money in bs
 	writing mesh:  money in hitbox
 	writing mesh:  quantity
 	writing mesh:  multiplied
 	writing mesh:  total
 	writing mesh:  spitted money
+	writing mesh:  paper money in dollars
 	writing mesh:  atm
 	writing mesh:  green thing
 	writing mesh:  nope3
@@ -660,4 +681,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.3862 secs
+elapsed time:  0 min, 4.8091 secs
