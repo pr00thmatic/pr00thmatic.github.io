@@ -9,7 +9,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
 		Keep Z-up r-handed  :  no
-		Texture directory   :  D:\compartidos-ruth\FieATMWeb\pr00thmatic.github.io\old\atm\scenes\Atm\
+		Texture directory   :  D:\compartidos-ruth\FieATMWeb\pr00thmatic.github.io\old\atm\
 	Python World class constructor completed
 	processing begun of skeleton:  Armature, id:  0
 		processing begun of bone:  Bone, index:  0
@@ -660,4 +660,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.3862 secs
+elapsed time:  0 min, 4.1735 secs

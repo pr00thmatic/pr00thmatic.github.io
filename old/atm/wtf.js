@@ -80,7 +80,10 @@ var game = (() => {
     }
     scene.getMeshByName("receipt hitbox").material =
       scene.getMeshByName("money out hitbox").material =
-      scene.getMeshByName("money in hitbox").material = game.invisibleMaterial;
+      scene.getMeshByName("money in hitbox").material =
+      scene.getMeshByName("spitted money").material =
+      game.invisibleMaterial;
+    scene.getMeshByName("spitted money").setEnabled(false);
     scene.getMeshByName("money in hitbox").setEnabled(false);
   };
 

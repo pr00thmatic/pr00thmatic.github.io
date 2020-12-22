@@ -274,6 +274,24 @@ var flow = (() => {
       }
     },
     "32": {
+      buttons: [ 'touch l 0' ],
+      actions: [
+        babylonAction(() => {
+          goToScreen("14"); // por favor, retire su efectivo
+          game.skeleton.beginAnimation("SpitTheDepositedMoney", false, 1, () => {
+            var hitbox = game.scene.getMeshByName("spitted money");
+            hitbox.setEnabled(true);
+            hitbox.actionManager = new BABYLON.ActionManager(game.scene);
+            hitbox.actionManager.registerAction(babylonAction(() => {
+              hitbox.actionManager.actions = [];
+              hitbox.setEnabled(false);
+              game.skeleton.beginAnimation("TakeTheDepositedMoney", false, 1, () => {
+                cancel();
+              });
+            }));
+          });
+        }),
+      ],
       onCall: function () {
         game.quantityPanel.setEnabled(true);
         game.totalPanel.setEnabled(true);
