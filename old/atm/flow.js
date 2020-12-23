@@ -135,7 +135,8 @@ var flow = (() => {
       ]
     },
     "7": { // whatcha gonna do?
-      buttons: ['touch l 3', 'touch l 2', 'touch l 1'],
+      buttons: ['touch l 3', 'touch l 2', 'touch l 1',
+                'touch r 3'],
       actions: [
         babylonAction(function () { goToScreen("8"); }),
         babylonAction(function () {
@@ -144,6 +145,9 @@ var flow = (() => {
         }),
         babylonAction(function () {
           goToScreen("28");
+        }),
+        babylonAction(function () {
+          goToScreen("20");
         })
       ]
     },
@@ -152,11 +156,6 @@ var flow = (() => {
       actions: [
         babylonAction(function () {
           goToScreen("46");
-          game.blocked = true;
-          setTimeout(() => {
-            game.blocked = false;
-            game.cancelFunction();
-          }, warningDuration);
         }),
         babylonAction(function () {
           if (game.quickWhithdraw) {
@@ -318,8 +317,24 @@ var flow = (() => {
         game.totalPanel.setEnabled(false);
         game.multipliedPanel.setEnabled(false);
       }
+    },
+    "46": { // no can do (tarjeta de crédito)
+      onCall: function () {
+        game.blocked = true;
+        setTimeout(() => {
+          game.blocked = false;
+          game.cancelFunction();
+        }, warningDuration);
+      }
+    },
+    "20": {
+      buttons: [ 'touch r 0' ],
+      actions: [
+        babylonAction(() => {
+          goToScreen("46");
+        })
+      ]
     }
-
   };
 
   var disableAllButtons = function () {
