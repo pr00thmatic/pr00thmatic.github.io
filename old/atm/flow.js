@@ -7,6 +7,10 @@ var flow = (() => {
     'touch l 0', 'touch l 1', 'touch l 2', 'touch l 3',
   ];
 
+  var babylonAction = function (f) {
+    return new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, f );
+  };
+
   var unstickTheCard = function () {
     if (!game.isCardInside) return;
     game.isCardInside = false;
@@ -17,9 +21,25 @@ var flow = (() => {
     });
   };
 
-  var babylonAction = function (f) {
-    return new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, f );
-  };
+  var amountScreen = {
+    buttons: ['touch r 1', 'touch r 2'],
+    actions: [
+      babylonAction(function () { game.erasePanels(); }),
+      babylonAction(function () {
+        if (!game.transference &&
+            (game.amountPanel.value == 0 || (game.amountPanel.value / 100) % 10 != 0 ||
+             (game.amountPanel.value/100) > 3000)) {
+          goToScreen("57");
+        } else {
+          goToScreen("12");
+        }
+      }),
+    ],
+    requireAmount: true,
+    onQuit: function () {
+      game.transference = false;
+    }
+  }
 
   var selectCurrency = ((currency) => {
     return babylonAction(function () {
@@ -74,25 +94,43 @@ var flow = (() => {
     flow.scene.getMeshByName("money out").setEnabled(game.spitsMoney);
     game.spitsMoney = true;
 
-    game.skeleton.beginAnimation("SpitMoneyAndReceipt", false, 1, function () {
-      receipt.actionManager = new BABYLON.ActionManager(flow.scene);
-      receipt.actionManager.registerAction(babylonAction(function () {
-        retrieve();
-      }));
-      money.actionManager = new BABYLON.ActionManager(flow.scene);
-      money.actionManager.registerAction(babylonAction(function () {
-        retrieve();
-      }));
-    });
+    game.skeleton.beginAnimation("SpitMoneyAndReceipt", false, 1, waitforRetrieval);
+  };
+
+  var waitforRetrieval = function () {
+    var receipt = flow.scene.getMeshByName("receipt hitbox");
+    var money = flow.scene.getMeshByName("money out hitbox");
+    receipt.actionManager = new BABYLON.ActionManager(flow.scene);
+    receipt.actionManager.registerAction(babylonAction(function () {
+      retrieve();
+    }));
+    money.actionManager = new BABYLON.ActionManager(flow.scene);
+    money.actionManager.registerAction(babylonAction(function () {
+      retrieve();
+    }));
   }
 
   var f = () => {
+    if (game.query) {
+      game.query = false;
+      game.skeleton.beginAnimation("SpitMoneyAndReceipt", false, 1, function () {
+        game.spitsMoney = false;
+        flow.scene.getMeshByName("receipt").setEnabled(true);
+        flow.scene.getMeshByName("money out").setEnabled(false);
+        waitforRetrieval();
+      });
+      return;
+    }
     if (game.isDeposit) {
       game.isDeposit = false;
       if (game.thirdPartyRequired) {
         goToScreen("33");
       } else {
-        goToScreen("30");
+        if (game.transference) {
+          goToScreen("42");
+        } else {
+          goToScreen("30");
+        }
       }
     } else {
       goToScreen("10");
@@ -136,7 +174,7 @@ var flow = (() => {
     },
     "7": { // whatcha gonna do?
       buttons: ['touch l 3', 'touch l 2', 'touch l 1',
-                'touch r 3'],
+                'touch r 3', 'touch r 2' ],
       actions: [
         babylonAction(function () { goToScreen("8"); }),
         babylonAction(function () {
@@ -148,6 +186,11 @@ var flow = (() => {
         }),
         babylonAction(function () {
           goToScreen("20");
+        }),
+        babylonAction(() => {
+          game.transference = true;
+          game.spitsMoney = false;
+          goToScreen("28");
         })
       ]
     },
@@ -173,21 +216,8 @@ var flow = (() => {
         })
       ]
     },
-    "11": { // ingrese el monto
-      buttons: ['touch r 1', 'touch r 2'],
-      actions: [
-        babylonAction(function () { game.erasePanels(); }),
-        babylonAction(function () {
-          if (game.amountPanel.value == 0 || (game.amountPanel.value / 100) % 10 != 0 ||
-              (game.amountPanel.value/100) > 3000) {
-            goToScreen("57");
-          } else {
-            goToScreen("12");
-          }
-        }),
-      ],
-      requireAmount: true
-    },
+    "42": amountScreen, // ingrese el monto (transferencia)
+    "11": amountScreen, // ingrese el monto
     "10": { // whithdraw amount
       buttons: ['touch r 1'],
       actions: [
@@ -246,7 +276,12 @@ var flow = (() => {
       buttons: ['touch r 0', 'touch r 1'],
       actions: [
         babylonAction(() => cancel()),
-        babylonAction(() => goToScreen("30"))
+        babylonAction(() => {
+          if (game.transference)
+            goToScreen("42");
+          else
+            goToScreen("30");
+        })
       ],
       requireAccount: true
     },
@@ -328,10 +363,18 @@ var flow = (() => {
       }
     },
     "20": {
-      buttons: [ 'touch r 0' ],
+      buttons: [ 'touch r 0', 'touch r 1', 'touch r 2' ],
       actions: [
         babylonAction(() => {
           goToScreen("46");
+        }),
+        babylonAction(() => {
+          game.query = true;
+          goToScreen("45");
+        }),
+        babylonAction(() => {
+          game.query = true;
+          goToScreen("47");
         })
       ]
     }
@@ -407,11 +450,15 @@ var flow = (() => {
   };
 
   var confirm = function () {
+    game.spitsMoney = true;
+    game.transference = false;
     game.quickWhithdraw = false;
     goToScreen("16");
   }
 
   var cancel = function () {
+    game.spitsMoney = true;
+    game.transference = false;
     game.quickWhithdraw = false;
     goToScreen("23");
   }
