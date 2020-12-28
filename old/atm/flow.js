@@ -11,13 +11,42 @@ var flow = (() => {
     return new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, f );
   };
 
-  var unstickTheCard = function () {
+  var somethingElseScreen = {
+    buttons: ['touch r 1', 'touch r 2'],
+    actions: [
+      babylonAction(() => {
+        unstickTheCard();
+      }),
+      babylonAction(() => goToScreen("4"))
+    ]
+  }
+
+  var handleChangePinInput = function () {
+    if (game.numbersPanel.isEnabled() && game.numbersPanel.button.input.length >= 4) {
+      if (flow.currentScreen.name == "24") {
+        game.changeAtmCode = game.numbersPanel.button.input;
+        goToScreen("25");
+      } else if (flow.currentScreen.name == "25") {
+        if (game.changeAtmCode == game.numbersPanel.button.input) {
+          game.atmCode = game.changeAtmCode;
+          goToScreen("26");
+        } else {
+          goToScreen("27");
+        }
+      }
+    }
+  }
+
+  var unstickTheCard = function (goesBlank = true) {
     if (!game.isCardInside) return;
     game.isCardInside = false;
-    goToScreen("0");
+    if (goesBlank) {
+      goToScreen("0");
+    }
     game.card.setEnabled(true);
     game.skeleton.beginAnimation("UnstickTheCard", false, 1, function () {
       game.card.actionManager.registerAction(game.card.stickInAction);
+      if (!goesBlank) goToScreen("0");
     });
   };
 
@@ -54,7 +83,7 @@ var flow = (() => {
 
   var handlePinInput = function () {
     if (game.numbersPanel.isEnabled() && game.numbersPanel.button.input.length >= 4) {
-      if (game.numbersPanel.button.input === '0000') {
+      if (game.numbersPanel.button.input === game.atmCode) {
         goToScreen("7"); // code accepted, do your stuff
       } else { // wrong code!
         goToScreen("5");
@@ -74,7 +103,9 @@ var flow = (() => {
     receipt.actionManager.actions = [];
     money.actionManager.actions = [];
 
-    game.skeleton.beginAnimation("retrieve receipt and money", false);
+    game.skeleton.beginAnimation("retrieve receipt and money", false, 1, function () {
+      game.spitsMoney = true;
+    });
     setTimeout(() => {
       goToScreen("16");
     }, 1000);
@@ -111,10 +142,11 @@ var flow = (() => {
   }
 
   var f = () => {
-    if (game.query) {
-      game.query = false;
+    if (game.query || game.miniExtracto) {
+      game.miniExtracto = game.query = false;
+      game.spitsMoney = false;
+      flow.scene.getMeshByName("money out").setEnabled(false);
       game.skeleton.beginAnimation("SpitMoneyAndReceipt", false, 1, function () {
-        game.spitsMoney = false;
         flow.scene.getMeshByName("receipt").setEnabled(true);
         flow.scene.getMeshByName("money out").setEnabled(false);
         waitforRetrieval();
@@ -168,13 +200,15 @@ var flow = (() => {
     "23": { // canceled transaction
       buttons: ['touch r 1', 'touch r 2'],
       actions: [
-        babylonAction(unstickTheCard),
+        babylonAction(() => {
+          unstickTheCard();
+        }),
         babylonAction(function () { goToScreen("4"); })
       ]
     },
     "7": { // whatcha gonna do?
       buttons: ['touch l 3', 'touch l 2', 'touch l 1',
-                'touch r 3', 'touch r 2' ],
+                'touch r 3', 'touch r 2', 'touch r 1', 'touch r 0' ],
       actions: [
         babylonAction(function () { goToScreen("8"); }),
         babylonAction(function () {
@@ -191,6 +225,13 @@ var flow = (() => {
           game.transference = true;
           game.spitsMoney = false;
           goToScreen("28");
+        }),
+        babylonAction(() => {
+          goToScreen("24");
+        }),
+        babylonAction(() => {
+          game.miniExtracto = true;
+          goToScreen("20");
         })
       ]
     },
@@ -236,13 +277,7 @@ var flow = (() => {
     },
     "45": whithdrawScreen, // TODO: este es depósito también
     "47": whithdrawScreen, // TODO: este es depósito también
-    "16": { // something else?
-      buttons: ['touch r 1', 'touch r 2'],
-      actions: [
-        babylonAction(unstickTheCard),
-        babylonAction(() => goToScreen("4"))
-      ]
-    },
+    "16": somethingElseScreen, // something else?
     "19": { // quick whithdraw amount
       buttons: [ 'touch r 0', 'touch r 1', 'touch r 2', 'touch r 3',
                  'touch l 0', 'touch l 1', 'touch l 2', 'touch l 3'],
@@ -377,7 +412,23 @@ var flow = (() => {
           goToScreen("47");
         })
       ]
-    }
+    },
+    "24": {
+      requirePin: true,
+      hidePin: true,
+      onInput: handleChangePinInput
+    },
+    "25": {
+      requirePin: true,
+      hidePin: true,
+      onInput: handleChangePinInput
+    },
+    "26": somethingElseScreen,
+    "27": {
+      onCall: function () {
+        unstickTheCard(false);
+      }
+    },
   };
 
   var disableAllButtons = function () {
@@ -401,6 +452,9 @@ var flow = (() => {
     game.goToScreen(screenName);
     console.log(screenName, screens[screenName]);
     flow.currentScreen = screens[screenName];
+    if (flow.currentScreen) {
+      flow.currentScreen.name = screenName;
+    }
     disableAllButtons(flow.scene);
     if (screens[screenName]) {
       if (screens[screenName].buttons) {
@@ -450,23 +504,23 @@ var flow = (() => {
   };
 
   var confirm = function () {
-    game.spitsMoney = true;
-    game.transference = false;
-    game.quickWhithdraw = false;
+    clear();
     goToScreen("16");
   }
 
   var cancel = function () {
-    game.spitsMoney = true;
-    game.transference = false;
-    game.quickWhithdraw = false;
+    clear();
     goToScreen("23");
   }
 
-  var initializeChip = function () {
-    // goToScreen("10");
-    // game.isCardInAnimationOver = true;
+  var clear = function () {
+    game.spitsMoney = true;
+    game.transference = false;
+    game.quickWhithdraw = false;
+    game.miniExtracto = false;
+  }
 
+  var initializeChip = function () {
     game.card.setEnabled(false);
     game.isCardInAnimationOver = false;
     goToScreen("1");

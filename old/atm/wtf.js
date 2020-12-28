@@ -161,6 +161,8 @@ var game = (() => {
     isCardInAnimationOver: false,
     blocked: false,
     erasePanels: erasePanels,
-    spitsMoney: true
+    spitsMoney: true,
+    atmCode: '0000',
+    changeAtmCode: ''
   };
 })();
