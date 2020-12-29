@@ -450,6 +450,13 @@ var flow = (() => {
         unstickTheCard(false);
       }
     },
+    "57": {
+      buttons: [ 'touch r 1', 'touch r 2' ],
+      actions: [
+        babylonAction(() => cancel()),
+        babylonAction(() => goToScreen("11"))
+      ]
+    }
   };
 
   var disableAllButtons = function () {
