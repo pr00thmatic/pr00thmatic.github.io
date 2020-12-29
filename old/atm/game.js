@@ -83,7 +83,7 @@ var game = (() => {
 
   var setupTouchButtons = function (scene) {
     game.invisibleMaterial = new BABYLON.StandardMaterial("touch buttons", scene);
-    game.invisibleMaterial.alpha = 0.1;
+    game.invisibleMaterial.alpha = 0;
     for (var i=0; i<4; i++) {
       var mesh = scene.getMeshByName("touch r " + i);
       mesh.material = game.invisibleMaterial;
