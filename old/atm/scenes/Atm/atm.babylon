@@ -6881,7 +6881,7 @@
 ,"instances":[]}
 ],
 "morphTargetManagers":[],
-"cameras":[{"name":"camera","id":"camera","position":[-0.0716,1.867,-3.0311],"rotation":[0.6035,0,0],"fov":0.6911,"minZ":0.1,"maxZ":1000,"speed":1,"inertia":0.9,"checkCollisions":false,"applyGravity":false,"ellipsoid":[0.2,0.9,0.2],"cameraRigMode":0,"interaxial_distance":0.0637,"type":"UniversalCamera"}],"activeCameraID":"camera",
+"cameras":[{"name":"camera","id":"camera","position":[0,1.9,-3],"rotation":[0.6109,0,0],"fov":0.6911,"minZ":0.1,"maxZ":1000,"speed":1,"inertia":0.9,"checkCollisions":false,"applyGravity":false,"ellipsoid":[0.2,0.9,0.2],"cameraRigMode":0,"interaxial_distance":0.0637,"type":"UniversalCamera"}],"activeCameraID":"camera",
 "lights":[{"name":"ambience light","id":"ambience light","type":0,"position":[0,0.7989,-1.914],"range":40,"intensityMode":0,"intensity":1,"diffuse":[0.8362,1,0.9622],"specular":[0.8362,1,0.9622],"radius":6}],
 "shadowGenerators":[]
 }

@@ -1,5 +1,20 @@
 var asdf = 5;
 var game = (() => {
+  var cameraTargets = {
+    whole: {
+      position: {
+        x: 0,
+        y: 1.9,
+        z: -3
+      },
+      rotation: {
+        x: 0.6109,
+        y: 0,
+        z: 0
+      }
+    }
+  };
+
   var numpadNames = [
     "zero", "one", "two", "three", "four", "five",
     "six", "seven", "eight", "nine"
@@ -168,6 +183,9 @@ var game = (() => {
     onSceneLoad: function (scene) {
       preload();
       initialize(scene);
+      game.scene.registerBeforeRender(() => {
+
+      });
     },
     onNumpadInput: new Event('onNumpadInput'),
     screenMaterial: screenMaterial,
