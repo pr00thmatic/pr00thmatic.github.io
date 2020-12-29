@@ -177,16 +177,30 @@ var flow = (() => {
       babylonAction(f),
       babylonAction(f),
       babylonAction(f)
-    ]
+    ],
+    // cameraTarget: cameraTargets.whole
   };
 
   var screens = {
+    "0": {
+      cameraTarget: cameraTargets.whole
+    },
+    "14": {
+      cameraTarget: cameraTargets.whole
+    },
+    "1": {
+      cameraTarget: cameraTargets.screen
+    },
+    "2": {
+      cameraTarget: cameraTargets.screen
+    },
     "3": { // language
       buttons: ['touch r 1',  'touch r 2'],
       actions: [
         babylonAction(function () { goToScreen("4"); }),
         babylonAction(function () { goToScreen("4"); })
-      ]
+      ],
+      cameraTarget: cameraTargets.screen
     },
     "4": { // pin
       requirePin: true,
@@ -207,7 +221,8 @@ var flow = (() => {
           unstickTheCard();
         }),
         babylonAction(function () { goToScreen("4"); })
-      ]
+      ],
+      cameraTarget: cameraTargets.screen
     },
     "7": { // whatcha gonna do?
       buttons: ['touch l 3', 'touch l 2', 'touch l 1',
@@ -331,6 +346,7 @@ var flow = (() => {
       ]
     },
     "30": { // insert money
+      cameraTarget: cameraTargets.whole,
       onCall: function () {
         game.scene.getMeshByName("paper money in dollars").setEnabled(game.currency == "$");
         game.scene.getMeshByName("paper money in bs").setEnabled(game.currency == "bs");
@@ -461,7 +477,7 @@ var flow = (() => {
     if (flow.currentScreen && flow.currentScreen.cameraTarget) {
       game.currentCameraTarget = flow.currentScreen.cameraTarget;
     } else {
-      game.currentCameraTarget = cameraTargets.whole;
+      game.currentCameraTarget = cameraTargets.screen;
     }
 
     if (flow.currentScreen) {

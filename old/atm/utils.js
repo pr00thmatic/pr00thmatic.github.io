@@ -52,8 +52,17 @@ var utils = (() => {
         z: a.z + b.z
       };
     },
-    lerp: function (min, max, t) {
-      return Math.max(min, Math.min(max, min + t * (max - min)));
+    lerp: function (a, b, t) {
+      return {
+        x: utils.lerpScalar(a.x, b.x, t),
+        y: utils.lerpScalar(a.y, b.y, t),
+        z: utils.lerpScalar(a.z, b.z, t)
+      };
+    },
+    lerpScalar: function (a, b, t) {
+      var theMin = Math.min(a, b);
+      var theMax = Math.max(a, b);
+      return Math.max(theMin, Math.min(theMax, a + t * (b - a)));
     },
     equals: function (a, b) {
       return a.x == b.x && a.y == b.y && a.z == b.z;

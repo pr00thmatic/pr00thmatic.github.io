@@ -165,20 +165,31 @@ var game = (() => {
   };
 
   var currentCameraTarget = cameraTargets.whole;
+  var transitionElapsed = 0;
+  var lastTarget;
 
   return {
     onSceneLoad: function (scene) {
       preload();
       initialize(scene);
       game.scene.registerBeforeRender(() => {
-        var p = utils.moveTowards(game.scene.cameras[0].position, game.currentCameraTarget.position,
-                                  (game.scene._engine._deltaTime / 1000) * game.cameraMovementSpeed);
-        var r = utils.moveTowards(game.scene.cameras[0].rotation, game.currentCameraTarget.rotation,
-                                  (game.scene._engine._deltaTime / 1000) * game.cameraRotationSpeed);
+        if (lastTarget != game.currentCameraTarget) {
+          transitionElapsed = 0;
+          lastTarget = game.currentCameraTarget;
+        }
+
+        var p = utils.lerp(game.scene.cameras[0].position, game.currentCameraTarget.position,
+                           transitionElapsed / game.transitionDuration);
+        var r = utils.lerp(game.scene.cameras[0].rotation, game.currentCameraTarget.rotation,
+                           transitionElapsed / game.transitionDuration);
+
         utils.set(p, game.scene.cameras[0].position);
         utils.set(r, game.scene.cameras[0].rotation);
+
+        transitionElapsed += game.scene._engine._deltaTime / 1000;
       });
     },
+    transitionDuration: 2,
     cameraMovementSpeed: 2,
     cameraRotationSpeed: 10 / (180 / Math.PI),
     currentCameraTarget: currentCameraTarget,
