@@ -5,7 +5,18 @@ var game = (() => {
     "six", "seven", "eight", "nine"
   ];
 
- var amountPanel;
+  var usedScreens = [
+    "4", "25", "26", "27", "0", "57",
+    "12", "22", "12", "7", "5", "16",
+    "14", "33", "42", "30", "10", "4",
+    "8", "28", "20", "28", "24", "46",
+    "19", "45", "11", "29", "45", "47",
+    "32", "14", "30", "23", "1", "2",
+    "3", "6"];
+
+  var amountPanel;
+
+  var screenTextures = {};
 
   var registerNumpadFunction = function (name, value, scene) {
     var mesh = scene.getMeshByName(name);
@@ -59,7 +70,8 @@ var game = (() => {
   };
 
   var goToScreen = function (screenName) {
-    screen.material.albedoTexture = new BABYLON.Texture("screens/" + screenName + ".png");
+    screen.material.albedoTexture = screenTextures[screenName];
+    // screen.material.albedoTexture = new BABYLON.Texture("screens/" + screenName + ".png");
   };
 
   var setupGreenThing = function (scene) {
@@ -146,8 +158,15 @@ var game = (() => {
   var screen;
   var numbersPanel;
 
+  var preload = function () {
+    for (var i=0; i<usedScreens.length; i++) {
+      screenTextures[usedScreens[i]] = new BABYLON.Texture("screens/" + usedScreens[i] + ".png");
+    }
+  };
+
   return {
     onSceneLoad: function (scene) {
+      preload();
       initialize(scene);
     },
     onNumpadInput: new Event('onNumpadInput'),
@@ -163,6 +182,7 @@ var game = (() => {
     erasePanels: erasePanels,
     spitsMoney: true,
     atmCode: '0000',
-    changeAtmCode: ''
+    changeAtmCode: '',
+    screenTextures: screenTextures
   };
 })();
