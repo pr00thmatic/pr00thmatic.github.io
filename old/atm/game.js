@@ -1,20 +1,5 @@
 var asdf = 5;
 var game = (() => {
-  var cameraTargets = {
-    whole: {
-      position: {
-        x: 0,
-        y: 1.9,
-        z: -3
-      },
-      rotation: {
-        x: 0.6109,
-        y: 0,
-        z: 0
-      }
-    }
-  };
-
   var numpadNames = [
     "zero", "one", "two", "three", "four", "five",
     "six", "seven", "eight", "nine"
@@ -179,14 +164,25 @@ var game = (() => {
     }
   };
 
+  var currentCameraTarget = cameraTargets.whole;
+
   return {
     onSceneLoad: function (scene) {
       preload();
       initialize(scene);
       game.scene.registerBeforeRender(() => {
-
+        var p = utils.moveTowards(game.scene.cameras[0].position, game.currentCameraTarget.position,
+                                  (game.scene._engine._deltaTime / 1000) * game.cameraMovementSpeed);
+        var r = utils.moveTowards(game.scene.cameras[0].rotation, game.currentCameraTarget.rotation,
+                                  (game.scene._engine._deltaTime / 1000) * game.cameraRotationSpeed);
+        utils.set(p, game.scene.cameras[0].position);
+        utils.set(r, game.scene.cameras[0].rotation);
       });
     },
+    cameraMovementSpeed: 2,
+    cameraRotationSpeed: 10 / (180 / Math.PI),
+    currentCameraTarget: currentCameraTarget,
+    cameraTargets: cameraTargets,
     onNumpadInput: new Event('onNumpadInput'),
     screenMaterial: screenMaterial,
     screen: screen,

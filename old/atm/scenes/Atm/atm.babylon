@@ -1164,7 +1164,7 @@
 {"frame":37,"values":[1,1,1]},
 {"frame":44,"values":[1,1,1]}],"loopBehavior":1,"name":"scaling animation","property":"scaling"}],"ranges":[{"name":"SpawnMoneyUp","from":0,"to":44}]
 ,"instances":[]}
-,{"name":"money in hitbox","id":"money in hitbox","materialId":"AtmTextured","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+,{"name":"money in hitbox","id":"money in hitbox","materialId":"AtmTextured","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":false,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
 ,"positions":[0.1856,0.5541,-1.3098,-0.39,0.5541,-1.3098,0.1856,0.8416,-1.3091,-0.39,0.8416,-1.3091,-0.39,0.5541,-1.31,0.1856,0.5541,-1.31,0.1856,0.8416,-1.3094,-0.39,0.8416,-1.3094,-0.39,0.8416,-1.3094,0.1856,0.8416,-1.3094,0.1856,0.8416,-1.3091,-0.39,0.8416,-1.3094,0.1856,0.8416,-1.3091,-0.39,0.8416,-1.3091,-0.39,0.5541,-1.31,-0.39,0.8416,-1.3094,-0.39,0.8416,-1.3091
 ,-0.39,0.5541,-1.31,-0.39,0.8416,-1.3091,-0.39,0.5541,-1.3098,0.1856,0.5541,-1.31,-0.39,0.5541,-1.31,-0.39,0.5541,-1.3098,0.1856,0.5541,-1.31,-0.39,0.5541,-1.3098,0.1856,0.5541,-1.3098,0.1856,0.8416,-1.3094,0.1856,0.5541,-1.31,0.1856,0.5541,-1.3098,0.1856,0.8416,-1.3094,0.1856,0.5541,-1.3098,0.1856,0.8416,-1.3091]
 ,"normals":[0,-0.002,1,0,-0.002,1,0,-0.002,1,0,-0.002,1,0,0.002,-1,0,0.002,-1,0,0.002,-1,0,0.002,-1,0,1,0.002,0,1,0.002,0,1,0.002,0,1,0.002,0,1,0.002,0,1,0.002,-1,0,0,-1,0,0,-1,0,0

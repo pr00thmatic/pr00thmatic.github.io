@@ -57,6 +57,11 @@ var utils = (() => {
     },
     equals: function (a, b) {
       return a.x == b.x && a.y == b.y && a.z == b.z;
+    },
+    set: function (v, target) {
+      target.x = v.x;
+      target.y = v.y;
+      target.z = v.z;
     }
   };
 })();

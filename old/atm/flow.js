@@ -64,6 +64,7 @@ var flow = (() => {
         }
       }),
     ],
+    cameraTarget: cameraTargets.keyboard,
     requireAmount: true,
     onQuit: function () {
       game.transference = false;
@@ -190,12 +191,14 @@ var flow = (() => {
     "4": { // pin
       requirePin: true,
       hidePin: true,
-      onInput: handlePinInput
+      onInput: handlePinInput,
+      cameraTarget: cameraTargets.keyboard
     },
     "5": { // wrong pin, try again
       requirePin: true,
       hidePin: true,
-      onInput: handlePinInput
+      onInput: handlePinInput,
+      cameraTarget: cameraTargets.keyboard
     },
     "23": { // canceled transaction
       buttons: ['touch r 1', 'touch r 2'],
@@ -416,12 +419,14 @@ var flow = (() => {
     "24": {
       requirePin: true,
       hidePin: true,
-      onInput: handleChangePinInput
+      onInput: handleChangePinInput,
+      cameraTarget: cameraTargets.keyboard,
     },
     "25": {
       requirePin: true,
       hidePin: true,
-      onInput: handleChangePinInput
+      onInput: handleChangePinInput,
+      cameraTarget: cameraTargets.keyboard,
     },
     "26": somethingElseScreen,
     "27": {
@@ -452,6 +457,13 @@ var flow = (() => {
     game.goToScreen(screenName);
     console.log(screenName, screens[screenName]);
     flow.currentScreen = screens[screenName];
+
+    if (flow.currentScreen && flow.currentScreen.cameraTarget) {
+      game.currentCameraTarget = flow.currentScreen.cameraTarget;
+    } else {
+      game.currentCameraTarget = cameraTargets.whole;
+    }
+
     if (flow.currentScreen) {
       flow.currentScreen.name = screenName;
     }
