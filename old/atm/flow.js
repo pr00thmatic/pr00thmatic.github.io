@@ -144,7 +144,14 @@ var flow = (() => {
   }
 
   var f = () => {
+    if (game.quickWhithdraw) {
+      game.quickWhithdraw = false;
+      goToScreen("19");
+      return;
+    }
     if (game.query || game.miniExtracto) {
+      goToScreen("0");
+      game.currentCameraTarget = cameraTargets.whole;
       game.miniExtracto = game.query = false;
       game.spitsMoney = false;
       flow.scene.getMeshByName("money out").setEnabled(false);
@@ -261,18 +268,10 @@ var flow = (() => {
           goToScreen("46");
         }),
         babylonAction(function () {
-          if (game.quickWhithdraw) {
-            goToScreen("19");
-          } else {
-            goToScreen("45");
-          }
+          goToScreen("45");
         }),
         babylonAction(function () {
-          if (game.quickWhithdraw) {
-            goToScreen("19");
-          } else {
-            goToScreen("45");
-          }
+          goToScreen("45");
         })
       ]
     },
@@ -337,7 +336,8 @@ var flow = (() => {
             goToScreen("30");
         })
       ],
-      requireAccount: true
+      requireAccount: true,
+      cameraTarget: cameraTargets.keyboard
     },
     "22": { // tipo de cuenta
       buttons: ['touch r 1', 'touch r 2'],
@@ -447,6 +447,7 @@ var flow = (() => {
     },
     "26": somethingElseScreen,
     "27": {
+      cameraTarget: cameraTargets.whole,
       onCall: function () {
         unstickTheCard(false);
       }
