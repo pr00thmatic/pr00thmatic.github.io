@@ -172,6 +172,9 @@ var game = (() => {
     onSceneLoad: function (scene) {
       preload();
       initialize(scene);
+      var light = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, -0.2, 0), scene);
+      light.intensity = 2;
+      game.sun = light;
       game.scene.registerBeforeRender(() => {
         if (lastTarget != game.currentCameraTarget) {
           transitionElapsed = 0;
