@@ -174,7 +174,8 @@ var game = (() => {
       initialize(scene);
       var light = new BABYLON.PointLight("DirectionalLight", new BABYLON.Vector3(0, 1, -3), scene);
       light.intensity = 10;
-      game.sun = light;
+      game.secondaryLight = light;
+
       game.scene.registerBeforeRender(() => {
         if (lastTarget != game.currentCameraTarget) {
           transitionElapsed = 0;
@@ -191,6 +192,9 @@ var game = (() => {
 
         transitionElapsed += game.scene._engine._deltaTime / 1000;
       });
+
+      game.scene.getLightByName("ambience light").intensity = 2.5;
+      game.secondaryLight.intensity = 20;
     },
     transitionDuration: 6,
     currentCameraTarget: currentCameraTarget,
