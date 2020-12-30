@@ -1,6 +1,6 @@
 console.log("it's ready! 0.13");
 var flow = (() => {
-  var initializeDuration = 1000;
+  var initializeDuration = 6000;
   var warningDuration = 5000;
   var respawnWait = 8000;
   var touchButtons = [

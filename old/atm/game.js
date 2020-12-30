@@ -189,9 +189,7 @@ var game = (() => {
         transitionElapsed += game.scene._engine._deltaTime / 1000;
       });
     },
-    transitionDuration: 2,
-    cameraMovementSpeed: 2,
-    cameraRotationSpeed: 10 / (180 / Math.PI),
+    transitionDuration: 6,
     currentCameraTarget: currentCameraTarget,
     cameraTargets: cameraTargets,
     onNumpadInput: new Event('onNumpadInput'),
