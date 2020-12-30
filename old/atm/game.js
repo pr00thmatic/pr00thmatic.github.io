@@ -152,6 +152,13 @@ var game = (() => {
     game.cancelButton = utils.onClick(scene, "cancel", cancelFunction);
     game.okButton = scene.getMeshByName("ok");
     game.eraseButton = utils.onClick(scene, "erase", erasePanels);
+
+    // responsivessnessiness
+    if (window.innerHeight < window.innerWidth) {
+      game.scene.cameras[0].fov=0.6911;
+    } else {
+      game.scene.cameras[0].fov=1.2;
+    }
   };
 
   var screenMaterial;

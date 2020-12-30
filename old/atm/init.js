@@ -55,5 +55,10 @@ var init = (() => {
   // Resize
   window.addEventListener("resize", function () {
     engine.resize();
+    if (window.innerHeight < window.innerWidth) {
+      game.scene.cameras[0].fov=0.6911;
+    } else {
+      game.scene.cameras[0].fov=1.2;
+    }
   });
 })();
