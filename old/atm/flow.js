@@ -1,4 +1,4 @@
-console.log("it's ready! 0.17");
+console.log("it's ready! 0.18");
 var flow = (() => {
   var initializeDuration = 6000;
   var warningDuration = 5000;
@@ -214,7 +214,15 @@ var flow = (() => {
       requirePin: true,
       hidePin: true,
       onInput: handlePinInput,
-      cameraTarget: cameraTargets.keyboard
+      cameraTarget: cameraTargets.keyboard,
+      onCall: function () {
+        console.log("pin up");
+        game.skeleton.beginAnimation("PinUp", false);
+      },
+      onQuit: function () {
+        console.log("pin down");
+        game.skeleton.beginAnimation("PinDown", false);
+      }
     },
     "5": { // wrong pin, try again
       requirePin: true,

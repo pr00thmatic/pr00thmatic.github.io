@@ -59,7 +59,11 @@ var game = (() => {
 
   var setupLighting = function (scene) {
     var light = scene.getLightByName("ambience light");
-    light.intensity = 5;
+    light.intensity = 2.5;
+
+    var sun = new BABYLON.PointLight("DirectionalLight", new BABYLON.Vector3(0, 1, -3), scene);
+    sun.intensity = 15;
+    light.excludedMeshes.push(scene.getMeshByName("pin"));
   };
 
   var setupScreenMaterial = function (scene) {
@@ -179,9 +183,9 @@ var game = (() => {
     onSceneLoad: function (scene) {
       preload();
       initialize(scene);
-      var light = new BABYLON.PointLight("DirectionalLight", new BABYLON.Vector3(0, 1, -3), scene);
-      light.intensity = 10;
-      game.secondaryLight = light;
+      // var light = new BABYLON.PointLight("DirectionalLight", new BABYLON.Vector3(0, 1, -3), scene);
+      // light.intensity = 10;
+      // game.secondaryLight = light;
 
       game.scene.registerBeforeRender(() => {
         if (lastTarget != game.currentCameraTarget) {
@@ -200,8 +204,8 @@ var game = (() => {
         transitionElapsed += game.scene._engine._deltaTime / 1000;
       });
 
-      game.scene.getLightByName("ambience light").intensity = 2.5;
-      game.secondaryLight.intensity = 20;
+      // game.scene.getLightByName("ambience light").intensity = 2.5;
+      // game.secondaryLight.intensity = 20;
     },
     transitionDuration: 6,
     currentCameraTarget: currentCameraTarget,

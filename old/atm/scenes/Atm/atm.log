@@ -9,7 +9,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
 		Keep Z-up r-handed  :  no
-		Texture directory   :  D:\compartidos-ruth\FieATMWeb\pr00thmatic.github.io\old\atm\scenes\Atm\
+		Texture directory   :  D:\pr00thmatic.github.io\old\atm\scenes\Atm\
 	Python World class constructor completed
 	processing begun of skeleton:  Armature, id:  0
 		processing begun of bone:  Bone, index:  0
@@ -19,16 +19,18 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing begun of bone:  receipt, index:  4
 		processing begun of bone:  money out paper, index:  5
 		processing begun of bone:  money in paper, index:  6
-		processing action RespawnCard:  in[0 - 50], out[0 - 50]
-		processing action retrieve receipt and money:  in[0 - 46], out[60 - 106]
-		processing action SpawnMoneyUp:  in[0 - 44], out[120 - 164]
-		processing action SpawnMoneyUp.001:  in[0 - 44], out[170 - 214]
-		processing action SpitMoneyAndReceipt:  in[0 - 60], out[220 - 280]
-		processing action SpitTheDepositedMoney:  in[0 - 40], out[290 - 330]
-		processing action StickTheCard:  in[0 - 139], out[340 - 479]
-		processing action StickTheMoney:  in[0 - 95], out[490 - 585]
-		processing action TakeTheDepositedMoney:  in[1 - 55], out[590 - 645]
-		processing action UnstickTheCard:  in[0 - 140], out[650 - 790]
+		processing begun of bone:  pin, index:  7
+		processing action PinDown:  in[0 - 22], out[0 - 22]
+		processing action PinUp:  in[0 - 31], out[30 - 61]
+		processing action RespawnCard:  in[0 - 50], out[70 - 120]
+		processing action retrieve receipt and money:  in[0 - 46], out[130 - 176]
+		processing action SpawnMoneyUp:  in[0 - 44], out[190 - 234]
+		processing action SpitMoneyAndReceipt:  in[0 - 60], out[240 - 300]
+		processing action SpitTheDepositedMoney:  in[0 - 40], out[310 - 350]
+		processing action StickTheCard:  in[0 - 139], out[360 - 499]
+		processing action StickTheMoney:  in[0 - 95], out[510 - 605]
+		processing action TakeTheDepositedMoney:  in[0 - 55], out[610 - 665]
+		processing action UnstickTheCard:  in[0 - 140], out[670 - 810]
 	processing begun of mesh:  touch l 3
 		processing begun of material:  TouchButtons
 		num positions      :  4
@@ -243,7 +245,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num triangles      :  12
 	processing begun of mesh:  paper money in dollars
 		animation processing begun
-			processing action SpawnMoneyUp.001:  in[0 - 44], out[0 - 44]
+			processing action PinUp:  in[0 - 31], out[0 - 31]
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
@@ -260,23 +262,41 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			Highest # of influencers observed:  1, num vertices with this:  32
 			exported as 1 influencers
 			num skeletonWeights and skeletonIndices:  128
+	processing begun of mesh:  pin
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		num positions      :  301
+		num normals        :  301
+		num tangents       :  0
+		num uvs            :  602
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  116
+		Skeleton stats:  
+			Total Influencers:  301
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  301
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  1204
 	processing begun of mesh:  atm
+		animation processing begun
+			processing action StickTheCard:  in[0 - 139], out[0 - 139]
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
-		num positions      :  8260
-		num normals        :  8260
-		num tangents       :  33040
-		num uvs            :  16520
-		num uvs2           :  16520
+		num positions      :  8258
+		num normals        :  8258
+		num tangents       :  33032
+		num uvs            :  16516
+		num uvs2           :  16516
 		num colors         :  0
 		num triangles      :  6426
 		Skeleton stats:  
-			Total Influencers:  8260
+			Total Influencers:  8258
 			Avg # of influencers per vertex:  1
-			Highest # of influencers observed:  1, num vertices with this:  8260
+			Highest # of influencers observed:  1, num vertices with this:  8258
 			exported as 1 influencers
-			num skeletonWeights and skeletonIndices:  33040
+			num skeletonWeights and skeletonIndices:  33032
 	processing begun of mesh:  green thing
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
@@ -656,6 +676,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  total
 	writing mesh:  spitted money
 	writing mesh:  paper money in dollars
+	writing mesh:  pin
 	writing mesh:  atm
 	writing mesh:  green thing
 	writing mesh:  nope3
@@ -681,4 +702,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.4668 secs
+elapsed time:  0 min, 4.3745 secs
