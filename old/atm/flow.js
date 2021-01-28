@@ -1,4 +1,4 @@
-console.log("it's ready! 0.19");
+console.log("it's ready! 0.20");
 var flow = (() => {
   var initializeDuration = 6000;
   var warningDuration = 5000;
@@ -189,6 +189,44 @@ var flow = (() => {
     // cameraTarget: cameraTargets.whole
   };
 
+  var depositScreen = {
+    buttons: [ 'touch l 0', 'touch r 1', 'touch r 0' ],
+    actions: [
+      babylonAction(() => {
+        goToScreen("14"); // por favor, retire su efectivo
+        game.skeleton.beginAnimation("SpitTheDepositedMoney", false, 1, () => {
+          var hitbox = game.scene.getMeshByName("spitted money");
+          hitbox.setEnabled(true);
+          hitbox.actionManager = new BABYLON.ActionManager(game.scene);
+          hitbox.actionManager.registerAction(babylonAction(() => {
+            hitbox.actionManager.actions = [];
+            hitbox.setEnabled(false);
+            game.skeleton.beginAnimation("TakeTheDepositedMoney", false, 1, () => {
+              cancel();
+            });
+          }));
+        });
+      }),
+      babylonAction(() => {
+        goToScreen("30");
+      }),
+      babylonAction(() => {
+        game.spitsMoney = false;
+        goToScreen("12");
+      })
+    ],
+    onCall: function () {
+      game.quantityPanel.setEnabled(true);
+      game.totalPanel.setEnabled(true);
+      game.multipliedPanel.setEnabled(true);
+    },
+    onQuit: function () {
+      game.quantityPanel.setEnabled(false);
+      game.totalPanel.setEnabled(false);
+      game.multipliedPanel.setEnabled(false);
+    }
+  }
+
   var screens = {
     "0": {
       cameraTarget: cameraTargets.whole
@@ -279,7 +317,7 @@ var flow = (() => {
           goToScreen("45");
         }),
         babylonAction(function () {
-          goToScreen("45");
+          goToScreen("47");
         })
       ]
     },
@@ -372,50 +410,19 @@ var flow = (() => {
               game.quantityPanel.button.textBlock.text = game.numberOfBills + "";
               game.totalPanel.button.textBlock.text = game.multipliedPanel.button.textBlock.text =
                 (game.numberOfBills * 100) + "";
-              goToScreen("32"); // detalle del depósito
+              if (game.currency == "$") {
+                goToScreen("32"); // detalle del depósito
+              } else {
+                goToScreen("60");
+              }
             });
           }));
 
         });
       }
     },
-    "32": {
-      buttons: [ 'touch l 0', 'touch r 1', 'touch r 0' ],
-      actions: [
-        babylonAction(() => {
-          goToScreen("14"); // por favor, retire su efectivo
-          game.skeleton.beginAnimation("SpitTheDepositedMoney", false, 1, () => {
-            var hitbox = game.scene.getMeshByName("spitted money");
-            hitbox.setEnabled(true);
-            hitbox.actionManager = new BABYLON.ActionManager(game.scene);
-            hitbox.actionManager.registerAction(babylonAction(() => {
-              hitbox.actionManager.actions = [];
-              hitbox.setEnabled(false);
-              game.skeleton.beginAnimation("TakeTheDepositedMoney", false, 1, () => {
-                cancel();
-              });
-            }));
-          });
-        }),
-        babylonAction(() => {
-          goToScreen("30");
-        }),
-        babylonAction(() => {
-          game.spitsMoney = false;
-          goToScreen("12");
-        })
-      ],
-      onCall: function () {
-        game.quantityPanel.setEnabled(true);
-        game.totalPanel.setEnabled(true);
-        game.multipliedPanel.setEnabled(true);
-      },
-      onQuit: function () {
-        game.quantityPanel.setEnabled(false);
-        game.totalPanel.setEnabled(false);
-        game.multipliedPanel.setEnabled(false);
-      }
-    },
+    "32": depositScreen,
+    "60": depositScreen,
     "46": { // no can do (tarjeta de crédito)
       onCall: function () {
         game.blocked = true;

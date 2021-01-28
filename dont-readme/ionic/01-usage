@@ -1,0 +1,9 @@
+<ion-content>
+  el contenido :v
+</ion-content>
+
+botones flotantes que no se recorren con la página.
+https://ionicframework.com/docs/api/fab
+<ion-fab vertical="bottom">
+  <ion-icon name="name of the icon :v"></ion-icon>
+</ion-fab>

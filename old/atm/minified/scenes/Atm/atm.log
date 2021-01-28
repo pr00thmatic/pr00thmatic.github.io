@@ -1,0 +1,705 @@
+Exporter version: 6.4.6, Blender version: 2.83.5
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\pr00thmatic.github.io\old\atm\scenes\Atm\
+	Python World class constructor completed
+	processing begun of skeleton:  Armature, id:  0
+		processing begun of bone:  Bone, index:  0
+		processing begun of bone:  Bone.001, index:  1
+		processing begun of bone:  money out, index:  2
+		processing begun of bone:  money in, index:  3
+		processing begun of bone:  receipt, index:  4
+		processing begun of bone:  money out paper, index:  5
+		processing begun of bone:  money in paper, index:  6
+		processing begun of bone:  pin, index:  7
+		processing action PinDown:  in[0 - 22], out[0 - 22]
+		processing action PinUp:  in[0 - 31], out[30 - 61]
+		processing action RespawnCard:  in[0 - 50], out[70 - 120]
+		processing action retrieve receipt and money:  in[0 - 46], out[130 - 176]
+		processing action SpawnMoneyUp:  in[0 - 44], out[190 - 234]
+		processing action SpitMoneyAndReceipt:  in[0 - 60], out[240 - 300]
+		processing action SpitTheDepositedMoney:  in[0 - 40], out[310 - 350]
+		processing action StickTheCard:  in[0 - 139], out[360 - 499]
+		processing action StickTheMoney:  in[0 - 95], out[510 - 605]
+		processing action TakeTheDepositedMoney:  in[0 - 55], out[610 - 665]
+		processing action UnstickTheCard:  in[0 - 154], out[670 - 824]
+	processing begun of mesh:  touch l 3
+		processing begun of material:  TouchButtons
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  touch r 0
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  touch r 1
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  touch r 2
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  touch r 3
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  0
+		num uvs            :  60
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  touch l 0
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  touch l 1
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  touch l 2
+		processing begun of material:  TouchButtons
+		registered as also a user of material:  TouchButtons
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  receipt
+		processing begun of material:  AtmTextured
+			processing texture atm
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  384
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+		Skeleton stats:  
+			Total Influencers:  96
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  96
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  384
+	processing begun of mesh:  money out
+		animation processing begun
+			processing action SpitMoneyAndReceipt:  in[0 - 60], out[0 - 60]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+		Skeleton stats:  
+			Total Influencers:  32
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  32
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  128
+	processing begun of mesh:  money out hitbox
+		animation processing begun
+			processing action SpawnMoneyUp:  in[0 - 44], out[0 - 44]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  receipt hitbox
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  384
+		num uvs            :  192
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  paper money in bs
+		animation processing begun
+			processing action SpawnMoneyUp:  in[0 - 44], out[0 - 44]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+		Skeleton stats:  
+			Total Influencers:  32
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  32
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  128
+	processing begun of mesh:  money in hitbox
+		animation processing begun
+			processing action StickTheMoney:  in[0 - 95], out[0 - 95]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  quantity
+		processing begun of material:  button
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  multiplied
+		processing begun of material:  button
+		registered as also a user of material:  button
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  total
+		processing begun of material:  button
+		registered as also a user of material:  button
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  0
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  spitted money
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  paper money in dollars
+		animation processing begun
+			processing action StickTheCard:  in[0 - 139], out[0 - 139]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  32
+		num normals        :  32
+		num tangents       :  128
+		num uvs            :  64
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+		Skeleton stats:  
+			Total Influencers:  32
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  32
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  128
+	processing begun of mesh:  pin
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		num positions      :  65
+		num normals        :  65
+		num tangents       :  0
+		num uvs            :  130
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  67
+		Skeleton stats:  
+			Total Influencers:  65
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  65
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  260
+	processing begun of mesh:  atm
+		animation processing begun
+			processing action StickTheCard:  in[0 - 139], out[0 - 139]
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  8241
+		num normals        :  8241
+		num tangents       :  32964
+		num uvs            :  16482
+		num uvs2           :  16482
+		num colors         :  0
+		num triangles      :  6308
+		Skeleton stats:  
+			Total Influencers:  8241
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  8241
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  32964
+	processing begun of mesh:  green thing
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  1880
+		num normals        :  1880
+		num tangents       :  7520
+		num uvs            :  3760
+		num uvs2           :  3760
+		num colors         :  0
+		num triangles      :  1992
+		Skeleton stats:  
+			Total Influencers:  1880
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  1880
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  7520
+	processing begun of camera (UniversalCamera):  camera
+	processing begun of mesh:  nope3
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  152
+		num normals        :  152
+		num tangents       :  608
+		num uvs            :  304
+		num uvs2           :  304
+		num colors         :  0
+		num triangles      :  100
+		Skeleton stats:  
+			Total Influencers:  152
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  152
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  608
+	processing begun of mesh:  one
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  145
+		num normals        :  145
+		num tangents       :  580
+		num uvs            :  290
+		num uvs2           :  290
+		num colors         :  0
+		num triangles      :  96
+		Skeleton stats:  
+			Total Influencers:  145
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  145
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  580
+	processing begun of mesh:  two
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  141
+		num normals        :  141
+		num tangents       :  564
+		num uvs            :  282
+		num uvs2           :  282
+		num colors         :  0
+		num triangles      :  94
+		Skeleton stats:  
+			Total Influencers:  141
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  141
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  564
+	processing begun of mesh:  three
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  144
+		num normals        :  144
+		num tangents       :  576
+		num uvs            :  288
+		num uvs2           :  288
+		num colors         :  0
+		num triangles      :  97
+		Skeleton stats:  
+			Total Influencers:  144
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  144
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  576
+	processing begun of mesh:  four
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  150
+		num normals        :  150
+		num tangents       :  600
+		num uvs            :  300
+		num uvs2           :  300
+		num colors         :  0
+		num triangles      :  96
+		Skeleton stats:  
+			Total Influencers:  150
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  150
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  600
+	processing begun of mesh:  five
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  94
+		Skeleton stats:  
+			Total Influencers:  146
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  146
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  584
+	processing begun of mesh:  six
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  153
+		num normals        :  153
+		num tangents       :  612
+		num uvs            :  306
+		num uvs2           :  306
+		num colors         :  0
+		num triangles      :  97
+		Skeleton stats:  
+			Total Influencers:  153
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  153
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  612
+	processing begun of mesh:  seven
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  228
+		num normals        :  228
+		num tangents       :  912
+		num uvs            :  456
+		num uvs2           :  456
+		num colors         :  0
+		num triangles      :  96
+		Skeleton stats:  
+			Total Influencers:  228
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  228
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  912
+	processing begun of mesh:  eight
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  94
+		Skeleton stats:  
+			Total Influencers:  146
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  146
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  584
+	processing begun of mesh:  nine
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  230
+		num normals        :  230
+		num tangents       :  920
+		num uvs            :  460
+		num uvs2           :  460
+		num colors         :  0
+		num triangles      :  97
+		Skeleton stats:  
+			Total Influencers:  230
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  230
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  920
+	processing begun of mesh:  zero
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  94
+		Skeleton stats:  
+			Total Influencers:  146
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  146
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  584
+	processing begun of mesh:  nope2
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  153
+		num normals        :  153
+		num tangents       :  612
+		num uvs            :  306
+		num uvs2           :  306
+		num colors         :  0
+		num triangles      :  97
+		Skeleton stats:  
+			Total Influencers:  153
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  153
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  612
+	processing begun of mesh:  nope1
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  150
+		num normals        :  150
+		num tangents       :  600
+		num uvs            :  300
+		num uvs2           :  300
+		num colors         :  0
+		num triangles      :  96
+		Skeleton stats:  
+			Total Influencers:  150
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  150
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  600
+	processing begun of mesh:  erase
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  146
+		num normals        :  146
+		num tangents       :  584
+		num uvs            :  292
+		num uvs2           :  292
+		num colors         :  0
+		num triangles      :  100
+		Skeleton stats:  
+			Total Influencers:  146
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  146
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  584
+	processing begun of mesh:  cancel
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  155
+		num normals        :  155
+		num tangents       :  620
+		num uvs            :  310
+		num uvs2           :  310
+		num colors         :  0
+		num triangles      :  100
+		Skeleton stats:  
+			Total Influencers:  155
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  155
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  620
+	processing begun of mesh:  ok
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  234
+		num normals        :  234
+		num tangents       :  936
+		num uvs            :  468
+		num uvs2           :  468
+		num colors         :  0
+		num triangles      :  100
+		Skeleton stats:  
+			Total Influencers:  234
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  234
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  936
+	processing begun of mesh:  numbers screen
+		processing begun of material:  button
+		registered as also a user of material:  button
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  card
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		Custom split normals with tangents being used
+		num positions      :  128
+		num normals        :  128
+		num tangents       :  512
+		num uvs            :  256
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  60
+		Skeleton stats:  
+			Total Influencers:  128
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  128
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  512
+	processing begun of mesh:  screen
+		processing begun of material:  Screen
+			processing texture _32
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+		Skeleton stats:  
+			Total Influencers:  4
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  4
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  16
+	processing begun of mesh:  amount
+		processing begun of material:  button
+		registered as also a user of material:  button
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  account
+		processing begun of material:  button
+		registered as also a user of material:  button
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+	processing begun of light (POINT):  ambience light
+========= Writing of JSON file started =========
+	writing mesh:  touch l 3
+	writing mesh:  touch r 0
+	writing mesh:  touch r 1
+	writing mesh:  touch r 2
+	writing mesh:  touch r 3
+	writing mesh:  touch l 0
+	writing mesh:  touch l 1
+	writing mesh:  touch l 2
+	writing mesh:  receipt
+	writing mesh:  money out
+	writing mesh:  money out hitbox
+	writing mesh:  receipt hitbox
+	writing mesh:  paper money in bs
+	writing mesh:  money in hitbox
+	writing mesh:  quantity
+	writing mesh:  multiplied
+	writing mesh:  total
+	writing mesh:  spitted money
+	writing mesh:  paper money in dollars
+	writing mesh:  pin
+	writing mesh:  atm
+	writing mesh:  green thing
+	writing mesh:  nope3
+	writing mesh:  one
+	writing mesh:  two
+	writing mesh:  three
+	writing mesh:  four
+	writing mesh:  five
+	writing mesh:  six
+	writing mesh:  seven
+	writing mesh:  eight
+	writing mesh:  nine
+	writing mesh:  zero
+	writing mesh:  nope2
+	writing mesh:  nope1
+	writing mesh:  erase
+	writing mesh:  cancel
+	writing mesh:  ok
+	writing mesh:  numbers screen
+	writing mesh:  card
+	writing mesh:  screen
+	writing mesh:  amount
+	writing mesh:  account
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 4.5757 secs

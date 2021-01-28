@@ -30,7 +30,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing action StickTheCard:  in[0 - 139], out[360 - 499]
 		processing action StickTheMoney:  in[0 - 95], out[510 - 605]
 		processing action TakeTheDepositedMoney:  in[0 - 55], out[610 - 665]
-		processing action UnstickTheCard:  in[0 - 140], out[670 - 810]
+		processing action UnstickTheCard:  in[0 - 154], out[670 - 824]
 	processing begun of mesh:  touch l 3
 		processing begun of material:  TouchButtons
 		num positions      :  30
@@ -192,7 +192,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			num skeletonWeights and skeletonIndices:  128
 	processing begun of mesh:  money in hitbox
 		animation processing begun
-			processing action SpitTheDepositedMoney:  in[0 - 40], out[0 - 40]
+			processing action StickTheMoney:  in[0 - 95], out[0 - 95]
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
@@ -245,7 +245,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num triangles      :  12
 	processing begun of mesh:  paper money in dollars
 		animation processing begun
-			processing action PinUp:  in[0 - 31], out[0 - 31]
+			processing action StickTheCard:  in[0 - 139], out[0 - 139]
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
@@ -265,38 +265,38 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	processing begun of mesh:  pin
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
-		num positions      :  301
-		num normals        :  301
+		num positions      :  65
+		num normals        :  65
 		num tangents       :  0
-		num uvs            :  602
+		num uvs            :  130
 		num uvs2           :  0
 		num colors         :  0
-		num triangles      :  116
+		num triangles      :  67
 		Skeleton stats:  
-			Total Influencers:  301
+			Total Influencers:  65
 			Avg # of influencers per vertex:  1
-			Highest # of influencers observed:  1, num vertices with this:  301
+			Highest # of influencers observed:  1, num vertices with this:  65
 			exported as 1 influencers
-			num skeletonWeights and skeletonIndices:  1204
+			num skeletonWeights and skeletonIndices:  260
 	processing begun of mesh:  atm
 		animation processing begun
 			processing action StickTheCard:  in[0 - 139], out[0 - 139]
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		Custom split normals with tangents being used
-		num positions      :  8258
-		num normals        :  8258
-		num tangents       :  33032
-		num uvs            :  16516
-		num uvs2           :  16516
+		num positions      :  8241
+		num normals        :  8241
+		num tangents       :  32964
+		num uvs            :  16482
+		num uvs2           :  16482
 		num colors         :  0
-		num triangles      :  6426
+		num triangles      :  6308
 		Skeleton stats:  
-			Total Influencers:  8258
+			Total Influencers:  8241
 			Avg # of influencers per vertex:  1
-			Highest # of influencers observed:  1, num vertices with this:  8258
+			Highest # of influencers observed:  1, num vertices with this:  8241
 			exported as 1 influencers
-			num skeletonWeights and skeletonIndices:  33032
+			num skeletonWeights and skeletonIndices:  32964
 	processing begun of mesh:  green thing
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
@@ -702,4 +702,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.3127 secs
+elapsed time:  0 min, 4.5757 secs
