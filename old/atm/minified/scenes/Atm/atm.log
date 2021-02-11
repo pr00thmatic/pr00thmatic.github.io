@@ -20,6 +20,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing begun of bone:  money out paper, index:  5
 		processing begun of bone:  money in paper, index:  6
 		processing begun of bone:  pin, index:  7
+		processing begun of bone:  plz plick the card, index:  8
 		processing action PinDown:  in[0 - 22], out[0 - 22]
 		processing action PinUp:  in[0 - 31], out[30 - 61]
 		processing action RespawnCard:  in[0 - 50], out[70 - 120]
@@ -263,6 +264,22 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 			exported as 1 influencers
 			num skeletonWeights and skeletonIndices:  128
 	processing begun of mesh:  pin
+		processing begun of material:  AtmTextured
+		registered as also a user of material:  AtmTextured
+		num positions      :  65
+		num normals        :  65
+		num tangents       :  0
+		num uvs            :  130
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  67
+		Skeleton stats:  
+			Total Influencers:  65
+			Avg # of influencers per vertex:  1
+			Highest # of influencers observed:  1, num vertices with this:  65
+			exported as 1 influencers
+			num skeletonWeights and skeletonIndices:  260
+	processing begun of mesh:  pin.001
 		processing begun of material:  AtmTextured
 		registered as also a user of material:  AtmTextured
 		num positions      :  65
@@ -677,6 +694,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  spitted money
 	writing mesh:  paper money in dollars
 	writing mesh:  pin
+	writing mesh:  pin.001
 	writing mesh:  atm
 	writing mesh:  green thing
 	writing mesh:  nope3
@@ -702,4 +720,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.5757 secs
+elapsed time:  0 min, 4.36 secs
