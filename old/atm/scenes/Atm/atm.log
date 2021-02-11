@@ -20,7 +20,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing begun of bone:  money out paper, index:  5
 		processing begun of bone:  money in paper, index:  6
 		processing begun of bone:  pin, index:  7
-		processing begun of bone:  in_tutorial, index:  8
+		processing begun of bone:  plz plick the card, index:  8
 		processing action PinDown:  in[0 - 22], out[0 - 22]
 		processing action PinUp:  in[0 - 31], out[30 - 61]
 		processing action RespawnCard:  in[0 - 50], out[70 - 120]
@@ -720,4 +720,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.711 secs
+elapsed time:  0 min, 4.36 secs

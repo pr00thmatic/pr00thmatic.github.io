@@ -1,4 +1,4 @@
-console.log("it's ready! 0.20");
+console.log("it's ready! 0.21");
 var flow = (() => {
   var initializeDuration = 6000;
   var warningDuration = 5000;
@@ -561,6 +561,7 @@ var flow = (() => {
   }
 
   var cancel = function () {
+    game.atmCode = '0000';
     clear();
     goToScreen("23");
   }
