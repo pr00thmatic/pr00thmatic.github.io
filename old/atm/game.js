@@ -24,6 +24,7 @@ var game = (() => {
     mesh.actionManager.registerAction(new BABYLON.ExecuteCodeAction(
       BABYLON.ActionManager.OnPickTrigger,
       function () {
+        console.log("plick " + name);
         if (game.numbersPanel.isEnabled()) {
           game.numbersPanel.button.textBlock.text += game.hidePin? "X": value;
           if (!game.numbersPanel.button.input) game.numbersPanel.button.input = "";
