@@ -1,4 +1,4 @@
-Exporter version: 6.4.6, Blender version: 2.83.5
+Exporter version: 2.80.1, Blender version: 2.91.2
 ========= Conversion from Blender to Babylon.js =========
 	Scene settings used :
 		Inline textures     :  false
@@ -9,7 +9,7 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
 		Keep Z-up r-handed  :  no
-		Texture directory   :  D:\pr00thmatic.github.io\old\atm\scenes\Atm\
+		Texture directory   :  D:\External\pr00thmatic.github.io\old\atm\scenes\Atm\
 	Python World class constructor completed
 	processing begun of skeleton:  Armature, id:  0
 		processing begun of bone:  Bone, index:  0
@@ -31,7 +31,8 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		processing action StickTheCard:  in[0 - 139], out[360 - 499]
 		processing action StickTheMoney:  in[0 - 95], out[510 - 605]
 		processing action TakeTheDepositedMoney:  in[0 - 55], out[610 - 665]
-		processing action UnstickTheCard:  in[0 - 154], out[670 - 824]
+		processing action totalAction:  in[0 - 1], out[670 - 671]
+		processing action UnstickTheCard:  in[0 - 154], out[680 - 834]
 	processing begun of mesh:  touch l 3
 		processing begun of material:  TouchButtons
 		num positions      :  30
@@ -224,6 +225,8 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 		num colors         :  0
 		num triangles      :  2
 	processing begun of mesh:  total
+		animation processing begun
+			processing action totalAction:  in[0 - 0], out[0 - 0]
 		processing begun of material:  button
 		registered as also a user of material:  button
 		num positions      :  4
@@ -720,4 +723,4 @@ Exporter version: 6.4.6, Blender version: 2.83.5
 	writing mesh:  account
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 4.36 secs
+elapsed time:  1 min, 7.869 secs

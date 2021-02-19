@@ -223,7 +223,7 @@ var game = (() => {
     blocked: false,
     erasePanels: erasePanels,
     spitsMoney: true,
-    atmCode: '0000',
+    atmCode: '0000', // I replaced this with '0000' everywhere so the pin doesn't change as the client requested
     changeAtmCode: '',
     screenTextures: screenTextures
   };

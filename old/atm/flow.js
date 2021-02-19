@@ -1,4 +1,4 @@
-console.log("it's ready! 0.21");
+console.log("it's ready! 0.23");
 var flow = (() => {
   var initializeDuration = 6000;
   var warningDuration = 5000;
@@ -84,9 +84,11 @@ var flow = (() => {
   });
 
   var handlePinInput = function () {
-    if (game.numbersPanel.isEnabled() && game.numbersPanel.button.input.length >= 4) {
-      if (game.numbersPanel.button.input === game.atmCode) {
-        goToScreen("7"); // code accepted, do your stuff
+    if (game.numbersPanel.isEnabled() && game.numbersPanel.button.input.length >= 4) { 
+      // if (game.numbersPanel.button.input === game.atmCode) {
+      if (game.numbersPanel.button.input === '0000') {
+       goToScreen("7"); // code accepted, do your stuff
+        game.wrongCode = 0;
       } else { // wrong code!
         goToScreen("5");
 
@@ -587,6 +589,7 @@ var flow = (() => {
   };
 
   var retainCard = function () {
+    game.wrongCode = 0;
     goToScreen("6");
     setTimeout(() => {
       goToScreen("0");
