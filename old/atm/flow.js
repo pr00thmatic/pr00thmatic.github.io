@@ -1,4 +1,4 @@
-console.log("it's ready! 0.23");
+console.log("it's ready! 0.24");
 var flow = (() => {
   var initializeDuration = 6000;
   var warningDuration = 5000;
