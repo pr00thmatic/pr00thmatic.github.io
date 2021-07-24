@@ -8,7 +8,18 @@ Frog.gimmieFroggy = function () {
 
     moveToTile: function (x, y) {
       if (x || x === 0) this.sprite.x = gameSettings.tileSize * x + gameSettings.tileSize / 2;
-      if (y || y === 0) this.sprite.y = gameSettings.tileSize * y;
+      if (y || y === 0) {
+        var tween = scene.tweens.add({
+          targets: this.sprite,
+          y: gameSettings.tileSize * y,
+          ease: 'InOut',
+          duration: 50
+        });
+        // game.add.tween(sprite).to({ y: y }, gameSettings.tileSize * y,
+        //                           Phaser.Easing.Sinusoidal.InOut, true, delay, 25, false);
+
+        // this.sprite.y = gameSettings.tileSize * y;
+      }
     },
 
     froggyJump: function () {
