@@ -25,10 +25,11 @@ var UI = {
   onRanking : function () { window.open('ranking'); }, // TODO!
 
   create : function () {
-    UI.frogCounterLabel = scene.add.text(192, 64, ' x 00',
-                                         { fontFamily: 'Roboto', fontSize: '64px' } )
+    UI.frogCounterLabel = scene.add.text(192, 64, ' x 1',
+                                         { fontFamily: 'Passion One', fontSize: '64px' } )
       .setOrigin(0, 0)
       .setDepth(gameSettings.uiDepth);
+    setTimeout(() => UI.frogCounterLabel.setStyle(UI.style), 100);
     gameStatus.emitter.on('score change', UI.updateScore, UI);
   },
 
@@ -44,7 +45,7 @@ var UI = {
   createGameOverButton : function (name, content, yTile, xOffset,
                                    over, exit, click) {
     UI[name] = scene.add.text(scene.cameras.main.centerX + xOffset, gameSettings.tileSize * yTile,
-                              content, { fontFamily: 'Roboto', fontSize: '48px', color: '#000',
+                              content, { fontFamily: 'Passion One', fontSize: '48px', color: '#000',
                                          align: 'center', backgroundColor: '#fff', })
       .setOrigin(xOffset == 0? 0.5: (Math.sign(xOffset) < 0? 1: 0) , 0)
       .setDepth(gameSettings.uiDepth)
@@ -57,7 +58,7 @@ var UI = {
 
   createLabel : function (name, content, yTile, fontSize = '96px') {
     UI[name] = scene.add.text(scene.cameras.main.centerX, yTile * gameSettings.tileSize, content,
-                              { fontFamily: 'Roboto', fontSize: fontSize })
+                              { fontFamily: 'Passion One', fontSize: fontSize })
       .setOrigin(0.5, 0)
       .setDepth(gameSettings.uiDepth);
   }

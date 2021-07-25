@@ -31,11 +31,13 @@ Car.gimmieCar = function (lane, orientation) {
     utils.randomLerpedRange(gameSettings.slowCarSpeed, gameSettings.normalizedDifficulty()):
     utils.randomLerpedRange(gameSettings.fastCarSpeed, gameSettings.normalizedDifficulty());
 
+  var modifier = (Math.random() > 0.5? '1': '2');
   car.sprite =
     scene.physics.add.image((orientation == 1? -100: config.width + 100),
                             gameSettings.tileSize * gameSettings.lanes[lane * 2 + (orientation === 1? 0: 1)]
-                            -5 * orientation, car.isSlow? 'car1': 'car2');
+                            -5 * orientation, car.isSlow? ('bus' + modifier): ('car' + modifier));
 
+  car.sprite.scaleX *= orientation;
   car.sprite.setOrigin(0.5, 1);
   gameStatus.emitter.on('update', car.update, car);
 
