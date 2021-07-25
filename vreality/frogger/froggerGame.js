@@ -1,10 +1,12 @@
 var gameSettings = {
   normalizedDifficulty: function () { return gameStatus.rescuedFroggies / gameSettings.highestDifficulty; },
+  // estos parámetros se pueden modificar para hacer al juego más divertido
   highestDifficulty: 5,
   spawnCooldown: [ [ 3, 6 ], [ 1.5, 3 ] ],
   slowCarSpeed: [ [ 300, 400 ], [ 600, 700 ] ],
   fastCarSpeed: [ [ 600, 700 ], [ 900, 1000 ] ],
 
+  // estos no!!
   tileSize: 64,
   originY: 27,
   destinationY: 4,
@@ -66,13 +68,15 @@ var froggerGame = new Phaser.Class({
     characters.frog = Frog.gimmieFroggy(this);
 
     for (var lane = 0; lane < gameSettings.lanes.length/2; lane++) {
-      gameStatus.carSpawners[lane + ", " + 1] =
-        setInterval(((lane) => { return () => { Car.gimmieCar(lane, 1); } })(lane),
-                    utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
+      startCarSpawner(lane, 1);
+      startCarSpawner(lane, -1);
+      // gameStatus.carSpawners[lane + ", " + 1] =
+      //   setInterval(((lane) => { return () => { Car.gimmieCar(lane, 1); } })(lane),
+      //               utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
 
-      gameStatus.carSpawners[lane + ", " + "-1"] =
-        setInterval(((lane) => { return () => { Car.gimmieCar(lane, -1); }})(lane),
-                    utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
+      // gameStatus.carSpawners[lane + ", " + "-1"] =
+      //   setInterval(((lane) => { return () => { Car.gimmieCar(lane, -1); }})(lane),
+      //               utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
     }
 
     UI.create();
@@ -85,6 +89,17 @@ var froggerGame = new Phaser.Class({
   },
 
 });
+
+function startCarSpawner (lane, orientation) {
+  var key = lane + ", " + orientation;
+  gameStatus.carSpawners[key] = setTimeout(((lane) => {
+    return () => {
+      Car.gimmieCar(lane, orientation);
+      gameStatus.carSpawners[key] = startCarSpawner(lane, orientation);
+    };
+  })(lane), utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
+  return gameStatus.carSpawners[key];
+}
 
 
 function gameOver () {
