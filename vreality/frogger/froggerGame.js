@@ -20,19 +20,10 @@ var gameSettings = {
 };
 
 function resetGameStatus () {
-  if (gameStatus && gameStatus.carSpawners) {
-    for (var spawner in gameStatus.carSpawners) {
-      if (gameStatus.carSpawners[spawner]) {
-        clearInterval(gameStatus.carSpawners[spawner]);
-      }
-    }
-  }
-
   gameStatus = {
     rescuedFroggies: 0,
     deltaTime: 0,
     time: 0,
-    carSpawners: {}
   };
 };
 var gameStatus = null;
@@ -68,15 +59,8 @@ var froggerGame = new Phaser.Class({
     characters.frog = Frog.gimmieFroggy(this);
 
     for (var lane = 0; lane < gameSettings.lanes.length/2; lane++) {
-      startCarSpawner(lane, 1);
-      startCarSpawner(lane, -1);
-      // gameStatus.carSpawners[lane + ", " + 1] =
-      //   setInterval(((lane) => { return () => { Car.gimmieCar(lane, 1); } })(lane),
-      //               utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
-
-      // gameStatus.carSpawners[lane + ", " + "-1"] =
-      //   setInterval(((lane) => { return () => { Car.gimmieCar(lane, -1); }})(lane),
-      //               utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
+      CarLane.getCarLane(lane, 1);
+      CarLane.getCarLane(lane, -1);
     }
 
     UI.create();
@@ -89,18 +73,6 @@ var froggerGame = new Phaser.Class({
   },
 
 });
-
-function startCarSpawner (lane, orientation) {
-  var key = lane + ", " + orientation;
-  gameStatus.carSpawners[key] = setTimeout(((lane) => {
-    return () => {
-      Car.gimmieCar(lane, orientation);
-      gameStatus.carSpawners[key] = startCarSpawner(lane, orientation);
-    };
-  })(lane), utils.randomLerpedRange(gameSettings.spawnCooldown, gameSettings.normalizedDifficulty()) * 1000);
-  return gameStatus.carSpawners[key];
-}
-
 
 function gameOver () {
   characters.frog = null;
