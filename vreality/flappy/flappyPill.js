@@ -5,14 +5,14 @@ var gameSettings = {
   unscaledXSpeed: 1080 * 1.1,
   // scaling difficulty: yus
   maxScoreToHardest: 30,
-  pipeSpawnOffsetY: [ -421, 249 ],
-  xSpeed: [ 1080/2, 1080 * 1.1 ],
+  xSpeed: [ 1080/2 + 100, 1080 * 1.1 ],
   gravityRange: [ 980*1.5, 980*4.5 ],
   // either
   immortal: false,
   distanceBetweenPipes: 900,
   flapHeight: 150,
 
+  pipeSpawnOffsetY: [ -421, 249 ],
   uiDepth: 1000,
   tileSize: 64,
   floorLine : 200,
