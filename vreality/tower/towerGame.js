@@ -45,8 +45,7 @@ var towerGame = new Phaser.Class({
     UI.create();
     UI.isOver = false;
 
-    this.floor = this.matter.add.image(config.width/2, gameSettings.maxHeight, 'floor')
-      .setOrigin(0.5,1)
+    this.floor = this.matter.add.image(config.width/2, gameSettings.maxHeight - gameSettings.floorHeight / 2, 'floor')
       .setStatic(true);
 
     this.gradient = this.add.image(config.width/2, gameSettings.maxHeight, 'gradient')

@@ -24,7 +24,6 @@ var Box = {
     box.sprite = context.matter.add.image(Math.random() * (config.width - gameSettings.boxWidth/2) + gameSettings.boxWidth / 2,
                                           Box.theBox !== null? Box.lastY - 800: gameStatus.getBoxSpawnY(),
                                           'caja' + (Math.random() > 0.5? '1': '2'))
-      .setOrigin(0.5,1)
       .setFriction(0.25,0,0.25);
     box.sprite.setStatic(true);
     box.orientation = Math.random() > 0.5? -1: 1;
