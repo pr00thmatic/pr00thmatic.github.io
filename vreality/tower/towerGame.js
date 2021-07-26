@@ -67,6 +67,7 @@ var towerGame = new Phaser.Class({
     this.cameras.main.setBounds(0, 0, 1080, gameSettings.maxHeight);
     this.cameras.main.setBackgroundColor('#262262');
     context.cameras.main.centerOnY(context.floor.y);
+    context.cameras.main.setLerp(1, 0.01);
     this.dummyFollow = this.add.image(this.floor.x, this.floor.y);
     context.cameras.main.startFollow(this.dummyFollow, false, 0.1, 0.1);
   }
