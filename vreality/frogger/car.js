@@ -15,7 +15,6 @@ Car.gimmieCar = function (lane, orientation) {
           Phaser.Geom.Intersects.RectangleToRectangle(this.sprite.getBounds(), characters.frog.sprite.getBounds())) {
         killer = this;
         characters.frog.die();
-        game.scene.pause('froggerGame');
       }
       if (this.sprite.x < -150 || this.sprite.x > config.width + 150) {
         this.destroy();
