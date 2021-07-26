@@ -1,6 +1,7 @@
 var Box = {
   theBox: null,
   lastY: 0,
+
   gimmieBox : function () {
     var box = {};
 

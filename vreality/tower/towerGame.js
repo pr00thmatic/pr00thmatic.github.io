@@ -9,6 +9,7 @@ var gameSettings = {
 var gameStatus = null;
 function resetGameStatus () {
   gameStatus = {
+    gameOver: false,
     score: 0,
     maxScoreToHardest: 10,
     xSpeed: [ 1080/2, 1080 ],
@@ -45,6 +46,7 @@ var towerGame = new Phaser.Class({
     UI.create();
     UI.isOver = false;
 
+
     this.floor = this.matter.add.image(config.width/2, gameSettings.maxHeight - gameSettings.floorHeight / 2, 'floor')
       .setStatic(true);
 
@@ -53,6 +55,8 @@ var towerGame = new Phaser.Class({
     this.gradient.scaleX = config.width;
 
     this.createCamera();
+    Box.theBox = null;
+    Box.lastY = 0;
     Box.gimmieBox();
     gameStatus.emitter.on('game over', gameOver, this);
   },
@@ -75,6 +79,7 @@ var towerGame = new Phaser.Class({
 });
 
 function gameOver () {
+  gameStatus.gameOver = true;
   UI.createGameOver();
 }
 
