@@ -23,7 +23,7 @@ var Pipe = {
             gameStatus.emitter.emit('score change');
           }
           if (this.sprite.x > 0 && this.sprite.x < 400) {
-            if(!(gameStatus.pill.sprite.y < this.sprite.y + 490/2 && gameStatus.pill.sprite.y > this.sprite.y - 490/2)) {
+            if(!(gameStatus.pill.sprite.y < this.sprite.y + 450/2 && gameStatus.pill.sprite.y > this.sprite.y - 450/2)) {
               gameStatus.pill.die();
             }
           }

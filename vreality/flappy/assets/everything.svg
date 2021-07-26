@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933334"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
@@ -41,18 +41,26 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.175"
-     inkscape:cx="4326.2891"
-     inkscape:cy="770.66904"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="6265.8463"
+     inkscape:cy="3379.0995"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:snap-global="false"
+     showgrid="true"
+     inkscape:snap-global="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     units="px">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3589"
+       spacingx="8.4666667"
+       spacingy="8.4666667"
+       empspacing="2" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -68,7 +76,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,-280.06665)">
     <image
        sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\city.png"
        xlink:href="city.png"
@@ -87,15 +96,6 @@
        id="image834"
        x="354.23929"
        y="32.870239" />
-    <image
-       sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\score.png"
-       xlink:href="score.png"
-       width="40.745834"
-       height="40.745834"
-       preserveAspectRatio="none"
-       id="image845"
-       x="350.79971"
-       y="29.430655" />
     <image
        sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\terrain-loopseamless.png"
        xlink:href="terrain-loopseamless.png"
@@ -118,17 +118,15 @@
        inkscape:export-ydpi="96"
        inkscape:export-xdpi="96"
        inkscape:export-filename="./pipes.png"
-       transform="translate(557.89237,-74.739782)"
+       transform="translate(510.85293,-74.739782)"
        id="g953"
-       style="opacity:0.401">
+       style="opacity:0.40100002">
       <g
          transform="translate(0,-21.922619)"
-         id="g943"
-         style="">
+         id="g943">
         <image
            sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\tubo.png"
            xlink:href="tubo.png"
-           style=""
            width="50.799999"
            height="186.26666"
            preserveAspectRatio="none"
@@ -151,12 +149,10 @@
       </g>
       <g
          transform="rotate(-180,486.70364,51.956005)"
-         id="g949"
-         style="">
+         id="g949">
         <image
            sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\tubo.png"
            xlink:href="tubo.png"
-           style=""
            transform="scale(-1)"
            y="-301.15887"
            x="-512.10364"
@@ -193,18 +189,16 @@
     <g
        style="opacity:1"
        id="g1017"
-       transform="translate(1087.059,-74.739782)"
+       transform="translate(726.77968,-74.739782)"
        inkscape:export-filename="./pipes.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <g
          id="g1007"
-         transform="translate(0,-21.922619)"
-         style="">
+         transform="translate(0,-21.922619)">
         <image
            sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\tubo.png"
            xlink:href="tubo.png"
-           style=""
            transform="scale(-1)"
            y="-301.15887"
            x="-512.10364"
@@ -227,12 +221,10 @@
       </g>
       <g
          id="g1013"
-         transform="rotate(-180,486.70364,51.956005)"
-         style="">
+         transform="rotate(-180,486.70364,51.956005)">
         <image
            sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\tubo.png"
            xlink:href="tubo.png"
-           style=""
            width="50.799999"
            height="186.26666"
            preserveAspectRatio="none"
@@ -254,5 +246,55 @@
            width="50.799999" />
       </g>
     </g>
+    <g
+       id="g1819"
+       transform="translate(1557.8667,-1600.2)"
+       inkscape:export-filename=".\background over.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       style="stroke-width:0.99999958">
+      <g
+         id="g1579"
+         transform="translate(-2.0345052e-6)"
+         inkscape:export-filename=".\background over.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         style="stroke-width:0.99999958">
+        <image
+           width="30.427084"
+           height="476.25"
+           preserveAspectRatio="none"
+           id="image1575"
+           x="33.866669"
+           y="813.46667"
+           style="stroke-width:0.99999958"
+           xlink:href="D:\External\pr00thmatic.github.io\vreality\frogger\assets\borde-curvo.png"
+           sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\frogger\assets\borde-curvo.png" />
+        <g
+           id="g1583"
+           transform="matrix(-1,0,0,1,352.16042,-8.138021e-6)"
+           style="stroke-width:0.99999958">
+          <image
+             y="813.46667"
+             x="32.543991"
+             id="image1581"
+             preserveAspectRatio="none"
+             height="476.25"
+             width="30.427084"
+             style="stroke-width:0.99999958"
+             xlink:href="D:\External\pr00thmatic.github.io\vreality\frogger\assets\borde-curvo.png"
+             sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\frogger\assets\borde-curvo.png" />
+        </g>
+      </g>
+    </g>
+    <image
+       sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\flappy\assets\score.png"
+       xlink:href="score.png"
+       width="40.745834"
+       height="40.745834"
+       preserveAspectRatio="none"
+       id="image845"
+       x="1596.6659"
+       y="-781.91412" />
   </g>
 </svg>

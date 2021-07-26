@@ -29,7 +29,7 @@ function resetGameStatus () {
   };
 };
 
-var images = [ 'city', 'terrain-loopseamless', 'pildorita', 'pipes' ];
+var images = [ 'city', 'terrain-loopseamless', 'pildorita', 'pipes', 'background over' ];
 var context;
 
 var flappyPills = new Phaser.Class({
@@ -56,6 +56,8 @@ var flappyPills = new Phaser.Class({
     var background = this.add.image(config.width/2, config.height - 164, 'city')
         .setOrigin(0.5,1)
         .setDepth(-100);
+    this.add.image(config.width/2, config.height/2, 'background over')
+      .setDepth(200);
     gameStatus.floor =
       this.add.tileSprite(config.width/2, config.height, config.width, 480, 'terrain-loopseamless')
       .setOrigin(0.5,1)
