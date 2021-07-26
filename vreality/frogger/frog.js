@@ -47,6 +47,7 @@ Frog.gimmieFroggy = function () {
       if (!this.sprite) return;
       this.destroy();
       gameStatus.emitter.emit('dead froggy');
+      scene.cameras.main.shake();
     },
 
     createSavedFroggy: function () {
