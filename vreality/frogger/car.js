@@ -1,4 +1,5 @@
 var Car = {};
+var killer;
 
 Car.gimmieCar = function (lane, orientation) {
   var car = {
@@ -12,7 +13,9 @@ Car.gimmieCar = function (lane, orientation) {
       this.sprite.x += this.orientation * this.speed * (gameStatus.deltaTime / 1000);
       if (characters.frog && characters.frog.sprite &&
           Phaser.Geom.Intersects.RectangleToRectangle(this.sprite.getBounds(), characters.frog.sprite.getBounds())) {
+        killer = this;
         characters.frog.die();
+        game.scene.pause('froggerGame');
       }
       if (this.sprite.x < -150 || this.sprite.x > config.width + 150) {
         this.destroy();

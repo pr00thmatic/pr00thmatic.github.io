@@ -44,6 +44,7 @@ Frog.gimmieFroggy = function () {
     },
 
     die: function () {
+      if (!this.sprite) return;
       this.destroy();
       gameStatus.emitter.emit('dead froggy');
     },
