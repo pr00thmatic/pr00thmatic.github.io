@@ -1,30 +1,49 @@
 var gameSettings = {
+  scalingDifficulty: true,
+  // scaling difficulty: nope
+  unscaledGravity : 980 * 4.5,
+  unscaledXSpeed: 1080 * 1.1,
+  // scaling difficulty: yus
+  maxScoreToHardest: 30,
+  pipeSpawnOffsetY: [ -421, 249 ],
+  xSpeed: [ 1080/2, 1080 * 1.1 ],
+  gravityRange: [ 980*1.5, 980*4.5 ],
+  // either
+  immortal: false,
+  distanceBetweenPipes: 900,
+  flapHeight: 150,
+
   uiDepth: 1000,
   tileSize: 64,
   floorLine : 200,
   angle: 80,
   velocityRange: 1000,
-  distanceBetweenPipes: 900,
   pipeSpawnX: function () { return config.width + 192; },
-  pipeSpawnOffsetY: [ -421, 249 ],
-  flapHeight: 150,
 };
 
 var gameStatus = null;
 function resetGameStatus () {
   gameStatus = {
+    started: false,
     pill: null,
     gameOver: false,
     score: 0,
-    maxScoreToHardest: 30,
-    xSpeed: [ 1080/2, 1080 * 1.1 ],
     pipeSpawnCooldown: 2,
     getXSpeed : function () {
-      return utils.lerp(this.xSpeed[0], this.xSpeed[1], this.score / this.maxScoreToHardest);
+      if (gameSettings.scalingDifficulty) {
+        return utils.lerp(gameSettings.xSpeed[0], gameSettings.xSpeed[1], this.score / gameSettings.maxScoreToHardest);
+      } else {
+        return gameSettings.unscaledXSpeed;
+      }
     },
-    gravityRange: [ 980*1.5, 980*4.5 ],
-    getGravity: function () { return utils.lerp(gameStatus.gravityRange[0], gameStatus.gravityRange[1],
-                                                this.score / this.maxScoreToHardest); },
+    getGravity: function () {
+      if (gameSettings.scalingDifficulty) {
+        return utils.lerp(gameSettings.gravityRange[0], gameSettings.gravityRange[1],
+                          this.score / gameSettings.maxScoreToHardest);
+      } else {
+        return gameSettings.unscaledGravity;
+      }
+    },
     getFlapVelocity: function () { return -Math.sqrt(2 * context.physics.world.gravity.y * gameSettings.flapHeight); }
   };
 };
@@ -74,11 +93,14 @@ var flappyPills = new Phaser.Class({
     gameStatus.time = time / 1000;
     gameStatus.deltaTime = deltaTime / 1000;
 
-    gameStatus.pipeSpawnCooldown -= gameStatus.deltaTime;
-    if (gameStatus.pipeSpawnCooldown <= 0) {
-      gameStatus.pipeSpawnCooldown = gameSettings.distanceBetweenPipes / gameStatus.getXSpeed();
-      Pipe.gimmiePipe();
+    if (gameStatus.started) {
+      gameStatus.pipeSpawnCooldown -= gameStatus.deltaTime;
+      if (gameStatus.pipeSpawnCooldown <= 0) {
+        gameStatus.pipeSpawnCooldown = gameSettings.distanceBetweenPipes / gameStatus.getXSpeed();
+        Pipe.gimmiePipe();
+      }
     }
+
     gameStatus.emitter.emit('update');
     gameStatus.floor.setTilePosition(gameStatus.floor.tilePositionX + gameStatus.deltaTime * gameStatus.getXSpeed() * 1.5);
   },
