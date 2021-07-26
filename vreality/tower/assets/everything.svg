@@ -107,9 +107,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.25"
-     inkscape:cx="2115.6"
-     inkscape:cy="-2120.8056"
+     inkscape:zoom="0.5"
+     inkscape:cx="4622.4482"
+     inkscape:cy="1112.6618"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -6668,5 +6668,23 @@ AAAAAElFTkSuQmCC
        id="image2442"
        x="812.4472"
        y="1429.4166" />
+    <image
+       sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\tower\assets\caja1.png"
+       xlink:href="caja1.png"
+       width="112.88889"
+       height="67.73333"
+       preserveAspectRatio="none"
+       id="image2466"
+       x="1639.7111"
+       y="1025.1333" />
+    <image
+       sodipodi:absref="D:\External\pr00thmatic.github.io\vreality\tower\assets\caja2.png"
+       xlink:href="caja2.png"
+       width="112.88889"
+       height="67.73333"
+       preserveAspectRatio="none"
+       id="image2477"
+       x="1752.6"
+       y="1025.1333" />
   </g>
 </svg>
