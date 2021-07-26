@@ -54,6 +54,7 @@ var towerGame = new Phaser.Class({
 
     this.createCamera();
     Box.gimmieBox();
+    gameStatus.emitter.on('game over', gameOver, this);
   },
 
   update : function (time, deltaTime) {
