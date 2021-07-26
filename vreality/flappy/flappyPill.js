@@ -16,8 +16,8 @@ function resetGameStatus () {
     pill: null,
     gameOver: false,
     score: 0,
-    maxScoreToHardest: 10,
-    xSpeed: [ 1080/2, 1080 ],
+    maxScoreToHardest: 30,
+    xSpeed: [ 1080/2, 1080 * 1.1 ],
     pipeSpawnCooldown: 2,
     getXSpeed : function () {
       return utils.lerp(this.xSpeed[0], this.xSpeed[1], this.score / this.maxScoreToHardest);

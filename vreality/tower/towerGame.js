@@ -4,6 +4,7 @@ var gameSettings = {
   boxHeight: 256,
   floorHeight: 264,
   boxWidth: 427,
+  uiDepth: 1000
 };
 
 var gameStatus = null;
@@ -22,7 +23,7 @@ function resetGameStatus () {
   };
 };
 
-var images = [ 'gradient', 'floor', 'caja1', 'caja2' ];
+var images = [ 'gradient', 'floor', 'caja1', 'caja2', 'background over', 'tiling sky' ];
 var context;
 
 var towerGame = new Phaser.Class({
@@ -50,9 +51,19 @@ var towerGame = new Phaser.Class({
     this.floor = this.matter.add.image(config.width/2, gameSettings.maxHeight - gameSettings.floorHeight / 2, 'floor')
       .setStatic(true);
 
+    this.add.image(config.width/2, config.height/2, 'background over')
+      .setDepth(gameSettings.uiDepth-1)
+      .setScrollFactor(0);
     this.gradient = this.add.image(config.width/2, gameSettings.maxHeight, 'gradient')
-        .setDepth(-1).setOrigin(0.5,1);
+        .setDepth(-2).setOrigin(0.5,1);
     this.gradient.scaleX = config.width;
+
+    gameStatus.tilingSky =
+      this.add.tileSprite(config.width/2, config.height, config.width, config.height, 'tiling sky')
+      .setOrigin(0.5,1)
+      .setDepth(-1)
+      .setScrollFactor(0);
+
 
     this.createCamera();
     Box.theBox = null;
@@ -64,6 +75,7 @@ var towerGame = new Phaser.Class({
   update : function (time, deltaTime) {
     gameStatus.time = time / 1000;
     gameStatus.deltaTime = deltaTime / 1000;
+    gameStatus.tilingSky.setTilePosition(0, this.cameras.main.scrollY * 0.5);
     gameStatus.emitter.emit('update');
   },
 

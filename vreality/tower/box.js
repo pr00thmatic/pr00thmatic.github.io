@@ -3,9 +3,13 @@ var Box = {
   lastY: 0,
 
   gimmieBox : function () {
-    var box = {};
+    var box = {
+      markedForSleep: false
+    };
 
     box.drop = function () {
+      if (gameStatus.gameOver) return;
+
       gameStatus.score++;
       box.sprite.setStatic(false);
       gameStatus.emitter.off('update', box.update, box);
@@ -20,6 +24,7 @@ var Box = {
         Box.gimmieBox().lastBox = this;
         context.cameras.main.shake(50);
         gameStatus.emitter.emit('score change');
+        setTimeout(() => { box.markedForSleep = true; }, 2000);
       });
     }
 
@@ -30,6 +35,7 @@ var Box = {
     box.sprite.setStatic(true);
     box.orientation = Math.random() > 0.5? -1: 1;
 
+
     box.update = function () {
       this.sprite.x += box.orientation * gameStatus.getXSpeed() * gameStatus.deltaTime;
       if (this.orientation < 0 && this.sprite.x < gameSettings.boxWidth/2 ||
@@ -39,6 +45,7 @@ var Box = {
     };
 
     box.gameOverUpdate = function () {
+      if (this.markedForSleep && Math.abs(this.sprite.rotation < 0.27)) this.sprite.setStatic(true);
       if (!this.lastBox) return;
       if (this.sprite.y >= this.lastBox.sprite.y) gameStatus.emitter.emit('game over');
     };
