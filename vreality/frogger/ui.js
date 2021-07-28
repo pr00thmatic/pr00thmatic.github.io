@@ -24,13 +24,23 @@ var UI = {
   onAgain : function () { game.scene.start('froggerGame'); },
   onRanking : function () { window.open('ranking'); }, // TODO!
 
+  destroyIndication : function () {
+    UI.indication.destroy();
+  },
+
   create : function () {
     UI.frogCounterLabel = scene.add.text(192, 64, ' x 0',
                                          { fontFamily: 'Passion One', fontSize: '64px', color: '#812990' } )
       .setOrigin(0, 0)
       .setDepth(gameSettings.uiDepth-5);
-    setTimeout(() => UI.frogCounterLabel.setStyle(UI.style), 100);
+    setTimeout(() => UI.frogCounterLabel.setStyle(UI.style), 500);
     gameStatus.emitter.on('score change', UI.updateScore, UI);
+    UI.indication = scene.add.text(config.width/2, 400, '¡Toca para comenzar!',
+                                   { fontFamily: 'Passion One', fontSize: '64px', color: '#fff', align: 'center' } )
+      .setOrigin(0.5,1)
+      .setDepth(gameSettings.uiDepth-6);
+    setTimeout(() => UI.indication.setStyle(UI.indication.style), 500);
+    scene.input.on('pointerdown', this.destroyIndication, UI);
   },
 
   createGameOver : function () {

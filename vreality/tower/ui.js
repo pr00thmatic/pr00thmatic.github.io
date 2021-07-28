@@ -24,6 +24,10 @@ var UI = {
   onAgain : function () { game.scene.start('towerGame'); },
   onRanking : function () { window.open('ranking'); }, // TODO!
 
+  destroyIndication : function () {
+    UI.indication.destroy();
+  },
+
   create : function () {
     UI.frogCounterLabel = context.add.text(192, 64, ' x 0',
                                            { fontFamily: 'Passion One', fontSize: '64px' } )
@@ -32,6 +36,14 @@ var UI = {
       .setScrollFactor(0);
     setTimeout(() => UI.frogCounterLabel.setStyle(UI.style), 1000);
     gameStatus.emitter.on('score change', UI.updateScore, UI);
+
+    UI.indication = context.add.text(config.width/2, 400, '¡Toca para comenzar!',
+                                   { fontFamily: 'Passion One', fontSize: '64px', color: '#fff', align: 'center' } )
+      .setOrigin(0.5,1)
+      .setDepth(gameSettings.uiDepth-6)
+      .setScrollFactor(0);
+    setTimeout(() => UI.indication.setStyle(UI.indication.style), 500);
+    context.input.on('pointerdown', this.destroyIndication, UI);
   },
 
   createGameOver : function () {

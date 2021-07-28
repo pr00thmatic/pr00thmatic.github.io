@@ -1,5 +1,5 @@
 var gameSettings = {
-  waitForInputToStart: false,
+  waitForInputToStart: true,
   scalingDifficulty: true,
   // scaling difficulty: nope
   unscaledGravity : 980 * 4.5,
