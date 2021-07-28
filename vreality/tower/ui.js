@@ -53,7 +53,7 @@ var UI = {
       .setScrollFactor(0);
     UI.createLabel('game over label', '¡Sigue intentando!', 620, '#f68b1f');
     UI.createLabel('score', "x " + gameStatus.score, 386);
-    UI.createLabel('your ranking', 'Tu puntaje máximo\n' + this.getPuntajeMaximo(), 1246, null, '48px');
+    UI.createLabel('your ranking', 'Tu puntaje máximo\n' + backend.getPuntajeMaximo(), 1246, null, '48px');
     UI.createGameOverButton('again', 'Jugar de \nNuevo', 790, 0, UI.onOver, UI.onExit, UI.onAgain);
     UI.createGameOverButton('ranking', 'Ver \nRanking', 1000, 0, UI.onOver, UI.onExit, UI.onRanking);
   },
@@ -80,9 +80,5 @@ var UI = {
       .setOrigin(0.5, 1)
       .setDepth(gameSettings.uiDepth)
       .setScrollFactor(0);
-  },
-
-  getPuntajeMaximo : function () {
-    return '88';
   }
 }
