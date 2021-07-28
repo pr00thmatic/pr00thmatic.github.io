@@ -1,5 +1,6 @@
 var backend = {
-  getPuntajeMaximo : function () {
+  getPuntajeMaximo : function (currentScore) {
+    console.log(currentScore);
     return '888';
   }
 }
