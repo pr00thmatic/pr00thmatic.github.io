@@ -25,29 +25,30 @@ var UI = {
   onRanking : function () { window.open('ranking'); }, // TODO!
 
   create : function () {
-    UI.frogCounterLabel = scene.add.text(192, 64, ' x 1',
-                                         { fontFamily: 'Passion One', fontSize: '64px' } )
+    UI.frogCounterLabel = scene.add.text(192, 64, ' x 0',
+                                         { fontFamily: 'Passion One', fontSize: '64px', color: '#812990' } )
       .setOrigin(0, 0)
-      .setDepth(gameSettings.uiDepth);
+      .setDepth(gameSettings.uiDepth-5);
     setTimeout(() => UI.frogCounterLabel.setStyle(UI.style), 100);
     gameStatus.emitter.on('score change', UI.updateScore, UI);
   },
 
   createGameOver : function () {
-    UI.createLabel('game over label', 'GAME OVER', 6);
-    UI.createLabel('score', "Puntuación: " + gameStatus.rescuedFroggies, 8);
-    UI.createLabel('your ranking', '888vo lugar', 10, '48px');
-    UI.createLabel('1st place', '1er lugar: AVA', 23, '48px');
-    UI.createGameOverButton('again', 'Jugar de \nnuevo', 13, -32, UI.onOver, UI.onExit, UI.onAgain);
-    UI.createGameOverButton('ranking', 'Ver \nranking', 13, +32, UI.onOver, UI.onExit, UI.onRanking);
+    scene.add.image(config.width / 2, config.height / 2, 'game over')
+      .setDepth(gameSettings.uiDepth-1);
+    UI.createLabel('game over label', '¡Sigue intentando!', 620, '#f68b1f');
+    UI.createLabel('score', "x " + gameStatus.rescuedFroggies, 386);
+    UI.createLabel('your ranking', 'Tu puntaje máximo\n' + this.getPuntajeMaximo(), 1246, null, '48px');
+    UI.createGameOverButton('again', 'Jugar de \nNuevo', 790, 0, UI.onOver, UI.onExit, UI.onAgain);
+    UI.createGameOverButton('ranking', 'Ver \nRanking', 1000, 0, UI.onOver, UI.onExit, UI.onRanking);
   },
 
-  createGameOverButton : function (name, content, yTile, xOffset,
+  createGameOverButton : function (name, content, y, xOffset,
                                    over, exit, click) {
-    UI[name] = scene.add.text(scene.cameras.main.centerX + xOffset, gameSettings.tileSize * yTile,
-                              content, { fontFamily: 'Passion One', fontSize: '48px', color: '#000',
-                                         align: 'center', backgroundColor: '#fff', })
-      .setOrigin(xOffset == 0? 0.5: (Math.sign(xOffset) < 0? 1: 0) , 0)
+    UI[name] = scene.add.text(scene.cameras.main.centerX + xOffset, y,
+                              content, { fontFamily: 'Passion One', fontSize: '64px', color: '#fff',
+                                         align: 'center', backgroundColor: '#602a7e', })
+      .setOrigin(xOffset == 0? 0.5: (Math.sign(xOffset) < 0? 1: 0) , 0.5)
       .setDepth(gameSettings.uiDepth)
       .setPadding(64, 16, 64, 16)
       .setInteractive({ useHandCursor: true })
@@ -56,10 +57,15 @@ var UI = {
       .on('pointerdown', click);
   },
 
-  createLabel : function (name, content, yTile, fontSize = '96px') {
-    UI[name] = scene.add.text(scene.cameras.main.centerX, yTile * gameSettings.tileSize, content,
-                              { fontFamily: 'Passion One', fontSize: fontSize })
-      .setOrigin(0.5, 0)
+  createLabel : function (name, content, y, color = '#602a7e', fontSize = '96px') {
+    if (color === null) color = '#602a7e';
+    UI[name] = scene.add.text(scene.cameras.main.centerX, y, content,
+                              { fontFamily: 'Passion One', fontSize: fontSize, color: color, align: 'center' })
+      .setOrigin(0.5, 1)
       .setDepth(gameSettings.uiDepth);
+  },
+
+  getPuntajeMaximo : function () {
+    return '88';
   }
 }

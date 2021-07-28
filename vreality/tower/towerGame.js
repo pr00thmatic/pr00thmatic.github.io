@@ -23,7 +23,7 @@ function resetGameStatus () {
   };
 };
 
-var images = [ 'gradient', 'floor', 'caja1', 'caja2', 'background over', 'tiling sky' ];
+var images = [ 'gradient', 'floor', 'caja1', 'caja2', 'background over', 'tiling sky', 'game over' ];
 var context;
 
 var towerGame = new Phaser.Class({
@@ -91,8 +91,8 @@ var towerGame = new Phaser.Class({
 });
 
 function gameOver () {
-  gameStatus.gameOver = true;
   UI.createGameOver();
+  gameStatus.gameOver = true;
 }
 
 var config = {

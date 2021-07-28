@@ -30,7 +30,7 @@ var gameStatus = null;
 
 var characters = {};
 
-var images = [ 'background', 'background over', 'frog', 'car1', 'car2', 'bus1', 'bus2' ];
+var images = [ 'background', 'background over', 'frog', 'car1', 'car2', 'bus1', 'bus2', 'game over' ];
 var scene;
 
 var froggerGame = new Phaser.Class({
@@ -61,7 +61,7 @@ var froggerGame = new Phaser.Class({
     });
     this.add.image(0,0, 'background').setOrigin(0,0);
     this.add.image(0,0, 'background over').setDepth(gameSettings.uiDepth-1).setOrigin(0,0);
-    this.add.sprite(560, 300, 'ads').setDepth(10).setOrigin(0,1).play('idleAd');
+    this.add.sprite(560, 250, 'ads').setDepth(10).setOrigin(0,1).play('idleAd');
     gameStatus.emitter = new Phaser.Events.EventEmitter();
     gameStatus.emitter.on('dead froggy', gameOver, this);
     gameStatus.deltaTime = 0;

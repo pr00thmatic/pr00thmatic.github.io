@@ -1,4 +1,5 @@
 var gameSettings = {
+  waitForInputToStart: false,
   scalingDifficulty: true,
   // scaling difficulty: nope
   unscaledGravity : 980 * 4.5,
@@ -48,7 +49,7 @@ function resetGameStatus () {
   };
 };
 
-var images = [ 'city', 'terrain-loopseamless', 'pildorita', 'pipes', 'background over' ];
+var images = [ 'city', 'terrain-loopseamless', 'pildorita', 'pipes', 'background over', 'game over' ];
 var context;
 
 var flappyPills = new Phaser.Class({
@@ -67,6 +68,7 @@ var flappyPills = new Phaser.Class({
 
   create : function () {
     resetGameStatus();
+    if (!gameSettings.waitForInputToStart) gameStatus.started = true;
     gameStatus.emitter = new Phaser.Events.EventEmitter();
     context = this;
     UI.create();
@@ -112,8 +114,8 @@ var flappyPills = new Phaser.Class({
 });
 
 function gameOver () {
-  gameStatus.gameOver = true;
   UI.createGameOver();
+  gameStatus.gameOver = true;
 }
 
 var config = {
