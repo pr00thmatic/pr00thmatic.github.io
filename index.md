@@ -87,6 +87,9 @@ During 2020 I have had more work than ever! I am currently working for 3 compani
 And I know that working 12 hours a day is a lot of work, but right now, with this pandemy, this is exactly what I need... after all... All I wanna do is become big game developer, and help others to build awesome games!
 
 But this leaves me very short of time :(
+
+.
+
 ---
 
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>

@@ -22,7 +22,8 @@ var UI = {
   },
 
   onAgain : function () { game.scene.start('froggerGame'); },
-  onRanking : function () { window.open('ranking'); }, // TODO!
+  onRanking : function () { parent.location.href = "../../ranking.php"; },
+  onMenu : function () { parent.location.href = "../../index.php"; },
 
   destroyIndication : function () {
     UI.indication.destroy();
@@ -46,11 +47,13 @@ var UI = {
   createGameOver : function () {
     scene.add.image(config.width / 2, config.height / 2, 'game over')
       .setDepth(gameSettings.uiDepth-1);
-    UI.createLabel('game over label', '¡Sigue intentando!', 620, '#f68b1f');
-    UI.createLabel('score', "x " + gameStatus.rescuedFroggies, 386);
-    UI.createLabel('your ranking', 'Tu puntaje máximo\n' + backend.getPuntajeMaximo(), 1246, null, '48px');
-    UI.createGameOverButton('again', 'Jugar de \nNuevo', 790, 0, UI.onOver, UI.onExit, UI.onAgain);
-    UI.createGameOverButton('ranking', 'Ver \nRanking', 1000, 0, UI.onOver, UI.onExit, UI.onRanking);
+    UI.createLabel('game over label', '¡Sigue intentando!', 486, '#f68b1f');
+    UI.createLabel('score', "x " + gameStatus.rescuedFroggies, 300);
+    UI.createLabel("your ranking","Tu puntaje máximo\n"+backend.getPuntajeMaximo(gameStatus.rescuedFroggies, UI),
+                   1246, null, '48px');
+    UI.createGameOverButton('again', 'Jugar de \nNuevo', 614, 0, UI.onOver, UI.onExit, UI.onAgain);
+    UI.createGameOverButton('ranking', 'Ver \nRanking', 820, 0, UI.onOver, UI.onExit, UI.onRanking);
+    UI.createGameOverButton('menu', 'Volver\nal Menú', 1032, 0, UI.onOver, UI.onExit, UI.onMenu);
   },
 
   createGameOverButton : function (name, content, y, xOffset,
