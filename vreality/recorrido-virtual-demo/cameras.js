@@ -8,6 +8,7 @@ var cameras = {
     global.cam = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(4, 27.5, -1.31), global.scene);
     global.cam.rotation = new BABYLON.Vector3(1.3, -0.3979, 0);
     global.cam.minZ = 0.1;
+    global.cam.angularSensibility = 5000;
     // global.cam = new BABYLON.FreeCamera("camera1", camPlaceholder.position, global.scene);
     // global.cam.rotation = camPlaceholder.rotation;
     global.cam.attachControl(document.getElementById("renderCanvas"), true);
