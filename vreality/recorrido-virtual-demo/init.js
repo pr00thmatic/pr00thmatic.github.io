@@ -2,6 +2,7 @@ var global = {
   engine: null,
   scene: null,
   cam: null,
+  navpoints: []
 };
 
 global.init = (() => {
@@ -19,9 +20,12 @@ global.init = (() => {
 
   var delayCreateScene = function () {
     global.scene = new BABYLON.Scene(engine);
+    global.scene.onNewMaterialAddedObservable.add(function(mat) {
+      mat.backFaceCulling = false;
+    });
     BABYLON.SceneLoader.Append(
-      "assets/scenes/",
-      "recorrido virtual.babylon",
+      "assets/Recorrido_virtual/house_export_babylon/",
+      "house.babylon",
       global.scene,
       global.init.setup
     );
@@ -52,11 +56,11 @@ global.init = (() => {
   });
 
   var setup = function () {
-    var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(1, 1, 0), global.scene);
+    var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(.8,.8,.8), global.scene);
     light.intensity = 2;
-    light.diffuse = new BABYLON.Color3(.8,.8,.8);
-    light.specular = new BABYLON.Color3(1,0,0);
-    light.groundColor = new BABYLON.Color3(.1,.1,0);
+    light.diffuse = new BABYLON.Color3(.6,.6,.6);
+    light.specular = new BABYLON.Color3(.8,.8,.8);
+    light.groundColor = new BABYLON.Color3(.2,.2,.2);
 
     cameras.setup();
     recorrido.onSceneLoad();

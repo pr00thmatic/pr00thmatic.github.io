@@ -1,0 +1,3810 @@
+Exporter version: 2.80.1, Blender version: 2.91.2
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\External\pr00thmatic.github.io\vreality\recorrido-virtual-demo\assets\scenes\
+	Python World class constructor completed
+	processing begun of skeleton:  Group001, id:  0
+		processing begun of bone:  Cabinet, index:  0
+		processing begun of bone:  Armature, index:  1
+		processing begun of bone:  Door_R, index:  2
+		processing begun of bone:  Door_L, index:  3
+		processing begun of bone:  Cabinet001, index:  4
+		processing begun of bone:  Armature.001, index:  5
+		processing begun of bone:  Door_L001, index:  6
+		processing begun of bone:  Door_R001, index:  7
+		processing begun of bone:  Switch002, index:  8
+		processing begun of bone:  Switch_lever002, index:  9
+		processing begun of bone:  Switch001, index:  10
+		processing begun of bone:  Switch_lever001, index:  11
+		processing begun of bone:  Switch, index:  12
+		processing begun of bone:  Switch_lever, index:  13
+		processing begun of bone:  Switch003, index:  14
+		processing begun of bone:  Switch_lever003, index:  15
+		processing begun of bone:  Switch004, index:  16
+		processing begun of bone:  Switch_lever004, index:  17
+		processing begun of bone:  ClosetsDoor002, index:  18
+		processing begun of bone:  ClosetsDoor01_L001, index:  19
+		processing begun of bone:  ClosetsDoor01_R001, index:  20
+		processing begun of bone:  ClosetsDoor01, index:  21
+		processing begun of bone:  ClosetsDoor01_R, index:  22
+		processing begun of bone:  ClosetsDoor01_L, index:  23
+		processing begun of bone:  Door_narrow, index:  24
+		processing begun of bone:  DoorNarrow_joint, index:  25
+		processing begun of bone:  DoorNarrow_handle, index:  26
+		processing begun of bone:  Door_wide, index:  27
+		processing begun of bone:  DoorWide_joint, index:  28
+		processing begun of bone:  DoorWide_handle, index:  29
+		processing begun of bone:  Door_main, index:  30
+		processing begun of bone:  DoorMain_joint, index:  31
+		processing begun of bone:  DoorMain_handle, index:  32
+		processing begun of bone:  DoorMain_knoker, index:  33
+		processing begun of bone:  Garage_Door001, index:  34
+		processing begun of bone:  GarageDoor_joint010, index:  35
+		processing begun of bone:  GarageDoor_joint009, index:  36
+		processing begun of bone:  GarageDoor_joint006, index:  37
+		processing begun of bone:  GarageDoor_joint007, index:  38
+		processing begun of bone:  GarageDoor_joint008, index:  39
+		processing begun of bone:  Garage_Door, index:  40
+		processing begun of bone:  GarageDoor_joint05, index:  41
+		processing begun of bone:  GarageDoor_joint04, index:  42
+		processing begun of bone:  GarageDoor_joint01, index:  43
+		processing begun of bone:  GarageDoor_joint02, index:  44
+		processing begun of bone:  GarageDoor_joint03, index:  45
+	processing begun of mesh:  House_exterior
+		processing begun of material:  HouseOutside
+			processing texture House_exterior_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture House_exterior_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  13629
+		num normals        :  13629
+		num tangents       :  54516
+		num uvs            :  27258
+		num uvs2           :  27258
+		num colors         :  0
+		num triangles      :  4914
+	processing begun of mesh:  Walls_02
+		processing begun of material:  Walls01_mtl
+			processing texture Walls01_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Walls01_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  41
+		num normals        :  41
+		num tangents       :  164
+		num uvs            :  82
+		num uvs2           :  82
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  Walls_05
+		processing begun of material:  Walls01_mtl
+		registered as also a user of material:  Walls01_mtl
+		Custom split normals with tangents being used
+		num positions      :  157
+		num normals        :  157
+		num tangents       :  628
+		num uvs            :  314
+		num uvs2           :  314
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  Walls_04
+		processing begun of material:  Walls01_mtl
+		registered as also a user of material:  Walls01_mtl
+		Custom split normals with tangents being used
+		num positions      :  159
+		num normals        :  159
+		num tangents       :  636
+		num uvs            :  318
+		num uvs2           :  318
+		num colors         :  0
+		num triangles      :  82
+	processing begun of mesh:  Walls_01
+		processing begun of material:  Walls01_mtl
+		registered as also a user of material:  Walls01_mtl
+		Custom split normals with tangents being used
+		num positions      :  141
+		num normals        :  141
+		num tangents       :  564
+		num uvs            :  282
+		num uvs2           :  282
+		num colors         :  0
+		num triangles      :  69
+	processing begun of mesh:  Walls_03
+		processing begun of material:  Walls01_mtl
+		registered as also a user of material:  Walls01_mtl
+		Custom split normals with tangents being used
+		num positions      :  120
+		num normals        :  120
+		num tangents       :  480
+		num uvs            :  240
+		num uvs2           :  240
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  Walls_15
+		processing begun of material:  Walls01_mtl.001
+			processing texture Walls02_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Walls02_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  261
+		num normals        :  261
+		num tangents       :  1044
+		num uvs            :  522
+		num uvs2           :  522
+		num colors         :  0
+		num triangles      :  112
+	processing begun of mesh:  Walls_06
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  25
+		num normals        :  25
+		num tangents       :  100
+		num uvs            :  50
+		num uvs2           :  50
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  Walls_07
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  142
+		num normals        :  142
+		num tangents       :  568
+		num uvs            :  284
+		num uvs2           :  284
+		num colors         :  0
+		num triangles      :  72
+	processing begun of mesh:  Walls_08
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  39
+		num normals        :  39
+		num tangents       :  156
+		num uvs            :  78
+		num uvs2           :  78
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  Walls_09
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  126
+		num normals        :  126
+		num tangents       :  504
+		num uvs            :  252
+		num uvs2           :  252
+		num colors         :  0
+		num triangles      :  59
+	processing begun of mesh:  Walls_10
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  118
+		num normals        :  118
+		num tangents       :  472
+		num uvs            :  236
+		num uvs2           :  236
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  Walls_11
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  149
+		num normals        :  149
+		num tangents       :  596
+		num uvs            :  298
+		num uvs2           :  298
+		num colors         :  0
+		num triangles      :  72
+	processing begun of mesh:  Walls_12
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  250
+		num normals        :  250
+		num tangents       :  1000
+		num uvs            :  500
+		num uvs2           :  500
+		num colors         :  0
+		num triangles      :  114
+	processing begun of mesh:  Walls_13
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  100
+		num normals        :  100
+		num tangents       :  400
+		num uvs            :  200
+		num uvs2           :  200
+		num colors         :  0
+		num triangles      :  55
+	processing begun of mesh:  Walls_14
+		processing begun of material:  Walls01_mtl.001
+		registered as also a user of material:  Walls01_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  173
+		num normals        :  173
+		num tangents       :  692
+		num uvs            :  346
+		num uvs2           :  346
+		num colors         :  0
+		num triangles      :  84
+	processing begun of mesh:  Walls_garage
+		processing begun of material:  Walls02_mtl
+			processing texture Walls02_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Walls02_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  50
+		num normals        :  50
+		num tangents       :  200
+		num uvs            :  100
+		num uvs2           :  100
+		num colors         :  0
+		num triangles      :  26
+	processing begun of mesh:  Floor_garage
+		processing begun of material:  Concrete_mtl
+			processing texture Concrete_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Concrete_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Floor02
+		processing begun of material:  Carpet_mtl
+			processing texture Carpet_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Carpet_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  5
+		num normals        :  5
+		num tangents       :  20
+		num uvs            :  10
+		num uvs2           :  10
+		num colors         :  0
+		num triangles      :  3
+	processing begun of mesh:  Floor_kitchen
+		processing begun of material:  Laminate_mtl
+			processing texture Laminate_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Laminate_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  54
+		num normals        :  54
+		num tangents       :  216
+		num uvs            :  108
+		num uvs2           :  108
+		num colors         :  0
+		num triangles      :  22
+	processing begun of mesh:  WoodDeck
+		processing begun of material:  WoodDeck_mtl
+			processing texture WoodDeck_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture WoodDeck_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  37
+		num normals        :  37
+		num tangents       :  148
+		num uvs            :  74
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  16
+	processing begun of mesh:  Floor01
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  16
+		num normals        :  16
+		num tangents       :  64
+		num uvs            :  32
+		num uvs2           :  32
+		num colors         :  0
+		num triangles      :  14
+	processing begun of mesh:  Floor00
+		processing begun of material:  bathroom
+			processing texture Floor_marble_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Floor_marble_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture Floor_marble_s_r
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  8
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Floor05
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  32
+		num uvs            :  16
+		num uvs2           :  16
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  Floor04
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  6
+		num normals        :  6
+		num tangents       :  24
+		num uvs            :  12
+		num uvs2           :  12
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  Floor03
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  9
+		num normals        :  9
+		num tangents       :  36
+		num uvs            :  18
+		num uvs2           :  18
+		num colors         :  0
+		num triangles      :  7
+	processing begun of mesh:  Floor10
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  9
+		num normals        :  9
+		num tangents       :  36
+		num uvs            :  18
+		num uvs2           :  18
+		num colors         :  0
+		num triangles      :  4
+		WARNING: # of 0 area faces found:  1
+	processing begun of mesh:  Floor11
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  20
+		num normals        :  20
+		num tangents       :  80
+		num uvs            :  40
+		num uvs2           :  40
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  Floor09
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  10
+		num normals        :  10
+		num tangents       :  40
+		num uvs            :  20
+		num uvs2           :  20
+		num colors         :  0
+		num triangles      :  6
+		WARNING: # of 0 area faces found:  1
+	processing begun of mesh:  Floor08
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  19
+		num normals        :  19
+		num tangents       :  76
+		num uvs            :  38
+		num uvs2           :  38
+		num colors         :  0
+		num triangles      :  14
+		WARNING: # of 0 area faces found:  1
+	processing begun of mesh:  Floor07
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  20
+		num normals        :  20
+		num tangents       :  80
+		num uvs            :  40
+		num uvs2           :  40
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  Floor06
+		processing begun of material:  Carpet_mtl
+		registered as also a user of material:  Carpet_mtl
+		Custom split normals with tangents being used
+		num positions      :  16
+		num normals        :  16
+		num tangents       :  64
+		num uvs            :  32
+		num uvs2           :  32
+		num colors         :  0
+		num triangles      :  11
+	processing begun of mesh:  Garage_Door_mesh001
+		processing begun of material:  Garage_Door_mtl
+			processing texture Garage_Door_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Garage_Door_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  4448
+		num normals        :  4448
+		num tangents       :  17792
+		num uvs            :  8896
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1736
+	processing begun of mesh:  Garage_Door_mesh
+		processing begun of material:  Garage_Door_mtl
+		registered as also a user of material:  Garage_Door_mtl
+		Custom split normals with tangents being used
+		num positions      :  4448
+		num normals        :  4448
+		num tangents       :  17792
+		num uvs            :  8896
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1736
+	processing begun of mesh:  navpoint_016
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_015
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_014
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_013
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_012
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_011
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_010
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_009
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_008
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_007
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_006
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_005
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  Door_main_mesh
+		processing begun of material:  Door_main_mtl
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Door_main_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture Door_main_s
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.019 secs
+		Custom split normals with tangents being used
+		num positions      :  2381
+		num normals        :  2381
+		num tangents       :  9524
+		num uvs            :  4762
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  952
+	processing begun of mesh:  navpoint_004
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_003
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_002
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  navpoint_001
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  DoorSlide_glass_R
+		processing begun of material:  DoorSlide_mtl
+			processing texture DoorSlide_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture DoorSlide_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  32
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  DoorSlide_R
+		processing begun of material:  DoorSlide_mtl
+		registered as also a user of material:  DoorSlide_mtl
+		Custom split normals with tangents being used
+		num positions      :  84
+		num normals        :  84
+		num tangents       :  336
+		num uvs            :  168
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  DoorSlide_glass_L
+		processing begun of material:  DoorSlide_mtl
+		registered as also a user of material:  DoorSlide_mtl
+		Custom split normals with tangents being used
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  32
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  DoorSlide_L
+		processing begun of material:  DoorSlide_mtl
+		registered as also a user of material:  DoorSlide_mtl
+		Custom split normals with tangents being used
+		num positions      :  84
+		num normals        :  84
+		num tangents       :  336
+		num uvs            :  168
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  Door_slide
+		processing begun of material:  DoorSlide_mtl
+		registered as also a user of material:  DoorSlide_mtl
+		Custom split normals with tangents being used
+		num positions      :  87
+		num normals        :  87
+		num tangents       :  348
+		num uvs            :  174
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  36
+	processing begun of mesh:  Window_narrow004
+		processing begun of material:  Windows
+			processing texture Windows_N
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Windows_D
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  Window_wide001
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  866
+		num normals        :  866
+		num tangents       :  3464
+		num uvs            :  1732
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  342
+	processing begun of mesh:  Window_narrow005
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  Window_small_glass
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  32
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  Window_small
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  623
+		num normals        :  623
+		num tangents       :  2492
+		num uvs            :  1246
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  228
+	processing begun of mesh:  Window_narrow007
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  Window_small001
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  623
+		num normals        :  623
+		num tangents       :  2492
+		num uvs            :  1246
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  228
+	processing begun of mesh:  Window_narrow006
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  Leaf_glass
+		processing begun of material:  Windows_glass
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Windows_D
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  64
+		num normals        :  64
+		num tangents       :  256
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  Leaf
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  155
+		num normals        :  155
+		num tangents       :  620
+		num uvs            :  310
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  64
+	processing begun of mesh:  Window_narrow_glass
+		processing begun of material:  Windows_glass
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Windows_D
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.012 secs
+		Custom split normals with tangents being used
+		num positions      :  64
+		num normals        :  64
+		num tangents       :  256
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  Window_narrow
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  Window_wide_glass
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  128
+		num normals        :  128
+		num tangents       :  512
+		num uvs            :  256
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  64
+	processing begun of mesh:  leaf02_glass
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  64
+		num normals        :  64
+		num tangents       :  256
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  Leaf02
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  155
+		num normals        :  155
+		num tangents       :  620
+		num uvs            :  310
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  64
+	processing begun of mesh:  Leaf01_glass
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  64
+		num normals        :  64
+		num tangents       :  256
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  Leaf01
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  155
+		num normals        :  155
+		num tangents       :  620
+		num uvs            :  310
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  64
+	processing begun of mesh:  Window_wide
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  866
+		num normals        :  866
+		num tangents       :  3464
+		num uvs            :  1732
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  342
+	processing begun of mesh:  Window_narrow002
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  Window_narrow003
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  Window_narrow001
+		processing begun of material:  Windows
+		registered as also a user of material:  Windows
+		Custom split normals with tangents being used
+		num positions      :  682
+		num normals        :  682
+		num tangents       :  2728
+		num uvs            :  1364
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  260
+	processing begun of mesh:  WallTiles_holey
+		processing begun of material:  WallTiles_solid_mtl
+			processing texture Floor_marble_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Floor_marble_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  40
+		num normals        :  40
+		num tangents       :  160
+		num uvs            :  80
+		num uvs2           :  80
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  WallTiles_solid
+		processing begun of material:  WallTiles_solid_mtl
+		registered as also a user of material:  WallTiles_solid_mtl
+		Custom split normals with tangents being used
+		num positions      :  34
+		num normals        :  34
+		num tangents       :  136
+		num uvs            :  68
+		num uvs2           :  68
+		num colors         :  0
+		num triangles      :  14
+	processing begun of mesh:  Stairs
+		processing begun of material:  Stairs_mtl
+			processing texture Stairs02_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Stairs02_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  18680
+		num normals        :  18680
+		num tangents       :  74720
+		num uvs            :  37360
+		num uvs2           :  37360
+		num colors         :  0
+		num triangles      :  6466
+		WARNING: # of 0 area faces found:  1
+	processing begun of mesh:  DoorFrameA
+		processing begun of material:  DoorFrame_mtl
+			processing texture DoorFrame_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture DoorFrame_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  149
+		num normals        :  149
+		num tangents       :  596
+		num uvs            :  298
+		num uvs2           :  298
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  DoorFrameC
+		processing begun of material:  DoorFrame_mtl
+		registered as also a user of material:  DoorFrame_mtl
+		Custom split normals with tangents being used
+		num positions      :  149
+		num normals        :  149
+		num tangents       :  596
+		num uvs            :  298
+		num uvs2           :  298
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  navpoint_00
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of mesh:  PhotoFrameF001
+		processing begun of material:  PhotoFrames_mtl
+			processing texture PhotoFrames_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture PhotoFrames_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  189
+		num normals        :  189
+		num tangents       :  756
+		num uvs            :  378
+		num uvs2           :  378
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  VaseE_LOD001
+		processing begun of material:  Vases01_mtl
+			processing texture Vases01_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Vases01_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  630
+		num normals        :  630
+		num tangents       :  2520
+		num uvs            :  1260
+		num uvs2           :  1260
+		num colors         :  0
+		num triangles      :  222
+	processing begun of mesh:  Door_wide_mesh
+		processing begun of material:  Door_white_mtl
+			processing texture Door_white_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1342
+		num normals        :  1342
+		num tangents       :  5368
+		num uvs            :  2684
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  516
+	processing begun of mesh:  Door_narrow_mesh
+		processing begun of material:  Door_white_mtl
+		registered as also a user of material:  Door_white_mtl
+		Custom split normals with tangents being used
+		num positions      :  1341
+		num normals        :  1341
+		num tangents       :  5364
+		num uvs            :  2682
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  516
+	processing begun of mesh:  DoorFrameB
+		processing begun of material:  DoorFrame_mtl
+		registered as also a user of material:  DoorFrame_mtl
+		Custom split normals with tangents being used
+		num positions      :  152
+		num normals        :  152
+		num tangents       :  608
+		num uvs            :  304
+		num uvs2           :  304
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  ClosetsDoor01_mesh
+		processing begun of material:  Closets_door_mtl
+			processing texture Closets_door_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Closets_door_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  423
+		num normals        :  423
+		num tangents       :  1692
+		num uvs            :  846
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  178
+	processing begun of mesh:  Drawer_C
+		processing begun of material:  HallwayDresser_mtl
+			processing texture HallwayDresser_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture HallwayDresser_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  267
+		num normals        :  267
+		num tangents       :  1068
+		num uvs            :  534
+		num uvs2           :  534
+		num colors         :  0
+		num triangles      :  110
+	processing begun of mesh:  Drawer_A
+		processing begun of material:  HallwayDresser_mtl
+		registered as also a user of material:  HallwayDresser_mtl
+		Custom split normals with tangents being used
+		num positions      :  270
+		num normals        :  270
+		num tangents       :  1080
+		num uvs            :  540
+		num uvs2           :  540
+		num colors         :  0
+		num triangles      :  110
+	processing begun of mesh:  Drawer_B
+		processing begun of material:  HallwayDresser_mtl
+		registered as also a user of material:  HallwayDresser_mtl
+		Custom split normals with tangents being used
+		num positions      :  267
+		num normals        :  267
+		num tangents       :  1068
+		num uvs            :  534
+		num uvs2           :  534
+		num colors         :  0
+		num triangles      :  110
+	processing begun of mesh:  HallwayDresser
+		processing begun of material:  HallwayDresser_mtl
+		registered as also a user of material:  HallwayDresser_mtl
+		Custom split normals with tangents being used
+		num positions      :  1422
+		num normals        :  1422
+		num tangents       :  5688
+		num uvs            :  2844
+		num uvs2           :  2844
+		num colors         :  0
+		num triangles      :  576
+	processing begun of mesh:  Soap_LOD1
+		processing begun of material:  BathroomWareA_mtl
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture BathroomWareA_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  189
+		num normals        :  189
+		num tangents       :  756
+		num uvs            :  378
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  69
+	processing begun of mesh:  LampWall001
+		processing begun of material:  LampFloor
+			processing texture Lamps_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Lamps_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1376
+		num normals        :  1376
+		num tangents       :  5504
+		num uvs            :  2752
+		num uvs2           :  2752
+		num colors         :  0
+		num triangles      :  532
+	processing begun of mesh:  LampWall
+		processing begun of material:  LampFloor
+		registered as also a user of material:  LampFloor
+		Custom split normals with tangents being used
+		num positions      :  1376
+		num normals        :  1376
+		num tangents       :  5504
+		num uvs            :  2752
+		num uvs2           :  2752
+		num colors         :  0
+		num triangles      :  532
+	processing begun of mesh:  ToiletPaper
+		processing begun of material:  Toilet_mtl
+			processing texture Toilet_n
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\_Textures\\Toilet\\Toilet_n.tga'
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Toilet_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\_Textures\\Toilet\\Toilet_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  995
+		num normals        :  995
+		num tangents       :  3980
+		num uvs            :  1990
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  384
+	processing begun of mesh:  Toilet
+		processing begun of material:  Toilet_mtl.001
+			processing texture Toilet_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Toilet_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture Toilet_s_r
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  2938
+		num normals        :  2938
+		num tangents       :  11752
+		num uvs            :  5876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  1064
+	processing begun of mesh:  ClosetsDoor01_mesh001
+		processing begun of material:  Closets_door_mtl
+		registered as also a user of material:  Closets_door_mtl
+		Custom split normals with tangents being used
+		num positions      :  423
+		num normals        :  423
+		num tangents       :  1692
+		num uvs            :  846
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  178
+	processing begun of mesh:  Blinds_wide_LOD0
+		processing begun of material:  BlindsAndJalousie_mtl
+			processing texture BlindsAndJalousie_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture BlindsAndJalousie_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  7189
+		num normals        :  7189
+		num tangents       :  28756
+		num uvs            :  14378
+		num uvs2           :  14378
+		num colors         :  0
+		num triangles      :  2560
+	processing begun of mesh:  Blinds_wide_LOD1
+		processing begun of material:  BlindsAndJalousie_mtl
+		registered as also a user of material:  BlindsAndJalousie_mtl
+		Custom split normals with tangents being used
+		num positions      :  4089
+		num normals        :  4089
+		num tangents       :  16356
+		num uvs            :  8178
+		num uvs2           :  8178
+		num colors         :  0
+		num triangles      :  1501
+	processing begun of mesh:  JalousieDouble
+		processing begun of material:  BlindsAndJalousie_mtl
+		registered as also a user of material:  BlindsAndJalousie_mtl
+		Custom split normals with tangents being used
+		num positions      :  2954
+		num normals        :  2954
+		num tangents       :  11816
+		num uvs            :  5908
+		num uvs2           :  5908
+		num colors         :  0
+		num triangles      :  1140
+	processing begun of mesh:  SofaSmall
+		processing begun of material:  SofaSmall_mtl
+			processing texture SofaSmall_n
+				texture type:  bumpTexture, mapped using: "UVMap"
+			processing texture SofaSmall_d
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  4962
+		num normals        :  4962
+		num tangents       :  19848
+		num uvs            :  9924
+		num uvs2           :  9924
+		num colors         :  0
+		num triangles      :  1720
+	processing begun of mesh:  Cabinet
+		processing begun of material:  Cabinet_mtl
+			processing texture Cabinet_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Cabinet_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  204
+		num normals        :  204
+		num tangents       :  816
+		num uvs            :  408
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  BathroomSink
+		processing begun of material:  BathroomSink_mtl
+			processing texture BathroomSink_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture BathroomSink_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture BathroomSink_s_r
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1568
+		num normals        :  1568
+		num tangents       :  6272
+		num uvs            :  3136
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  566
+	processing begun of node:  sink_B_!
+	processing begun of mesh:  Cabinet_doors
+		processing begun of material:  Cabinet_mtl
+		registered as also a user of material:  Cabinet_mtl
+		Custom split normals with tangents being used
+		num positions      :  341
+		num normals        :  341
+		num tangents       :  1364
+		num uvs            :  682
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  132
+	processing begun of mesh:  Cabinet001
+		processing begun of material:  Cabinet_mtl
+		registered as also a user of material:  Cabinet_mtl
+		Custom split normals with tangents being used
+		num positions      :  204
+		num normals        :  204
+		num tangents       :  816
+		num uvs            :  408
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  80
+	processing begun of mesh:  Switch_mesh004
+		processing begun of material:  SmallProps_mtl
+			processing texture SmallProps_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture SmallProps_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  111
+		num normals        :  111
+		num tangents       :  444
+		num uvs            :  222
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  Switch_mesh003
+		processing begun of material:  SmallProps_mtl
+		registered as also a user of material:  SmallProps_mtl
+		Custom split normals with tangents being used
+		num positions      :  111
+		num normals        :  111
+		num tangents       :  444
+		num uvs            :  222
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  Cabinet_doors001
+		processing begun of material:  Cabinet_mtl
+		registered as also a user of material:  Cabinet_mtl
+		Custom split normals with tangents being used
+		num positions      :  341
+		num normals        :  341
+		num tangents       :  1364
+		num uvs            :  682
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  132
+	processing begun of mesh:  Fireplace
+		processing begun of material:  Fireplace_mtl
+			processing texture Fireplace_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Fireplace_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1359
+		num normals        :  1359
+		num tangents       :  5436
+		num uvs            :  2718
+		num uvs2           :  2718
+		num colors         :  0
+		num triangles      :  512
+	processing begun of mesh:  CofeeTable
+		processing begun of material:  CoffeTable_mtl
+			processing texture CoffeeTable_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture CoffeeTable_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  820
+		num normals        :  820
+		num tangents       :  3280
+		num uvs            :  1640
+		num uvs2           :  1640
+		num colors         :  0
+		num triangles      :  376
+	processing begun of mesh:  RockingChair
+		processing begun of material:  RockingChair_mtl
+			processing texture RockingChair_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture RockingChair_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  2852
+		num normals        :  2852
+		num tangents       :  11408
+		num uvs            :  5704
+		num uvs2           :  5704
+		num colors         :  0
+		num triangles      :  1202
+	processing begun of mesh:  DrawerA
+		processing begun of material:  Dresser_mtl
+			processing texture Dresser_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Dresser_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  489
+		num normals        :  489
+		num tangents       :  1956
+		num uvs            :  978
+		num uvs2           :  978
+		num colors         :  0
+		num triangles      :  222
+	processing begun of mesh:  DrawerB
+		processing begun of material:  Dresser_mtl
+		registered as also a user of material:  Dresser_mtl
+		Custom split normals with tangents being used
+		num positions      :  489
+		num normals        :  489
+		num tangents       :  1956
+		num uvs            :  978
+		num uvs2           :  978
+		num colors         :  0
+		num triangles      :  222
+	processing begun of mesh:  DrawerC
+		processing begun of material:  Dresser_mtl
+		registered as also a user of material:  Dresser_mtl
+		Custom split normals with tangents being used
+		num positions      :  581
+		num normals        :  581
+		num tangents       :  2324
+		num uvs            :  1162
+		num uvs2           :  1162
+		num colors         :  0
+		num triangles      :  268
+		WARNING: # of 0 area faces found:  2
+	processing begun of mesh:  Dresser
+		processing begun of material:  Dresser_mtl
+		registered as also a user of material:  Dresser_mtl
+		Custom split normals with tangents being used
+		num positions      :  1742
+		num normals        :  1742
+		num tangents       :  6968
+		num uvs            :  3484
+		num uvs2           :  3484
+		num colors         :  0
+		num triangles      :  646
+	processing begun of mesh:  PlantB_LOD0
+		processing begun of material:  PlantB_mtl
+			processing texture PlantB_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture PlantB_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  2669
+		num normals        :  2669
+		num tangents       :  10676
+		num uvs            :  5338
+		num uvs2           :  5338
+		num colors         :  0
+		num triangles      :  896
+	processing begun of mesh:  PlantB_LOD1
+		processing begun of material:  PlantB_mtl
+		registered as also a user of material:  PlantB_mtl
+		Custom split normals with tangents being used
+		num positions      :  1499
+		num normals        :  1499
+		num tangents       :  5996
+		num uvs            :  2998
+		num uvs2           :  2998
+		num colors         :  0
+		num triangles      :  506
+	processing begun of mesh:  PlantB_LOD2
+		processing begun of material:  PlantB_mtl
+		registered as also a user of material:  PlantB_mtl
+		Custom split normals with tangents being used
+		num positions      :  737
+		num normals        :  737
+		num tangents       :  2948
+		num uvs            :  1474
+		num uvs2           :  1474
+		num colors         :  0
+		num triangles      :  252
+	processing begun of mesh:  PlantB_LOD3
+		processing begun of material:  PlantB_mtl
+		registered as also a user of material:  PlantB_mtl
+		Custom split normals with tangents being used
+		num positions      :  401
+		num normals        :  401
+		num tangents       :  1604
+		num uvs            :  802
+		num uvs2           :  802
+		num colors         :  0
+		num triangles      :  140
+	processing begun of mesh:  LampFloor_bulb
+		processing begun of material:  LampFloor.001
+			processing texture Lamps_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Lamps_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  167
+		num normals        :  167
+		num tangents       :  668
+		num uvs            :  334
+		num uvs2           :  334
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  LampFloor
+		processing begun of material:  LampFloor.001
+		registered as also a user of material:  LampFloor.001
+		Custom split normals with tangents being used
+		num positions      :  900
+		num normals        :  900
+		num tangents       :  3600
+		num uvs            :  1800
+		num uvs2           :  1800
+		num colors         :  0
+		num triangles      :  330
+	processing begun of mesh:  LampTable_bulb
+		processing begun of material:  LampFloor.001
+		registered as also a user of material:  LampFloor.001
+		Custom split normals with tangents being used
+		num positions      :  167
+		num normals        :  167
+		num tangents       :  668
+		num uvs            :  334
+		num uvs2           :  334
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  LampTable
+		processing begun of material:  LampFloor.001
+		registered as also a user of material:  LampFloor.001
+		Custom split normals with tangents being used
+		num positions      :  1012
+		num normals        :  1012
+		num tangents       :  4048
+		num uvs            :  2024
+		num uvs2           :  2024
+		num colors         :  0
+		num triangles      :  370
+	processing begun of mesh:  BookE
+		processing begun of material:  Books_mtl
+			processing texture Books_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Books_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  344
+		num uvs2           :  344
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  PhotoFrameD
+		processing begun of material:  PhotoFrames_mtl
+		registered as also a user of material:  PhotoFrames_mtl
+		Custom split normals with tangents being used
+		num positions      :  190
+		num normals        :  190
+		num tangents       :  760
+		num uvs            :  380
+		num uvs2           :  380
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  VaseC_LOD0
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  929
+		num normals        :  929
+		num tangents       :  3716
+		num uvs            :  1858
+		num uvs2           :  1858
+		num colors         :  0
+		num triangles      :  318
+	processing begun of mesh:  VaseC_LOD1
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  405
+		num normals        :  405
+		num tangents       :  1620
+		num uvs            :  810
+		num uvs2           :  810
+		num colors         :  0
+		num triangles      :  142
+	processing begun of mesh:  VaseF_LOD0
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  505
+		num normals        :  505
+		num tangents       :  2020
+		num uvs            :  1010
+		num uvs2           :  1010
+		num colors         :  0
+		num triangles      :  190
+	processing begun of mesh:  VaseF_LOD1
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  183
+		num normals        :  183
+		num tangents       :  732
+		num uvs            :  366
+		num uvs2           :  366
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  CandleSmall_LOD1
+		processing begun of material:  Clock_mtl
+			processing texture Clock_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Clock_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  102
+		num normals        :  102
+		num tangents       :  408
+		num uvs            :  204
+		num uvs2           :  204
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  CandleSmall_LOD0
+		processing begun of material:  Clock_mtl
+		registered as also a user of material:  Clock_mtl
+		Custom split normals with tangents being used
+		num positions      :  183
+		num normals        :  183
+		num tangents       :  732
+		num uvs            :  366
+		num uvs2           :  366
+		num colors         :  0
+		num triangles      :  66
+	processing begun of mesh:  CandleBig_LOD0
+		processing begun of material:  Clock_mtl
+		registered as also a user of material:  Clock_mtl
+		Custom split normals with tangents being used
+		num positions      :  147
+		num normals        :  147
+		num tangents       :  588
+		num uvs            :  294
+		num uvs2           :  294
+		num colors         :  0
+		num triangles      :  66
+	processing begun of mesh:  CandleBig_LOD1
+		processing begun of material:  Clock_mtl
+		registered as also a user of material:  Clock_mtl
+		Custom split normals with tangents being used
+		num positions      :  90
+		num normals        :  90
+		num tangents       :  360
+		num uvs            :  180
+		num uvs2           :  180
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  PhotoFrameC
+		processing begun of material:  PhotoFrames_mtl
+		registered as also a user of material:  PhotoFrames_mtl
+		Custom split normals with tangents being used
+		num positions      :  190
+		num normals        :  190
+		num tangents       :  760
+		num uvs            :  380
+		num uvs2           :  380
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  VaseD_LOD0
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  405
+		num normals        :  405
+		num tangents       :  1620
+		num uvs            :  810
+		num uvs2           :  810
+		num colors         :  0
+		num triangles      :  140
+	processing begun of mesh:  VaseD_LOD1
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  258
+		num normals        :  258
+		num tangents       :  1032
+		num uvs            :  516
+		num uvs2           :  516
+		num colors         :  0
+		num triangles      :  92
+	processing begun of mesh:  VaseA_LOD0
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  889
+		num normals        :  889
+		num tangents       :  3556
+		num uvs            :  1778
+		num uvs2           :  1778
+		num colors         :  0
+		num triangles      :  302
+	processing begun of mesh:  VaseA_LOD1
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  456
+		num normals        :  456
+		num tangents       :  1824
+		num uvs            :  912
+		num uvs2           :  912
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  VaseA_LOD2
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  266
+		num normals        :  266
+		num tangents       :  1064
+		num uvs            :  532
+		num uvs2           :  532
+		num colors         :  0
+		num triangles      :  94
+	processing begun of mesh:  Clock_glass
+		processing begun of material:  ClockGlass_mtl
+			processing texture Clock_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Clock_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  12
+		num normals        :  12
+		num tangents       :  48
+		num uvs            :  24
+		num uvs2           :  24
+		num colors         :  0
+		num triangles      :  10
+	processing begun of mesh:  Clock_LOD0
+		processing begun of material:  ClockGlass_mtl
+		registered as also a user of material:  ClockGlass_mtl
+		Custom split normals with tangents being used
+		num positions      :  774
+		num normals        :  774
+		num tangents       :  3096
+		num uvs            :  1548
+		num uvs2           :  1548
+		num colors         :  0
+		num triangles      :  296
+	processing begun of mesh:  Clock_LOD1
+		processing begun of material:  Clock_mtl.001
+			processing texture Clock_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Clock_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  257
+		num normals        :  257
+		num tangents       :  1028
+		num uvs            :  514
+		num uvs2           :  514
+		num colors         :  0
+		num triangles      :  104
+	processing begun of mesh:  BoxBig
+		processing begun of material:  Box_ntl
+			processing texture Boxes_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Boxes_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  341
+		num normals        :  341
+		num tangents       :  1364
+		num uvs            :  682
+		num uvs2           :  682
+		num colors         :  0
+		num triangles      :  148
+	processing begun of mesh:  BoxSmall
+		processing begun of material:  Box_ntl
+		registered as also a user of material:  Box_ntl
+		Custom split normals with tangents being used
+		num positions      :  341
+		num normals        :  341
+		num tangents       :  1364
+		num uvs            :  682
+		num uvs2           :  682
+		num colors         :  0
+		num triangles      :  148
+	processing begun of mesh:  BookSetB
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  3312
+		num normals        :  3312
+		num tangents       :  13248
+		num uvs            :  6624
+		num uvs2           :  6624
+		num colors         :  0
+		num triangles      :  1292
+	processing begun of mesh:  BooksSetA
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  3086
+		num normals        :  3086
+		num tangents       :  12344
+		num uvs            :  6172
+		num uvs2           :  6172
+		num colors         :  0
+		num triangles      :  1224
+	processing begun of mesh:  VaseB_LOD0
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  421
+		num normals        :  421
+		num tangents       :  1684
+		num uvs            :  842
+		num uvs2           :  842
+		num colors         :  0
+		num triangles      :  164
+	processing begun of mesh:  VaseB_LOD1
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  153
+		num normals        :  153
+		num tangents       :  612
+		num uvs            :  306
+		num uvs2           :  306
+		num colors         :  0
+		num triangles      :  60
+	processing begun of mesh:  NotebooksStack_small
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  90
+		num normals        :  90
+		num tangents       :  360
+		num uvs            :  180
+		num uvs2           :  180
+		num colors         :  0
+		num triangles      :  36
+	processing begun of mesh:  VaseF_LOD002
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  505
+		num normals        :  505
+		num tangents       :  2020
+		num uvs            :  1010
+		num uvs2           :  1010
+		num colors         :  0
+		num triangles      :  190
+	processing begun of mesh:  PhotoFrameB
+		processing begun of material:  PhotoFrames_mtl
+		registered as also a user of material:  PhotoFrames_mtl
+		Custom split normals with tangents being used
+		num positions      :  191
+		num normals        :  191
+		num tangents       :  764
+		num uvs            :  382
+		num uvs2           :  382
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  PhotoFrameA
+		processing begun of material:  PhotoFrames_mtl
+		registered as also a user of material:  PhotoFrames_mtl
+		Custom split normals with tangents being used
+		num positions      :  189
+		num normals        :  189
+		num tangents       :  756
+		num uvs            :  378
+		num uvs2           :  378
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  BookSetB001
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  3312
+		num normals        :  3312
+		num tangents       :  13248
+		num uvs            :  6624
+		num uvs2           :  6624
+		num colors         :  0
+		num triangles      :  1292
+	processing begun of mesh:  BooksSetA001
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  3086
+		num normals        :  3086
+		num tangents       :  12344
+		num uvs            :  6172
+		num uvs2           :  6172
+		num colors         :  0
+		num triangles      :  1224
+	processing begun of mesh:  BookE001
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  344
+		num uvs2           :  344
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  BookA
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  174
+		num normals        :  174
+		num tangents       :  696
+		num uvs            :  348
+		num uvs2           :  348
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  BookB
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  344
+		num uvs2           :  344
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  VaseF_LOD003
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  505
+		num normals        :  505
+		num tangents       :  2020
+		num uvs            :  1010
+		num uvs2           :  1010
+		num colors         :  0
+		num triangles      :  190
+	processing begun of mesh:  BookE002
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  344
+		num uvs2           :  344
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  BookD
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  175
+		num normals        :  175
+		num tangents       :  700
+		num uvs            :  350
+		num uvs2           :  350
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  BookF
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  344
+		num uvs2           :  344
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  BoxSmall001
+		processing begun of material:  Box_ntl
+		registered as also a user of material:  Box_ntl
+		Custom split normals with tangents being used
+		num positions      :  341
+		num normals        :  341
+		num tangents       :  1364
+		num uvs            :  682
+		num uvs2           :  682
+		num colors         :  0
+		num triangles      :  148
+	processing begun of mesh:  BoxMid
+		processing begun of material:  Box_ntl
+		registered as also a user of material:  Box_ntl
+		Custom split normals with tangents being used
+		num positions      :  341
+		num normals        :  341
+		num tangents       :  1364
+		num uvs            :  682
+		num uvs2           :  682
+		num colors         :  0
+		num triangles      :  148
+	processing begun of mesh:  BoxSmall002
+		processing begun of material:  Box_ntl
+		registered as also a user of material:  Box_ntl
+		Custom split normals with tangents being used
+		num positions      :  341
+		num normals        :  341
+		num tangents       :  1364
+		num uvs            :  682
+		num uvs2           :  682
+		num colors         :  0
+		num triangles      :  148
+	processing begun of mesh:  Glass001
+		processing begun of material:  PictureGlass_mtl
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			bake time:  0 min, 0.011 secs
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Picture_middle001
+		processing begun of material:  Pictures_mtl
+			processing texture Pictures_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Pictures01_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  75
+		num normals        :  75
+		num tangents       :  300
+		num uvs            :  150
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  28
+	processing begun of mesh:  Picture_big
+		processing begun of material:  Pictures_mtl
+		registered as also a user of material:  Pictures_mtl
+		Custom split normals with tangents being used
+		num positions      :  75
+		num normals        :  75
+		num tangents       :  300
+		num uvs            :  150
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  28
+	processing begun of mesh:  Glass002
+		processing begun of material:  PictureGlass_mtl
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			bake time:  0 min, 0.011 secs
+		Custom split normals with tangents being used
+		num positions      :  4
+		num normals        :  4
+		num tangents       :  16
+		num uvs            :  8
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  2
+	processing begun of mesh:  Picture_middle002
+		processing begun of material:  Pictures_mtl
+		registered as also a user of material:  Pictures_mtl
+		Custom split normals with tangents being used
+		num positions      :  75
+		num normals        :  75
+		num tangents       :  300
+		num uvs            :  150
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  28
+	processing begun of mesh:  Switch_mesh
+		processing begun of material:  SmallProps_mtl
+		registered as also a user of material:  SmallProps_mtl
+		Custom split normals with tangents being used
+		num positions      :  111
+		num normals        :  111
+		num tangents       :  444
+		num uvs            :  222
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  LampFluor007
+		processing begun of material:  LampsCeiling_mtl
+			processing texture LampsCeiling_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture LampsCeiling_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  276
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  LampFluor006
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  276
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  Socket
+		processing begun of material:  SmallProps_mtl
+		registered as also a user of material:  SmallProps_mtl
+		Custom split normals with tangents being used
+		num positions      :  45
+		num normals        :  45
+		num tangents       :  180
+		num uvs            :  90
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  LaptopClosed_LOD0
+		processing begun of material:  Gadgets_mtl
+			processing texture Gadgets_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Gadgets_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  618
+		num normals        :  618
+		num tangents       :  2472
+		num uvs            :  1236
+		num uvs2           :  1236
+		num colors         :  0
+		num triangles      :  258
+	processing begun of mesh:  CupE_LOD1
+		processing begun of material:  Kitchenware2_mtl
+			processing texture Kitchenware2_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  301
+		num normals        :  301
+		num tangents       :  1204
+		num uvs            :  602
+		num uvs2           :  602
+		num colors         :  0
+		num triangles      :  126
+	processing begun of mesh:  CupE_LOD0
+		processing begun of material:  Kitchenware2_mtl
+		registered as also a user of material:  Kitchenware2_mtl
+		Custom split normals with tangents being used
+		num positions      :  568
+		num normals        :  568
+		num tangents       :  2272
+		num uvs            :  1136
+		num uvs2           :  1136
+		num colors         :  0
+		num triangles      :  246
+	processing begun of mesh:  PlateE_LOD0
+		processing begun of material:  Kitchenware2_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\Kitchenware\\Kitchenware2_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.007 secs
+		Custom split normals with tangents being used
+		num positions      :  438
+		num normals        :  438
+		num tangents       :  1752
+		num uvs            :  876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  BookH
+		processing begun of material:  Books_mtl
+		registered as also a user of material:  Books_mtl
+		Custom split normals with tangents being used
+		num positions      :  174
+		num normals        :  174
+		num tangents       :  696
+		num uvs            :  348
+		num uvs2           :  348
+		num colors         :  0
+		num triangles      :  68
+	processing begun of mesh:  VaseE_LOD0
+		processing begun of material:  Vases01_mtl
+		registered as also a user of material:  Vases01_mtl
+		Custom split normals with tangents being used
+		num positions      :  630
+		num normals        :  630
+		num tangents       :  2520
+		num uvs            :  1260
+		num uvs2           :  1260
+		num colors         :  0
+		num triangles      :  222
+	processing begun of mesh:  PhotoFrameF
+		processing begun of material:  PhotoFrames_mtl
+		registered as also a user of material:  PhotoFrames_mtl
+		Custom split normals with tangents being used
+		num positions      :  189
+		num normals        :  189
+		num tangents       :  756
+		num uvs            :  378
+		num uvs2           :  378
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  GarageShelfA_LOD002
+		processing begun of material:  GarageShelf_mtl
+			processing texture GarageShelf_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture GarageShelf_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1493
+		num normals        :  1493
+		num tangents       :  5972
+		num uvs            :  2986
+		num uvs2           :  2986
+		num colors         :  0
+		num triangles      :  540
+	processing begun of mesh:  GarageShelfA_LOD004
+		processing begun of material:  GarageShelf_mtl
+		registered as also a user of material:  GarageShelf_mtl
+		Custom split normals with tangents being used
+		num positions      :  1493
+		num normals        :  1493
+		num tangents       :  5972
+		num uvs            :  2986
+		num uvs2           :  2986
+		num colors         :  0
+		num triangles      :  540
+	processing begun of mesh:  GarageShelfA_LOD0
+		processing begun of material:  GarageShelf_mtl
+		registered as also a user of material:  GarageShelf_mtl
+		Custom split normals with tangents being used
+		num positions      :  1493
+		num normals        :  1493
+		num tangents       :  5972
+		num uvs            :  2986
+		num uvs2           :  2986
+		num colors         :  0
+		num triangles      :  540
+	processing begun of mesh:  GarageShelfA_LOD1
+		processing begun of material:  GarageShelf_mtl
+		registered as also a user of material:  GarageShelf_mtl
+		Custom split normals with tangents being used
+		num positions      :  765
+		num normals        :  765
+		num tangents       :  3060
+		num uvs            :  1530
+		num uvs2           :  1530
+		num colors         :  0
+		num triangles      :  300
+	processing begun of mesh:  GarageShelfA_LOD005
+		processing begun of material:  GarageShelf_mtl
+		registered as also a user of material:  GarageShelf_mtl
+		Custom split normals with tangents being used
+		num positions      :  765
+		num normals        :  765
+		num tangents       :  3060
+		num uvs            :  1530
+		num uvs2           :  1530
+		num colors         :  0
+		num triangles      :  300
+	processing begun of mesh:  GarageBox
+		processing begun of material:  GarageBox_mtl
+			processing texture GarageBox_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture GarageBox_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBoxSmall
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  391
+		num normals        :  391
+		num tangents       :  1564
+		num uvs            :  782
+		num uvs2           :  782
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  GarageBox001
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox002
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox003
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox004
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox006
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBoxSmall001
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  391
+		num normals        :  391
+		num tangents       :  1564
+		num uvs            :  782
+		num uvs2           :  782
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  GarageBox007
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox008
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox009
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox010
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBoxSmall002
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  391
+		num normals        :  391
+		num tangents       :  1564
+		num uvs            :  782
+		num uvs2           :  782
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  GarageBoxSmallEmpty
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  325
+		num normals        :  325
+		num tangents       :  1300
+		num uvs            :  650
+		num uvs2           :  650
+		num colors         :  0
+		num triangles      :  116
+	processing begun of mesh:  GarageBoxEmpty001
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  215
+		num normals        :  215
+		num tangents       :  860
+		num uvs            :  430
+		num uvs2           :  430
+		num colors         :  0
+		num triangles      :  92
+	processing begun of mesh:  GarageBoxCap
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  384
+		num uvs            :  192
+		num uvs2           :  192
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  GarageBoxFilled_LOD0
+		processing begun of material:  GarageBox_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture GarageBox_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\GarageBoxes\\GarageBox_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.012 secs
+		Custom split normals with tangents being used
+		num positions      :  1695
+		num normals        :  1695
+		num tangents       :  6780
+		num uvs            :  3390
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  591
+	processing begun of mesh:  GarageBoxFilled_LOD1
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  304
+		num normals        :  304
+		num tangents       :  1216
+		num uvs            :  608
+		num uvs2           :  608
+		num colors         :  0
+		num triangles      :  117
+	processing begun of mesh:  GarageBoxCap001
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  384
+		num uvs            :  192
+		num uvs2           :  192
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  GarageBoxEmpty002
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  215
+		num normals        :  215
+		num tangents       :  860
+		num uvs            :  430
+		num uvs2           :  430
+		num colors         :  0
+		num triangles      :  92
+	processing begun of mesh:  GarageBox011
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox012
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox013
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox014
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox015
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox016
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox017
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox018
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox019
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox020
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox021
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBox022
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  311
+		num normals        :  311
+		num tangents       :  1244
+		num uvs            :  622
+		num uvs2           :  622
+		num colors         :  0
+		num triangles      :  136
+	processing begun of mesh:  GarageBoxSmall003
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  391
+		num normals        :  391
+		num tangents       :  1564
+		num uvs            :  782
+		num uvs2           :  782
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  KitchenSetB
+		processing begun of material:  Kitchen_mtl
+			processing texture KitchenSet_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture KitchenSet_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture KitchenSet_s
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  549
+		num normals        :  549
+		num tangents       :  2196
+		num uvs            :  1098
+		num uvs2           :  1098
+		num colors         :  0
+		num triangles      :  196
+	processing begun of mesh:  KitchenSetB001
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  549
+		num normals        :  549
+		num tangents       :  2196
+		num uvs            :  1098
+		num uvs2           :  1098
+		num colors         :  0
+		num triangles      :  196
+	processing begun of mesh:  Door
+		processing begun of material:  Kitchen_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture KitchenSet_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\Kitchen\\KitchenSet_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  325
+		num normals        :  325
+		num tangents       :  1300
+		num uvs            :  650
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  118
+	processing begun of mesh:  KitchenSetD
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  360
+		num normals        :  360
+		num tangents       :  1440
+		num uvs            :  720
+		num uvs2           :  720
+		num colors         :  0
+		num triangles      :  132
+	processing begun of mesh:  KitchenSetG001
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  480
+		num normals        :  480
+		num tangents       :  1920
+		num uvs            :  960
+		num uvs2           :  960
+		num colors         :  0
+		num triangles      :  166
+	processing begun of mesh:  KitchenSetH
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  289
+		num normals        :  289
+		num tangents       :  1156
+		num uvs            :  578
+		num uvs2           :  578
+		num colors         :  0
+		num triangles      :  102
+	processing begun of mesh:  GarageBoxCap002
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  96
+		num normals        :  96
+		num tangents       :  384
+		num uvs            :  192
+		num uvs2           :  192
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  GarageBoxSmallFilled_LOD0
+		processing begun of material:  GarageBox_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture GarageBox_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\GarageBoxes\\GarageBox_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.011 secs
+		Custom split normals with tangents being used
+		num positions      :  1801
+		num normals        :  1801
+		num tangents       :  7204
+		num uvs            :  3602
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  615
+	processing begun of mesh:  GarageBoxSmallFilled_LOD1
+		processing begun of material:  GarageBox_mtl
+		registered as also a user of material:  GarageBox_mtl
+		Custom split normals with tangents being used
+		num positions      :  328
+		num normals        :  328
+		num tangents       :  1312
+		num uvs            :  656
+		num uvs2           :  656
+		num colors         :  0
+		num triangles      :  117
+	processing begun of mesh:  LampFluor005
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  276
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  Switch_mesh001
+		processing begun of material:  SmallProps_mtl
+		registered as also a user of material:  SmallProps_mtl
+		Custom split normals with tangents being used
+		num positions      :  111
+		num normals        :  111
+		num tangents       :  444
+		num uvs            :  222
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  LampFlour_reflector004
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  100
+		num normals        :  100
+		num tangents       :  400
+		num uvs            :  200
+		num uvs2           :  200
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  LampFluor004
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  276
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  LampCeiling
+		processing begun of material:  LampsCeiling_mtl.001
+			processing texture Lamps_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture LampsCeiling_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  450
+		num normals        :  450
+		num tangents       :  1800
+		num uvs            :  900
+		num uvs2           :  900
+		num colors         :  0
+		num triangles      :  182
+	processing begun of mesh:  Switch_mesh002
+		processing begun of material:  SmallProps_mtl
+		registered as also a user of material:  SmallProps_mtl
+		Custom split normals with tangents being used
+		num positions      :  111
+		num normals        :  111
+		num tangents       :  444
+		num uvs            :  222
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  44
+	processing begun of mesh:  Socket001
+		processing begun of material:  SmallProps_mtl
+		registered as also a user of material:  SmallProps_mtl
+		Custom split normals with tangents being used
+		num positions      :  45
+		num normals        :  45
+		num tangents       :  180
+		num uvs            :  90
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  LampFlour_reflector001
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  100
+		num normals        :  100
+		num tangents       :  400
+		num uvs            :  200
+		num uvs2           :  200
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  LampFluor001
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  276
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  LampFlour_reflector002
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  100
+		num normals        :  100
+		num tangents       :  400
+		num uvs            :  200
+		num uvs2           :  200
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  LampFluor002
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  276
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  LampFlour_reflector003
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  100
+		num normals        :  100
+		num tangents       :  400
+		num uvs            :  200
+		num uvs2           :  200
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  LampFluor003
+		processing begun of material:  LampsCeiling_mtl
+		registered as also a user of material:  LampsCeiling_mtl
+		Custom split normals with tangents being used
+		num positions      :  138
+		num normals        :  138
+		num tangents       :  552
+		num uvs            :  276
+		num uvs2           :  276
+		num colors         :  0
+		num triangles      :  78
+	processing begun of mesh:  JalousieSmall
+		processing begun of material:  BlindsAndJalousie_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture BlindsAndJalousie_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\BlindsAndJalousie\\BlindsAndJalousie_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.012 secs
+		Custom split normals with tangents being used
+		num positions      :  1089
+		num normals        :  1089
+		num tangents       :  4356
+		num uvs            :  2178
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  418
+	processing begun of mesh:  KitchenSetG002
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  480
+		num normals        :  480
+		num tangents       :  1920
+		num uvs            :  960
+		num uvs2           :  960
+		num colors         :  0
+		num triangles      :  166
+	processing begun of mesh:  KitchenSetG003
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  480
+		num normals        :  480
+		num tangents       :  1920
+		num uvs            :  960
+		num uvs2           :  960
+		num colors         :  0
+		num triangles      :  166
+	processing begun of mesh:  KitchenSetF
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  97
+		num normals        :  97
+		num tangents       :  388
+		num uvs            :  194
+		num uvs2           :  194
+		num colors         :  0
+		num triangles      :  38
+	processing begun of mesh:  KitchenSetE
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  307
+		num normals        :  307
+		num tangents       :  1228
+		num uvs            :  614
+		num uvs2           :  614
+		num colors         :  0
+		num triangles      :  112
+	processing begun of mesh:  KitchenSetG
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  480
+		num normals        :  480
+		num tangents       :  1920
+		num uvs            :  960
+		num uvs2           :  960
+		num colors         :  0
+		num triangles      :  166
+	processing begun of mesh:  CookerHood
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  201
+		num normals        :  201
+		num tangents       :  804
+		num uvs            :  402
+		num uvs2           :  402
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  KitchenSetD001
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  360
+		num normals        :  360
+		num tangents       :  1440
+		num uvs            :  720
+		num uvs2           :  720
+		num colors         :  0
+		num triangles      :  132
+	processing begun of mesh:  KitchenSetA
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  1263
+		num normals        :  1263
+		num tangents       :  5052
+		num uvs            :  2526
+		num uvs2           :  2526
+		num colors         :  0
+		num triangles      :  511
+	processing begun of mesh:  KitchenSetH001
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  289
+		num normals        :  289
+		num tangents       :  1156
+		num uvs            :  578
+		num uvs2           :  578
+		num colors         :  0
+		num triangles      :  102
+	processing begun of mesh:  KitchenBorder
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  30
+		num normals        :  30
+		num tangents       :  120
+		num uvs            :  60
+		num uvs2           :  60
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  CookerStove
+		processing begun of material:  KitchenDevices_mtl
+			processing texture KitchenDevices_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture KitchenDevices_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture KitchenDevices_s
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  601
+		num normals        :  601
+		num tangents       :  2404
+		num uvs            :  1202
+		num uvs2           :  1202
+		num colors         :  0
+		num triangles      :  228
+	processing begun of mesh:  Drawer
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  307
+		num normals        :  307
+		num tangents       :  1228
+		num uvs            :  614
+		num uvs2           :  614
+		num colors         :  0
+		num triangles      :  124
+	processing begun of mesh:  KitchenSetC
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  359
+		num normals        :  359
+		num tangents       :  1436
+		num uvs            :  718
+		num uvs2           :  718
+		num colors         :  0
+		num triangles      :  132
+	processing begun of mesh:  KitchenSetB002
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  549
+		num normals        :  549
+		num tangents       :  2196
+		num uvs            :  1098
+		num uvs2           :  1098
+		num colors         :  0
+		num triangles      :  196
+	processing begun of mesh:  KitchenSetD002
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  360
+		num normals        :  360
+		num tangents       :  1440
+		num uvs            :  720
+		num uvs2           :  720
+		num colors         :  0
+		num triangles      :  132
+	processing begun of mesh:  Refrigerator_LOD0
+		processing begun of material:  KitchenDevices02_mtl
+			processing texture KitchenDevices02_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture KitchenDevices02_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture KitchenDevices02_s
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1518
+		num normals        :  1518
+		num tangents       :  6072
+		num uvs            :  3036
+		num uvs2           :  3036
+		num colors         :  0
+		num triangles      :  614
+	processing begun of mesh:  Toaster_LOD0
+		processing begun of material:  KitchenDevices_mtl
+		registered as also a user of material:  KitchenDevices_mtl
+		Custom split normals with tangents being used
+		num positions      :  1161
+		num normals        :  1161
+		num tangents       :  4644
+		num uvs            :  2322
+		num uvs2           :  2322
+		num colors         :  0
+		num triangles      :  444
+	processing begun of mesh:  Toaster_LOD1
+		processing begun of material:  KitchenDevices_mtl
+		registered as also a user of material:  KitchenDevices_mtl
+		Custom split normals with tangents being used
+		num positions      :  552
+		num normals        :  552
+		num tangents       :  2208
+		num uvs            :  1104
+		num uvs2           :  1104
+		num colors         :  0
+		num triangles      :  214
+	processing begun of mesh:  Teapot_LOD0
+		processing begun of material:  Kitchenware_mtl
+			processing texture Kitchenware_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture Kitchenware_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			processing texture Kitchenware_s
+				texture type:  specularTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1418
+		num normals        :  1418
+		num tangents       :  5672
+		num uvs            :  2836
+		num uvs2           :  2836
+		num colors         :  0
+		num triangles      :  524
+	processing begun of mesh:  Teapot_LOD1
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  676
+		num normals        :  676
+		num tangents       :  2704
+		num uvs            :  1352
+		num uvs2           :  1352
+		num colors         :  0
+		num triangles      :  261
+	processing begun of mesh:  MicrowaveOven
+		processing begun of material:  KitchenDevices_mtl.001
+			processing texture KitchenDevices_n
+				texture type:  bumpTexture, mapped using: "UVChannel_1"
+			processing texture KitchenDevices_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  492
+		num normals        :  492
+		num tangents       :  1968
+		num uvs            :  984
+		num uvs2           :  984
+		num colors         :  0
+		num triangles      :  212
+	processing begun of mesh:  PlateD_LOD0
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.011 secs
+		Custom split normals with tangents being used
+		num positions      :  639
+		num normals        :  639
+		num tangents       :  2556
+		num uvs            :  1278
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  220
+	processing begun of mesh:  PlateB_LOD0
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.011 secs
+		Custom split normals with tangents being used
+		num positions      :  494
+		num normals        :  494
+		num tangents       :  1976
+		num uvs            :  988
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  188
+	processing begun of mesh:  CupA_LOD0
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  CupB_LOD0
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  Fork
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  295
+		num normals        :  295
+		num tangents       :  1180
+		num uvs            :  590
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Fork001
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  295
+		num normals        :  295
+		num tangents       :  1180
+		num uvs            :  590
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Fork002
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  295
+		num normals        :  295
+		num tangents       :  1180
+		num uvs            :  590
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  Spoon_LOD0
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  417
+		num normals        :  417
+		num tangents       :  1668
+		num uvs            :  834
+		num uvs2           :  834
+		num colors         :  0
+		num triangles      :  140
+	processing begun of mesh:  Spoon_LOD002
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  417
+		num normals        :  417
+		num tangents       :  1668
+		num uvs            :  834
+		num uvs2           :  834
+		num colors         :  0
+		num triangles      :  140
+	processing begun of mesh:  CuttingBoard
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  55
+		num normals        :  55
+		num tangents       :  220
+		num uvs            :  110
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  22
+	processing begun of mesh:  KitchenSetD003
+		processing begun of material:  Kitchen_mtl
+		registered as also a user of material:  Kitchen_mtl
+		Custom split normals with tangents being used
+		num positions      :  360
+		num normals        :  360
+		num tangents       :  1440
+		num uvs            :  720
+		num uvs2           :  720
+		num colors         :  0
+		num triangles      :  132
+	processing begun of mesh:  Knife
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  172
+		num normals        :  172
+		num tangents       :  688
+		num uvs            :  344
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  70
+	processing begun of mesh:  Fork003
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  295
+		num normals        :  295
+		num tangents       :  1180
+		num uvs            :  590
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  108
+	processing begun of mesh:  CuttingBoard_stand
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  218
+		num normals        :  218
+		num tangents       :  872
+		num uvs            :  436
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  90
+	processing begun of mesh:  KnifeStand
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  453
+		num normals        :  453
+		num tangents       :  1812
+		num uvs            :  906
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+	processing begun of mesh:  CupB_LOD001
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  CupA_LOD001
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.012 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  CupB_LOD002
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  CupB_LOD003
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  CupB_LOD004
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  224
+	processing begun of mesh:  CupC_LOD0
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  552
+		num normals        :  552
+		num tangents       :  2208
+		num uvs            :  1104
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  232
+	processing begun of mesh:  CupC_LOD001
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  552
+		num normals        :  552
+		num tangents       :  2208
+		num uvs            :  1104
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  232
+	processing begun of mesh:  CupD_LOD0
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.013 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  232
+	processing begun of mesh:  CupD_LOD001
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  554
+		num normals        :  554
+		num tangents       :  2216
+		num uvs            :  1108
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  232
+	processing begun of mesh:  PlateF_LOD0
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  440
+		num normals        :  440
+		num tangents       :  1760
+		num uvs            :  880
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateF_LOD001
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  440
+		num normals        :  440
+		num tangents       :  1760
+		num uvs            :  880
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateF_LOD002
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  440
+		num normals        :  440
+		num tangents       :  1760
+		num uvs            :  880
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateF_LOD003
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.01 secs
+		Custom split normals with tangents being used
+		num positions      :  440
+		num normals        :  440
+		num tangents       :  1760
+		num uvs            :  880
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateE_LOD001
+		processing begun of material:  Kitchenware2_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\Kitchenware\\Kitchenware2_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.007 secs
+		Custom split normals with tangents being used
+		num positions      :  438
+		num normals        :  438
+		num tangents       :  1752
+		num uvs            :  876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateE_LOD002
+		processing begun of material:  Kitchenware2_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\Kitchenware\\Kitchenware2_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.007 secs
+		Custom split normals with tangents being used
+		num positions      :  438
+		num normals        :  438
+		num tangents       :  1752
+		num uvs            :  876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateE_LOD003
+		processing begun of material:  Kitchenware2_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\Kitchenware\\Kitchenware2_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  438
+		num normals        :  438
+		num tangents       :  1752
+		num uvs            :  876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateE_LOD004
+		processing begun of material:  Kitchenware2_mtl.001
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\Kitchenware\\Kitchenware2_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  438
+		num normals        :  438
+		num tangents       :  1752
+		num uvs            :  876
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  158
+	processing begun of mesh:  PlateB_LOD001
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  494
+		num normals        :  494
+		num tangents       :  1976
+		num uvs            :  988
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  188
+	processing begun of mesh:  PlateB_LOD002
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.0111 secs
+		Custom split normals with tangents being used
+		num positions      :  494
+		num normals        :  494
+		num tangents       :  1976
+		num uvs            :  988
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  188
+	processing begun of mesh:  PlateB_LOD003
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  494
+		num normals        :  494
+		num tangents       :  1976
+		num uvs            :  988
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  188
+	processing begun of mesh:  PlateB_LOD004
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  494
+		num normals        :  494
+		num tangents       :  1976
+		num uvs            :  988
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  188
+	processing begun of mesh:  PlateA_LOD0
+		processing begun of material:  Kitchenware2_mtl.003
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				WARNING: Exception during copy:
+					[Errno 2] No such file or directory: 'D:\\External\\pr00thmatic.github.io\\vreality\\recorrido-virtual-demo\\..\\..\\..\\..\\Projects\\American House\\Kitchenware\\Kitchenware2_d.tga'
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.008 secs
+		Custom split normals with tangents being used
+		num positions      :  489
+		num normals        :  489
+		num tangents       :  1956
+		num uvs            :  978
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  188
+	processing begun of mesh:  PlateD_LOD001
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  639
+		num normals        :  639
+		num tangents       :  2556
+		num uvs            :  1278
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  220
+	processing begun of mesh:  PlateD_LOD002
+		processing begun of material:  Kitchenware2_mtl.002
+
+ERROR: UN-EXCEPTED NODE TYPE(SHADERNODENORMALMAP).  CANNOT CONTINUE.
+
+			processing texture Kitchenware2_d
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+			bake time:  0 min, 0.009 secs
+		Custom split normals with tangents being used
+		num positions      :  639
+		num normals        :  639
+		num tangents       :  2556
+		num uvs            :  1278
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  220
+	processing begun of mesh:  Spoon_LOD003
+		processing begun of material:  Kitchenware_mtl
+		registered as also a user of material:  Kitchenware_mtl
+		Custom split normals with tangents being used
+		num positions      :  417
+		num normals        :  417
+		num tangents       :  1668
+		num uvs            :  834
+		num uvs2           :  834
+		num colors         :  0
+		num triangles      :  140
+	processing begun of mesh:  Socket002
+		processing begun of material:  SmallProps_mtl
+		registered as also a user of material:  SmallProps_mtl
+		Custom split normals with tangents being used
+		num positions      :  45
+		num normals        :  45
+		num tangents       :  180
+		num uvs            :  90
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  18
+	processing begun of mesh:  navpoint_017
+		WARNING: No materials have been assigned: 
+		Custom split normals with tangents being used
+		num positions      :  214
+		num normals        :  214
+		num tangents       :  856
+		num uvs            :  428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  216
+	processing begun of camera (UniversalCamera):  Camera
+	Output cancelled due to data error
+========= end of processing =========
+elapsed time:  0 min, 32.1579 secs

@@ -2,30 +2,59 @@ var recorrido = (() => {
   function onNavpointClick (e) {
     console.log(e.source.name);
     cameras.currentCameraTarget = {
-      position: e.source.position.add(new BABYLON.Vector3(0, 1.5, 0)),
+      position: e.source.position.add(new BABYLON.Vector3(0, 16*3, 0)),
       rotation: global.cam.rotation,
-      duration: 1
+      duration: 3
     };
   }
 
   function setupNavpoints() {
-    var stop = false;
-    var i = 0;
+    for (var i=0; i<global.scene.meshes.length; i++) {
+      if (global.scene.meshes[i].name.indexOf("navpoint") >= 0) {
+        utils.registerOnClicMesh(global.scene.meshes[i], onNavpointClick);
+        global.navpoints.push(global.scene.meshes[i]);
+        global.scene.meshes[i].isPickable = true;
+      }
+    }
 
-    while (!stop) {
-      var meshName = i == 0? 'navpoint': 'navpoint.' + ('000' + i).substr(-3);
-      var mesh = global.scene.getMeshByName(meshName);
-      if (!mesh) { break; stop = true; }
-      utils.registerOnClicMesh(mesh, onNavpointClick);
-      i++;
+    cameras.currentCameraTarget = {
+      position: global.navpoints[0].position.add(new BABYLON.Vector3(0, 45, 0)),
+      rotation: global.cam.rotation,
+      duration: 3
+    };
+  }
+
+  function setupColorLoopers () {
+    for (var i=0; i<global.scene.meshes.length; i++) {
+      if (global.scene.meshes[i].name.indexOf("colorlooper") >= 0) {
+        utils.registerOnClicMesh(global.scene.meshes[i], loopColorOnClick);
+      }
     }
   }
 
   function onSceneLoad () {
     setupNavpoints();
+    setupColorLoopers();
+    // global.scene.onPointerMove = function () {
+    //   recorrido.onMouseMove();
+    // }
+  }
+
+  function onMouseMove () {
+    var pickResult = global.scene.pick(global.scene.pointerX, global.scene.pointerY);
+
+    if (pickResult.hit) {
+      console.log(pickResult);
+    }
+  }
+
+  function loopColorOnClick (e) {
+    var arr = e.source.material.subMaterials;
+    arr.push(arr.shift());
   }
 
   return {
-    onSceneLoad
+    onSceneLoad,
+    onMouseMove
   };
 })();
