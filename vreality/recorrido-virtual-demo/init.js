@@ -20,9 +20,6 @@ global.init = (() => {
 
   var delayCreateScene = function () {
     global.scene = new BABYLON.Scene(engine);
-    global.scene.onNewMaterialAddedObservable.add(function(mat) {
-      mat.backFaceCulling = false;
-    });
     BABYLON.SceneLoader.Append(
       "assets/Recorrido_virtual/house_export_babylon/",
       "house.babylon",

@@ -10,6 +10,11 @@ var recorrido = (() => {
 
   function setupNavpoints() {
     for (var i=0; i<global.scene.meshes.length; i++) {
+      var mesh = global.scene.meshes[i];
+      if (mesh.material) {
+        mesh.material.backFaceCulling = false;
+      }
+
       if (global.scene.meshes[i].name.indexOf("navpoint") >= 0) {
         utils.registerOnClicMesh(global.scene.meshes[i], onNavpointClick);
         global.navpoints.push(global.scene.meshes[i]);
