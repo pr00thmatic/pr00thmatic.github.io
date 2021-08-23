@@ -19,6 +19,14 @@ var recorrido = (() => {
         utils.registerOnClicMesh(global.scene.meshes[i], onNavpointClick);
         global.navpoints.push(global.scene.meshes[i]);
         global.scene.meshes[i].isPickable = true;
+      } else {
+        global.scene.meshes[i].isPickable = true;
+        utils.registerOnClicMesh(global.scene.meshes[i], colorPicker.pickColor);
+        if (global.scene.meshes[i].material &&
+            recorrido.reflective.indexOf(global.scene.meshes[i].name) >= 0 &&
+            global.scene.meshes[i].material.name != 'Kitchen_mtl') {
+          global.scene.meshes[i].material.reflectionTexture = new BABYLON.CubeTexture("textures/skybox", global.scene);
+        }
       }
     }
 
@@ -29,17 +37,9 @@ var recorrido = (() => {
     };
   }
 
-  function setupColorLoopers () {
-    for (var i=0; i<global.scene.meshes.length; i++) {
-      if (global.scene.meshes[i].name.indexOf("colorlooper") >= 0) {
-        utils.registerOnClicMesh(global.scene.meshes[i], loopColorOnClick);
-      }
-    }
-  }
-
   function onSceneLoad () {
+    sky();
     setupNavpoints();
-    setupColorLoopers();
     // global.scene.onPointerMove = function () {
     //   recorrido.onMouseMove();
     // }
@@ -53,12 +53,9 @@ var recorrido = (() => {
     }
   }
 
-  function loopColorOnClick (e) {
-    var arr = e.source.material.subMaterials;
-    arr.push(arr.shift());
-  }
-
   return {
+    reflective: [ 'Soap_LOD1', 'BathroomSink', 'LampWall001', 'GarageShelfA_LOD005', 'DoorSlide_glass_L',
+                  'Teapot_LOD0', 'Toaster_LOD0', 'Refrigerator_LOD0', 'MicrowaveOven', 'KitchenSetA' ],
     onSceneLoad,
     onMouseMove
   };
