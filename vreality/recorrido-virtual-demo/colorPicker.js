@@ -24,7 +24,7 @@ var colorPicker = (() => {
                   'Floor_kitchen', 'KitchenSetD001', 'KitchenSetB', 'KitchenSetB002', 'Drawer',
                   'KitchenSetE', 'KitchenSetG', 'KitchenSetH001', 'KitchenSetA', 'DoorFrameA', 'KitchenSetD002', 'Door',
                   'KitchenSetB001', 'RockingChair', 'CofeeTable', 'Cabinet001', 'Dresser'],
-    clothMeshes: [ 'SofaSmall', 'Blinds_wide_LOD0', 'LampCeiling', 'GarageBox009', ],
+    clothMeshes: [ 'SofaSmall', 'Blinds_wide_LOD0', 'LampCeiling', 'GarageBox009', 'ClockGlass_mtl', 'Vases01_mtl'],
     cloth: [
       new BABYLON.Color3.FromHexString('#ffffff'),
       new BABYLON.Color3.FromHexString('#aaaaaa'),
