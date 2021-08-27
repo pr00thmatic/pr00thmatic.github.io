@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="casa2.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.014142136"
+     inkscape:cx="-5631.8928"
+     inkscape:cy="14747.016"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="cm"
+       spacingx="250"
+       spacingy="250"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.56690943;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.70072795, 4.70072795;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="M 15118.109 -18720 L 15118.109 -18719.998 L 0.001953125 -18719.998 L -944.88281 -18719.998 L -944.88281 -17775.117 L -944.88281 -11160.945 L -944.88281 -10216.062 L -944.88281 1122.5215 L -944.88281 2067.4023 L 0.001953125 2067.4023 L 31181.102 2067.4023 L 31181.102 1122.5215 L 31181.102 -1712.125 L 30236.221 -1712.125 L 30236.221 1122.5215 L 0.001953125 1122.5215 L 0.001953125 -10216.062 L 944.88281 -10216.062 L 944.88281 -11160.945 L 0.001953125 -11160.945 L 0.001953125 -17775.117 L 5669.293 -17775.117 L 5669.293 -11160.943 L 4724.4102 -11160.943 L 4724.4102 -10216.061 L 6614.1738 -10216.061 L 6614.1738 -11160.943 L 6614.1738 -17775.117 L 15118.109 -17775.117 L 15118.109 -16830.236 L 16062.992 -16830.236 L 16062.992 -17775.117 L 30236.221 -17775.117 L 30236.221 -8326.2969 L 18897.637 -8326.2969 L 16062.994 -11160.943 L 16062.994 -13050.709 L 15118.109 -13050.709 L 15118.109 -11160.943 L 15118.109 -10216.061 L 17952.758 -7381.416 L 18897.637 -7381.416 L 30236.221 -7381.416 L 30236.221 -5491.6504 L 31181.102 -5491.6504 L 31181.102 -18719.998 L 16062.992 -18719.998 L 16062.992 -18720 L 15118.109 -18720 z "
+       transform="scale(0.26458333)"
+       id="rect4520" />
+  </g>
+</svg>

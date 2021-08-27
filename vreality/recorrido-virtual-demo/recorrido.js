@@ -2,7 +2,7 @@ var recorrido = (() => {
   function onNavpointClick (e) {
     console.log(e.source.name);
     cameras.currentCameraTarget = {
-      position: e.source.position.add(new BABYLON.Vector3(0, 16*3, 0)),
+      position: e.source.position.add(utils.toVector3(cameras.navpointOffset)),
       rotation: global.cam.rotation,
       duration: 3
     };
@@ -15,23 +15,23 @@ var recorrido = (() => {
         mesh.material.backFaceCulling = false;
       }
 
-      if (global.scene.meshes[i].name.indexOf("navpoint") >= 0) {
+      if (mesh.name.indexOf("navpoint") >= 0) {
         utils.registerOnClicMesh(global.scene.meshes[i], onNavpointClick);
         global.navpoints.push(global.scene.meshes[i]);
-        global.scene.meshes[i].isPickable = true;
+        mesh.isPickable = true;
       } else {
-        global.scene.meshes[i].isPickable = true;
+        mesh.isPickable = true;
         utils.registerOnClicMesh(global.scene.meshes[i], colorPicker.pickColor);
-        if (global.scene.meshes[i].material &&
-            recorrido.reflective.indexOf(global.scene.meshes[i].name) >= 0 &&
-            global.scene.meshes[i].material.name != 'Kitchen_mtl') {
-          global.scene.meshes[i].material.reflectionTexture = new BABYLON.CubeTexture("textures/skybox", global.scene);
+        if (mesh.material && recorrido.reflective.indexOf(mesh.material.name) >= 0 && mesh.material.name != 'Kitchen_mtl') {
+          mesh.material.environmentTexture = mesh.material.reflectionTexture =
+            new BABYLON.CubeTexture("textures/skybox", global.scene);
         }
       }
     }
 
     cameras.currentCameraTarget = {
-      position: global.navpoints[0].position.add(new BABYLON.Vector3(0, 45, 0)),
+      // position: global.navpoints[0].position.add(utils.toVector3(cameras.navpointOffset)),
+      position: global.scene.getMeshByName('navpoint.001').position.add(utils.toVector3(cameras.navpointOffset)),
       rotation: global.cam.rotation,
       duration: 3
     };
@@ -54,8 +54,9 @@ var recorrido = (() => {
   }
 
   return {
-    reflective: [ 'Soap_LOD1', 'BathroomSink', 'LampWall001', 'GarageShelfA_LOD005', 'DoorSlide_glass_L',
-                  'Teapot_LOD0', 'Toaster_LOD0', 'Refrigerator_LOD0', 'MicrowaveOven', 'KitchenSetA' ],
+    reflective: [ 'DoorSlide_mtl', 'KitchenDevices_mtl', 'Kitchenware_mtl' ],
+    // reflective: [ 'Soap_LOD1', 'BathroomSink', 'LampWall001', 'GarageShelfA_LOD005', 'DoorSlide_glass_L',
+    //               'Teapot_LOD0', 'Toaster_LOD0', 'Refrigerator_LOD0', 'MicrowaveOven', 'KitchenSetA' ],
     onSceneLoad,
     onMouseMove
   };

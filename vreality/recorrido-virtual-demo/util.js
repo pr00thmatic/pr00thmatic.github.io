@@ -27,6 +27,9 @@ var utils = {
   equals: function (a, b) {
     return a.x == b.x && a.y == b.y && a.z == b.z;
   },
+  toVector3: function (v) {
+    return new BABYLON.Vector3(v.x, v.y, v.z);
+  },
   set: function (v, target) {
     target.x = v.x;
     target.y = v.y;
