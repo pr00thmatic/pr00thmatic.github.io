@@ -29,12 +29,14 @@ var recorrido = (() => {
       }
     }
 
-    cameras.currentCameraTarget = {
-      // position: global.navpoints[0].position.add(utils.toVector3(cameras.navpointOffset)),
-      position: global.scene.getMeshByName('navpoint.001').position.add(utils.toVector3(cameras.navpointOffset)),
-      rotation: global.cam.rotation,
-      duration: 3
-    };
+    if (global.scene.getMeshByName('navpoint.001')) {
+      cameras.currentCameraTarget = {
+        // position: global.navpoints[0].position.add(utils.toVector3(cameras.navpointOffset)),
+        position: global.scene.getMeshByName('navpoint.001').position.add(utils.toVector3(cameras.navpointOffset)),
+        rotation: global.cam.rotation,
+        duration: 3
+      };
+    }
   }
 
   function onSceneLoad () {

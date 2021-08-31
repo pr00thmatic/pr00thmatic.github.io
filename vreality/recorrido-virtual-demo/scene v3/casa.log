@@ -142,8 +142,9 @@ Exporter version: 2.80.1, Blender version: 2.91.2
 		num colors         :  0
 		num triangles      :  46
 	processing begun of mesh:  baker.002
-		processing begun of material:  roof bathroom
-		registered as also a user of material:  roof bathroom
+		processing begun of material:  floor bathroom
+			processing texture the_biggest_wet_bake
+				texture type:  diffuseTexture, mapped using: "UVMap"
 		num positions      :  6
 		num normals        :  6
 		num tangents       :  0
@@ -263,4 +264,4 @@ Exporter version: 2.80.1, Blender version: 2.91.2
 	writing mesh:  baker.011
 ========= Writing of JSON file completed =========
 ========= end of processing =========
-elapsed time:  0 min, 0.1178 secs
+elapsed time:  0 min, 0.1286 secs

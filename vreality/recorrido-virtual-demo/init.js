@@ -21,7 +21,7 @@ global.init = (() => {
   var delayCreateScene = function () {
     global.scene = new BABYLON.Scene(engine);
     BABYLON.SceneLoader.Append(
-      "scene v3/",
+      "scene v4/babylon bake/",
       "casa.babylon",
       global.scene,
       global.init.setup

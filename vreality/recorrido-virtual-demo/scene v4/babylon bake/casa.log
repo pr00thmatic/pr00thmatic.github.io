@@ -1,0 +1,59 @@
+Exporter version: 2.80.1, Blender version: 2.91.2
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\External\pr00thmatic.github.io\vreality\recorrido-virtual-demo\scene v4\babylon bake\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	WARNING: The following object (type - LIGHT_PROBE) is not currently exportable thus ignored: IrradianceVolume
+	processing begun of mesh:  Dresser
+		processing begun of material:  Dresser_mtl.001
+			processing texture baked_dresser
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  3303
+		num normals        :  3303
+		num tangents       :  13212
+		num uvs            :  6606
+		num uvs2           :  6606
+		num colors         :  0
+		num triangles      :  1358
+		WARNING: # of 0 area faces found:  2
+	processing begun of mesh:  DoorFrameC
+		processing begun of material:  Material #36.003
+			processing texture door_border_baked
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  149
+		num normals        :  149
+		num tangents       :  596
+		num uvs            :  298
+		num uvs2           :  298
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  walls and floor
+		processing begun of material:  Material #78.003
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  580
+		num normals        :  580
+		num tangents       :  2320
+		num uvs            :  1160
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  236
+========= Writing of JSON file started =========
+	writing mesh:  Dresser
+	writing mesh:  DoorFrameC
+	writing mesh:  walls and floor
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.2012 secs

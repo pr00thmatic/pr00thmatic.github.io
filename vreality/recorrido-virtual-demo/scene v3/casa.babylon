@@ -20,6 +20,8 @@
 {"name":"walls room","id":"walls room","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
 "albedoTexture":{"name":"the biggest wet bake.jpg","level":1,"hasAlpha":false,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":false},
 {"name":"outside","id":"outside","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
+"albedoTexture":{"name":"the biggest wet bake.jpg","level":1,"hasAlpha":false,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":false},
+{"name":"floor bathroom","id":"floor bathroom","customType":"BABYLON.PBRMaterial","backFaceCulling":true,"checkReadyOnlyOnce":false,"maxSimultaneousLights":4,"environmentIntensity":1,"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
 "albedoTexture":{"name":"the biggest wet bake.jpg","level":1,"hasAlpha":false,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":1,"wrapV":1,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":false}],
 "multiMaterials":[{"name":"casa.Multimaterial#0","id":"casa.Multimaterial#0","materials":["living room","roof bathroom","roof","roof room","floor","floor living","floor room","walls bathroom","walls room","outside"]}],
 "skeletons":[],
@@ -187,7 +189,7 @@
 ,92,93,94,21,95,35,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125]
 ,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":126,"indexStart":0,"indexCount":138}]
 ,"instances":[]}
-,{"name":"baker.002","id":"baker.002","materialId":"roof bathroom","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+,{"name":"baker.002","id":"baker.002","materialId":"floor bathroom","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
 ,"positions":[0.0035,0.0028,2.9966,0.9971,0.0028,2.9965,0.9971,0.0028,3.2523,1.247,0.0028,3.2524,1.247,0.0028,4.9961,0.003,0.0028,4.9961]
 ,"normals":[0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0]
 ,"uvs":[0.139,0.628,0.139,0.598,0.146,0.598,0.146,0.59,0.199,0.59,0.199,0.628]
