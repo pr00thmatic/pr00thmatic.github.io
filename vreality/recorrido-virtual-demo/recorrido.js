@@ -23,6 +23,7 @@ var recorrido = (() => {
         mesh.isPickable = true;
         utils.registerOnClicMesh(global.scene.meshes[i], colorPicker.pickColor);
         if (mesh.material && recorrido.reflective.indexOf(mesh.material.name) >= 0 && mesh.material.name != 'Kitchen_mtl') {
+          console.log(mesh.name);
           mesh.material.environmentTexture = mesh.material.reflectionTexture =
             new BABYLON.CubeTexture("textures/skybox", global.scene);
         }
@@ -42,6 +43,7 @@ var recorrido = (() => {
   function onSceneLoad () {
     sky();
     setupNavpoints();
+    reflections.setup();
     // global.scene.onPointerMove = function () {
     //   recorrido.onMouseMove();
     // }
@@ -57,8 +59,6 @@ var recorrido = (() => {
 
   return {
     reflective: [ 'DoorSlide_mtl', 'KitchenDevices_mtl', 'Kitchenware_mtl' ],
-    // reflective: [ 'Soap_LOD1', 'BathroomSink', 'LampWall001', 'GarageShelfA_LOD005', 'DoorSlide_glass_L',
-    //               'Teapot_LOD0', 'Toaster_LOD0', 'Refrigerator_LOD0', 'MicrowaveOven', 'KitchenSetA' ],
     onSceneLoad,
     onMouseMove
   };

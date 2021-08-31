@@ -1,21 +1,18 @@
 var colorPicker = (() => {
 
   function pickColor (e) {
-    console.log(e.source.material.name);
+    console.log("mesh: " + e.source.name + " mat: " + e.source.material.name);
     if (!e.source.material) return;
     colorPicker.loops[e.source.material.name] = colorPicker.loops[e.source.material.name] | 0;
 
-    // var colors = colorPicker.colors;
     var colors = null;
-    // if (e.source.name.indexOf('Walls') >= 0) colors = colorPicker.wallColors;
-    colors = colorPicker.wallColors;
+    if (e.source.name.indexOf('wall') >= 0) colors = colorPicker.wallColors;
     if (e.source.material.name.indexOf('floor') >= 0 || e.source.material.name.indexOf('roof') >= 0) colors = colorPicker.floor;
-    // if (colorPicker.woodMeshes.indexOf(e.source.material.name) >= 0 ||
-    //     e.source.material.name.indexOf('Door') >= 0) colors = colorPicker.wood;
-    // if (colorPicker.clothMeshes.indexOf(e.source.name) >= 0 ||
-    //     e.source.name.indexOf('Kitchen') >= 0)
-    //   colors = colorPicker.cloth;
-    // // if (colors == null) return;
+    if (colorPicker.woodMeshes.indexOf(e.source.material.name) >= 0 ||
+        colorPicker.woodMeshes.indexOf(e.source.name) >= 0 ||
+        e.source.name.indexOf('Window') >= 0) colors = colorPicker.wood;
+    if (colorPicker.clothMeshes.indexOf(e.source.name) >= 0) colors = colorPicker.cloth;
+    if (colors == null) return;
     colorPicker.loops[e.source.material.name] = (colorPicker.loops[e.source.material.name] + 1) % colors.length;
     e.source.material.albedoColor = colors[colorPicker.loops[e.source.material.name]];
     // e.source.material.diffuseColor = colors[colorPicker.loops[e.source.material.name]];
@@ -24,8 +21,8 @@ var colorPicker = (() => {
   return {
     loops: {},
     pickColor,
-    woodMeshes: [ 'Stairs_mtl', 'Closets_door_mtl', 'DoorFrame_mtl', 'Door_white_mtl', 'Windows', 'RockingChair_mtl', 'Fireplace_mtl' ],
-    clothMeshes: [ 'SofaSmall', 'Blinds_wide_LOD0', 'ClockGlass_mtl', 'Vases01_mtl', 'BlindsAndJalousie_mtl'],
+    woodMeshes: [ 'Door_narrow_mesh',  'CofeeTable', 'Dresser', 'Window', 'DoorFrameC' ],
+    clothMeshes: [ 'SofaSmall' ],
     // banned: [ 'HallwayDresser_mtl' ],
     cloth: [
       new BABYLON.Color3.FromHexString('#ffffff'),
