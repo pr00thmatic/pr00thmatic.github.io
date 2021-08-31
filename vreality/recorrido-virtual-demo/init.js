@@ -1,3 +1,37 @@
+function CustomLoadingScreen( /* variables needed, for example:*/ text) {
+  //init the loader
+  this.loadingUIText = text;
+}
+CustomLoadingScreen.prototype.displayLoadingUI = function() {
+  if (document.getElementById("customLoadingScreenDiv")) {
+    // Do not add a loading screen if there is already one
+    document.getElementById("customLoadingScreenDiv").style.display = "initial";
+    return;
+  }
+  this._loadingDiv = document.createElement("div");
+  this._loadingDiv.id = "customLoadingScreenDiv";
+  this._loadingDiv.innerHTML = "scene is currently loading";
+  var customLoadingScreenCss = document.createElement('style');
+  customLoadingScreenCss.type = 'text/css';
+  customLoadingScreenCss.innerHTML = `
+    #customLoadingScreenDiv{
+        background-color: #BB464Bcc;
+        color: white;
+        font-size:50px;
+        text-align:center;
+    }
+    `;
+  document.getElementsByTagName('head')[0].appendChild(customLoadingScreenCss);
+  // this._resizeLoadingUI();
+  // window.addEventListener("resize", this._resizeLoadingUI);
+  document.body.appendChild(this._loadingDiv);
+};
+CustomLoadingScreen.prototype.hideLoadingUI = function() {
+    document.getElementById("customLoadingScreenDiv").style.display = "none";
+    console.log("scene is now loaded");
+  // alert("Loaded!");
+};
+
 var global = {
   engine: null,
   scene: null,
@@ -12,10 +46,18 @@ global.init = (() => {
   var sceneToRender = null;
 
   var createDefaultEngine = function() {
-    return new BABYLON.Engine(canvas, true, {
+    var engine = new BABYLON.Engine(canvas, true, {
       preserveDrawingBuffer: true,
       stencil: true,
       disableWebGL2Support: false});
+
+    var loadingScreen = new CustomLoadingScreen("I'm loading!!");
+    // replace the default loading screen
+    engine.loadingScreen = loadingScreen;
+    // show the loading screen
+    engine.displayLoadingUI();
+
+    return engine;
   };
 
   var delayCreateScene = function () {
