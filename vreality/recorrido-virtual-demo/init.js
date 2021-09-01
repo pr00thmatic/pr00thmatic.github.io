@@ -1,35 +1,36 @@
-function CustomLoadingScreen( /* variables needed, for example:*/ text) {
-  //init the loader
-  this.loadingUIText = text;
-}
-CustomLoadingScreen.prototype.displayLoadingUI = function() {
-  if (document.getElementById("customLoadingScreenDiv")) {
+BABYLON.DefaultLoadingScreen.prototype.displayLoadingUI = function () {
+  if (this._loadingDiv) {
     // Do not add a loading screen if there is already one
-    document.getElementById("customLoadingScreenDiv").style.display = "initial";
     return;
   }
   this._loadingDiv = document.createElement("div");
-  this._loadingDiv.id = "customLoadingScreenDiv";
-  this._loadingDiv.innerHTML = "scene is currently loading";
-  var customLoadingScreenCss = document.createElement('style');
-  customLoadingScreenCss.type = 'text/css';
-  customLoadingScreenCss.innerHTML = `
-    #customLoadingScreenDiv{
-        background-color: #BB464Bcc;
-        color: white;
-        font-size:50px;
-        text-align:center;
-    }
-    `;
-  document.getElementsByTagName('head')[0].appendChild(customLoadingScreenCss);
-  // this._resizeLoadingUI();
-  // window.addEventListener("resize", this._resizeLoadingUI);
+  this._loadingDiv.id = "babylonjsLoadingDiv";
+  this._loadingDiv.style.opacity = "0";
+  this._loadingDiv.style.transition = "opacity 1.5s ease";
+  this._loadingDiv.style.pointerEvents = "none";
+  // Loading text
+  // Generating keyframes
+  var style = document.createElement('style');
+  style.type = 'text/css';
+  document.getElementsByTagName('head')[0].appendChild(style);
+  // Loading img
+  var imgBack = new Image();
+  imgBack.src = "scene v4/vreality logo.png";
+  imgBack.style.position = "absolute";
+  imgBack.style.left = "50%";
+  imgBack.style.top = "50%";
+  // imgBack.style.marginLeft = "-60px";
+  // imgBack.style.marginTop = "-60px";
+  imgBack.style.animation = "spin1 2s infinite ease-in-out";
+  imgBack.style.webkitAnimation = "spin1 2s infinite ease-in-out";
+  imgBack.style.transformOrigin = "50% 50%";
+  imgBack.style.webkitTransformOrigin = "50% 50%";
+  this._loadingDiv.appendChild(imgBack);
+  this._resizeLoadingUI();
+  window.addEventListener("resize", this._resizeLoadingUI);
+  this._loadingDiv.style.backgroundColor = "#ffffff";// this._loadingDivBackgroundColor;
   document.body.appendChild(this._loadingDiv);
-};
-CustomLoadingScreen.prototype.hideLoadingUI = function() {
-    document.getElementById("customLoadingScreenDiv").style.display = "none";
-    console.log("scene is now loaded");
-  // alert("Loaded!");
+  this._loadingDiv.style.opacity = "1";
 };
 
 var global = {
@@ -51,11 +52,11 @@ global.init = (() => {
       stencil: true,
       disableWebGL2Support: false});
 
-    var loadingScreen = new CustomLoadingScreen("I'm loading!!");
-    // replace the default loading screen
-    engine.loadingScreen = loadingScreen;
-    // show the loading screen
-    engine.displayLoadingUI();
+    // var loadingScreen = new CustomLoadingScreen("I'm loading!!");
+    // // replace the default loading screen
+    // engine.loadingScreen = loadingScreen;
+    // // show the loading screen
+    // engine.displayLoadingUI();
 
     return engine;
   };
