@@ -1,0 +1,408 @@
+Exporter version: 2.80.1, Blender version: 2.91.2
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+		Texture directory   :  D:\External\pr00thmatic.github.io\vreality\recorrido-virtual-demo\scene v4\babylon bake\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	WARNING: The following object (type - LIGHT_PROBE) is not currently exportable thus ignored: IrradianceVolume
+	processing begun of mesh:  Dresser
+		processing begun of material:  dresser nochange
+			processing texture baked_dresser
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  3303
+		num normals        :  3303
+		num tangents       :  13212
+		num uvs            :  6606
+		num uvs2           :  6606
+		num colors         :  0
+		num triangles      :  1358
+		WARNING: # of 0 area faces found:  2
+	processing begun of mesh:  DoorFrameC
+		processing begun of material:  wood border
+			processing texture door_border
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  286
+		num normals        :  286
+		num tangents       :  1144
+		num uvs            :  572
+		num uvs2           :  572
+		num colors         :  0
+		num triangles      :  112
+	processing begun of mesh:  Door_narrow_mesh
+		processing begun of material:  wood door
+			processing texture door
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1373
+		num normals        :  1373
+		num tangents       :  5492
+		num uvs            :  2746
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  528
+	processing begun of mesh:  Window_wide
+		processing begun of material:  Windows.001
+			processing texture window_kitchen
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  866
+		num normals        :  866
+		num tangents       :  3464
+		num uvs            :  1732
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  342
+	processing begun of mesh:  Window_wide001
+		processing begun of material:  Windows_glass.001
+			processing texture window_living_room
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  866
+		num normals        :  866
+		num tangents       :  3464
+		num uvs            :  1732
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  342
+	processing begun of mesh:  LampCeiling
+		processing begun of material:  LampsCeiling_mtl.003
+			processing texture kitchen_lamp
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  450
+		num normals        :  450
+		num tangents       :  1800
+		num uvs            :  900
+		num uvs2           :  900
+		num colors         :  0
+		num triangles      :  182
+	processing begun of mesh:  LampFloor
+		processing begun of material:  LampFloor.003
+			processing texture living_room_lamp
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  867
+		num normals        :  867
+		num tangents       :  3468
+		num uvs            :  1734
+		num uvs2           :  1734
+		num colors         :  0
+		num triangles      :  316
+	processing begun of mesh:  CofeeTable
+		processing begun of material:  CoffeTable_mtl.003
+			processing texture living_room_table
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  820
+		num normals        :  820
+		num tangents       :  3280
+		num uvs            :  1640
+		num uvs2           :  1640
+		num colors         :  0
+		num triangles      :  376
+	processing begun of mesh:  SofaSmall
+		processing begun of material:  Material.001
+			processing texture sofa
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  4962
+		num normals        :  4962
+		num tangents       :  19848
+		num uvs            :  9924
+		num uvs2           :  9924
+		num colors         :  0
+		num triangles      :  1720
+	processing begun of mesh:  PlantB_LOD002
+		processing begun of material:  PlantB_mtl.003
+			processing texture plant_kitchen0
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1499
+		num normals        :  1499
+		num tangents       :  5996
+		num uvs            :  2998
+		num uvs2           :  2998
+		num colors         :  0
+		num triangles      :  506
+	processing begun of mesh:  PlantB_LOD1
+		processing begun of material:  PlantB_mtl.001
+			processing texture plant_kitchen1
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1499
+		num normals        :  1499
+		num tangents       :  5996
+		num uvs            :  2998
+		num uvs2           :  2998
+		num colors         :  0
+		num triangles      :  506
+	processing begun of mesh:  PlantB_LOD003
+		processing begun of material:  PlantB_mtl.002
+			processing texture plant_living
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1499
+		num normals        :  1499
+		num tangents       :  5996
+		num uvs            :  2998
+		num uvs2           :  2998
+		num colors         :  0
+		num triangles      :  506
+	processing begun of mesh:  Cabinet
+		processing begun of material:  Cabinet_mtl.003
+			processing texture kitchen_dresser0
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  545
+		num normals        :  545
+		num tangents       :  2180
+		num uvs            :  1090
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  212
+	processing begun of mesh:  KnifeStand
+		processing begun of material:  Kitchenware_mtl.006
+			processing texture knives
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  453
+		num normals        :  453
+		num tangents       :  1812
+		num uvs            :  906
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  206
+	processing begun of mesh:  Teapot_LOD1
+		processing begun of material:  Kitchenware_mtl.007
+		Custom split normals with tangents being used
+		num positions      :  676
+		num normals        :  676
+		num tangents       :  2704
+		num uvs            :  1352
+		num uvs2           :  1352
+		num colors         :  0
+		num triangles      :  261
+	processing begun of mesh:  KitchenSetA
+		processing begun of material:  Kitchen_mtl.002
+			processing texture kitchen_drawers_big
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  793
+		num normals        :  793
+		num tangents       :  3172
+		num uvs            :  1586
+		num uvs2           :  1586
+		num colors         :  0
+		num triangles      :  302
+	processing begun of mesh:  KitchenSetA.001
+		processing begun of material:  Kitchen_mtl.001
+		Custom split normals with tangents being used
+		num positions      :  860
+		num normals        :  860
+		num tangents       :  3440
+		num uvs            :  1720
+		num uvs2           :  1720
+		num colors         :  0
+		num triangles      :  354
+	processing begun of mesh:  Refrigerator_LOD0
+		processing begun of material:  KitchenDevices02_mtl.003
+			processing texture freezer
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  1518
+		num normals        :  1518
+		num tangents       :  6072
+		num uvs            :  3036
+		num uvs2           :  3036
+		num colors         :  0
+		num triangles      :  614
+	processing begun of mesh:  PictureSetD
+		processing begun of material:  PicturesSet_mtl.001
+			processing texture paintings
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  145
+		num normals        :  145
+		num tangents       :  580
+		num uvs            :  290
+		num uvs2           :  290
+		num colors         :  0
+		num triangles      :  56
+	processing begun of mesh:  navpoint.001
+		processing begun of material:  navpoint
+		num positions      :  94
+		num normals        :  94
+		num tangents       :  0
+		num uvs            :  188
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  126
+	processing begun of mesh:  navpoint.002
+		processing begun of material:  navpoint
+		registered as also a user of material:  navpoint
+		num positions      :  90
+		num normals        :  90
+		num tangents       :  0
+		num uvs            :  180
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  126
+	processing begun of mesh:  navpoint.003
+		processing begun of material:  navpoint
+		registered as also a user of material:  navpoint
+		num positions      :  90
+		num normals        :  90
+		num tangents       :  0
+		num uvs            :  180
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  126
+	processing begun of mesh:  navpoint.004
+		processing begun of material:  navpoint
+		registered as also a user of material:  navpoint
+		num positions      :  89
+		num normals        :  89
+		num tangents       :  0
+		num uvs            :  178
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  126
+	processing begun of mesh:  navpoint
+		processing begun of material:  navpoint
+		registered as also a user of material:  navpoint
+		num positions      :  90
+		num normals        :  90
+		num tangents       :  0
+		num uvs            :  180
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  126
+	processing begun of mesh:  walls and floor
+		processing begun of material:  walls living room.001
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  390
+		num normals        :  390
+		num tangents       :  1560
+		num uvs            :  780
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  150
+	processing begun of mesh:  living room walls
+		processing begun of material:  walls living room
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  46
+		num normals        :  46
+		num tangents       :  184
+		num uvs            :  92
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  30
+	processing begun of mesh:  roof living room
+		processing begun of material:  roof living room
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  6
+		num normals        :  6
+		num tangents       :  24
+		num uvs            :  12
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  4
+	processing begun of mesh:  floor living room
+		processing begun of material:  floor living room
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  12
+		num normals        :  12
+		num tangents       :  48
+		num uvs            :  24
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  8
+	processing begun of mesh:  floor kitchen
+		processing begun of material:  floor kitchen
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  32
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+	processing begun of mesh:  kitchen walls
+		processing begun of material:  kitchen walls
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  48
+		num normals        :  48
+		num tangents       :  192
+		num uvs            :  96
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  32
+	processing begun of mesh:  roof kitchen
+		processing begun of material:  roof kitchen
+			processing texture baked_walls_and_floors
+				texture type:  diffuseTexture, mapped using: "UVChannel_1"
+		Custom split normals with tangents being used
+		num positions      :  8
+		num normals        :  8
+		num tangents       :  32
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  6
+========= Writing of JSON file started =========
+	writing mesh:  Dresser
+	writing mesh:  DoorFrameC
+	writing mesh:  Door_narrow_mesh
+	writing mesh:  Window_wide
+	writing mesh:  Window_wide001
+	writing mesh:  LampCeiling
+	writing mesh:  LampFloor
+	writing mesh:  CofeeTable
+	writing mesh:  SofaSmall
+	writing mesh:  PlantB_LOD002
+	writing mesh:  PlantB_LOD1
+	writing mesh:  PlantB_LOD003
+	writing mesh:  Cabinet
+	writing mesh:  KnifeStand
+	writing mesh:  Teapot_LOD1
+	writing mesh:  KitchenSetA
+	writing mesh:  KitchenSetA.001
+	writing mesh:  Refrigerator_LOD0
+	writing mesh:  PictureSetD
+	writing mesh:  navpoint.001
+	writing mesh:  navpoint.002
+	writing mesh:  navpoint.003
+	writing mesh:  navpoint.004
+	writing mesh:  navpoint
+	writing mesh:  walls and floor
+	writing mesh:  living room walls
+	writing mesh:  roof living room
+	writing mesh:  floor living room
+	writing mesh:  floor kitchen
+	writing mesh:  kitchen walls
+	writing mesh:  roof kitchen
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 1.2369 secs
