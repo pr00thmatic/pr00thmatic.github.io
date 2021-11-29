@@ -63,57 +63,66 @@ var Sopa = ( function () {
         setOrigin(0,0).
         setInteractive()
     };
+    createLabel(sopa.cells[r][c], r, c);
 
-    sopa.cells[r][c].label = Label.gimmieLabel(sopa.cells[r][c].sprite, '');
-    sopa.cells[r][c].randomize = ((r, c) => { return () => {
-      sopa.cells[r][c].label.text = utils.randomPick(alfabet);
-    }; })(r, c);
-    sopa.cells[r][c].randomize();
+    sopa.cells[r][c].sprite.on('pointerdown', pointerdown(sopa, r, c));
+    sopa.cells[r][c].sprite.on('pointerover', pointerover(sopa, r, c));
+    sopa.cells[r][c].sprite.on('pointerup', pointerup(sopa, r, c));
 
-    sopa.cells[r][c].sprite.on('pointerdown', ((r, c) => { return () => {
-      currentDragbox = DragBox.gimmieDragBox(sopa.cells[r][c].sprite.getCenter().x, sopa.cells[r][c].sprite.getCenter().y);
-      currentDragbox.setValid(false);
-      dragOrigin = { r: r, c: c };
-    }; })(r, c));
+    return sopa.cells[r][c];
+  };
 
-    sopa.cells[r][c].sprite.on('pointerover', ((r, c) => { return () => {
-      if (currentDragbox) {
+  var pointerdown = ((sopa, r, c) => { return () => {
+    currentDragbox = DragBox.gimmieDragBox(sopa.cells[r][c].sprite.getCenter().x, sopa.cells[r][c].sprite.getCenter().y);
+    currentDragbox.setValid(false);
+    dragOrigin = { r: r, c: c };
+  }; });
+
+  var pointerover = ((sopa, r, c) => { return () => {
+    if (currentDragbox) {
+      currentDragbox.target = { x: sopa.cells[r][c].sprite.getCenter().x, y: sopa.cells[r][c].sprite.getCenter().y };
+      currentDragbox.update();
+      var difR = Math.abs(dragOrigin.r - r);
+      var difC = Math.abs(dragOrigin.c - c);
+
+      sopa.clearBold();
+      if ((difR === difC || difR === 0 || difC === 0) && (dragOrigin.r !== r || dragOrigin.c !== c)) {
+        currentDragbox.setValid(true);
+        var line = sopa.getLine({ origin: {r: dragOrigin.r, c: dragOrigin.c}, end: {r: r, c: c} });
+        for (let i=0; i<line.length; i++) line[i].label.setFontStyle("bold");
+      } else {
+        currentDragbox.setValid(false);
+      }
+    }
+  }; });
+
+  var pointerup = ((sopa, r, c) => { return () => {
+    if (currentDragbox) {
+      if (!currentDragbox.valid) {
+        currentDragbox.destroy();
+        if (dragOrigin.c == c && dragOrigin.r == r) {
+          gameStatus.emitter.emit('delete request', { r : r, c : c });
+        }
+      } else {
         currentDragbox.target = { x: sopa.cells[r][c].sprite.getCenter().x, y: sopa.cells[r][c].sprite.getCenter().y };
         currentDragbox.update();
-        var difR = Math.abs(dragOrigin.r - r);
-        var difC = Math.abs(dragOrigin.c - c);
-
-        sopa.clearBold();
-        if ((difR === difC || difR === 0 || difC === 0) && (dragOrigin.r !== r || dragOrigin.c !== c)) {
-          currentDragbox.setValid(true);
-          var line = sopa.getLine({ origin: {r: dragOrigin.r, c: dragOrigin.c}, end: {r: r, c: c} });
-          for (let i=0; i<line.length; i++) line[i].label.setFontStyle("bold");
-        } else {
-          currentDragbox.setValid(false);
-        }
+        var capsule = { origin: dragOrigin, end: { r: r, c: c} };
+        gameStatus.emitter.emit('word enclosed', {
+          capsule: capsule,
+          line: sopa.getLine(capsule),
+          dragbox: currentDragbox
+        });
       }
-    }; })(r, c));
+      currentDragbox = null;
+    }
+  }; });
 
-    sopa.cells[r][c].sprite.on('pointerup', ((r, c) => { return () => {
-      if (currentDragbox) {
-        if (!currentDragbox.valid) {
-          currentDragbox.destroy();
-          if (dragOrigin.c == c && dragOrigin.r == r) {
-            gameStatus.emitter.emit('delete request', { r : r, c : c });
-          }
-        } else {
-          currentDragbox.target = { x: sopa.cells[r][c].sprite.getCenter().x, y: sopa.cells[r][c].sprite.getCenter().y };
-          currentDragbox.update();
-          var capsule = { origin: dragOrigin, end: { r: r, c: c} };
-          gameStatus.emitter.emit('word enclosed', {
-            capsule: capsule,
-            line: sopa.getLine(capsule),
-            dragbox: currentDragbox
-          });
-        }
-        currentDragbox = null;
-      }
-    }; })(r, c));
+  var createLabel = function (cell) {
+    cell.label = Label.gimmieLabel(cell.sprite, '');
+    cell.randomize = () => {
+      cell.label.text = utils.randomPick(alfabet);
+    };
+    cell.randomize();
   }
 
   return {
