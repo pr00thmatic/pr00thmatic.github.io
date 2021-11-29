@@ -20,6 +20,7 @@ var mainState = ( function () {
 
     // DragBox.subscribeOnClick();
     gameStatus.sopa = Sopa.gimmieSopa();
+    SopaEditor.Edit();
 
     gameStatus.emitter.emit('create');
   }

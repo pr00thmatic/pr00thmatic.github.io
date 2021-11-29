@@ -44,6 +44,16 @@ var DragBox = ( function () {
       updateToCursor: function () {
         box.target = { x: game.input.activePointer.x, y: game.input.activePointer.y };
         box.update();
+      },
+      setTint: function (color) {
+        box.caps[0].setTint(color); box.caps[1].setTint(color); box.sprite.setTint(color);
+      },
+      setValid: function (bool) {
+        box.setTint(bool? 0xffff11: 0xff0000);
+        box.valid = bool;
+      },
+      destroy: function () {
+        box.caps[0].destroy(); box.caps[1].destroy(); box.sprite.destroy();
       }
     };
 

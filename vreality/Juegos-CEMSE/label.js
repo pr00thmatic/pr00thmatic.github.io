@@ -9,5 +9,7 @@ var Label = {
       text.x = gameObject.getCenter().x;
       text.y = gameObject.getCenter().y;
     });
+
+    return text;
   }
 }
