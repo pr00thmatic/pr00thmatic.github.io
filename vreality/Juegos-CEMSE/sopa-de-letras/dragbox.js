@@ -13,8 +13,7 @@ var DragBox = ( function () {
 
       scene.input.on('pointermove', function (pointer) {
         if (DragBox.information.dragging) {
-          DragBox.information.currentBox.target = { x: pointer.x, y: pointer.y };
-          DragBox.information.currentBox.update();
+          Dragbox.information.currentBox.updateToCursor();
         }
       });
 
@@ -41,6 +40,10 @@ var DragBox = ( function () {
         box.caps[0].rotation = box.caps[1].rotation = box.sprite.rotation;
         box.caps[1].x = box.target.x;
         box.caps[1].y = box.target.y;
+      },
+      updateToCursor: function () {
+        box.target = { x: game.input.activePointer.x, y: game.input.activePointer.y };
+        box.update();
       }
     };
 
@@ -55,6 +58,7 @@ var DragBox = ( function () {
     // properties
     information : information,
     // methods
-    subscribeOnClick : subscribeOnClick
+    subscribeOnClick : subscribeOnClick,
+    gimmieDragBox : gimmieDragBox
   };
 })();

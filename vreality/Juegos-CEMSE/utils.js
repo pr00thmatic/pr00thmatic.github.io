@@ -32,6 +32,10 @@ var utils = {
     return { x: a.x - b.x, y: a.y - b.y };
   },
 
+  randomPick : function (arr) {
+    return arr[utils.randomIntBetween(0, arr.length)];
+  },
+
   deg2Rad : 2 * Math.PI / 360,
   rad2Deg : 360 / (Math.PI * 2)
 }
