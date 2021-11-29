@@ -1,10 +1,14 @@
 var SopaEditor = ( function () {
   var sopaData = {
     words: [],
-    currentWord: null
+    currentWord: null,
+    editMode: false,
+    label: null
   };
 
-  var Edit = function () {
+  var edit = function () {
+    if (!sopaData.label) sopaData.label = scene.add.text(0,0, 'MODO EDICIÓN!!', { color: '#00aa00' }).setOrigin(0,0);
+    sopaData.editMode = true;
     scene.input.keyboard.on('keydown', function (event) {
       if (!sopaData.currentWord) return;
 
@@ -14,6 +18,7 @@ var SopaEditor = ( function () {
         var word = sopaData.currentWord;
         word.line[word.currentLetter].label.text = event.key.toUpperCase();
         if (!word.nextLetter()) {
+          sopaData.currentWord.dragbox.setTint(0x111111);
           sopaData.currentWord = null;
         }
       }
@@ -27,6 +32,7 @@ var SopaEditor = ( function () {
           if (cell == sopaData.words[i].line[j]) {
             for (let l=0; l<sopaData.words[i].line.length; l++) {
               sopaData.words[i].line[l].randomize();
+              sopaData.words[i].line[l].sprite.setTint(0xffffff);
             }
             if (sopaData.currentWord == sopaData.words[i]) {
               sopaData.currentWord = null;
@@ -64,6 +70,18 @@ var SopaEditor = ( function () {
     });
   };
 
-  return { Edit : Edit,
+  var getPuzzleString = function () {
+    var json = [];
+    for (let i=0; i<sopaData.words.length; i++) {
+      json[i] = {
+        capsule : sopaData.words[i].capsule,
+        word: Sopa.getContent(sopaData.words[i].line)
+      };
+    }
+    return JSON.stringify(json);
+  };
+
+  return { edit : edit,
+           getPuzzleString : getPuzzleString,
            sopaData : sopaData };
 } )();

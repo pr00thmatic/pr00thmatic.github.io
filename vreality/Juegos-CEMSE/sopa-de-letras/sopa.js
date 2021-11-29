@@ -1,4 +1,5 @@
 var Sopa = ( function () {
+  var testPuzzle = '[{"capsule":{"origin":{"r":6,"c":4},"end":{"r":6,"c":9}},"word":"ABUELA"},{"capsule":{"origin":{"r":8,"c":7},"end":{"r":4,"c":11}},"word":"TRANS"},{"capsule":{"origin":{"r":5,"c":7},"end":{"r":11,"c":7}},"word":"LENTEJA"},{"capsule":{"origin":{"r":6,"c":5},"end":{"r":1,"c":5}},"word":"BRILLA"},{"capsule":{"origin":{"r":6,"c":4},"end":{"r":1,"c":9}},"word":"ARRIBA"},{"capsule":{"origin":{"r":1,"c":5},"end":{"r":1,"c":9}},"word":"ARAÑA"}]';
   var rows = 13;
   var columns = 13;
 
@@ -44,6 +45,26 @@ var Sopa = ( function () {
 
       return line;
     };
+
+    sopa.feed = function (stringified) {
+      for (let i=0; i<sopa.cells.length; i++) {
+        for (let j=0; j<sopa.cells[i].length; j++) {
+          sopa.cells[i][j].randomize();
+        }
+      }
+
+      var json = JSON.parse(stringified);
+      for (let i=0; i<json.length; i++) {
+        var line = sopa.getLine(json[i].capsule);
+        for (let l=line.length-1; l>=0; l--) {
+          line[l].label.text = json[i].word[json[i].word.length-1-l];
+        }
+      }
+
+      sopa.clearBold();
+      gameStatus.words = json;
+      gameStatus.emitter.emit('got words');
+    }
 
     return sopa;
   };
@@ -123,10 +144,21 @@ var Sopa = ( function () {
       cell.label.text = utils.randomPick(alfabet);
     };
     cell.randomize();
+  };
+
+  var compareCapsules = function (a, b) {
+    return ((compareCoords(a.origin, b.origin) && compareCoords(a.end, b.end)) ||
+            (compareCoords(a.origin, b.end) && (a.end, b.origin)));
+  };
+
+  var compareCoords = function (a, b) {
+    return a.r == b.r && a.c == b.c;
   }
 
   return {
+    testPuzzle : testPuzzle,
     gimmieSopa : gimmieSopa,
-    getContent : getContent
+    getContent : getContent,
+    compareCapsules : compareCapsules
   };
 })();

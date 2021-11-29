@@ -9,6 +9,7 @@ var mainState = ( function () {
     scene.load.image('left cap', 'sopa-de-letras/assets/left cap.png');
     scene.load.image('right cap', 'sopa-de-letras/assets/right cap.png');
     scene.load.image('midle tile', 'sopa-de-letras/assets/midle tile.png');
+    scene.load.image('word holder', 'sopa-de-letras/assets/word holder.png');
   }
 
   var create = function () {
@@ -18,9 +19,10 @@ var mainState = ( function () {
       setOrigin(0,0).
       setDepth(-100);
 
-    // DragBox.subscribeOnClick();
     gameStatus.sopa = Sopa.gimmieSopa();
-    SopaEditor.Edit();
+    Found.create();
+    VictoryCriteria.create();
+    // SopaEditor.edit();
 
     gameStatus.emitter.emit('create');
   }
@@ -45,3 +47,18 @@ var mainState = ( function () {
 var game = new Phaser.Game(mainState);
 // width = 360. accessible from game.world.width
 // height = 600 acccessible from game.world.height
+
+var editMode = function () {
+  SopaEditor.edit();
+};
+
+var print = function () {
+  var element = document.getElementById('json');
+  element.value = SopaEditor.getPuzzleString();
+  element.select();
+}
+
+var get = function () {
+  var element = document.getElementById('json');
+  gameStatus.sopa.feed(element.value);
+}
