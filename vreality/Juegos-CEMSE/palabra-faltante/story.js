@@ -8,6 +8,8 @@ var Story = (() => {
   };
   var fakeStyle = JSON.parse(JSON.stringify(style));
   fakeStyle.color = "#ff0000";
+  var fillStyle = JSON.parse(JSON.stringify(style));
+  fillStyle.font = '12px Helvetica';
   var lineSpacing = 3;
 
   var gimmieStory = function (text) {
@@ -68,5 +70,6 @@ var Story = (() => {
   }
 
   return { gimmieStory : gimmieStory,
-           style : style };
+           style : style,
+           fillStyle : fillStyle };
 })();

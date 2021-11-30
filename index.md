@@ -88,7 +88,6 @@ And I know that working 12 hours a day is a lot of work, but right now, with thi
 
 But this leaves me very short of time :(
 
-wtf?!
 ---
 
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>

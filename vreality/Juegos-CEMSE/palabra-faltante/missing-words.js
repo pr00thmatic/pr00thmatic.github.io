@@ -31,7 +31,7 @@ var MissingWords = (() => {
         word.solved = true;
         word.blank.setTint(0x5fd1ff);
         word.blank.alpha = 0;
-        word.blankLabel = Label.gimmieLabel(word.blank, gameObject.word.word, Story.style);
+        word.blankLabel = Label.gimmieLabel(word.blank, gameObject.word.word, Story.fillStyle);
         gameObject.word.container.label.destroy();
         gameObject.destroy();
         gameStatus.emitter.emit('word completed');
