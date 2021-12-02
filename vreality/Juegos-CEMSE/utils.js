@@ -1,4 +1,7 @@
 var utils = {
+  tilefy: function (vector, tileSize) {
+    return { x: Math.floor(vector.x / tileSize) * tileSize, y: Math.floor(vector.y / tileSize) * tileSize };
+  },
   frames: function (key, nums) {
     var arr = [];
     for (var i=0; i<nums.length; i++) {

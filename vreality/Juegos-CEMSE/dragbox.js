@@ -4,6 +4,12 @@ var DragBox = ( function () {
     dragging: false,
   };
 
+  var preload = function (folder) {
+    scene.load.image('left cap', folder + 'left cap.png');
+    scene.load.image('right cap', folder + 'right cap.png');
+    scene.load.image('midle tile', folder + 'midle tile.png');
+  }
+
   var subscribeOnClick = function () {
     gameStatus.emitter.on('create', () => {
       scene.input.on('pointerdown', function (pointer) {
@@ -13,7 +19,7 @@ var DragBox = ( function () {
 
       scene.input.on('pointermove', function (pointer) {
         if (DragBox.information.dragging) {
-          Dragbox.information.currentBox.updateToCursor();
+          DragBox.information.currentBox.updateToCursor();
         }
       });
 
@@ -69,6 +75,7 @@ var DragBox = ( function () {
     information : information,
     // methods
     subscribeOnClick : subscribeOnClick,
-    gimmieDragBox : gimmieDragBox
+    gimmieDragBox : gimmieDragBox,
+    preload : preload
   };
 })();

@@ -6,10 +6,8 @@ var mainState = ( function () {
     scene = this;
     scene.load.image('background', 'sopa-de-letras/assets/background.png');
     scene.load.image('cell', 'sopa-de-letras/assets/cell.png');
-    scene.load.image('left cap', 'sopa-de-letras/assets/left cap.png');
-    scene.load.image('right cap', 'sopa-de-letras/assets/right cap.png');
-    scene.load.image('midle tile', 'sopa-de-letras/assets/midle tile.png');
     scene.load.image('word holder', 'sopa-de-letras/assets/word holder.png');
+    DragBox.preload('sopa-de-letras/assets/');
   }
 
   var create = function () {
