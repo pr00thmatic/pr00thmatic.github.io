@@ -31,8 +31,9 @@ var DragBox = ( function () {
     });
   };
 
-  var gimmieDragBox = function (x, y) {
+  var gimmieDragBox = function (x, y, config) {
     var box = {
+      config : config,
       origin: { x: x, y: y },
       sprite: scene.add.tileSprite(x, y, 10, 20, 'midle tile').setOrigin(0, 0.5),
       caps : [],
@@ -55,7 +56,9 @@ var DragBox = ( function () {
         box.caps[0].setTint(color); box.caps[1].setTint(color); box.sprite.setTint(color);
       },
       setValid: function (bool) {
-        box.setTint(bool? 0xffff11: 0xff0000);
+        var validColor = config? config.validColor: 0xffff11;
+        var invalidColor = config? config.invalidColor: 0xff0000;
+        box.setTint(bool? validColor: invalidColor);
         box.valid = bool;
       },
       destroy: function () {

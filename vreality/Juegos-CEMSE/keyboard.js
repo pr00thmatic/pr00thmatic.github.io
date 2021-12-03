@@ -1,24 +1,52 @@
 var Keyboard = (() => {
   var gimmieKeyboard = function (assetsFolder = "ahorcado/assets/", config) {
-    var keyChars = [ "QWERTYUIOP",
-                     "ASDFGHJKLÑ",
-                     "ZXCVBNM" ];
+    var keyboard = {};
+    keyboard.keyChars = [ "QWERTYUIOP",
+                          "ASDFGHJKLÑ",
+                          "ZXCVBNM" ];
     if (config && config.extraChars) {
       for (let i=0; i<config.extraChars.length; i++) {
-        keyChars.push(config.extraChars[i]);
+        keyboard.keyChars.push(config.extraChars[i]);
       }
     }
-    var keys = [];
-    var margin = { x: 44, y: 470 };
-    var offset = 26;
 
-    var preload = () => {
+    keyboard.keys = [];
+    keyboard.margin = { x: 44, y: 470 };
+    keyboard.offset = 26;
+
+    keyboard.preload = () => {
       scene.load.spritesheet('keyboard', assetsFolder + 'keyboard.png', { frameWidth: 24, frameHeight: 24 });
-      scene.load.image('space', assetsFolder + 'space.png');
+      if (config && config.space) scene.load.image('space', assetsFolder + 'space.png');
+      if (config && config.backspace) scene.load.image('backspace', assetsFolder + 'backspace.png');
     };
 
-    var create = () => {
-      var joinedKeys = keyChars.join('');
+    keyboard.createKey = function (sprite, keyEmitted, i = -1) {
+      var x, y;
+
+      if (i !== -1) {
+        x = keyboard.margin.x + ((i % 10) * keyboard.offset + (keyboard.offset/2) * Math.floor(i/10)) -
+          (config && config.backspace? keyboard.offset/2: 0);
+        y = keyboard.margin.y + Math.floor(i/10) * keyboard.offset;
+      } else {
+        x = keyEmitted.x;
+        y = keyEmitted.y;
+      }
+
+      keyEmitted.sprite =
+        scene.add.sprite(x, y, sprite).
+        setOrigin(0,0).
+        setInteractive();
+
+      keyEmitted.sprite.on('pointerdown', ((keyEmitted) => { return () => {
+        gameStatus.emitter.emit('keyboard.keyPress', keyEmitted);
+      }; } )(keyEmitted));
+      keyboard.keys.push(keyEmitted);
+
+      return keyEmitted;
+    };
+
+    keyboard.create = () => {
+      var joinedKeys = keyboard.keyChars.join('');
       for (let i=0; i<joinedKeys.length; i++) {
         scene.anims.create({
           key: 'key-' + joinedKeys[i],
@@ -27,39 +55,30 @@ var Keyboard = (() => {
           repeat: -1
         });
 
-        var key  = {
-          sprite: scene.add.sprite(margin.x + ((i % 10) * offset + (offset/2) * Math.floor(i/10)),
-                                   margin.y + Math.floor(i/10) * offset, 'keyboard').
-            setOrigin(0,0).
-            setInteractive(),
-          letter: joinedKeys[i]
-        };
-
-        key.sprite.on('pointerdown', ((key) => { return () => {
-          gameStatus.emitter.emit('keyboard.keyPress', key);
-        }; } )(key));
+        var key  = {};
+        key.letter = joinedKeys[i];
+        keyboard.createKey('keyboard', key, i);
         key.sprite.play('key-' + joinedKeys[i]);
-        keys.push(key);
       }
+
       if (config && config.space) {
-        var key = {
-          sprite: scene.add.sprite(margin.x + offset + offset/2, margin.y + offset * 3, 'space').
-            setOrigin(0,0).
-            setInteractive(),
-          letter: ' '
-        };
-        key.sprite.on('pointerdown', ((key) => { return () => {
-          gameStatus.emitter.emit('keyboard.keyPress', key);
-        }; })(key));
-        keys.push(key);
+        keyboard.createKey('space', {
+          letter: ' ',
+          x: keyboard.margin.x + keyboard.offset + keyboard.offset/2,
+          y: keyboard.margin.y + keyboard.offset * 3
+        });
+      }
+
+      if (config && config.backspace) {
+        keyboard.backspace = keyboard.createKey('backspace', {
+          letter: 'BACKSPACE',
+          x: keyboard.margin.x + keyboard.offset * 9.5,
+          y: keyboard.margin.y
+        }).sprite.setTint(0xff5555);
       }
     };
 
-    return {
-      keys : keys,
-      preload : preload,
-      create : create
-    };
+    return keyboard;
   };
 
   return {

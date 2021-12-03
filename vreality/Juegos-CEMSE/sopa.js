@@ -1,30 +1,23 @@
 var Sopa = ( function () {
-  var testPuzzle = '[{"capsule":{"origin":{"r":6,"c":4},"end":{"r":6,"c":9}},"word":"ABUELA"},{"capsule":{"origin":{"r":8,"c":7},"end":{"r":4,"c":11}},"word":"TRANS"},{"capsule":{"origin":{"r":5,"c":7},"end":{"r":11,"c":7}},"word":"LENTEJA"},{"capsule":{"origin":{"r":6,"c":5},"end":{"r":1,"c":5}},"word":"BRILLA"},{"capsule":{"origin":{"r":6,"c":4},"end":{"r":1,"c":9}},"word":"ARRIBA"},{"capsule":{"origin":{"r":1,"c":5},"end":{"r":1,"c":9}},"word":"ARAÑA"}]';
-  var rows = 13;
-  var columns = 13;
+  var marginY = 30;
+  var tileSize = 20;
 
-  var alfabet = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZAEIOUBCGRBCDFEPABCDEFGILMNOPRSTUVAEIOUABCDEFGHIJKLMNÑOPQRSTUVW";
-  var currentDragbox = null;
-
-  var gimmieSopa = function () {
-    var sopa = {};
-    sopa.cells = [];
+  var gimmieSopa = function (config) {
+    var sopa = {
+      rows: config.rows,
+      columns: config.columns,
+      currentDragbox: null,
+      cells: [],
+      config : config
+    };
     var dragOrigin = null;
 
-    for (var r=0; r<rows; r++) {
+    for (var r=0; r<sopa.rows; r++) {
       sopa.cells[r] = [];
-      for (var c=0; c<columns; c++) {
+      for (var c=0; c<sopa.columns; c++) {
         createCell(sopa, r, c);
       }
     }
-
-    sopa.clearBold = function () {
-      for (var r=0; r<rows; r++) {
-        for (var c=0; c<columns; c++) {
-          sopa.cells[r][c].label.setFontStyle("");
-        }
-      }
-    };
 
     sopa.getLine = function (capsule) {
       var line = [];
@@ -46,26 +39,6 @@ var Sopa = ( function () {
       return line;
     };
 
-    sopa.feed = function (stringified) {
-      for (let i=0; i<sopa.cells.length; i++) {
-        for (let j=0; j<sopa.cells[i].length; j++) {
-          sopa.cells[i][j].randomize();
-        }
-      }
-
-      var json = JSON.parse(stringified);
-      for (let i=0; i<json.length; i++) {
-        var line = sopa.getLine(json[i].capsule);
-        for (let l=line.length-1; l>=0; l--) {
-          line[l].label.text = json[i].word[json[i].word.length-1-l];
-        }
-      }
-
-      sopa.clearBold();
-      gameStatus.words = json;
-      gameStatus.emitter.emit('got words');
-    }
-
     return sopa;
   };
 
@@ -80,12 +53,13 @@ var Sopa = ( function () {
 
   var createCell = function (sopa, r, c) {
     sopa.cells[r][c] = {
-      sprite: scene.add.image((360 - columns * 20)/2 +c*20, 40+r*20, 'cell').
+      sprite: scene.add.image((mainState.width - sopa.columns * tileSize)/2 +c*tileSize, marginY+r*tileSize, 'cell').
         setOrigin(0,0).
         setInteractive()
     };
     createLabel(sopa.cells[r][c], r, c);
 
+    sopa.cells[r][c].sprite.alpha = sopa.config.cellAlpha;
     sopa.cells[r][c].sprite.on('pointerdown', pointerdown(sopa, r, c));
     sopa.cells[r][c].sprite.on('pointerover', pointerover(sopa, r, c));
     sopa.cells[r][c].sprite.on('pointerup', pointerup(sopa, r, c));
@@ -94,56 +68,55 @@ var Sopa = ( function () {
   };
 
   var pointerdown = ((sopa, r, c) => { return () => {
-    currentDragbox = DragBox.gimmieDragBox(sopa.cells[r][c].sprite.getCenter().x, sopa.cells[r][c].sprite.getCenter().y);
-    currentDragbox.setValid(false);
+    sopa.currentDragbox = DragBox.gimmieDragBox(sopa.cells[r][c].sprite.getCenter().x, sopa.cells[r][c].sprite.getCenter().y,
+                                                { validColor: sopa.config.validColor, invalidColor: sopa.config.invalidColor });
+    sopa.currentDragbox.setValid(false);
     dragOrigin = { r: r, c: c };
+    gameStatus.emitter.emit('start new dragbox', sopa.currentDragbox);
   }; });
 
   var pointerover = ((sopa, r, c) => { return () => {
-    if (currentDragbox) {
-      currentDragbox.target = { x: sopa.cells[r][c].sprite.getCenter().x, y: sopa.cells[r][c].sprite.getCenter().y };
-      currentDragbox.update();
+    if (sopa.currentDragbox) {
+      sopa.currentDragbox.target = { x: sopa.cells[r][c].sprite.getCenter().x, y: sopa.cells[r][c].sprite.getCenter().y };
+      sopa.currentDragbox.update();
       var difR = Math.abs(dragOrigin.r - r);
       var difC = Math.abs(dragOrigin.c - c);
 
-      sopa.clearBold();
-      if ((difR === difC || difR === 0 || difC === 0) && (dragOrigin.r !== r || dragOrigin.c !== c)) {
-        currentDragbox.setValid(true);
+      if ((sopa.config.allowDiagonals &&
+           (difR === difC || difR === 0 || difC === 0) && (dragOrigin.r !== r || dragOrigin.c !== c)) ||
+          (!sopa.config.allowDiagonals && ((difR === 0 && difC !== 0) || (difR !== 0 && difC == 0)))) {
+        sopa.currentDragbox.setValid(true);
         var line = sopa.getLine({ origin: {r: dragOrigin.r, c: dragOrigin.c}, end: {r: r, c: c} });
         for (let i=0; i<line.length; i++) line[i].label.setFontStyle("bold");
       } else {
-        currentDragbox.setValid(false);
+        sopa.currentDragbox.setValid(false);
       }
     }
   }; });
 
   var pointerup = ((sopa, r, c) => { return () => {
-    if (currentDragbox) {
-      if (!currentDragbox.valid) {
-        currentDragbox.destroy();
+    if (sopa.currentDragbox) {
+      if (!sopa.currentDragbox.valid) {
+        sopa.currentDragbox.destroy();
         if (dragOrigin.c == c && dragOrigin.r == r) {
           gameStatus.emitter.emit('delete request', { r : r, c : c });
         }
       } else {
-        currentDragbox.target = { x: sopa.cells[r][c].sprite.getCenter().x, y: sopa.cells[r][c].sprite.getCenter().y };
-        currentDragbox.update();
+        sopa.currentDragbox.target = { x: sopa.cells[r][c].sprite.getCenter().x, y: sopa.cells[r][c].sprite.getCenter().y };
+        sopa.currentDragbox.update();
         var capsule = { origin: dragOrigin, end: { r: r, c: c} };
         gameStatus.emitter.emit('word enclosed', {
           capsule: capsule,
           line: sopa.getLine(capsule),
-          dragbox: currentDragbox
+          dragbox: sopa.currentDragbox
         });
       }
-      currentDragbox = null;
+      sopa.currentDragbox = null;
     }
   }; });
 
   var createLabel = function (cell) {
     cell.label = Label.gimmieLabel(cell.sprite, '');
-    cell.randomize = () => {
-      cell.label.text = utils.randomPick(alfabet);
-    };
-    cell.randomize();
   };
 
   var compareCapsules = function (a, b) {
@@ -156,7 +129,6 @@ var Sopa = ( function () {
   }
 
   return {
-    testPuzzle : testPuzzle,
     gimmieSopa : gimmieSopa,
     getContent : getContent,
     compareCapsules : compareCapsules

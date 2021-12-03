@@ -8,7 +8,11 @@ var mainState = ( function () {
     scene.load.image('cell', 'crucigrama/assets/cell.png');
     DragBox.preload('crucigrama/assets/');
 
-    gameStatus.keyboard = Keyboard.gimmieKeyboard('crucigrama/assets/', { space: true, extraChars: ',.' });
+    gameStatus.keyboard = Keyboard.gimmieKeyboard('crucigrama/assets/', {
+      space: true,
+      extraChars: ',.',
+      backspace: true
+    });
     gameStatus.keyboard.preload();
   }
 
@@ -17,7 +21,7 @@ var mainState = ( function () {
     var background = scene.add.sprite(0,0, 'background').
         setOrigin(0,0).
         setDepth(-100);
-    Word.subscribeWordOnClick();
+    CrucigramaEditor.edit();
     gameStatus.keyboard.create();
     gameStatus.emitter.emit('create');
   }
