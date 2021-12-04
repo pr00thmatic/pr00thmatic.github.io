@@ -19,6 +19,54 @@ var Sopa = ( function () {
       }
     }
 
+    sopa.editWord = function (word, customEditingCellIndex) {
+      if (customEditingCellIndex !== undefined) {
+        word.editingCellIndex = customEditingCellIndex;
+      } else {
+        word.editingCellIndex = word.line.length-1;
+      }
+
+      // what will happen when the user pushes a key while editing a word
+      var editCell = function (key) {
+        var currentCell = word.editingCellIndex < word.line.length && word.editingCellIndex >= 0?
+            word.line[word.editingCellIndex]: null;
+
+        if (currentCell) currentCell.sprite.setTint(0xffffff);
+
+        // concatenates the character to the word
+        if (key) {
+          if (key.letter === 'BACKSPACE') {
+            if (currentCell) currentCell.label.text = '';
+            word.editingCellIndex++;
+          } else {
+            currentCell.label.text = key.letter;
+            word.editingCellIndex--;
+          }
+        }
+
+        // checks if edition is over
+        if (word.editingCellIndex < 0) {
+          gameStatus.emitter.off('keyboard.keyPress', editCell);
+          gameStatus.emitter.emit('sopa.wordCompleted', word);
+          return;
+        } else if (word.editingCellIndex >= word.line.length) {
+          // abort this word and it's box! (if it's being edited)
+          gameStatus.emitter.off('keyboard.keyPress', editCell);
+          gameStatus.emitter.emit('sopa.attemptDestroyWord', word);
+          return;
+        }
+
+        word.line[word.editingCellIndex].sprite.setTint(0xffff00);
+      };
+
+      // subscribe, edit the first cell.
+      word.editCells = function () {
+        gameStatus.emitter.on('keyboard.keyPress', editCell);
+        editCell();
+      };
+      word.editCells();
+    };
+
     sopa.getLine = function (capsule) {
       var line = [];
       var step = { r: Math.sign(capsule.origin.r - capsule.end.r), c : Math.sign(capsule.origin.c - capsule.end.c) };
@@ -37,6 +85,25 @@ var Sopa = ( function () {
       }
 
       return line;
+    };
+
+    sopa.gimmieDragbox = function (capsule, word, isValid) {
+      var dragbox = DragBox.gimmieDragBox(getCell(capsule.origin, this).sprite.getCenter().x,
+                                          getCell(capsule.origin, this).sprite.getCenter().y,
+                                          { validColor: this.config.validColor, invalidColor: this.config.invalidColor });
+      dragbox.target = { x: getCell(capsule.end, this).sprite.getCenter().x,
+                         y: getCell(capsule.end, this).sprite.getCenter().y };
+      dragbox.setValid(isValid);
+      dragbox.update();
+
+      if (word) {
+        let line = sopa.getLine(capsule);
+        for (let i=0; i<line.length; i++) {
+          line[i].label.text = word[line.length - 1 - i];
+        }
+      }
+
+      return dragbox;
     };
 
     return sopa;
@@ -60,16 +127,23 @@ var Sopa = ( function () {
     createLabel(sopa.cells[r][c], r, c);
 
     sopa.cells[r][c].sprite.alpha = sopa.config.cellAlpha;
-    sopa.cells[r][c].sprite.on('pointerdown', pointerdown(sopa, r, c));
-    sopa.cells[r][c].sprite.on('pointerover', pointerover(sopa, r, c));
-    sopa.cells[r][c].sprite.on('pointerup', pointerup(sopa, r, c));
+    if (sopa.config && sopa.config.allowCapsuleCreation) {
+      sopa.cells[r][c].sprite.on('pointerdown', pointerdown(sopa, r, c));
+      sopa.cells[r][c].sprite.on('pointerover', pointerover(sopa, r, c));
+      sopa.cells[r][c].sprite.on('pointerup', pointerup(sopa, r, c));
+    }
 
     return sopa.cells[r][c];
   };
 
+  var getCell = function (coord, sopa) {
+    return sopa.cells[coord.r][coord.c];
+  }
+
   var pointerdown = ((sopa, r, c) => { return () => {
-    sopa.currentDragbox = DragBox.gimmieDragBox(sopa.cells[r][c].sprite.getCenter().x, sopa.cells[r][c].sprite.getCenter().y,
-                                                { validColor: sopa.config.validColor, invalidColor: sopa.config.invalidColor });
+    sopa.currentDragbox = sopa.gimmieDragbox({ origin: { r, c }, end: { r, c } })
+    // sopa.currentDragbox = DragBox.gimmieDragBox(sopa.cells[r][c].sprite.getCenter().x, sopa.cells[r][c].sprite.getCenter().y,
+    //                                             { validColor: sopa.config.validColor, invalidColor: sopa.config.invalidColor });
     sopa.currentDragbox.setValid(false);
     dragOrigin = { r: r, c: c };
     gameStatus.emitter.emit('start new dragbox', sopa.currentDragbox);
@@ -129,8 +203,8 @@ var Sopa = ( function () {
   }
 
   return {
-    gimmieSopa : gimmieSopa,
-    getContent : getContent,
-    compareCapsules : compareCapsules
+    gimmieSopa,
+    getContent,
+    compareCapsules
   };
 })();

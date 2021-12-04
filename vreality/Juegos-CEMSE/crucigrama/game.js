@@ -1,6 +1,11 @@
 var scene;
 var gameStatus = {};
 var mainState = ( function () {
+  var restart = function (editMode) {
+    gameStatus.editMode = editMode;
+    scene.scene.restart();
+    // gameStatus.game = new Phaser.Game(mainState);
+  };
 
   var preload = function () {
     scene = this;
@@ -21,7 +26,24 @@ var mainState = ( function () {
     var background = scene.add.sprite(0,0, 'background').
         setOrigin(0,0).
         setDepth(-100);
-    CrucigramaEditor.edit();
+    if (gameStatus.editMode) {
+      CrucigramaEditor.edit();
+    } else {
+      gameStatus.keyboard.space = false;
+      gameStatus.keyboard.extraChars = '';
+      gameStatus.sopa = Sopa.gimmieSopa({
+        rows: 10,
+        columns: 15,
+        allowDiagonals: false,
+        cellAlpha: 0.25,
+        validColor: 0x111111,
+        invalidColor: 0x885555,
+        allowCapsuleCreation: false
+      });
+      if (gameStatus.puzzleString) {
+        Loader.load(gameStatus.puzzleString);
+      }
+    }
     gameStatus.keyboard.create();
     gameStatus.emitter.emit('create');
   }
@@ -34,6 +56,7 @@ var mainState = ( function () {
   return { type: Phaser.WEBGL,
            width: 360,
            height: 600,
+           restart: restart,
            scene: {
              preload : preload,
              create : create,
@@ -43,6 +66,33 @@ var mainState = ( function () {
 
 })();
 
-var game = new Phaser.Game(mainState);
+gameStatus.game = new Phaser.Game(mainState);
 // width = 360. accessible from game.world.width
 // height = 600 acccessible from game.world.height
+
+function editMode () {
+  mainState.restart(true);
+  stop();
+}
+
+function print () {
+  var element = document.getElementById('json');
+  element.value = CrucigramaEditor.getPuzzleString();
+  element.select();
+  stop();
+}
+
+function get () {
+  var element = document.getElementById('json');
+  gameStatus.puzzleString = element.value;
+  mainState.restart(false);
+  stop();
+}
+
+function stop () {
+  document.getElementById('json').blur();
+  document.getElementById('edit-mode').blur();
+  document.getElementById('print').blur();
+  document.getElementById('get').blur();
+  this.focus(null);
+}

@@ -10,7 +10,7 @@ var Keyboard = (() => {
       }
     }
 
-    keyboard.keys = [];
+    keyboard.keys = {};
     keyboard.margin = { x: 44, y: 470 };
     keyboard.offset = 26;
 
@@ -40,12 +40,12 @@ var Keyboard = (() => {
       keyEmitted.sprite.on('pointerdown', ((keyEmitted) => { return () => {
         gameStatus.emitter.emit('keyboard.keyPress', keyEmitted);
       }; } )(keyEmitted));
-      keyboard.keys.push(keyEmitted);
+      keyboard.keys[keyEmitted.letter] = keyEmitted;
 
       return keyEmitted;
     };
 
-    keyboard.create = () => {
+    keyboard.create = function () {
       var joinedKeys = keyboard.keyChars.join('');
       for (let i=0; i<joinedKeys.length; i++) {
         scene.anims.create({
@@ -76,6 +76,13 @@ var Keyboard = (() => {
           y: keyboard.margin.y
         }).sprite.setTint(0xff5555);
       }
+
+      scene.input.keyboard.on('keydown', ((keyboard) => { return function (event) {
+        let key = event.key.toUpperCase();
+        if (keyboard.keys[key] !== undefined) {
+          gameStatus.emitter.emit('keyboard.keyPress', keyboard.keys[key]);
+        }
+      }; })(keyboard));
     };
 
     return keyboard;
