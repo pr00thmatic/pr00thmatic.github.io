@@ -29,8 +29,8 @@ var mainState = ( function () {
     if (gameStatus.editMode) {
       CrucigramaEditor.edit();
     } else {
-      gameStatus.keyboard.space = false;
-      gameStatus.keyboard.extraChars = '';
+      gameStatus.keyboard.config.space = false;
+      gameStatus.keyboard.config.extraChars = '';
       gameStatus.sopa = Sopa.gimmieSopa({
         rows: 10,
         columns: 15,
