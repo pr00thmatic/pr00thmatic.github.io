@@ -72,10 +72,8 @@ var mainState = ( function () {
 
       next.on('pointerdown', ((destroy) => { return () => {
         if (gameStatus.current >= data.length) {
-          console.log('game over');
           gameStatus.emitter.emit('game over');
         } else {
-          console.log('ok');
           updateCurrentQuestion();
         }
         destroy.destroy();

@@ -41,4 +41,4 @@ var utils = {
 
   deg2Rad : 2 * Math.PI / 360,
   rad2Deg : 360 / (Math.PI * 2)
-}
+};

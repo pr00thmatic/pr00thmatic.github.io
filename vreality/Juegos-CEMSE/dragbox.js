@@ -3,6 +3,9 @@ var DragBox = ( function () {
     currentBox: { },
     dragging: false,
   };
+  var config = {
+    height: 20
+  };
 
   var preload = function (folder) {
     scene.load.image('left cap', folder + 'left cap.png');
@@ -35,7 +38,7 @@ var DragBox = ( function () {
     var box = {
       config : config,
       origin: { x: x, y: y },
-      sprite: scene.add.tileSprite(x, y, 10, 20, 'midle tile').setOrigin(0, 0.5),
+      sprite: scene.add.tileSprite(x, y, 10, DragBox.config.height, 'midle tile').setOrigin(0, 0.5),
       caps : [],
       target: { x: x + 10, y: y },
       update: function () {
@@ -55,6 +58,9 @@ var DragBox = ( function () {
       setTint: function (color) {
         box.caps[0].setTint(color); box.caps[1].setTint(color); box.sprite.setTint(color);
       },
+      setDepth: function (depth) {
+        box.caps[0].setDepth(depth); box.caps[1].setDepth(depth); box.sprite.setDepth(depth);
+      },
       setValid: function (bool) {
         var validColor = config? config.validColor: 0xffff11;
         var invalidColor = config? config.invalidColor: 0xff0000;
@@ -67,8 +73,10 @@ var DragBox = ( function () {
     };
 
     // creates caps
-    box.caps[0] = scene.add.image(x, y, 'left cap').setOrigin(1, 0.5);
-    box.caps[1] = scene.add.image(x + 10, y, 'right cap').setOrigin(0, 0.5);
+    var leftOrigin = config && config.leftCapOrigin? config.leftCapOrigin: { x: 1, y: 0.5 };
+    var rightOrigin = config && config.rightCapOrigin? config.rightCapOrigin: { x: 0, y: 0.5 };
+    box.caps[0] = scene.add.image(x, y, 'left cap').setOrigin(leftOrigin.x, leftOrigin.y);
+    box.caps[1] = scene.add.image(x + 10, y, 'right cap').setOrigin(rightOrigin.x, rightOrigin.y);
 
     return box;
   };
@@ -76,6 +84,7 @@ var DragBox = ( function () {
   return {
     // properties
     information : information,
+    config,
     // methods
     subscribeOnClick : subscribeOnClick,
     gimmieDragBox : gimmieDragBox,
