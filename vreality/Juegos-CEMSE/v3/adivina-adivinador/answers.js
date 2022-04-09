@@ -2,9 +2,9 @@ var Answers = (() => {
   var config = {
     marginY : 300,
     spaceHeight : 260,
-    indicatorPosX : 260,
-    correctColor: 0x8fde8f,
-    incorrectColor: 0xe39797
+    indicatorPosX : 330,
+    correctColor: 0x43960e,
+    incorrectColor: 0xe55c00
   };
   var instance = {
     options: []

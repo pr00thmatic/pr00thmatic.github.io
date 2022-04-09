@@ -4,7 +4,7 @@ var data = [{
             'Identificar problemáticas dentro de la comunidad',
             'Promover la participación de los miembros de la comunidad',
             'Coordinar con distintas instancias e instituciones',
-            'Todas las anteriores' ],
+            'Todas son correctas' ],
   correctAnswer: 4,
 }, {
   question: 'Las y los líderes comunitarios para proteger a las niñas, niños y adolescentes pueden realizar acciones de prevención, identificación, atención y derivación de casos de violencia.',
