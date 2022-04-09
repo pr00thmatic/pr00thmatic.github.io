@@ -38,6 +38,8 @@ var Answers = (() => {
 
       answer.rebeal = () => {
         answer.holder.setTint(answer.isCorrect? config.correctColor: config.incorrectColor);
+        answer.statement.setFill('#ffffff');
+
         answer.indicator = scene.add.sprite(config.indicatorPosX, answer.holder.getCenter().y, answer.isCorrect? 'right': 'wrong');
         answer.indicator.rotation = utils.randomIntBetween(-7, 7) * utils.deg2Rad;
       };

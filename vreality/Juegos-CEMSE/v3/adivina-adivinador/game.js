@@ -69,13 +69,13 @@ var mainState = ( function () {
     gameStatus.right += wasRight? 1: 0;
     setTimeout(() => {
       var next = scene.add.tileSprite(mainState.width/2, 100, 150, 30, 'double line sheet').
-          setOrigin(0,0).
+          setOrigin(0.5,0).
           setInteractive();
 
       next.label =
         Label.gimmieLabel(next, gameStatus.current >= data.length? 'RESULTADOS!': 'Siguiente', {
           font: 'bold 15px Helvetica',
-          color: '0x000000'
+          color: '#ffffff'
         });
 
       next.on('pointerdown', ((destroy) => { return () => {
