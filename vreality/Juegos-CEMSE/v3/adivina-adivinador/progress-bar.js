@@ -21,8 +21,8 @@ var ProgressBar = (() => {
       setDepth(10);
 
     instance.label = scene.add.text(config.margin.x + config.size.x + 20, config.margin.y, '', {
-      color: '#000000',
-      font: 'bold 20px Helvetica'
+      color: '#43960e',
+      font: 'bold 20px Montserrat'
     });
 
     updateBar();

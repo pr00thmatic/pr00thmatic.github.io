@@ -11,8 +11,8 @@ var Question = (() => {
         setOrigin(0.5, 0);
       // instance.holder.rotation = utils.randomIntBetween(-1,2) * utils.deg2Rad;
       instance.label = Label.gimmieLabel(instance.holder, '', {
-        color: '#000000',
-        font: '15px Helvetica',
+        color: '#43960e',
+        font: 'bold 15px Montserrat',
         wordWrap: {
           width: 250
         },

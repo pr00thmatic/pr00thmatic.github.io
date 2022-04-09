@@ -22,7 +22,7 @@ var Answers = (() => {
       // answer.holder.rotation = utils.randomIntBetween(0,5) * utils.deg2Rad;
       answer.statement = Label.gimmieLabel(answer.holder, statements[i], {
         color: '#000000',
-        font: 'bold 15px Helvetica',
+        font: 'bold 15px Montserrat',
         wordWrap: {
           width: 220
         },
