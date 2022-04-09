@@ -19,7 +19,7 @@ var Answers = (() => {
       };
       instance.options.push(answer);
       answer.holder = scene.add.tileSprite(0,0, 250, offset * 0.8, 'grid sheet').setOrigin(0.5, 0).setInteractive();
-      answer.holder.rotation = utils.randomIntBetween(0,5) * utils.deg2Rad;
+      // answer.holder.rotation = utils.randomIntBetween(0,5) * utils.deg2Rad;
       answer.statement = Label.gimmieLabel(answer.holder, statements[i], {
         color: '#000000',
         font: 'bold 15px Helvetica',
