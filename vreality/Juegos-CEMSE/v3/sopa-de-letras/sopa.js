@@ -21,7 +21,7 @@ var Sopa = ( function () {
     sopa.clearBold = function () {
       for (var r=0; r<rows; r++) {
         for (var c=0; c<columns; c++) {
-          sopa.cells[r][c].label.setFontStyle("");
+          sopa.cells[r][c].label.setFontStyle("12px Montserrat");
         }
       }
     };
@@ -35,7 +35,7 @@ var Sopa = ( function () {
       do {
         current.r += step.r; current.c += step.c;
         line.push(sopa.cells[current.r][current.c]);
-        sopa.cells[current.r][current.c].label.setFontStyle("bold");
+        sopa.cells[current.r][current.c].label.setFontStyle("bold 12px Montserrat");
         guard++;
       } while ((current.r !== capsule.origin.r || current.c !== capsule.origin.c) && guard < 1000);
 
@@ -110,7 +110,7 @@ var Sopa = ( function () {
       if ((difR === difC || difR === 0 || difC === 0) && (dragOrigin.r !== r || dragOrigin.c !== c)) {
         currentDragbox.setValid(true);
         var line = sopa.getLine({ origin: {r: dragOrigin.r, c: dragOrigin.c}, end: {r: r, c: c} });
-        for (let i=0; i<line.length; i++) line[i].label.setFontStyle("bold");
+        for (let i=0; i<line.length; i++) line[i].label.setFontStyle("bold 12px Montserrat");
       } else {
         currentDragbox.setValid(false);
       }
@@ -139,7 +139,11 @@ var Sopa = ( function () {
   }; });
 
   var createLabel = function (cell) {
-    cell.label = Label.gimmieLabel(cell.sprite, '');
+    cell.label = Label.gimmieLabel(cell.sprite, '', {
+      font: '10px Montserrat',
+      color: '#000000',
+      align: 'center'
+    });
     cell.randomize = () => {
       cell.label.text = utils.randomPick(alfabet);
     };

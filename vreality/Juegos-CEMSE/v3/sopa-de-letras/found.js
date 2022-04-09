@@ -9,7 +9,10 @@ var Found = (() => {
       var holder = scene.add.image((i%2 === 1? mainState.width: 0) + (i%2 === 1? -1: 1) * x,
                                    y + Math.floor(i/2)*yOffset, 'word holder').
           setOrigin(i%2 === 1? 1 : 0, 0);
-      var label = Label.gimmieLabel(holder, '');
+      var label = Label.gimmieLabel(holder, '', {
+        color: '#43960e',
+        font: 'bold 12px Montserrat'
+      });
       holder.alpha = 0;
       holders.push({ sprite: holder, label: label });
     }
