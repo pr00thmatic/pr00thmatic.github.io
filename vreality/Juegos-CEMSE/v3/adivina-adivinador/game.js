@@ -1,19 +1,27 @@
 var data = [{
-  question: 'Tejido del cuerpo humano que une los huesos a los músculos.',
-  answers: ['Tendón', 'Nervios', 'Ligamentos', 'Cartílagos'],
+  question: '¿Cuáles son los roles de los líderes comunitarios?',
+  answers: ['Crear planes o proyectos para la comunidad',
+            'Identificar problemáticas dentro de la comunidad',
+            'Promover la participación de los miembros de la comunidad',
+            'Coordinar con distintas instancias e instituciones',
+            'Todas las anteriores' ],
+  correctAnswer: 4,
+}, {
+  question: 'Las y los líderes comunitarios para proteger a las niñas, niños y adolescentes pueden realizar acciones de prevención, identificación, atención y derivación de casos de violencia.',
+  answers: ['Verdadero', 'Falso' ],
   correctAnswer: 0
 }, {
-  question: '¿De qué está hecho el vidrio?',
-  answers: ['de arena', 'de cuarzo', 'de agua'],
-  correctAnswer: 0
+  question: '¿Qué ley se enfoca en la protección de las niñas, niños y adolescentes en Bolivia?',
+  answers: ['La ley de educación Avelino Siñani -Elizardo Perez',
+            'La constitución',
+            'El código Niño, Niña y Adolescente o Ley 548' ],
+  correctAnswer: 2
 }, {
-  question: '¿Cuál de estos planetas es un gigante de gas?',
-  answers: ['Saturno', 'Mercurio', 'Venus', 'Tierra', 'Marte', 'Plutón'],
-  correctAnswer: 0
-}, {
-  question: 'Cuál es el resultado de elevar un número positivo a una potencia negativa?',
-  answers: ['Negativo', 'Positivo'],
-  correctAnswer: 1
+  question: 'Según el Código Niño, Niña y Adolescente, ¿quiénes son los encargados de proteger el bienestar de los niños, niñas y adolescentes?',
+  answers: ['El gobierno',
+            'Los padres y madres',
+            'El Estado, los gobernantes, las familias y la sociedad en general' ],
+  correctAnswer: 2
 }];
 var scene;
 var gameStatus = {
