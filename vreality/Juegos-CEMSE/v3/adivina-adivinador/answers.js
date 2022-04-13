@@ -15,7 +15,7 @@ var Answers = (() => {
     var offset = config.spaceHeight / statements.length;
     for (let i=0; i<statements.length; i++) {
       let answer = {
-        isCorrect: i == correctIndex
+        isCorrect: correctIndex.length === undefined? i == correctIndex: correctIndex.indexOf(i) !== -1
       };
       instance.options.push(answer);
       answer.holder = scene.add.tileSprite(0,0, 250, offset * 0.8, 'grid sheet').setOrigin(0.5, 0).setInteractive();
@@ -53,7 +53,9 @@ var Answers = (() => {
         if (!wasCorrect && answer.isCorrect) {
           setTimeout(((answer) => { return () => { answer.rebeal() }; })(answer), 500);
         }
-        answer.holder.off('pointerdown', answer.onPointerdown);
+        if (gameStatus.missingAnswers <= 0) {
+          answer.holder.off('pointerdown', answer.onPointerdown);
+        }
       }; })(answer)
 
       answer.holder.on('pointerdown', answer.onPointerdown);

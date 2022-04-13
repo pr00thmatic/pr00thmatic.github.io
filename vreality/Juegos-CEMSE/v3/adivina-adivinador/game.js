@@ -1,28 +1,4 @@
-var data = [{
-  question: '¿Cuáles son los roles de los líderes comunitarios?',
-  answers: ['Crear planes o proyectos para la comunidad',
-            'Identificar problemáticas dentro de la comunidad',
-            'Promover la participación de los miembros de la comunidad',
-            'Coordinar con distintas instancias e instituciones',
-            'Todas son correctas' ],
-  correctAnswer: 4,
-}, {
-  question: 'Las y los líderes comunitarios para proteger a las niñas, niños y adolescentes pueden realizar acciones de prevención, identificación, atención y derivación de casos de violencia.',
-  answers: ['Verdadero', 'Falso' ],
-  correctAnswer: 0
-}, {
-  question: '¿Qué ley se enfoca en la protección de las niñas, niños y adolescentes en Bolivia?',
-  answers: ['La ley de educación Avelino Siñani -Elizardo Perez',
-            'La constitución',
-            'El código Niño, Niña y Adolescente o Ley 548' ],
-  correctAnswer: 2
-}, {
-  question: 'Según el Código Niño, Niña y Adolescente, ¿quiénes son los encargados de proteger el bienestar de los niños, niñas y adolescentes?',
-  answers: ['El gobierno',
-            'Los padres y madres',
-            'El Estado, los gobernantes, las familias y la sociedad en general' ],
-  correctAnswer: 2
-}];
+let data = [];
 var scene;
 var gameStatus = {
   current: 0,
@@ -31,6 +7,9 @@ var gameStatus = {
 var mainState = ( function () {
 
   var preload = function () {
+    let params = new URLSearchParams(window.location.search);
+    data = banco.trivia[params.get('capsula')];
+
     scene = this;
     var assets = 'adivina-adivinador/assets/';
     scene.load.image('background', assets + 'background.png');
@@ -65,6 +44,9 @@ var mainState = ( function () {
   };
 
   var nextQuestion = function (wasRight) {
+    let currentData = data[gameStatus.current];
+    if (wasRight && --gameStatus.missingAnswers > 0) return;
+
     gameStatus.current++;
     gameStatus.right += wasRight? 1: 0;
     setTimeout(() => {
@@ -91,6 +73,8 @@ var mainState = ( function () {
   };
 
   var updateCurrentQuestion = function () {
+    gameStatus.missingAnswers = data[gameStatus.current].correctAnswer.length === undefined? 1:
+      data[gameStatus.current].correctAnswer.length;
     Question.load(data[gameStatus.current].question);
     Answers.load(data[gameStatus.current].answers, data[gameStatus.current].correctAnswer);
   };
@@ -108,16 +92,3 @@ var mainState = ( function () {
 })();
 
 var game = new Phaser.Game(mainState);
-WebFontConfig = {
-
-  //  'active' means all requested fonts have finished loading
-  //  We set a 1 second delay before calling 'createText'.
-  //  For some reason if we don't the browser cannot render the text the first time it's created.
-  active: function() { game.time.events.add(Phaser.Timer.SECOND, createText, this); },
-
-  //  The Google Fonts we want to load (specify as many as you like in the array)
-  google: {
-    families: ['Revalia']
-  }
-
-};

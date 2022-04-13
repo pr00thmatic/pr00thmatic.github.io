@@ -9,7 +9,7 @@ var Result = (() => {
 
       instance.label = scene.add.text(mainState.width/2, instance.sprite.getCenter().y - 120,
                                       'Tu puntaje es:\n' +
-                                      100 * (gameStatus.right / data.length) +
+                                      Math.round(100 * (gameStatus.right / data.length)) +
                                       ' de 100', {
                                         color: '#aa0000',
                                         font: 'bold 20px Helvetica',
