@@ -6,6 +6,7 @@ var Label = {
     text.setDepth(gameObject.depth+1);
 
     gameStatus.emitter.on('update', () => {
+      if (!gameObject.getCenter) return;
       text.x = gameObject.getCenter().x;
       text.y = gameObject.getCenter().y;
     });

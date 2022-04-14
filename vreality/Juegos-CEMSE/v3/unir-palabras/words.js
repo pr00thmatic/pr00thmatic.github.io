@@ -20,8 +20,11 @@ var Words = (() => {
   };
 
   var createColumn = function (columnName, posX, origin, dragboxPosX, data) {
+    gameStatus.columns = gameStatus.columns? gameStatus.columns: {};
+    gameStatus.columns[columnName] = [];
     let column = [];
-    for (let i=0; i<data[columnName].length; i++) column.push({ statement: data[columnName], id: i });
+    for (let i=0; i<data[columnName].length; i++) column.push({ statement: data[columnName][i], id: i });
+    data[columnName] = column;
 
     utils.shuffle(data[columnName]);
 
@@ -33,7 +36,7 @@ var Words = (() => {
 
       option.dragboxPosX = dragboxPosX;
       option.columnName = columnName;
-      option.text = scene.add.text(pos.x, pos.y, data[columnName][i], {
+      option.text = scene.add.text(pos.x, pos.y, data[columnName][i].statement, {
         font: '12px Montserrat',
         align: 'left',
         color: '#fff',
@@ -41,6 +44,7 @@ var Words = (() => {
           width: width - 20
         }
       }).setOrigin(0.5, 0.5);
+      option.id = data[columnName][i].id;
 
       option.sprite = scene.add.nineslice(pos.x, pos.y, width,
                                           config.heightMargin * 2 + option.text.height,
@@ -51,6 +55,7 @@ var Words = (() => {
       option.text.setPosition(option.sprite.getCenter().x, option.sprite.getCenter().y).
         setDepth(10);
       sum += config.offset + option.sprite.height;
+      gameStatus.columns[columnName].push(option);
 
       gameStatus.emitter.emit('column option created', option);
     }
@@ -78,6 +83,9 @@ var Words = (() => {
       instance.currentDragbox.update();
       instance.currentDragbox.setTint(utils.randomPick(Words.config.finalColors));
       instance.currentDragbox = null;
+      let left = instance.underPointer.columnName === 'left'? instance.underPointer: selected;
+      let right = instance.underPointer.columnName === 'right'? instance.underPointer: selected;
+      gameStatus.connections.push([left.id, right.id]);
     } else {
       console.log('already connected');
       destroyCurrentDragbox();
