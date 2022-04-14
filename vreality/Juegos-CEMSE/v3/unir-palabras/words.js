@@ -1,16 +1,12 @@
 var Words = (() => {
   var instance = {};
   var config = {
-    margins: { x: 40, y: 170 },
-    containerHeight: 370,
+    margins: { x: 15, y: 25 },
+    containerHeight: 500,
     offset: 8,
-    width: 100,
+    width: 150,
     heightMargin: 5,
-    finalColors: [
-      0xff5b52, 0x41b238,
-      0x4249b5, 0x4cc9cc,
-      0xdc84d8, 0x84dca8
-    ]
+    finalColors: [ 0x000000, 0x222222, 0x444444, 0x666666, 0x888888, 0xaaaaaa ]
   };
 
   var create = function (data) {
@@ -18,32 +14,39 @@ var Words = (() => {
     scene.input.on('pointerup', onPointerup);
 
     createColumn('left', config.margins.x, { x: 0, y: 0 },
-                 config.width + config.margins.x - 10, data);
+                 config.width * 0.8 + config.margins.x, data);
     createColumn('right', mainState.width - config.margins.x, { x: 1, y: 0},
-                 mainState.width - (config.width + config.margins.x) + 10, data);
+                 mainState.width - (config.width * 1.2 + config.margins.x), data);
   };
 
   var createColumn = function (columnName, posX, origin, dragboxPosX, data) {
+    let column = [];
+    for (let i=0; i<data[columnName].length; i++) column.push({ statement: data[columnName], id: i });
+
     utils.shuffle(data[columnName]);
 
     var sum = 0;
     for (let i=0; i<data[columnName].length; i++) {
+      let width = config.width * (columnName === 'left'? 0.8: 1.2);
       var option = {};
       var pos = { x: posX, y: config.margins.y + sum };
 
       option.dragboxPosX = dragboxPosX;
       option.columnName = columnName;
       option.text = scene.add.text(pos.x, pos.y, data[columnName][i], {
-        font: '12px Helvetica',
-        align: 'center',
-        color: '#000000',
+        font: '12px Montserrat',
+        align: 'left',
+        color: '#fff',
         wordWrap: {
-          width: 90
+          width: width - 20
         }
       }).setOrigin(0.5, 0.5);
 
-      option.sprite = scene.add.tileSprite(pos.x, pos.y, config.width, config.heightMargin * 2 + option.text.height, columnName).
+      option.sprite = scene.add.nineslice(pos.x, pos.y, width,
+                                          config.heightMargin * 2 + option.text.height,
+                                          'info-box-fill', 10).
         setOrigin(origin.x, origin.y).
+        setTint(gameStatus.colors.stroke).
         setInteractive();
       option.text.setPosition(option.sprite.getCenter().x, option.sprite.getCenter().y).
         setDepth(10);

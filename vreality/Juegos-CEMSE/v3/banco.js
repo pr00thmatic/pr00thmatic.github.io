@@ -162,5 +162,21 @@ let banco = {
         correctAnswer: 2
       }
     ]
+  },
+
+  unir: {
+    lider_2_1: {
+      left: [
+        'Incidencia política', 'Derecho a la participación', 'Empoderamiento'
+      ],
+      right: [
+        'Proceso debidamente planificado que tiene como objetivo influir sobre las políticas públicas que contribuyan al bienestar de las personas.',
+        'Permite que puedan expresar sus opiniones en todo los asuntos que las y los involucran, que sean escuchadas y escuchados y que puedan elegir sus propios beneficios.',
+        'El impacto que tiene la participación en su desarrollo personal está relacionado con el desarrollo de la autoestima, la autonomía, las habilidades sociales, la identidad, la solidaridad, la seguridad y la dignidad.'
+      ],
+      answers: [
+        [0,0], [1,1], [2,2]
+      ]
+    },
   }
 };

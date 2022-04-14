@@ -3,10 +3,7 @@
 //   right: [ 'arácnidos e insectos', 'mamíferos', 'aves', 'reptiles', 'peces' ]
 // };
 
-var data = {
-  left: [ 'manzana', 'silla', 'dona', 'gato', 'mesa' ],
-  right: [ 'tiene cuatro patas', 'es una comida popular', 'está vivo' ]
-};
+var data;
 var scene;
 var gameStatus = {};
 var mainState = ( function () {
@@ -15,6 +12,8 @@ var mainState = ( function () {
     scene = this;
     var assets = 'unir-palabras/assets/';
     gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
+    gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
+    data = banco.unir[gameStatus.capsulaID];
     utils.preloadSharedAssets(scene);
     scene.load.image('left', assets + 'left.png');
     scene.load.image('right', assets + 'right.png');
@@ -27,6 +26,18 @@ var mainState = ( function () {
 
     this.background = utils.createBackground();
     Words.create(data);
+    this.evaluate = {
+      evaluate: function () { console.log('hola'); }
+    };
+    this.evaluate.button = scene.add.image(mainState.width / 2, mainState.height - 20, 'button').
+      setOrigin(0.5, 1).
+      setInteractive();
+    this.evaluate.button.on('pointerdown', this.evaluate.evaluate);
+    this.evaluate.label = Label.gimmieLabel(this.evaluate.button, 'EVALUAR', {
+      font: 'bold 12px Montserrat',
+      color: '#ffffff',
+      align: 'center'
+    });
 
     gameStatus.emitter.emit('create');
   }
