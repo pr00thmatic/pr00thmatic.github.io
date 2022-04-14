@@ -61,6 +61,34 @@ var utils = {
     return nineslice;
   },
 
+  preloadSharedAssets : function (scene) {
+    scene.load.image('background-fill', 'shared-assets/generic-background-fill.png');
+    scene.load.image('background-stroke', 'shared-assets/generic-background-stroke.png');
+    scene.load.image('button', 'shared-assets/button.png');
+    scene.load.image('progress-bar', 'shared-assets/progress-bar.png');
+    scene.load.image('info-box-fill', 'shared-assets/info-box-fill.png');
+    scene.load.image('info-box-stroke', 'shared-assets/info-box-stroke.png');
+    scene.load.image('ok', 'shared-assets/ok.png');
+    scene.load.image('oknt', 'shared-assets/oknt.png');
+    scene.load.image('results', 'shared-assets/results.png');
+  },
+
+  preloadCapsuleIdFromURL : function () {
+    return new URLSearchParams(window.location.search).get('capsula');
+  },
+
+  createBackground : function () {
+    // pos, size, pic, radius
+    let id = utils.preloadCapsuleIdFromURL();
+    let background = utils.createBorderNineslice({x:0, y:0}, {x:360, y:600}, 'background', 88).
+      setOrigin(0,0).
+      setDepth(-100);
+    background.fill.setTint(colors[id.split('_')[0]].fill);
+    background.stroke.setTint(colors[id.split('_')[0]].stroke);
+
+    return background
+  },
+
   deg2Rad : 2 * Math.PI / 360,
   rad2Deg : 360 / (Math.PI * 2)
 };

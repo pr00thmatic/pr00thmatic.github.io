@@ -7,31 +7,15 @@ var gameStatus = {
 var mainState = ( function () {
 
   var preload = function () {
-    let params = new URLSearchParams(window.location.search);
-    data = banco.trivia[params.get('capsula')];
-    data.capsulaId = params.get('capsula');
-
+    let id = utils.preloadCapsuleIdFromURL();
+    data = banco.trivia[id]; data.capsulaId = id;
     scene = this;
-    scene.load.image('background-fill', 'shared-assets/generic-background-fill.png');
-    scene.load.image('background-stroke', 'shared-assets/generic-background-stroke.png');
-    scene.load.image('button', 'shared-assets/button.png');
-    scene.load.image('progress-bar', 'shared-assets/progress-bar.png');
-    scene.load.image('info-box-fill', 'shared-assets/info-box-fill.png');
-    scene.load.image('info-box-stroke', 'shared-assets/info-box-stroke.png');
-    scene.load.image('ok', 'shared-assets/ok.png');
-    scene.load.image('oknt', 'shared-assets/oknt.png');
-
-    scene.load.image('results', 'shared-assets/results.png');
+    utils.preloadSharedAssets(scene);
   }
 
   var create = function () {
     gameStatus.emitter = new Phaser.Events.EventEmitter();
-    // pos, size, pic, radius
-    this.background = utils.createBorderNineslice({x:0, y:0}, {x:360, y:600}, 'background', 88).
-      setOrigin(0,0).
-      setDepth(-100);
-    this.background.fill.setTint(colors[data.capsulaId.split('_')[0]].fill);
-    this.background.stroke.setTint(colors[data.capsulaId.split('_')[0]].stroke);
+    this.background = utils.createBackground();
 
     utils.shuffle(data);
     gameStatus.emitter.on('question answered', nextQuestion);
