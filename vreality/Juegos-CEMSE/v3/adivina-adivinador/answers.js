@@ -1,8 +1,9 @@
 var Answers = (() => {
   var config = {
-    marginY : 300,
-    spaceHeight : 260,
-    indicatorPosX : 330,
+    marginX : 40,
+    marginY : 230,
+    spaceHeight : 320,
+    indicatorPosX : 20,
     correctColor: 0x43960e,
     incorrectColor: 0xe55c00
   };
@@ -13,20 +14,22 @@ var Answers = (() => {
   var load = function (statements, correctIndex) {
     Answers.destroy();
     var offset = config.spaceHeight / statements.length;
+    // var offset = 20;
+    // let height = (config.spaceHeight - offset * statements.length) / statements.length;
     for (let i=0; i<statements.length; i++) {
       let answer = {
         isCorrect: correctIndex.length === undefined? i == correctIndex: correctIndex.indexOf(i) !== -1
       };
       instance.options.push(answer);
-      answer.holder = scene.add.tileSprite(0,0, 250, offset * 0.8, 'grid sheet').setOrigin(0.5, 0).setInteractive();
-      // answer.holder.rotation = utils.randomIntBetween(0,5) * utils.deg2Rad;
+      answer.holder = scene.add.nineslice(0, 0, 260, offset * 0.93, 'info-box-fill', 10).
+        setOrigin(0, 0).setInteractive();
       answer.statement = Label.gimmieLabel(answer.holder, statements[i], {
         color: '#000000',
-        font: 'bold 15px Montserrat',
+        font: 'bold 14px Montserrat',
         wordWrap: {
           width: 220
         },
-        align: 'center',
+        align: 'left',
       });
 
       answer.destroy = () => {
@@ -37,11 +40,11 @@ var Answers = (() => {
       };
 
       answer.rebeal = () => {
-        answer.holder.setTint(answer.isCorrect? config.correctColor: config.incorrectColor);
+        answer.holder.setTint(answer.isCorrect? colors.global.right: colors.global.wrong);
         answer.statement.setFill('#ffffff');
 
-        answer.indicator = scene.add.sprite(config.indicatorPosX, answer.holder.getCenter().y, answer.isCorrect? 'right': 'wrong');
-        answer.indicator.rotation = utils.randomIntBetween(-7, 7) * utils.deg2Rad;
+        answer.indicator = scene.add.sprite(mainState.width - config.indicatorPosX, answer.holder.getCenter().y, answer.isCorrect? 'ok': 'oknt').
+          setOrigin(1,0.5);
       };
 
       answer.onPointerdown = ((answer) => {return () => {
@@ -63,8 +66,8 @@ var Answers = (() => {
     }
     // rearrange
     utils.shuffle(instance.options);
-    for (let i=0; i<statements.length; i++) {
-      instance.options[i].holder.setPosition(mainState.width/2, config.marginY + offset * i);
+    for (let i=0; i<statements.length; i++) { // noise
+      instance.options[i].holder.setPosition(config.marginX, config.marginY + offset * i);
     }
   };
 

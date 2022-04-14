@@ -39,6 +39,28 @@ var utils = {
     return arr[utils.randomIntBetween(0, arr.length)];
   },
 
+  createBorderNineslice : function (pos, size, imgName, bbq) {
+    nineslice = {
+      fill: scene.add.nineslice(pos.x, pos.y,
+                                size.x, size.y,
+                                imgName + '-fill', bbq),
+      stroke: scene.add.nineslice(pos.x, pos.y,
+                                  size.x, size.y,
+                                  imgName + '-stroke', bbq),
+      setOrigin : function (x, y) {
+        this.fill.setOrigin(x, y); this.stroke.setOrigin(x, y); return this;
+      },
+      setDepth : function (depth) {
+        this.fill.setDepth(depth); this.stroke.setDepth(depth); return this;
+      },
+      getCenter: function () {
+        return this.fill.getCenter();
+      }
+    };
+
+    return nineslice;
+  },
+
   deg2Rad : 2 * Math.PI / 360,
   rad2Deg : 360 / (Math.PI * 2)
 };

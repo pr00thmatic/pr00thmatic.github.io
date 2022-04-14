@@ -1,3 +1,34 @@
+let colors = {
+  toHex: function (ox) { return '#' + ox.substr(2); },
+  global: {
+    wrong: '0xC14612',
+    right: '0x12C185'
+  },
+  nino: {
+    fill: '0xFFF3C8',
+    stroke: '0xFFC907'
+  },
+  puber: {
+    fill: '0xFFE790',
+    stroke: '0xFF8D07'
+  },
+  adolescente: {
+    fill: '0xFFC690',
+    stroke: '0xFA6A35'
+  },
+  cuidador: {
+    fill: '0xF5FEE2',
+    stroke: '0x87BC1F'
+  },
+  educador: {
+    fill: '0xE1FFA6',
+    stroke: '0x5D8C01'
+  },
+  lider: {
+    fill: '0xEAFFFA',
+    stroke: '0x006E54'
+  }
+};
 let banco = {
   trivia : {
     lider_1_1: [

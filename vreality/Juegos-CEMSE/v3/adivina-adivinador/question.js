@@ -7,17 +7,18 @@ var Question = (() => {
 
   var load = function (statement) {
     if (!instance.holder) {
-      instance.holder = scene.add.tileSprite(mainState.width/2, 140, config.width, config.height, 'line sheet').
+      instance.holder = utils.createBorderNineslice({x:mainState.width/2, y:80},
+                                                    {x:config.width, y:config.height}, 'info-box', 10).
         setOrigin(0.5, 0);
-      // instance.holder.rotation = utils.randomIntBetween(-1,2) * utils.deg2Rad;
+      instance.holder.stroke.setTint(colors.global.right);
       instance.label = Label.gimmieLabel(instance.holder, '', {
-        color: '#43960e',
-        font: 'bold 15px Montserrat',
+        color: '#000',
+        font: 'bold 14px Montserrat',
         wordWrap: {
           width: 250
         },
-        align: 'center'
-      });
+        align: 'left'
+      }).setDepth(10);
     }
     instance.label.text = statement;
   };
