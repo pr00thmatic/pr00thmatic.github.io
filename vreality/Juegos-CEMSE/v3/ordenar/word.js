@@ -1,42 +1,32 @@
 var Word = {
   instances : [],
-  gimmieWord : function (position, origin, info) {
+  gimmieWord : function (positionY, info) {
     var word = {
-      sprite : scene.add.sprite(position.x, position.y, 'word').
-        setOrigin(origin.x, origin.y).
+      sprite : scene.add.nineslice(phaserConfig.width/2, positionY, 340, 50, 'info-box-fill', 5).
+        setOrigin(0.5, 0).
         setDepth(10).
+        setTint(gameStatus.colors.stroke).
         setInteractive(),
       info : info
     };
     Word.instances.push(word);
     word.sprite.parent = word;
-    word.sprite.x += word.sprite.width * (0.5 - word.sprite.originX);
-    word.sprite.y += word.sprite.height * (0.5 - word.sprite.originY);
-    word.sprite.setOrigin(0.5, 0.5);
-    word.label = Label.gimmieLabel(word.sprite, word.info.label);
-
-    word.sprite.anims.create({
-      key: 'idle',
-      frames: utils.frames('word', [0])
-    });
-    word.sprite.anims.create({
-      key: 'dragged',
-      frames: utils.frames('word', [1])
+    word.label = Label.gimmieLabel(word.sprite, word.info.label,{
+      color: '#fff',
+      font: '12px Montserrat',
+      fixedWidth: 320,
+      wordWrap: { width: 320 },
+      align: 'left',
     });
 
     scene.input.setDraggable(word.sprite);
-    scene.input.on('dragstart', function (pointer, gameObject) {
-      gameObject.anims.play('dragged');
-    });
 
+    // scene.input.on('dragstart', function (pointer, gameObject) {});
     scene.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
     });
-
-    scene.input.on('dragend', function (pointer, gameObject) {
-      gameObject.anims.play('idle');
-    });
+    // scene.input.on('dragend', function (pointer, gameObject) {});
 
     return word;
   }

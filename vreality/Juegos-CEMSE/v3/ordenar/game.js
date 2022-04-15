@@ -1,18 +1,8 @@
 var config = {
   words: {
-    margin: { x: 40, y: 210 },
-    yOffset: 45,
-    amount: 8,
-    fakeBackend: [
-      { category: 'Ropa', label: 'Gorra' },
-      { category: 'Dulce', label: 'Chocolate' },
-      { category: 'Salado', label: 'Pizza' },
-      { category: 'Mueble', label: 'Cama' },
-      { category: 'Ropa', label: 'Zapatos' },
-      { category: 'Dulce', label: 'Galletas' },
-      { category: 'Salado', label: 'Lasaña' },
-      { category: 'Mueble', label: 'Mesa' }
-    ]
+    margin: { x: 10, y: 150 },
+    yOffset: 52,
+    fakeBackend: null
   }
 };
 
@@ -20,7 +10,10 @@ var phaserConfig = {
   type: Phaser.WEBGL,
   width: 360,
   height: 600,
-  // parent: 'phaser-
+  transparent: true,
+  plugins: {
+    global: [ NineSlice.Plugin.DefaultCfg ]
+  },
   scene: {
     preload: preload,
     create: create,
@@ -38,6 +31,10 @@ var scene;
 
 function preload () {
   scene = this;
+  gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
+  config.words.fakeBackend = banco.ordenar[gameStatus.capsulaID];
+  utils.preloadSharedAssets(scene);
+  gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
   scene.load.spritesheet('word', 'ordenar/assets/word.png', {frameWidth: 130, frameHeight: 40});
   scene.load.spritesheet('container', 'ordenar/assets/container.png', { frameWidth: 140, frameHeight: 160 });
   scene.load.image('background', 'ordenar/assets/background.png');
@@ -47,17 +44,10 @@ function create () {
   gameStatus.emitter = new Phaser.Events.EventEmitter();
   utils.shuffle(config.words.fakeBackend);
 
-  var background = scene.add.sprite(0,0, 'background').
-      setOrigin(0,0).
-      setDepth(-100);
+  utils.createBackground();
 
-  for (var i=0; i<config.words.amount; i++) {
-    var left = (i%2) == 0;
-    var j = Math.floor(i/2);
-    var word = Word.gimmieWord({
-      x: (left? config.words.margin.x: phaserConfig.width - config.words.margin.x),
-      y: config.words.margin.y + (j * config.words.yOffset)
-    }, { x: (left? 0: 1) , y: 0 }, config.words.fakeBackend[i]);
+  for (var i=0; i<config.words.fakeBackend.length; i++) {
+    let word = Word.gimmieWord(config.words.margin.y + i * config.words.yOffset, config.words.fakeBackend[i]);
   }
 
   Container.gimmieContainer({ x: 0, y: 0 }, 'Ropa');

@@ -178,5 +178,29 @@ let banco = {
         [0,0], [1,1], [2,2]
       ]
     },
+  },
+
+  ordenar: {
+    lider_2_1: [
+      {
+        category: 'Se garantiza el derecho a la participación',
+        label: 'Una familia debe mudarse, los padres tienen una conversación con sus hijos al respecto.'
+      }, {
+        category: 'Se garantiza el derecho a la participación',
+        label: 'En la feria de la comunidad, los adolescentes organizan actividades de su agrado.'
+      }, {
+        category: 'Se garantiza el derecho a la participación',
+        label: 'En la escuela, se realizan las elecciones del centro de estudiantes.'
+      }, {
+        category: 'No se garantiza el derecho a la participación',
+        label: 'Los padres de una familia deciden cambiar de colegio a sus hijas, sin consultarles.'
+      }, {
+        category: 'No se garantiza el derecho a la participación',
+        label: 'Los adolescentes de una escuela desean hacer una queja, sin embargo, el director no los atiende.'
+      }, {
+        category: 'No se garantiza el derecho a la participación',
+        label: 'Los niños, niñas y adolescentes no pueden asistir a las asambleas de la comunidad.'
+      }
+    ]
   }
 };
