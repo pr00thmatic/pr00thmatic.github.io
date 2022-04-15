@@ -3,7 +3,7 @@ var Container = {
 
   config: {
     margin: { x: 35, y: 40 },
-    categories: ['Ropa', 'Dulce', 'Salado', 'Mueble'],
+    categories: []
     innerMargin: { x: 10, y: 30 },
     wordOffsetY: 40+5
   },
