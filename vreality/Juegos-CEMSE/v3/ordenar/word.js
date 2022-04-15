@@ -1,5 +1,14 @@
 var Word = {
   instances : [],
+
+  createWords : function () {
+    let marginY = Container.endingPosY();
+    for (var i=0; i<config.words.fakeBackend.length; i++) {
+      let word = this.gimmieWord(1 + marginY + i * config.words.yOffset,
+                                 config.words.fakeBackend[i]);
+    }
+  },
+
   gimmieWord : function (positionY, info) {
     var word = {
       sprite : scene.add.nineslice(phaserConfig.width/2, positionY, 340, 50, 'info-box-fill', 5).

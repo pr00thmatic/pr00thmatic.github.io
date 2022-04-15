@@ -1,6 +1,6 @@
 var config = {
   words: {
-    margin: { x: 10, y: 150 },
+    margin: { x: 10, y: 140 },
     yOffset: 52,
     fakeBackend: null
   }
@@ -33,6 +33,8 @@ function preload () {
   scene = this;
   gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
   config.words.fakeBackend = banco.ordenar[gameStatus.capsulaID];
+  Container.readCategories();
+
   utils.preloadSharedAssets(scene);
   gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
   scene.load.spritesheet('word', 'ordenar/assets/word.png', {frameWidth: 130, frameHeight: 40});
@@ -46,14 +48,8 @@ function create () {
 
   utils.createBackground();
 
-  for (var i=0; i<config.words.fakeBackend.length; i++) {
-    let word = Word.gimmieWord(config.words.margin.y + i * config.words.yOffset, config.words.fakeBackend[i]);
-  }
-
-  Container.gimmieContainer({ x: 0, y: 0 }, 'Ropa');
-  Container.gimmieContainer({ x: 1, y: 0 }, 'Dulce');
-  Container.gimmieContainer({ x: 0, y: 1 }, 'Salado');
-  Container.gimmieContainer({ x: 1, y: 1 }, 'Mueble');
+  Word.createWords();
+  Container.createContainers();
 
   gameStatus.statusLabel = scene.add.text(0,0, 'INCOMPLETO', { color: 0x222222 });
   gameStatus.emitter.on('container updated', () => {

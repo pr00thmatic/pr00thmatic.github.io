@@ -2,28 +2,49 @@ var Container = {
   instances: [],
 
   config: {
-    margin: { x: 35, y: 40 },
-    categories: []
-    innerMargin: { x: 10, y: 30 },
-    wordOffsetY: 40+5
+    categories: [],
+    innerMargin: { x: 10, y: 8 },
+    wordOffsetY: 30,
+    size: { x: 360 - 40, y: 130, yTotal: 132 }
   },
 
-  gimmieContainer : function (origin, category) {
+  endingPosY : function () {
+    return this.config.categories.length * this.config.size.yTotal + this.config.innerMargin.y;
+  },
+
+  readCategories : function () {
+    for (let i=0; i<config.words.fakeBackend.length; i++) {
+      let entry = config.words.fakeBackend[i];
+      if (this.config.categories.indexOf(entry.category) < 0) {
+        this.config.categories.push(entry.category);
+      }
+    }
+  },
+
+  createContainers : function () {
+    for (let i=0; i<this.config.categories.length; i++) {
+      this.gimmieContainer(this.config.categories[i],
+                           { x: phaserConfig.width/2,
+                             y: i * this.config.size.yTotal + this.config.innerMargin.y }, // pos
+                           { x: phaserConfig.width - 40, y: this.config.size.y }); // size
+    }
+  },
+
+  gimmieContainer : function (category, pos, width) {
     var container = {};
-    Container.initialize(container, origin, category);
-    Container.createAnims(container);
+    Container.initialize(container, pos, width, category);
     Container.createLabel(container);
 
     scene.input.
       on('dragenter', function (pointer, gameObject, dropZone) {
         if (dropZone != container.sprite) return;
-        container.sprite.anims.play('highlightToDrop');
+        container.sprite.setTint('0xe0dd60');
       });
 
     scene.input.
       on('dragleave', function (pointer, gameObject, dropZone) {
         if (dropZone != container.sprite) return;
-        container.sprite.anims.play('idle');
+        container.sprite.setTint(colors.global.right);
         var index = container.words.indexOf(gameObject.parent);
         if (index >= 0) {
           container.words.splice(index, 1);
@@ -36,7 +57,7 @@ var Container = {
     scene.input.
       on('drop', function (pointer, gameObject, dropZone) {
         if (dropZone != container.sprite || gameObject.parent === null) return;
-        container.sprite.anims.play('idle');
+        container.sprite.setTint(colors.global.right);
         var index = container.words.indexOf(gameObject.parent);
         if (index < 0) {
           container.words.push(gameObject.parent);
@@ -51,25 +72,11 @@ var Container = {
 
   },
 
-  createAnims : function (container) {
-    container.sprite.anims.create({
-      key: 'idle',
-      frames: utils.frames('container', [0])
-    });
-    container.sprite.anims.create({
-      key: 'highlightToDrop',
-      frames: utils.frames('container', [1])
-    });
-    container.sprite.anims.play('idle');
-  },
-
-  initialize : function (container, origin, category) {
-    var x = (origin.x == 1? phaserConfig.width : 0) + (origin.x == 1? -1: 1) * Container.config.margin.x;
-    var y = (origin.y == 1? phaserConfig.height : 0) + (origin.y == 1? -1: 1) * Container.config.margin.y;
-
-    container.sprite = scene.add.sprite(x, y, 'container').
-      setOrigin(origin.x, origin.y).
+  initialize : function (container, pos, size, category) {
+    container.sprite = scene.add.nineslice(pos.x, pos.y, size.x, size.y, 'info-box-fill', 5).
+      setOrigin(0.5, 0).
       setDepth(0).
+      setTint(colors.global.right).
       setInteractive();
     container.category = category;
     container.words = [];
@@ -85,7 +92,12 @@ var Container = {
   createLabel : function (container) {
     container.label = scene.add.text(container.sprite.getTopLeft().x + 10,
                                      container.sprite.getTopLeft().y + 10,
-                                     container.category, { color: 0x333333 });
+                                     container.category, {
+                                       color: '#ffffff',
+                                       font: 'bold 12px Montserrat',
+                                       width: this.config.size.x,
+                                       wordWrap: { width: this.config.size.x }
+                                     });
   },
 
   updateWordsPosition : function (container) {
