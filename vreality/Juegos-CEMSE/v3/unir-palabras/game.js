@@ -60,18 +60,10 @@ var mainState = ( function () {
 
         let hasErrors = (wrong1+wrong2) > 0;
 
-        scene.add.image(0,0, 'results').
-          setOrigin(0,0).
-          setDepth(1000)
-
-        Label.gimmieLabel({ x: mainState.width/2, y: mainState.height/2 },
-                          hasErrors? 'Tienes algunos errores': '¡Perfecto!',
-                          {
-                            color: colors.toHex(hasErrors? colors.global.wrong: colors.global.right),
-                            align: 'center',
-                            font: 'bold 14px Montserrat'
-                          }).
-          setDepth(1001);
+        utils.createResults('Tienes algunos errores', '¡Perfecto!',
+                            colors.global.wrong, colors.global.right,
+                            (wrong1 + wrong2) === 0,
+                            mainState.width, mainState.height, scene);
         // console.log('Lo siento, tienes ' + Math.abs(wrong1 - wrong2) + ' errores');
       }
     };

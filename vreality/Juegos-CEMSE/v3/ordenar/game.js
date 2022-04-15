@@ -51,24 +51,13 @@ function create () {
   Word.createWords();
   Container.createContainers();
 
-  gameStatus.statusLabel = scene.add.text(0,0, 'INCOMPLETO', { color: 0x222222 });
   gameStatus.emitter.on('container updated', () => {
-    for (var i=0; i<Container.instances.length; i++) {
-      if (!Container.instances[i].isOk()) {
-        console.log("this container isn't ok :C", Container.instances[i]);
-        gameStatus.statusLabel.text = 'INCOMPLETO';
-        return;
-      }
+    if ((gameStatus.ok + gameStatus.oknt) >= Word.totalWords) {
+      let text = 'Tu resultado es:\n' + Math.round((gameStatus.ok / Word.totalWords) * 100) + ' de 100';
+      utils.createResults(text, text, colors.global.wrong, colors.global.right,
+                          gameStatus.ok > gameStatus.oknt,
+                          phaserConfig.width, phaserConfig.height, scene);
     }
-
-    for (var i=0; i<Word.instances.length; i++) {
-      if (Word.instances[i].container == null) {
-        gameStatus.statusLabel.text = 'INCOMPLETO';
-        return;
-      }
-    }
-
-    gameStatus.statusLabel.text = 'COMPLETO!';
   });
 }
 

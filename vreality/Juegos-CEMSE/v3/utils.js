@@ -89,6 +89,28 @@ var utils = {
     return background
   },
 
+  createResults : function (badText, goodText, badColor, goodColor, isGood,
+                            width, height, scene) {
+    let background = scene.add.image(0,0, 'results').
+      setOrigin(0,0).
+      setDepth(1000).
+      setAlpha(0);
+
+    let label = Label.gimmieLabel({ x: width/2, y: height/2 },
+                      isGood? goodText: badText, {
+                        color: colors.toHex(isGood? goodColor: badColor),
+                        align: 'center',
+                        font: 'bold 14px Montserrat'
+                      }).
+      setAlpha(0).
+      setDepth(1001);
+    scene.tweens.add({
+      targets: [ background, label ],
+      alpha: 1,
+      duration: 500
+    });
+  },
+
   deg2Rad : 2 * Math.PI / 360,
   rad2Deg : 360 / (Math.PI * 2)
 };

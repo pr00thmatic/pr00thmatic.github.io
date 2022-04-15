@@ -59,12 +59,44 @@ var Container = {
         if (dropZone != container.sprite || gameObject.parent === null) return;
         container.sprite.setTint(colors.global.right);
         var index = container.words.indexOf(gameObject.parent);
+        let isOk = gameObject.parent.info.category === container.category
         if (index < 0) {
           container.words.push(gameObject.parent);
           gameObject.parent.container = container;
           Container.updateWordsPosition(container);
+          gameStatus.ok = (gameStatus.ok? gameStatus.ok: 0) + (isOk? 1: 0);
+          gameStatus.oknt = (gameStatus.oknt? gameStatus.oknt: 0) + (isOk? 0: 1);
           gameStatus.emitter.emit('container updated');
         }
+
+        let tween = scene.tweens.add({
+          targets: [ gameObject, gameObject.parent.label ],
+          alpha: 0,
+          delay: 50,
+          duration: 250,
+          onComplete: function () {
+            let image = isOk? 'ok': 'oknt';
+            let feedback = scene.add.image(gameObject.x, gameObject.y + 5, image).
+                setAlpha(0).
+                setTint('0xaaaaaa').
+                setOrigin(0.5, 0);
+
+            scene.tweens.add({
+              targets: feedback,
+              alpha: 1,
+              yoyo: true,
+              duration: 500,
+              onComplete: function () {
+                let l = gameObject.parent.label;
+                gameObject.parent = null;
+                l.destroy();
+                gameObject.destroy();
+                feedback.destroy();
+              }
+            });
+          }
+        });
+
       });
 
     Container.instances.push(container);
@@ -104,7 +136,7 @@ var Container = {
     for (var i=0; i<container.words.length; i++) {
       container.words[i].sprite.x = container.sprite.getCenter().x;
       container.words[i].sprite.y = container.sprite.getTopLeft().y +
-        Container.config.innerMargin.y + Container.config.wordOffsetY * (i+0.5);
+        Container.config.innerMargin.y + Container.config.wordOffsetY; // * (i+0.5);
     }
   }
 };

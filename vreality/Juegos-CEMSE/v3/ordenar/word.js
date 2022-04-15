@@ -7,6 +7,7 @@ var Word = {
       let word = this.gimmieWord(1 + marginY + i * config.words.yOffset,
                                  config.words.fakeBackend[i]);
     }
+    Word.totalWords = config.words.fakeBackend.length;
   },
 
   gimmieWord : function (positionY, info) {
