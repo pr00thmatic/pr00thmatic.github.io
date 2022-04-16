@@ -5,18 +5,18 @@ var mainState = ( function () {
 
   var preload = function () {
     scene = this;
-    scene.load.image('background', 'palabra-faltante/assets/background.png');
+    gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
+    utils.preloadSharedAssets(scene);
+    gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
     scene.load.image('word container', 'palabra-faltante/assets/word container.png');
     scene.load.image('blank', 'palabra-faltante/assets/blank.png');
   }
 
   var create = function () {
     gameStatus.emitter = new Phaser.Events.EventEmitter();
-    var background = scene.add.sprite(0,0, 'background').
-        setOrigin(0,0).
-        setDepth(-100);
 
-    gameStatus.story = Story.gimmieStory(samples.pez);
+    utils.createBackground();
+    gameStatus.story = Story.gimmieStory(banco.palabrasFaltantes[gameStatus.capsulaID]);
     MissingWords.gimmieMissingWords();
     VictoryCriteria.monitorVictory();
 
@@ -31,6 +31,10 @@ var mainState = ( function () {
   return { type: Phaser.WEBGL,
            width: 360,
            height: 600,
+           transparent: true,
+           plugins: {
+             global: [ NineSlice.Plugin.DefaultCfg ]
+           },
            scene: {
              preload : preload,
              create : create,

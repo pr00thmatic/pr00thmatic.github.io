@@ -7,9 +7,8 @@ var VictoryCriteria = (() => {
         }
       }
 
+      utils.displayInevitableVictory();
       gameStatus.emitter.emit('victory');
-      scene.add.text(0,0, 'COMPLETO!', { color: "#009900" }).
-        setOrigin(0,0);
     });
   };
 

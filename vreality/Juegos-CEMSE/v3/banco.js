@@ -211,4 +211,13 @@ let banco = {
   crucigrama: {
     lider_1_4: '{"words":[{"capsule":{"origin":{"r":0,"c":8},"end":{"r":10,"c":8}},"word":"CAPACIDADES","number":{"position":{"x":143,"y":33},"number":1},"hint":{"text":"1: Las (...) son fortalezas que tenemos o podemos desarrollar para enfrentar de manera exitosa un desastre o una emergencia","position":{"x":34,"y":300}}},{"capsule":{"origin":{"r":6,"c":0},"end":{"r":6,"c":17}},"word":"GESTION DE RIESGOS","number":{"position":{"x":15,"y":129},"number":2},"hint":{"text":"2: La (...) son las diversas acciones que los gobiernos y los miembros de una comunidad deben realizar para reducir los riesgos y vivir más seguros.","position":{"x":34,"y":327}}},{"capsule":{"origin":{"r":4,"c":1},"end":{"r":9,"c":1}},"word":"RIESGO","number":{"position":{"x":31,"y":97},"number":3},"hint":{"text":"3: El (...) es el cálculo de los potenciales daños o pérdidas que se podrían producir tomando en cuenta las amenazas, las vulnerabilidades y las capacidades.","position":{"x":34,"y":354}}},{"capsule":{"origin":{"r":9,"c":4},"end":{"r":9,"c":17}},"word":"VULNERABILIDAD","number":{"position":{"x":79,"y":177},"number":4},"hint":{"text":"4: La (...) es una debilidad que tenemos en caso de que se presente una amenaza.","position":{"x":34,"y":381}}},{"capsule":{"origin":{"r":3,"c":2},"end":{"r":3,"c":14}},"word":"MEMORIA LOCAL","number":{"position":{"x":47,"y":81},"number":5},"hint":{"text":"5: La (...) de eventos adversos es una herramienta que nos permite realizar el análisis de riesgos como un primer paso para prevenir y gestionar una emergencia.","position":{"x":34,"y":408}}},{"capsule":{"origin":{"r":1,"c":8},"end":{"r":1,"c":15}},"word":"AMENAZAS","number":{"position":{"x":143,"y":49},"number":6},"hint":{"text":"6: Factores externos que representan un riesgo o peligro.","position":{"x":34,"y":435}}}],"numberStyle":{"font":"8px Helvetica","color":"#000000"},"hintStyle":{"color":"#000000","font":"15px Helvetica","wordWrap":{"width":290}}}'
   },
+
+  palabrasFaltantes : {
+    cuidador_1_2: "1. Las Infecciones de _transmisión_ sexual son enfermedades que se contagian durante las relaciones _sexuales_ sin protección.\n\n" +
+      "2. La mejor forma de prevenir las ITS y el embarazo es el correcto uso del _condón_.\n\n" +
+      "3. Violencia sexual es:\n" +
+      "   - Si alguien toca tus pechos, nalgas, boca o genitales sin tu _consentimiento_.\n" +
+      "   - Si alguien te fuerza a que lo _beses_.\n" +
+      "   - Si alguien te obliga a sacarte _fotografías_ sin ropa o en posiciones eróticas."
+  }
 };

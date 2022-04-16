@@ -12,7 +12,6 @@ var mainState = ( function () {
     gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
     utils.preloadSharedAssets(scene);
     gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
-    scene.load.image('background', 'crucigrama/assets/background.png');
     scene.load.image('cell', 'crucigrama/assets/cell.png');
     DragBox.preload('crucigrama/assets/');
 
@@ -51,11 +50,7 @@ var mainState = ( function () {
 
     gameStatus.emitter.on('start word edition', editWord);
     gameStatus.emitter.on('end word edition', endEditWord);
-    gameStatus.emitter.on('win', () => {
-      utils.createResults('¡Muy bien!', '¡Muy bien!',
-                          colors.global.wrong, colors.global.right, true,
-                          mainState.width, mainState.height, scene);
-    });
+    gameStatus.emitter.on('win', () => { utils.displayInevitableVictory(); });
     gameStatus.emitter.emit('create');
   };
 

@@ -111,6 +111,12 @@ var utils = {
     });
   },
 
+  displayInevitableVictory : function () {
+    utils.createResults('¡Muy bien!', '¡Muy bien!',
+                        colors.global.wrong, colors.global.right, true,
+                        mainState.width, mainState.height, scene);
+  },
+
   deg2Rad : 2 * Math.PI / 360,
   rad2Deg : 360 / (Math.PI * 2)
 };
