@@ -90,8 +90,15 @@ var utils = {
   },
 
   createResults : function (badText, goodText, badColor, goodColor, isGood,
-                            width, height, scene) {
-    let background = scene.add.image(0,0, 'results').
+                            width, height, scen) {
+    if (!badColor) badColor = colors.global.wrong;
+    if (!goodColor) goodColor = colors.global.right;
+    if (isGood === undefined) isGood = true;
+    if (width === undefined) width = mainState.width;
+    if (height === undefined) height = mainState.height;
+    if (!scen) scen = scene;
+
+    let background = scen.add.image(0,0, 'results').
       setOrigin(0,0).
       setDepth(1000).
       setAlpha(0);
@@ -104,11 +111,13 @@ var utils = {
                       }).
       setAlpha(0).
       setDepth(1001);
-    scene.tweens.add({
+    scen.tweens.add({
       targets: [ background, label ],
       alpha: 1,
       duration: 500
     });
+
+    return { label, background };
   },
 
   displayInevitableVictory : function () {

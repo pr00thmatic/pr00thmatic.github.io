@@ -219,5 +219,13 @@ let banco = {
       "   - Si alguien toca tus pechos, nalgas, boca o genitales sin tu _consentimiento_.\n" +
       "   - Si alguien te fuerza a que lo _beses_.\n" +
       "   - Si alguien te obliga a sacarte _fotografías_ sin ropa o en posiciones eróticas."
+  },
+
+  ahorcado: {
+    puber_1_3: [
+      'Derecho a decidir sobre mi cuerpo',
+      'Derecho a vivir seguro y protegido',
+      'Derecho a ser incluido'
+    ]
   }
 };
