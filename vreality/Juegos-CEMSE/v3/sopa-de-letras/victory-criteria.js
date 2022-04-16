@@ -11,7 +11,7 @@ var VictoryCriteria = (() => {
       for (let i=0; i<gameStatus.words.length; i++) {
         if (Sopa.compareCapsules(gameStatus.words[i].capsule, word.capsule)) {
           for (let j=0; j<word.line.length; j++) {
-            word.line[j].sprite.setTint(0xaaffaa);
+            word.line[j].sprite.setTint(colors.global.right);
           }
           Found.holders[i].disclose();
           found = true;

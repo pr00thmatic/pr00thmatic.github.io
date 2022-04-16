@@ -202,5 +202,9 @@ let banco = {
         label: 'Los niños, niñas y adolescentes no pueden asistir a las asambleas de la comunidad.'
       }
     ]
+  },
+
+  sopa: {
+    lider_1_1: '[{"capsule":{"origin":{"r":0,"c":0},"end":{"r":12,"c":12}},"word":"PARTICIPACION"},{"capsule":{"origin":{"r":5,"c":0},"end":{"r":5,"c":9}},"word":"PROTECCION"},{"capsule":{"origin":{"r":4,"c":11},"end":{"r":12,"c":11}},"word":"EDUCACION"},{"capsule":{"origin":{"r":8,"c":1},"end":{"r":8,"c":9}},"word":"IDENTIDAD"},{"capsule":{"origin":{"r":12,"c":2},"end":{"r":8,"c":2}},"word":"SALUD"},{"capsule":{"origin":{"r":1,"c":4},"end":{"r":1,"c":11}},"word":"LIBERTAD"}]'
   }
 };

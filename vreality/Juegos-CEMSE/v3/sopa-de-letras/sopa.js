@@ -82,7 +82,8 @@ var Sopa = ( function () {
     sopa.cells[r][c] = {
       sprite: scene.add.image((360 - columns * 20)/2 +c*20, 40+r*20, 'cell').
         setOrigin(0,0).
-        setInteractive()
+        setInteractive().
+        setTint(gameStatus.colors.stroke)
     };
     createLabel(sopa.cells[r][c], r, c);
 
@@ -94,7 +95,12 @@ var Sopa = ( function () {
   };
 
   var pointerdown = ((sopa, r, c) => { return () => {
-    currentDragbox = DragBox.gimmieDragBox(sopa.cells[r][c].sprite.getCenter().x, sopa.cells[r][c].sprite.getCenter().y);
+    let x = sopa.cells[r][c].sprite.getCenter().x;
+    let y = sopa.cells[r][c].sprite.getCenter().y;
+    currentDragbox = DragBox.gimmieDragBox(x, y, {
+      validColor: colors.global.right,
+      invalidColor: colors.global.wrong
+    });
     currentDragbox.setValid(false);
     dragOrigin = { r: r, c: c };
   }; });
@@ -141,7 +147,7 @@ var Sopa = ( function () {
   var createLabel = function (cell) {
     cell.label = Label.gimmieLabel(cell.sprite, '', {
       font: '10px Montserrat',
-      color: '#000000',
+      color: '#ffffff',
       align: 'center'
     });
     cell.randomize = () => {

@@ -8,9 +8,11 @@ var Found = (() => {
     for (var i=0; i<14; i++) {
       var holder = scene.add.image((i%2 === 1? mainState.width: 0) + (i%2 === 1? -1: 1) * x,
                                    y + Math.floor(i/2)*yOffset, 'word holder').
-          setOrigin(i%2 === 1? 1 : 0, 0);
+          setOrigin(i%2 === 1? 1 : 0, 0).
+          setTint(gameStatus.colors.stroke);
       var label = Label.gimmieLabel(holder, '', {
-        color: '#43960e',
+        // color: colors.toHex(colors.global.right),
+        color: '#fff',
         font: 'bold 12px Montserrat'
       });
       holder.alpha = 0;
@@ -21,8 +23,13 @@ var Found = (() => {
       for (let i=0; i<gameStatus.words.length; i++) {
         Found.holders[i].sprite.alpha = 1
         Found.holders[i].toDisclose = gameStatus.words[i].word;
+        Found.holders[i].label.setAlpha(0.25);
+        Found.holders[i].label.text = gameStatus.words[i].word;
+        Found.holders[i].disclosed = false;
+
         Found.holders[i].disclose = function () {
-          this.label.text = this.toDisclose;
+          Found.holders[i].label.setAlpha(1);
+          Found.holders[i].disclosed = true;
         }
       }
     });

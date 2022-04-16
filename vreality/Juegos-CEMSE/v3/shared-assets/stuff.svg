@@ -11,6 +11,7 @@
    sodipodi:docname="stuff.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -23,9 +24,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.64903826"
-     inkscape:cx="-652.50391"
-     inkscape:cy="95.525956"
+     inkscape:zoom="32"
+     inkscape:cx="-133.95313"
+     inkscape:cy="-266.96875"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -196,6 +197,40 @@
            y="12.94429"
            rx="6.479353"
            ry="6.479353" />
+      </g>
+    </g>
+    <image
+       width="5.2916665"
+       height="5.2916665"
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAC1JREFUeNpi/BIuyUAuYAFi7hXPyND5NUKKiYECMKp5VPOo5uGjmZGS
+YgggwACZ4QXxexS6qgAAAABJRU5ErkJggg==
+"
+       id="image847"
+       x="-0.47538304"
+       y="-34.538639" />
+    <g
+       id="g1680"
+       inkscape:export-filename="D:\Vitacora con V\pr00thmatic.github.io\vreality\Juegos-CEMSE\v3\sopa-de-letras\assets\cell.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="rect2242"
+         style="fill:none;fill-opacity:0.397196;stroke:none;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="M -139.29688 -278.95508 L -139.29688 -258.95508 L -119.29688 -258.95508 L -119.29688 -278.95508 L -139.29688 -278.95508 z M -134.9668 -277.70312 L -123.62891 -277.70312 C -121.89906 -277.70313 -120.55078 -276.35485 -120.55078 -274.625 L -120.55078 -263.28711 C -120.55078 -261.55726 -121.89906 -260.20898 -123.62891 -260.20898 L -134.9668 -260.20898 C -136.69664 -260.20898 -138.04297 -261.5568 -138.04297 -263.28711 L -138.04297 -274.625 C -138.04296 -276.35531 -136.69664 -277.70312 -134.9668 -277.70312 z "
+         transform="matrix(0.26458333,0,0,0.26458333,44.19233,38.831319)" />
+      <g
+         id="rect1098"
+         style="fill:#ffffff;fill-opacity:0.675234">
+        <path
+           id="path1175"
+           style="color:#000000;fill:#ffffff;fill-opacity:0.675234;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+           sodipodi:type="inkscape:offset"
+           inkscape:radius="-0.7539295"
+           inkscape:original="M -134.9668 -278.45703 C -137.09783 -278.45703 -138.79687 -276.75604 -138.79688 -274.625 L -138.79688 -263.28711 C -138.79688 -261.15607 -137.09783 -259.45508 -134.9668 -259.45508 L -123.62891 -259.45508 C -121.49787 -259.45508 -119.79688 -261.15607 -119.79688 -263.28711 L -119.79688 -274.625 C -119.79688 -276.75604 -121.49787 -278.45703 -123.62891 -278.45703 L -134.9668 -278.45703 z "
+           transform="matrix(0.26458333,0,0,0.26458333,44.19233,38.831319)"
+           d="m -134.9668,-277.70312 c -1.72984,0 -3.07616,1.34781 -3.07617,3.07812 v 11.33789 c 0,1.73031 1.34633,3.07813 3.07617,3.07813 h 11.33789 c 1.72985,0 3.07813,-1.34828 3.07813,-3.07813 V -274.625 c 0,-1.72985 -1.34828,-3.07813 -3.07813,-3.07812 z" />
       </g>
     </g>
   </g>
