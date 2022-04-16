@@ -60,6 +60,11 @@ var Sopa = ( function () {
         word.line[word.editingCellIndex].sprite.setTint(0xffff00);
       };
 
+      sopa.cancelEdition = function (word) {
+        gameStatus.emitter.off('keyboard.keyPress', editCell);
+        gameStatus.emitter.emit('sopa.wordCompleted', word);
+      }
+
       // subscribe, edit the first cell.
       word.editCells = function () {
         gameStatus.emitter.on('keyboard.keyPress', editCell);

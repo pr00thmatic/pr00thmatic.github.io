@@ -47,8 +47,25 @@ var mainState = ( function () {
       Loader.load(gameStatus.puzzleString);
     }
     gameStatus.keyboard.create();
+    gameStatus.keyboard.setVisible(false);
+
+    gameStatus.emitter.on('start word edition', editWord);
+    gameStatus.emitter.on('end word edition', endEditWord);
+    gameStatus.emitter.on('win', () => {
+      utils.createResults('¡Muy bien!', '¡Muy bien!',
+                          colors.global.wrong, colors.global.right, true,
+                          mainState.width, mainState.height, scene);
+    });
     gameStatus.emitter.emit('create');
-  }
+  };
+
+  var editWord = function (word) {
+    gameStatus.keyboard.setVisible(true);
+  };
+
+  var endEditWord = function (word) {
+    gameStatus.keyboard.setVisible(false);
+  };
 
   var update = function (time, deltaTime) {
     gameStatus.deltaTime = deltaTime / 1000;

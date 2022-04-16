@@ -3,6 +3,7 @@ var Sopa = ( function () {
   var tileSize = 20;
 
   var gimmieSopa = function (config) {
+    tileSize = config.cellSize? config.cellSize: tileSize;
     var sopa = {
       rows: config.rows,
       columns: config.columns,
@@ -122,6 +123,7 @@ var Sopa = ( function () {
     sopa.cells[r][c] = {
       sprite: scene.add.image((mainState.width - sopa.columns * tileSize)/2 +c*tileSize, marginY+r*tileSize, 'cell').
         setOrigin(0,0).
+        setTint(sopa.config.cellTint? sopa.config.cellTint: '0xffffff').
         setInteractive()
     };
     createLabel(sopa.cells[r][c], r, c);

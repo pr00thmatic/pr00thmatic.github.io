@@ -8,6 +8,7 @@ var Keyboard = (() => {
       keys: {},
       margin: { x: 44, y: 470 },
       offset: 26,
+      keysArray: [],
 
       preload: function () {
         scene.load.spritesheet('keyboard', assetsFolder + 'keyboard.png', { frameWidth: 24, frameHeight: 24 });
@@ -36,6 +37,7 @@ var Keyboard = (() => {
           gameStatus.emitter.emit('keyboard.keyPress', keyEmitted);
         }; } )(keyEmitted));
         keyboard.keys[keyEmitted.letter] = keyEmitted;
+        keyboard.keysArray.push(keyEmitted);
 
         return keyEmitted;
       },
@@ -84,6 +86,13 @@ var Keyboard = (() => {
             gameStatus.emitter.emit('keyboard.keyPress', keyboard.keys[key]);
           }
         }; })(keyboard));
+      },
+
+      setVisible : function (value) {
+        for (let i=0; i<keyboard.keysArray.length; i++) {
+          keyboard.keysArray[i].sprite.alpha = value? 1: 0;
+        }
+        keyboard.hidden = true;
       }
     }
 
