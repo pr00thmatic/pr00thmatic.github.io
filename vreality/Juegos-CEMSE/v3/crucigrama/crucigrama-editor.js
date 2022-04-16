@@ -1,15 +1,4 @@
 var CrucigramaEditor = (() => {
-  let sopaConfig = {
-    rows: 13,
-    columns: 21,
-    cellSize: 16,
-    allowDiagonals: false,
-    cellAlpha: 1,
-    validColor: 0x111111,
-    invalidColor: 0x885555,
-    allowCapsuleCreation: true
-  };
-
   var marginY = 30;
   var marginX = 34;
   var hintWidth = 290;
@@ -29,8 +18,15 @@ var CrucigramaEditor = (() => {
   };
 
   var edit = function () {
-
-    data.sopa = Sopa.gimmieSopa(sopaConfig);
+    data.sopa = Sopa.gimmieSopa({
+      rows: 10,
+      columns: 15,
+      allowDiagonals: false,
+      cellAlpha: 0.25,
+      validColor: 0x111111,
+      invalidColor: 0x885555,
+      allowCapsuleCreation: true
+    });
     gameStatus.emitter.on('word enclosed', createBox);
     gameStatus.emitter.on('start new dragbox', stopEditingWord);
   };

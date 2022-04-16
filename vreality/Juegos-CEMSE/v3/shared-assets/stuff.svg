@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="32"
-     inkscape:cx="-133.95313"
-     inkscape:cy="-266.96875"
+     inkscape:zoom="11.313708"
+     inkscape:cx="-113.0045"
+     inkscape:cy="-269.40768"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -226,6 +226,31 @@ YgggwACZ4QXxexS6qgAAAABJRU5ErkJggg==
         <path
            id="path1175"
            style="color:#000000;fill:#ffffff;fill-opacity:0.675234;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+           sodipodi:type="inkscape:offset"
+           inkscape:radius="-0.7539295"
+           inkscape:original="M -134.9668 -278.45703 C -137.09783 -278.45703 -138.79687 -276.75604 -138.79688 -274.625 L -138.79688 -263.28711 C -138.79688 -261.15607 -137.09783 -259.45508 -134.9668 -259.45508 L -123.62891 -259.45508 C -121.49787 -259.45508 -119.79688 -261.15607 -119.79688 -263.28711 L -119.79688 -274.625 C -119.79688 -276.75604 -121.49787 -278.45703 -123.62891 -278.45703 L -134.9668 -278.45703 z "
+           transform="matrix(0.26458333,0,0,0.26458333,44.19233,38.831319)"
+           d="m -134.9668,-277.70312 c -1.72984,0 -3.07616,1.34781 -3.07617,3.07812 v 11.33789 c 0,1.73031 1.34633,3.07813 3.07617,3.07813 h 11.33789 c 1.72985,0 3.07813,-1.34828 3.07813,-3.07813 V -274.625 c 0,-1.72985 -1.34828,-3.07813 -3.07813,-3.07812 z" />
+      </g>
+    </g>
+    <g
+       id="g11242"
+       inkscape:export-filename="D:\Vitacora con V\pr00thmatic.github.io\vreality\Juegos-CEMSE\v3\crucigrama\assets\cell.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       transform="matrix(0.80000001,0,0,0.80000001,9.4887662,-6.9951086)"
+       style="stroke-width:1.25">
+      <path
+         id="path11236"
+         style="fill:#ffffff;fill-opacity:0.397196;stroke:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m -139.29688,-278.95508 v 20 h 20 v -20 z m 4.33008,1.25196 h 11.33789 c 1.72985,-10e-6 3.07813,1.34827 3.07813,3.07812 v 11.33789 c 0,1.72985 -1.34828,3.07813 -3.07813,3.07813 h -11.33789 c -1.72984,0 -3.07617,-1.34782 -3.07617,-3.07813 V -274.625 c 1e-5,-1.73031 1.34633,-3.07812 3.07617,-3.07812 z"
+         transform="matrix(0.26458333,0,0,0.26458333,44.19233,38.831319)" />
+      <g
+         id="g11240"
+         style="fill:none;fill-opacity:0.675234;stroke-width:1.25">
+        <path
+           id="path11238"
+           style="color:#000000;fill:none;fill-opacity:0.675234;stroke-width:0.330729;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
            sodipodi:type="inkscape:offset"
            inkscape:radius="-0.7539295"
            inkscape:original="M -134.9668 -278.45703 C -137.09783 -278.45703 -138.79687 -276.75604 -138.79688 -274.625 L -138.79688 -263.28711 C -138.79688 -261.15607 -137.09783 -259.45508 -134.9668 -259.45508 L -123.62891 -259.45508 C -121.49787 -259.45508 -119.79688 -261.15607 -119.79688 -263.28711 L -119.79688 -274.625 C -119.79688 -276.75604 -121.49787 -278.45703 -123.62891 -278.45703 L -134.9668 -278.45703 z "

@@ -1,17 +1,6 @@
 var scene;
 var gameStatus = {};
 var mainState = ( function () {
-  let sopaConfig = {
-    rows: 13,
-    columns: 21,
-    cellSize: 16,
-    allowDiagonals: false,
-    cellAlpha: 1,
-    validColor: 0x111111,
-    invalidColor: 0x885555,
-    allowCapsuleCreation: false
-  };
-
   var restart = function (editMode) {
     gameStatus.editMode = editMode;
     scene.scene.restart();
@@ -20,6 +9,9 @@ var mainState = ( function () {
 
   var preload = function () {
     scene = this;
+    gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
+    utils.preloadSharedAssets(scene);
+    gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
     scene.load.image('background', 'crucigrama/assets/background.png');
     scene.load.image('cell', 'crucigrama/assets/cell.png');
     DragBox.preload('crucigrama/assets/');
@@ -34,18 +26,25 @@ var mainState = ( function () {
 
   var create = function () {
     gameStatus.emitter = new Phaser.Events.EventEmitter();
-    var background = scene.add.sprite(0,0, 'background').
-        setOrigin(0,0).
-        setDepth(-100);
+    utils.createBackground();
     if (gameStatus.editMode) {
       CrucigramaEditor.edit();
     } else {
       gameStatus.keyboard.config.space = false;
-      gameStatus.keyboard.config.extraChars = '';
-      gameStatus.sopa = Sopa.gimmieSopa(sopaConfig);
-      if (gameStatus.puzzleString) {
-        Loader.load(gameStatus.puzzleString);
-      }
+      gameStatus.keyboard.config.extraChars = ' ';
+      gameStatus.sopa = Sopa.gimmieSopa({
+        rows: 13,
+        columns: 21,
+        cellSize: 16,
+        cellTint: gameStatus.colors.stroke,
+        allowDiagonals: false,
+        cellAlpha: 1,
+        validColor: 0x111111,
+        invalidColor: 0x885555,
+        allowCapsuleCreation: false
+      });
+      gameStatus.puzzleString = banco.crucigrama[gameStatus.capsulaID];
+      Loader.load(gameStatus.puzzleString);
     }
     gameStatus.keyboard.create();
     gameStatus.emitter.emit('create');
@@ -57,9 +56,13 @@ var mainState = ( function () {
   };
 
   return { type: Phaser.WEBGL,
-           width: 460,
+           width: 360,
            height: 600,
            restart: restart,
+           transparent: true,
+           plugins: {
+             global: [ NineSlice.Plugin.DefaultCfg ]
+           },
            scene: {
              preload : preload,
              create : create,
@@ -72,30 +75,3 @@ var mainState = ( function () {
 gameStatus.game = new Phaser.Game(mainState);
 // width = 360. accessible from game.world.width
 // height = 600 acccessible from game.world.height
-
-function editMode () {
-  mainState.restart(true);
-  stop();
-}
-
-function print () {
-  var element = document.getElementById('json');
-  element.value = CrucigramaEditor.getPuzzleString();
-  element.select();
-  stop();
-}
-
-function get () {
-  var element = document.getElementById('json');
-  gameStatus.puzzleString = element.value;
-  mainState.restart(false);
-  stop();
-}
-
-function stop () {
-  document.getElementById('json').blur();
-  document.getElementById('edit-mode').blur();
-  document.getElementById('print').blur();
-  document.getElementById('get').blur();
-  this.focus(null);
-}
