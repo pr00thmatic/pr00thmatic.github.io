@@ -1145,7 +1145,9 @@ let banco = {
 
     cuidador_2_4: "Como adultos nuestra responsabilidad es asegurar el _cuidado_ y protección de nuestras hijas e hijos. Sin embargo, también tenemos que enseñarles a _enfrentar_ posibles situaciones de riesgo y el mejor mecanismo de enseñanza es el ejemplo, por lo que el _autocuidado_ lo deben ver en nosotras y nosotros.\n\n" +
       "Identificar personas de _confianza_. Enseñarles\nque una persona de confianza es quien te escucha, te _respeta_ y te trata con cariño, por tanto, puede ser mamá, papá, cuidadores, profesores, etc. Especialmente estas personas te hacen _sentir_ segura, escuchada y te orientan.\n\n" +
-      "Enseñarles sobre sus _derechos_ y a expresar\nsus _emociones_."
+      "Enseñarles sobre sus _derechos_ y a expresar\nsus _emociones_.",
+
+    nino_2_6: "El internet es\nuna _herramienta.png_ muy\nútil, que nos\npermite _aprender.png_, informarnos\ny _divertirnos.png_, pero no podemos utilizarla todo el tiempo, tenemos que tener horarios establecidos, cuidarnos de _informacion.png_ falsa y no dar nuestros nombre ni subir _fotos.png_, así podremos disfrutar del internet."
   },
 
   ahorcado: {

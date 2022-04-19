@@ -32,21 +32,33 @@ var MissingWords = (() => {
         word.blank.setTint(0x5fd1ff);
         word.blank.alpha = 0;
         word.blankLabel = Label.gimmieLabel(word.blank, gameObject.word.word, Story.fillStyle);
+        if (Story.children) {
+          word.blankLabel.setAlpha(0);
+          let pos = word.blank.getCenter();
+          word.blankImage = scene.add.image(pos.x, pos.y, word.word).setScale(0.25);
+        }
         gameObject.word.container.label.destroy();
         gameObject.destroy();
         gameStatus.emitter.emit('word completed');
       }; })(word));
 
+      let space = { x: (Story.children? 20 + 110 * (i%3): bottom.x + offset.x * (i % 3)),
+                    y: (Story.children? mainState.height - 110*2 + 110 * Math.floor(i/3): bottom.y + offset.y * Math.floor(i/3)) };
       word.container = {
-        sprite: scene.add.sprite(bottom.x + offset.x * (i % 3), bottom.y + offset.y * Math.floor(i/3), 'word container').
+        sprite: scene.add.sprite(space.x, space.y,
+                                 Story.children? word.word: 'word container').
           setOrigin(0,0).
           setDepth(20).
           setInteractive()
       };
       word.container.sprite.word = word;
       word.container.originalPosition = { x: word.container.sprite.x, y: word.container.sprite.y };
-      word.container.label =
-        Label.gimmieLabel(word.container.sprite, word.word, { color: '#ffffff', font: '10px Helvetica', align: 'center' });
+      word.container.label = Label.gimmieLabel(word.container.sprite, word.word, {
+        color: '#ffffff', font: '11px Helvetica', align: 'center'
+      });
+      if (Story.children) {
+        word.container.label.setAlpha(0);
+      }
       scene.input.setDraggable(word.container.sprite);
       scene.input.on('dragstart', function (pointer, gameObject) {
         gameObject.alpha = 0.5;
