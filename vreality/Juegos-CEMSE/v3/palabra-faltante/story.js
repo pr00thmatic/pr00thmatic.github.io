@@ -6,6 +6,7 @@ var Story = (() => {
       width: 300
     }
   };
+
   var fakeStyle = JSON.parse(JSON.stringify(style));
   fakeStyle.color = "#ff0000";
   var fillStyle = JSON.parse(JSON.stringify(style));
@@ -17,6 +18,14 @@ var Story = (() => {
     var story = {};
     var open = false;
 
+    if (data.indexOf('.png') >= 0) {
+      Story.children = true;
+      style.font = '20px Montserrat';
+      fillStyle.font = '20px Montserrat';
+    }
+
+    fakeStyle = JSON.parse(JSON.stringify(style));
+    fakeStyle.color = "#ff0000";
     story.text = scene.add.text(margin.x, margin.y, '', style).setOrigin(0,0).setLineSpacing(lineSpacing);
     story.missingWords = [];
 

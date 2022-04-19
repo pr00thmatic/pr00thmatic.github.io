@@ -729,7 +729,16 @@ let banco = {
 
     puber_1_5: "La violencia sexual se refiere a cualquier\n contacto _no deseado_. Sucede cuando alguien te fuerza o presiona física o \nemocionalmente (_amenazas_, chantajes) a que hagas alguna cosa de tipo sexual.\n\n" +
       "Dentro de lo que se considera violencia sexual se encuentra el abuso sexual y la _violación_. El abuso sexual refiere a varias situaciones como: toques, frotes, mostrar las partes íntimas, mostrar pornografía, etc. Todas estas _sin consentimiento_. La violación tiene que ver con tener una relación sexual forzada.\n\n" +
-      "Si vives una situación de violencia sexual debes: buscar un lugar seguro, contarle lo sucedido a \nun _adulto_, no cambiarte de ropa o bañarte (en caso de violación) y realizar la _denuncia_ en la policía o en la defensoría de la Niñez y Adolescencia."
+      "Si vives una situación de violencia sexual debes: buscar un lugar seguro, contarle lo sucedido a \nun _adulto_, no cambiarte de ropa o bañarte (en caso de violación) y realizar la _denuncia_ en la policía o en la defensoría de la Niñez y Adolescencia.",
+
+    cuidador_2_1: "Las mamás, papás, cuidadores, comunidad y el estado tenemos la responsabilidad de _proteger_ a las niñas, niños y adolescentes.\n\n" +
+      "Los derechos de las niñas, niños y adolescentes están plenamente estipulados en el _código_ niña, niño y adolescente.",
+
+    cuidador_2_4: "Como adultos nuestra responsabilidad es asegurar el _cuidado_ y protección de nuestras hijas e hijos. Sin embargo, también tenemos que enseñarles a _enfrentar_ posibles situaciones de riesgo y el mejor mecanismo de enseñanza es el ejemplo, por lo que el _autocuidado_ lo deben ver en nosotras y nosotros.\n\n" +
+      "Identificar personas de _confianza_. Enseñarles\nque una persona de confianza es quien te escucha, te _respeta_ y te trata con cariño, por tanto, puede ser mamá, papá, cuidadores, profesores, etc. Especialmente estas personas te hacen _sentir_ segura, escuchada y te orientan.\n\n" +
+      "Enseñarles sobre sus _derechos_ y a expresar\nsus _emociones_.",
+
+    nino_2_6: "El internet es\nuna _herramienta.png_ muy\nútil, que nos\npermite _aprender.png_, informarnos\ny _divertirnos.png_, pero no podemos utilizarla todo el tiempo, tenemos que tener horarios establecidos, cuidarnos de _informacion.png_ falsa y no dar nuestros nombre ni subir _fotos.png_, así podremos disfrutar del internet."
   },
 
   ahorcado: {
