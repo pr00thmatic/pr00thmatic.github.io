@@ -3,6 +3,7 @@ var Word = {
 
   createWords : function () {
     let marginY = Container.endingPosY();
+    Word.marginY = marginY;
     for (var i=0; i<config.words.fakeBackend.length; i++) {
       let word = this.gimmieWord(1 + marginY + i * config.words.yOffset,
                                  config.words.fakeBackend[i]);
@@ -19,6 +20,17 @@ var Word = {
         setInteractive(),
       info : info
     };
+    word.destroy = function () {
+      let index = Word.instances.indexOf(this);
+      Word.instances.splice(index, 1);
+      word.sprite.destroy();
+      word.label.destroy();
+      let offset = (config.words.yOffset);
+      for (let i=index; i<Word.instances.length; i++) {
+        Word.instances[i].sprite.y -= offset;
+        Word.instances[i].label.y -= offset;
+      }
+    }
     Word.instances.push(word);
     word.sprite.parent = word;
     word.label = Label.gimmieLabel(word.sprite, word.info.label,{

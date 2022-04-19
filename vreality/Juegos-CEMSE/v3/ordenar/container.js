@@ -87,10 +87,10 @@ var Container = {
               yoyo: true,
               duration: 500,
               onComplete: function () {
-                let l = gameObject.parent.label;
+                gameObject.parent.destroy();
                 gameObject.parent = null;
-                l.destroy();
-                gameObject.destroy();
+                // l.destroy();
+                // gameObject.destroy();
                 feedback.destroy();
               }
             });

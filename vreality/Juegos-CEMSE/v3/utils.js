@@ -78,6 +78,8 @@ var utils = {
     scene.load.image('muy mal', 'shared-assets/muy mal.png');
     scene.load.image('meh', 'shared-assets/meh.png');
     scene.load.image('muy bien', 'shared-assets/muy bien.png');
+    scene.load.image('bad feedback', 'shared-assets/wrong-feedback.png');
+    scene.load.image('good feedback', 'shared-assets/good-feedback.png');
   },
 
   preloadCapsuleIdFromURL : function () {

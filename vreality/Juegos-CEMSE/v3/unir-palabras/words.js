@@ -6,7 +6,7 @@ var Words = (() => {
     offset: 8,
     width: 150,
     heightMargin: 5,
-    finalColors: [ 0x000000, 0x222222, 0x444444, 0x666666, 0x888888, 0xaaaaaa ]
+    finalColors: [ 0x000000, 0x222222, 0x444444, 0x666666, 0x888888, 0xaaaaaa ],
   };
 
   var create = function (data) {
@@ -34,8 +34,25 @@ var Words = (() => {
       var option = {};
       var pos = { x: posX, y: config.margins.y + sum };
 
+      option.destroy = function () {
+        let myColumn = gameStatus.columns[this.columnName];
+        let index = myColumn.indexOf(this);
+        let height = this.sprite.height;
+        myColumn.splice(index,1);
+
+        this.text.destroy();
+        this.sprite.destroy();
+
+        let offset = height + config.heightMargin * 1.5;
+        for (let i=index; i<myColumn.length; i++) {
+          myColumn[i].sprite.y -= offset;
+          myColumn[i].text.y -= offset;
+        }
+      };
+
       option.dragboxPosX = dragboxPosX;
       option.columnName = columnName;
+
       if (data[columnName][i].statement.indexOf('.png') >= 0) {
         option.text = scene.add.image(pos.x, pos.y, data[columnName][i].statement);
         let size = 200;
@@ -50,7 +67,9 @@ var Words = (() => {
             width: width - 20
           }
         }).setOrigin(0.5, 0.5);
+        option.textHeight = option.text.height;
       }
+
       option.id = data[columnName][i].id;
 
       option.sprite = scene.add.nineslice(pos.x, pos.y, width,
@@ -65,6 +84,7 @@ var Words = (() => {
       gameStatus.columns[columnName].push(option);
 
       gameStatus.emitter.emit('column option created', option);
+
     }
   };
 
@@ -89,15 +109,53 @@ var Words = (() => {
       instance.currentDragbox.target = { x: instance.underPointer.dragboxPosX, y: instance.underPointer.sprite.getCenter().y };
       instance.currentDragbox.update();
       instance.currentDragbox.setTint(utils.randomPick(Words.config.finalColors));
+      let lastDragbox = instance.currentDragbox
       instance.currentDragbox = null;
       let left = instance.underPointer.columnName === 'left'? instance.underPointer: selected;
       let right = instance.underPointer.columnName === 'right'? instance.underPointer: selected;
       gameStatus.connections.push([left.id, right.id]);
+
+      feedbackAndLongColumnFix(lastDragbox, left, right);
     } else {
       console.log('already connected');
       destroyCurrentDragbox();
     }
   };
+
+  var feedbackAndLongColumnFix = function (dragbox, left, right) {
+    let targets = [dragbox.sprite, dragbox.caps[0], dragbox.caps[1],
+                   right.sprite, right.text ];
+    if (!(data.destroysLeft === false)) {
+      targets.push(left.sprite); targets.push(left.text);
+    }
+    scene.tweens.add({ targets, alpha: 0, duration: 300, delay: 100});
+    setTimeout(() => {
+      let isItRight = false;
+      for (let i=0; i<data.answers.length; i++) {
+        if (data.answers[i][0] === left.id && data.answers[i][1] === right.id) {
+          isItRight = true;
+          break;
+        }
+      }
+      let feedback = scene.add.image(mainState.width/2, mainState.height/2,
+                                     isItRight? 'good feedback': 'bad feedback').
+          setDepth(100).
+          setAlpha(0);
+      scene.tweens.add({ targets: [ feedback ], alpha: 1, duration: 200});
+      scene.tweens.add({ targets: [ feedback ], alpha: 0, duration: 200, delay: 500});
+      setTimeout(() => { feedback.destroy(); }, 1100);
+    }, 250);
+    setTimeout(() => {
+      dragbox.destroy();
+      right.destroy();
+      if (!(data.destroysLeft === false)) {
+        left.destroy();
+      }
+      if (data.destroysLeft) {
+        left.destroy();
+      }
+    }, 800);
+  }
 
   var destroyCurrentDragbox = function () {
     if (!instance.currentDragbox) return;
