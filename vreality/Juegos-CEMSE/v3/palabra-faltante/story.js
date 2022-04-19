@@ -1,7 +1,7 @@
 var Story = (() => {
   var style = {
     color: "#000000",
-    font: '13px Montserrat',
+    font: '12px Montserrat',
     wordWrap: {
       width: 300
     }
@@ -9,11 +9,11 @@ var Story = (() => {
   var fakeStyle = JSON.parse(JSON.stringify(style));
   fakeStyle.color = "#ff0000";
   var fillStyle = JSON.parse(JSON.stringify(style));
-  fillStyle.font = '12px Montserrat';
+  fillStyle.font = '11px Montserrat';
   var lineSpacing = 3;
 
   var gimmieStory = function (text) {
-    var margin = { x: 35, y: 30 };
+    var margin = { x: 15, y: 15 };
     var story = {};
     var open = false;
 

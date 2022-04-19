@@ -11,6 +11,18 @@ var Question = (() => {
                                                     {x:config.width, y:config.height}, 'info-box', 10).
         setOrigin(0.5, 0);
       instance.holder.stroke.setTint(colors.global.right);
+    }
+
+    if (instance.label) {
+      instance.label.destroy();
+    }
+
+    if (statement.indexOf('.png') >= 0) {
+      let imgPos = instance.holder.getCenter();
+      let size = Math.min(config.width, config.height) - 10;
+      instance.label = scene.add.image(imgPos.x, imgPos.y, statement).
+        setDisplaySize(size * 1.29, size);
+    } else {
       instance.label = Label.gimmieLabel(instance.holder, '', {
         color: '#000',
         font: 'bold 14px Montserrat',
@@ -19,8 +31,8 @@ var Question = (() => {
         },
         align: 'left'
       }).setDepth(10);
+      instance.label.text = statement;
     }
-    instance.label.text = statement;
   };
 
   return {

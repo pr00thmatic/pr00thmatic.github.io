@@ -70,7 +70,14 @@ var utils = {
     scene.load.image('info-box-stroke', 'shared-assets/info-box-stroke.png');
     scene.load.image('ok', 'shared-assets/ok.png');
     scene.load.image('oknt', 'shared-assets/oknt.png');
+    scene.load.image('ok-ninos', 'shared-assets/ok-button-ninos.png');
+    scene.load.image('oknt-ninos', 'shared-assets/no-button-ninos.png');
     scene.load.image('results', 'shared-assets/results.png');
+    scene.load.image('right-facey', 'shared-assets/right.png');
+    scene.load.image('wrong-facey', 'shared-assets/wrong.png');
+    scene.load.image('muy mal', 'shared-assets/muy mal.png');
+    scene.load.image('meh', 'shared-assets/meh.png');
+    scene.load.image('muy bien', 'shared-assets/muy bien.png');
   },
 
   preloadCapsuleIdFromURL : function () {

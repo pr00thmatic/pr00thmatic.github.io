@@ -11,6 +11,16 @@ var mainState = ( function () {
     data = banco.trivia[id]; data.capsulaId = id;
     scene = this;
     utils.preloadSharedAssets(scene);
+    for (let i=0; i<data.length; i++) {
+      if (data[i].question.indexOf('.png') >= 0) {
+        scene.load.image(data[i].question, data[i].dir + data[i].question);
+      }
+      for (let j=0; j<data[i].answers.length; j++) {
+        if (data[i].answers[j].indexOf('.png') >= 0) {
+          scene.load.image(data[i].answers[j], data[i].dir + data[i].answers[j]);
+        }
+      }
+    }
   }
 
   var create = function () {

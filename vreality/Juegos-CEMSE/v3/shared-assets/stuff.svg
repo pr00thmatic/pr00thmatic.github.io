@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="11.313708"
-     inkscape:cx="-113.0045"
-     inkscape:cy="-269.40768"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="465.09949"
+     inkscape:cy="-114.5513"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -203,10 +203,7 @@
        width="5.2916665"
        height="5.2916665"
        preserveAspectRatio="none"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAAC1JREFUeNpi/BIuyUAuYAFi7hXPyND5NUKKiYECMKp5VPOo5uGjmZGS
-YgggwACZ4QXxexS6qgAAAABJRU5ErkJggg==
-"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ bWFnZVJlYWR5ccllPAAAAC1JREFUeNpi/BIuyUAuYAFi7hXPyND5NUKKiYECMKp5VPOo5uGjmZGS YgggwACZ4QXxexS6qgAAAABJRU5ErkJggg== "
        id="image847"
        x="-0.47538304"
        y="-34.538639" />
@@ -257,6 +254,198 @@ YgggwACZ4QXxexS6qgAAAABJRU5ErkJggg==
            transform="matrix(0.26458333,0,0,0.26458333,44.19233,38.831319)"
            d="m -134.9668,-277.70312 c -1.72984,0 -3.07616,1.34781 -3.07617,3.07812 v 11.33789 c 0,1.73031 1.34633,3.07813 3.07617,3.07813 h 11.33789 c 1.72985,0 3.07813,-1.34828 3.07813,-3.07813 V -274.625 c 0,-1.72985 -1.34828,-3.07813 -3.07813,-3.07812 z" />
       </g>
+    </g>
+    <image
+       width="7.7611108"
+       height="7.7611108"
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+AXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEMSURBVHgBrdVLDoIwEAbgmfra9iieQCUaXeoN
+9Ii6NDFBOAFHYe2jI0MA5dVOibMwcfLPR4E2ABQVb/Q+XGkNA4tn2Sj/K/6J1vpISp1xguEQnGd4
+lo1oq4/cQ74KN8oQESX0pCC4p6kPiojzsofGHNT7BREBJVUzC0hX3oVmK0vYxCowzQLwDbhW3oea
+YgZrQSHuQvM7bw04cAnagl14PiBAO2Ebng8I0F64D6+VBbXCVtyBcilwFYlarbI/iuaL+sUd+1yJ
+UYY8TihKUVNuN+EhQilaOyACHH3QWtaBoy8qxXEIKsHVaAbLISgXZ+hBQXO3jMawVItregEwJ1+0
+HzenxY3NouLdfz+mH0aFYmhKpqYyAAAAAElFTkSuQmCC
+"
+       id="image2710"
+       x="56.583649"
+       y="-4.4721546" />
+    <image
+       width="10.230556"
+       height="7.4083333"
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAVCAYAAAC6wOViAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA AXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD2SURBVHgBvdVNCoJAFMDxN0L7QdrnFVq30G7Q DaJzGGRQtu0I3kQNuoddINwHvmYsRcuPccbxv3EcwZ8PBQEmiIYXi95Pi+KcgOY4SEgW8jXO0ElX +4dWtAAJAStHERLE19IATf2CPDZhlK69VMukTSAgBE/H3X3xacHRURGQV75TevNtUEgULFEzPh8M xIiyI0g0BOQR8wN5xUbG1qntHkETyDMyIEltg6GiE8uAvPxDorG/NQCD6oW+iWXBEh0Kq4A1VBRW Bf/QPngMsBFtg9ndr4hkowq2ou1w9RnkwE60E1YAe9FGWBEUQmvwCOCg5oo/hGpv3Wu+8mqmND0A AAAASUVORK5CYII= "
+       id="image2722"
+       x="59.44997"
+       y="8.4042349" />
+    <g
+       id="g3482"
+       inkscape:export-filename="D:\Vitacora con V\pr00thmatic.github.io\vreality\Juegos-CEMSE\v3\shared-assets\ok-button-ninos.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:#12c185;fill-opacity:1;stroke:#ffffff;stroke-width:0.66146;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2567"
+         width="31.75"
+         height="8.9958334"
+         x="17.874918"
+         y="-5.0371051"
+         rx="4.7624998"
+         ry="4.7624998"
+         inkscape:export-filename="./ok-button.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 29.411676,-0.99103275 32.52053,1.9855283 38.07678,-3.5707232"
+         id="path3241" />
+    </g>
+    <g
+       id="g3488"
+       inkscape:export-filename="D:\Vitacora con V\pr00thmatic.github.io\vreality\Juegos-CEMSE\v3\shared-assets\no-button-ninos.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:#c14612;fill-opacity:1;stroke:#ffffff;stroke-width:0.66146;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2569"
+         width="31.75"
+         height="8.9958334"
+         x="17.874918"
+         y="7.7784691"
+         rx="4.7624998"
+         ry="4.7624998"
+         inkscape:export-filename="./ok-button.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <g
+         id="g3478"
+         transform="translate(-26.79697,12.818376)">
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 57.388424,-3.7004539 6.316927,6.316927"
+           id="path3374" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 63.705351,-3.7004539 -6.316927,6.316927"
+           id="path3456" />
+      </g>
+    </g>
+    <g
+       id="g3732"
+       inkscape:export-filename="D:\Vitacora con V\pr00thmatic.github.io\vreality\Juegos-CEMSE\v3\shared-assets\wrong.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <image
+         width="14.022917"
+         height="14.022917"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,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
+EhQ9+AAAAABJRU5ErkJggg==
+"
+         id="image3628"
+         x="149.3642"
+         y="-4.1634731" />
+      <image
+         width="7.7611108"
+         height="7.7611108"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+AXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEMSURBVHgBrdVLDoIwEAbgmfra9iieQCUaXeoN
+9Ii6NDFBOAFHYe2jI0MA5dVOibMwcfLPR4E2ABQVb/Q+XGkNA4tn2Sj/K/6J1vpISp1xguEQnGd4
+lo1oq4/cQ74KN8oQESX0pCC4p6kPiojzsofGHNT7BREBJVUzC0hX3oVmK0vYxCowzQLwDbhW3oea
+YgZrQSHuQvM7bw04cAnagl14PiBAO2Ebng8I0F64D6+VBbXCVtyBcilwFYlarbI/iuaL+sUd+1yJ
+UYY8TihKUVNuN+EhQilaOyACHH3QWtaBoy8qxXEIKsHVaAbLISgXZ+hBQXO3jMawVItregEwJ1+0
+HzenxY3NouLdfz+mH0aFYmhKpqYyAAAAAElFTkSuQmCC
+"
+         id="image3632"
+         x="157.38991"
+         y="-8.3086128" />
+    </g>
+    <g
+       id="g3728"
+       inkscape:export-filename="D:\Vitacora con V\pr00thmatic.github.io\vreality\Juegos-CEMSE\v3\shared-assets\right.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <image
+         width="14.022917"
+         height="14.022917"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,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
+AABJRU5ErkJggg==
+"
+         id="image3616"
+         x="149.3642"
+         y="17.53236" />
+      <image
+         width="10.230556"
+         height="7.4083333"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAVCAYAAAC6wOViAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA AXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD2SURBVHgBvdVNCoJAFMDxN0L7QdrnFVq30G7Q DaJzGGRQtu0I3kQNuoddINwHvmYsRcuPccbxv3EcwZ8PBQEmiIYXi95Pi+KcgOY4SEgW8jXO0ElX +4dWtAAJAStHERLE19IATf2CPDZhlK69VMukTSAgBE/H3X3xacHRURGQV75TevNtUEgULFEzPh8M xIiyI0g0BOQR8wN5xUbG1qntHkETyDMyIEltg6GiE8uAvPxDorG/NQCD6oW+iWXBEh0Kq4A1VBRW Bf/QPngMsBFtg9ndr4hkowq2ou1w9RnkwE60E1YAe9FGWBEUQmvwCOCg5oo/hGpv3Wu+8mqmND0A AAAASUVORK5CYII= "
+         id="image3634"
+         x="154.84833"
+         y="12.197247" />
     </g>
   </g>
 </svg>

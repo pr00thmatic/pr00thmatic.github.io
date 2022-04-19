@@ -23,14 +23,20 @@ var Answers = (() => {
       instance.options.push(answer);
       answer.holder = scene.add.nineslice(0, 0, 260, offset * 0.93, 'info-box-fill', 10).
         setOrigin(0, 0).setInteractive();
-      answer.statement = Label.gimmieLabel(answer.holder, statements[i], {
-        color: '#000000',
-        font: 'bold 14px Montserrat',
-        wordWrap: {
-          width: 220
-        },
-        align: 'left',
-      });
+      if (statements[i].indexOf('.png') >= 0) {
+        let size = Math.min(260, offset * 0.93) - 10;
+        answer.statement = scene.add.image(0,0, statements[i]).
+          setDisplaySize(size * 1.29, size);
+      } else {
+        answer.statement = Label.gimmieLabel(answer.holder, statements[i], {
+          color: '#000000',
+          font: 'bold 14px Montserrat',
+          wordWrap: {
+            width: 220
+          },
+          align: 'left',
+        });
+      }
 
       answer.destroy = () => {
         if (answer.holder) answer.holder.destroy();
@@ -41,7 +47,9 @@ var Answers = (() => {
 
       answer.rebeal = () => {
         answer.holder.setTint(answer.isCorrect? colors.global.right: colors.global.wrong);
-        answer.statement.setFill('#ffffff');
+        if (answer.statement.setFill) {
+          answer.statement.setFill('#ffffff');
+        }
 
         answer.indicator = scene.add.sprite(mainState.width - config.indicatorPosX, answer.holder.getCenter().y, answer.isCorrect? 'ok': 'oknt').
           setOrigin(1,0.5);
@@ -66,8 +74,10 @@ var Answers = (() => {
     }
     // rearrange
     utils.shuffle(instance.options);
-    for (let i=0; i<statements.length; i++) { // noise
+    for (let i=0; i<statements.length; i++) {
       instance.options[i].holder.setPosition(config.marginX, config.marginY + offset * i);
+      let imgPos = instance.options[i].holder.getCenter();
+      instance.options[i].statement.setPosition(imgPos.x, imgPos.y);
     }
   };
 
