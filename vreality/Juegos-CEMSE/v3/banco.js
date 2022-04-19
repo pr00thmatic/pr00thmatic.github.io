@@ -199,6 +199,95 @@ let banco = {
       ],
       correctAnswer: [0,1]
     } ],
+    nino_2_4: [ {
+      dir: 'img/trivia/nino_2_4/',
+      question: 'Anclaje-astronauta.png',
+      answers: [
+        'ninos.png',
+        'ninas.png',
+        'todas y todos.png'
+      ],
+      correctAnswer: [0,1,2]
+    }, {
+      dir: 'img/trivia/nino_2_4/',
+      question: 'anclaje-emoticon.png',
+      answers: [
+        'ninos.png',
+        'ninas.png',
+        'todas y todos.png'
+      ],
+      correctAnswer: [0,1,2]
+    }, {
+      dir: 'img/trivia/nino_2_4/',
+      question: 'Anclaje-objMedicos.png',
+      answers: [
+        'ninos.png',
+        'ninas.png',
+        'todas y todos.png'
+      ],
+      correctAnswer: [0,1,2]
+    }, {
+      dir: 'img/trivia/nino_2_4/',
+      question: 'Anclaje-pelota.png',
+      answers: [
+        'ninos.png',
+        'ninas.png',
+        'todas y todos.png'
+      ],
+      correctAnswer: [0,1,2]
+    }, {
+      dir: 'img/trivia/nino_2_4/',
+      question: 'Anclaje-superheroe.png',
+      answers: [
+        'ninos.png',
+        'ninas.png',
+        'todas y todos.png'
+      ],
+      correctAnswer: [0,1,2]
+    } ],
+    nino_2_5: [{
+      dir: 'img/trivia/nino_2_5/',
+      question: 'Anclaje-Rocio triste.png',
+      answers: [
+        'decoy.png',
+      ],
+      correctAnswer: 1
+    }, {
+      dir: 'img/trivia/nino_2_5/',
+      question: 'Anclaje-abrazo.png',
+      answers: [
+        'decoy.png',
+      ],
+      correctAnswer: 0
+    }, {
+      dir: 'img/trivia/nino_2_5/',
+      question: 'Anclaje-nina enojada.png',
+      answers: [
+        'decoy.png',
+      ],
+      correctAnswer: 1
+    }, {
+      dir: 'img/trivia/nino_2_5/',
+      question: 'Anclaje-padre hija.png',
+      answers: [
+        'decoy.png',
+      ],
+      correctAnswer: 0
+    }, {
+      dir: 'img/trivia/nino_2_5/',
+      question: 'Anclaje-Nina gritando.png',
+      answers: [
+        'decoy.png',
+      ],
+      correctAnswer: 1
+    }, {
+      dir: 'img/trivia/nino_2_5/',
+      question: 'Anclaje-Nino hablando.png',
+      answers: [
+        'decoy.png',
+      ],
+      correctAnswer: 0
+    }],
     puber_1_1: [ {
       question: '¿Qué cambios físicos atraviesan las mujeres en la adolescencia y pubertad?',
       answers: [
@@ -485,6 +574,25 @@ let banco = {
       ],
       answers: [
         [0,0], [1,1], [2,2], [3,3]
+      ]
+    },
+    puber_1_1: {
+      dir: 'img/unir/puber_1_1/',
+      left: [
+        'Comer frutas', 'Higiene', 'Higiene dental', 'Comer verduras', 'Cambios físicos'
+      ],
+      right: [
+        'Unir-cambios fisicos1.png',  'unir-comer verduras1.png',   'unir-higiene3.png',
+        'Unir-cambios fisicos2.png',  'unir-comer verduras2.png',   'unir-higiene4.png',
+        'unir-comer frutas1.png',      'unir-higiene1.png',
+        'unir-comer frutas2.png',      'unir-higiene2.png'
+      ],
+      answers: [
+        [0, 6], [0, 8],
+        [1, 2], [1, 5],
+        [2, 9],
+        [3, 1,], [3, 4],
+        [4, 0, 3]
       ]
     }
   },

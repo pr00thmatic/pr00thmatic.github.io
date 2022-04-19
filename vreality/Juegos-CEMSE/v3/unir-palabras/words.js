@@ -36,18 +36,25 @@ var Words = (() => {
 
       option.dragboxPosX = dragboxPosX;
       option.columnName = columnName;
-      option.text = scene.add.text(pos.x, pos.y, data[columnName][i].statement, {
-        font: '12px Montserrat',
-        align: 'left',
-        color: '#fff',
-        wordWrap: {
-          width: width - 20
-        }
-      }).setOrigin(0.5, 0.5);
+      if (data[columnName][i].statement.indexOf('.png') >= 0) {
+        option.text = scene.add.image(pos.x, pos.y, data[columnName][i].statement);
+        let size = 200;
+        option.textHeight = size * (option.text.height/option.text.width)
+        option.text.setDisplaySize(size, option.textHeight);
+      } else {
+        option.text = scene.add.text(pos.x, pos.y, data[columnName][i].statement, {
+          font: '12px Montserrat',
+          align: 'left',
+          color: '#fff',
+          wordWrap: {
+            width: width - 20
+          }
+        }).setOrigin(0.5, 0.5);
+      }
       option.id = data[columnName][i].id;
 
       option.sprite = scene.add.nineslice(pos.x, pos.y, width,
-                                          config.heightMargin * 2 + option.text.height,
+                                          config.heightMargin * 2 + option.textHeight,
                                           'info-box-fill', 10).
         setOrigin(origin.x, origin.y).
         setTint(gameStatus.colors.stroke).

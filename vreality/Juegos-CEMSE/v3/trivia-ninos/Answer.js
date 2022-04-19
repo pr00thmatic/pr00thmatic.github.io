@@ -22,10 +22,12 @@ let Answer = (() => {
       let isRightAnswer = correctAnswer.length === undefined?
           gameStatus.currentAnswer === correctAnswer:
           correctAnswer.indexOf(gameStatus.currentAnswer) >= 0;
-      let ok = scene.add.image(10, y, 'ok-ninos').setOrigin(0, 1).setInteractive().
+      let ok = scene.add.image(10, y, 'ok-ninos').
+          setOrigin(0, 1).setInteractive().setDepth(100).
           on('pointerdown', () => { Answer.fadeOut(isRightAnswer? 'right-facey': 'wrong-facey'); });
 
-      let oknt = scene.add.image(mainState.width-10, y-3, 'oknt-ninos').setOrigin(1, 1).setInteractive().
+      let oknt = scene.add.image(mainState.width-10, y-3, 'oknt-ninos').
+          setOrigin(1, 1).setInteractive().setDepth(100).
           on('pointerdown', () => { Answer.fadeOut(!isRightAnswer? 'right-facey': 'wrong-facey'); });
 
       ok.jumpy = scene.tweens.add({ targets: ok, y: y-3, duration: 300, ease: 'Sine.easeInOut',

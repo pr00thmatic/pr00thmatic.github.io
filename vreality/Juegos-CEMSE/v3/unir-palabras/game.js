@@ -20,6 +20,19 @@ var mainState = ( function () {
     DragBox.preload(assets);
     DragBox.config.height = 3;
     gameStatus.connections = [];
+
+    for (let i=0; i<data.left.length; i++) {
+      if (data.left[i].indexOf('.png') >= 0) {
+        scene.load.image(data.left[i], data.dir + data.left[i]);
+        console.log('loading', data.left[i]);
+      }
+    }
+    for (let i=0; i<data.right.length; i++) {
+      if (data.right[i].indexOf('.png') >= 0) {
+        scene.load.image(data.right[i], data.dir + data.right[i]);
+        console.log('loading', data.right[i]);
+      }
+    }
   }
 
   var create = function () {

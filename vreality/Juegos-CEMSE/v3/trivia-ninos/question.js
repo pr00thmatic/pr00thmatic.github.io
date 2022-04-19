@@ -44,7 +44,7 @@ let Question = (() => {
       scene.tweens.add({ targets: Question.instance.image, alpha: 0, y: -600, duration: 500, delay: 600 });
       setTimeout(() => {
         Question.gimmieQuestion(data[gameStatus.currentQuestion].question);
-      }, 1000);
+      }, 600);
     }
   };
 })();
