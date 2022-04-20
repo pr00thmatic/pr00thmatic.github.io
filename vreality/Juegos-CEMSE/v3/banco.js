@@ -951,6 +951,37 @@ let banco = {
       label: 'Derecho al acceso a servicios integrales de salud reproductiva.',
       category: 'Derechos reproductivos'
     }],
+    adolescente_1_1: [{
+      label: 'Derecho a decidir de forma libre sobre mi cuerpo y mi sexualidad.',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a elegir mis parejas sexuales y/o parejas amorosas.',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a vivir mi sexualidad sin ningún tipo de violencia sexual. ',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a vivir y expresar libremente mi orientación sexual e identidad de género.',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a la protección, prevención de las Infecciones de transmisión sexual (ITS) y embarazos no deseados. ',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a acceder a métodos anticonceptivos.',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho a decidir libremente si deseo o no tener hijas o hijos.',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho a tomar decisiones sobre la reproducción sin sufrir discriminación, coerción ni violencia.',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho a decidir sobre el tipo de familia que deseo formar.',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho al acceso a servicios integrales de salud reproductiva.',
+      category: 'Derechos reproductivos'
+    }],
     puber_1_15: [
       {
         category: 'Peligros de las Tecnologías de Información y Comunicación (TICs)',
