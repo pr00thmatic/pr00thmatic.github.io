@@ -31,6 +31,266 @@ let colors = {
 };
 let banco = {
   trivia : {
+    adolescente_1_1: [{
+      question: '¿Qué cambios físicos atraviesan las mujeres en la adolescencia y pubertad?',
+      answers: [
+        'Crecimiento de pechos, ensanchamiento de caderas, crecimiento de vello y menstruación.',
+        'No atraviesan cambios.',
+        'Solamente crecen los pechos.'
+      ],
+      correctAnswer: 0,
+    }, {
+        question: '¿Qué cambios físicos atraviesan los hombres en la adolescencia y pubertad?',
+      answers: [
+        'Ensanchamiento de la espalda, crecimiento del pene y los testículos, erecciones, crecimiento de vello, cambio de voz.',
+        'No atraviesan cambios.',
+        'Solamente crece la barba'
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Qué es la menstruación?',
+      answers: [
+        'Es un sangrado que sale por la vagina que puede durar entre 3 y 7 días y es un proceso natural por el que atraviesan todas las mujeres.',
+        'Es un estado de ánimo de las mujeres.',
+      ],
+      correctAnswer: 0,
+    }, {
+        question: '¿Cuánto dura el ciclo menstrual?',
+      answers: [
+        'En promedio dura 28 días, sin embargo, puede tener una duración menor o mayor.',
+        'En promedio dura 40 días',
+        'En promedio dura 50 días'
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Qué es la sexualidad?',
+      answers: [
+        'La sexualidad es la forma de conocer nuestro cuerpo, es una forma de expresión y comunicación afectiva relacionada con los sentimientos, emociones, ternura y amor.',
+        'La sexualidad hace referencia a las relaciones sexuales.'
+      ],
+      correctAnswer: 0,
+    }, {
+        question: '¿La sexualidad se vive solo a través de nuestros órganos reproductivos?',
+      answers: [
+        'No, la sexualidad puede ser vivida a través de todo nuestro cuerpo y sentidos, incluyendo nuestros valores, actitudes, sentimientos, interacciones y conductas.',
+        'Sí, la sexualidad solamente se la vivencia con los órganos sexuales.'
+      ],
+      correctAnswer: 0,
+    }],
+    adolescente_1_6: [{
+      question: '¿Qué significa ser sujeto de derechos?',
+      answers: [
+        'Que somos personas con derechos que deben ser respetados y garantizados.',
+        'Que vivimos en un país con leyes'
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Qué implica el derecho a la protección?',
+      answers: [
+        'Vivir en un contexto seguro y ser protegido de cualquier tipo de maltrato.',
+        'Vivir  con miedo en el hogar y el colegio. ',
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Qué implica el derecho a la no discriminación?',
+      answers: [
+        'No sufrir ningún tipo de discriminación por mi edad, género, etnia, clase social, religión, preferencia sexual, etc.',
+        'Vivir en un contexto seguro y ser protegido de cualquier tipo de maltrato, violencia o explotación. ',
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Qué implica el derecho a la participación?',
+      answers: [
+        'Ser escuchado y que mi opinión sea tomada en cuenta.',
+        'Ser educado en una institución del estado. ',
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Cuál de los siguientes derechos está relacionado a la sexualidad?',
+      answers: [
+        'Derecho a la protección',
+        'Derecho a la identidad',
+        'Derecho a decidir sobre mi cuerpo',
+        'Derecho a la no discriminación'
+      ],
+      correctAnswer: 2,
+    }, {
+      question: '¿Cuál de estos derechos me permite decidir si quiero tener hijos o no y a qué edad?',
+      answers: [
+        'Derecho a decidir sobre mi vida reproductiva.',
+        'Derecho a la protección',
+        'Derecho a la identidad'
+      ],
+      correctAnswer: 0,
+    }],
+    adolescente_1_7: [{
+      question: 'A qué nos referimos cuando hablamos de sexo?',
+      answers: [
+        'Son aquellas características físicas y biológicas que diferencian a los hombres de las mujeres.',
+        'Son aquellas normas culturales que nos dicen cómo deben ser las mujeres y los hombres.',
+      ],
+      correctAnswer: 0,
+    }, {
+      question: 'A qué nos referimos cuando hablamos de género?',
+      answers: [
+        'El género son aquellas normas culturales que nos dicen cómo deben ser las mujeres y los hombres.',
+        'El género son las  características físicas y biológicas que diferencian a los hombres de las mujeres.'
+      ],
+      correctAnswer: 0,
+    }, {
+      question: 'Qué son los roles de género?',
+      answers: [
+        'Son expectativas de cómo deben actuar los hombres y mujeres y qué roles deben cumplir en la sociedad.',
+        'Son las formas naturalmente aprendidas de cómo  deben comportarse los hombres y mujeres.'
+      ],
+      correctAnswer: 0,
+    }, {
+      question: 'Qué son los estereotipos de género?',
+      answers: [
+        'Son prejuicios sobre cómo deben ser los hombres o las mujeres.',
+        'Son las características biológicas de las mujeres y hombres.'
+      ],
+      correctAnswer: 0
+    }],
+    adolescente_1_9: [{
+      question: '¿Qué es la orientación sexual?',
+      answers: [
+        'Es a quién te sientes atraído o atraída, física, sexual y románticamente.',
+        'Es tu sexo biológico'
+      ],
+      correctAnswer: 0
+    }, {
+      question: '¿Qué significa ser heterosexual?',
+      answers: [
+        'Sentirse atraído o atraída por una persona del sexo opuesto.',
+        'Sentirse atraído o atraída por una persona del  mismo sexo.',
+      ],
+      correctAnswer: 0
+    }, {
+      question: '¿Qué significa ser homosexual?',
+      answers: [
+        'Sentirse atraído o atraída por una persona del mismo sexo.',
+        'Sentirse atraído o atraída por una persona del otro sexo.',
+      ],
+      correctAnswer: 0
+    }, {
+      question: '¿Qué significa ser bisexual?',
+      answers: [
+        'Sentirse atraído o atraída por hombre y por mujeres.',
+        'Sentirse atraído solamente hacia mujeres'
+      ],
+      correctAnswer: 0
+    }, {
+      question: '¿Qué es la identidad de género?',
+      answers: [
+        'Es cómo te sientes, defines y expresas tu género.',
+        'Es tu sexo biológico'
+      ],
+      correctAnswer: 0
+    }],
+    adolescente_1_13: [{
+      question: '¿Cómo podemos manejar de mejor manera nuestras emociones?',
+      answers: [
+        'Reconociendo nuestras emociones y cómo actuamos cuando las sentimos.',
+        'Utilizando formas positivas para expresar nuestras emociones.',
+        'Respirando profundo o utilizar otras técnicas para evitar actuar de forma impulsiva',
+        'Todas las respuestas son correctas'
+      ],
+      correctAnswer: 3,
+    }, {
+      question: '¿En qué nos ayuda la empatía?',
+      answers: [
+        'Nos permite comprender las emociones de los demás y ponernos en su lugar.',
+        'Nos permite tener una posición firme de nuestros pensamientos.',
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Qué es la negociación?',
+      answers: [
+        'Se trata de llegar a acuerdos que permitan resolver el conflicto.',
+        'Se trata de discutir con la otra persona y reconozca que yo tengo la razón',
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿Qué es el reconocimiento?',
+      answers: [
+        'Es tolerar, respetar y comprender a la otra persona, su posición, su opinión y sus emociones.',
+        'Es saber que la otra persona puede hablar, aunque no la escuche.',
+      ],
+      correctAnswer: 0,
+    }, {
+      question: '¿A qué se refiere la colaboración en la resolución de conflictos?',
+      answers: [
+        'Se refiere a que ambas partes deben participar activamente en la resolución del conflicto.',
+        'Se refiere a que puedo apoyarme en otras personas para que me den la razón cuando tengo una discusión.',
+      ],
+      correctAnswer: 0,
+    }],
+    adolescente_2_2: [{
+      question: 'Qué es la identidad sexual?',
+      answers: [
+        'La identidad sexual es la percepción que tiene cada persona de sí misma.',
+        'Es una atracción emocional, romántica sexual o afectiva hacia otra persona.',
+      ],
+      correctAnswer: 0
+    }, {
+      question: 'Qué es el sexo biológico?',
+      answers: [
+        'Son las características biológicas (pene o vagina) con las que nacemos.',
+        'Son aquellas características de lo masculino o femenino que aprendemos en la familia, la escuela, la comunidad, etc.',
+      ],
+      correctAnswer: 0
+    }, {
+      question: 'Qué es el género?',
+      answers: [
+        'Son aquellas características de lo masculino o femenino que aprendemos en la familia, la escuela, la comunidad, etc.',
+        'Es la forma en la que uno expresa su  apariencia, forma de vestir y de comportarse. ',
+      ],
+      correctAnswer: 0
+    }, {
+      question: 'Qué es la identidad de género?',
+      answers: [
+        'Tiene que ver con cómo nos identificamos, ya sea como masculino o femenino.',
+        'Son las características biológicas (pene o vagina) con las que nacemos',
+      ],
+      correctAnswer: 0
+    }, {
+      question: 'Qué es la orientación sexual?',
+      answers: [
+        'Es una atracción emocional, romántica sexual o afectiva hacia otra persona. ',
+        'Es la percepción que tiene cada persona de sí misma.'
+      ],
+      correctAnswer: 0
+    }, {
+      question: 'Qué es la expresión de género?',
+      answers: [
+        'Es la forma en la que uno expresa su feminidad o masculinidad, esta incluye la apariencia, forma de vestir y de comportarse.',
+        'Son aquellas características de lo masculino o femenino que aprendemos en la familia, la escuela, la comunidad, etc.',
+      ],
+      correctAnswer: 0
+    }],
+    adolescente_3_6: [{
+      question: 'María tuvo un mal día en el colegio, volvió a casa muy triste y enojada.',
+      answers: [
+        'Al llegar a casa, su mamá le pregunta qué pasó. María se molesta y le dice a su mamá que no se meta. Después corre a su cuarto y lanza la puerta.',
+        'Al llegar a casa, su mamá le pregunta qué pasó. María le comenta a su mamá lo sucedido, le explica cómo se siente y le pide a su mamá un consejo.'
+      ],
+      correctAnswer: 1
+    }, {
+      question: 'Miguel llega tarde a su cita con Raquel. Al llegar, Raquel le dice que se sentía molesta.',
+      answers: [
+        'Miguel comprende el enojo de Raquel, le explica el porqué del retraso y se disculpa con ella.',
+        'Miguel se enoja y le dice a Raquel que no fue su culpa y que había tráfico y que no exagere.'
+      ],
+      correctAnswer: 0
+    }, {
+      question: 'Pablo se siente muy triste, hace días que no tiene ganas de ir al colegio, hablar con sus amigos o salir a pasear. Lo único que hace es quedarse encerrado en su cuarto.',
+      answers: [
+        'Decide comentarle lo que está sintiendo a su papá y le pide ayuda. Su papá lo apoya y juntos piden ayuda a la psicóloga del colegio.',
+        'Pablo comienza a recurrir a las bebidas alcohólicas para no sentirse así.'
+      ],
+      correctAnswer: 0
+    }],
     lider_1_1: [
       {
         question: '¿Cuáles son los roles de los líderes comunitarios?',
@@ -660,6 +920,99 @@ let banco = {
   },
 
   unir: {
+    adolescente_3_7: {
+      left: [
+        'Violencia de género',
+        'Ley 348',
+        'Ruta crítica',
+        'Protocolo de atención'
+      ],
+      right: [
+        'Todo acto que busque dañar a una persona por su género. Tiene su origen en la desigualdad de género, el abuso de poder y normas perjudiciales como los roles de género.',
+        'Tiene como objetivo establecer “mecanismos, medidas y políticas integrales de prevención, atención, protección y reparación a las mujeres en casos de violencia”, y de perseguir y sancionar a los agresores.',
+        'Es una herramienta que visibiliza los distintos pasos a tomar en caso de violencia.',
+        'Reglamento que especifica las acciones que deben tomar las distintas instituciones y profesionales que atienden casos de violencia de género'
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [3,3], [4,4]
+      ]
+    },
+    adolescente_2_7: {
+      left: [
+        'Violencia de género',
+        'Violencia psicológica',
+        'Violencia física',
+        'Violencia sexual',
+        'Violencia económica',
+        'Violencia digital',
+        'Feminicidio'
+      ],
+      right: [
+        'Todo acto que busque dañar a una persona por su género, hace referencia especialmente a la violencia en contra de las mujeres a los niños y niñas.',
+        'Amenazas, insultos, críticas, comentarios malintencionados.',
+        'Cualquier tipo de acto que implique un daño físico a otra persona.',
+        'Obligar a una persona a realizar un acto de tipo sexual sin su consentimiento.',
+        'Controlar los ingresos económicos de una persona o impedirle trabajar.',
+        'Cualquier acto dañino que se da mediante el uso de la tecnología.',
+        'Asesinato de una mujer por el hecho de ser mujer.',
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [3,3], [4,4], [5,5], [6,6]
+      ]
+    },
+    adolescente_1_12: {
+      left: [
+        'Consentimiento sexual',
+        'El consentimiento es libre',
+        'El consentimiento debe ser específico',
+        'El consentimiento es reversible',
+        'Violencia sexual'
+      ],
+      right: [
+        'Es un acuerdo entre dos personas para participar en una actividad sexual.',
+        'No debe existir ningún tipo de presión, amenaza o chantaje de por medio.',
+        'Puedo decir que sí una vez y decir que no en otras ocasiones; o decir que sí sólo a algunas cosas y a otras no.',
+        'Puedo cambiar de parecer después de haber dicho que sí.',
+        'Cualquier contacto de tipo sexual en el cual no existe consentimiento de ambas personas.'
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [3,3], [4,4]
+      ]
+     },
+    adolescente_1_8: {
+      left: [
+        'Autoconocimiento',
+        'Autocuidado',
+        'Autonomía en la toma de decisiones',
+        'Empatía',
+      ],
+      right: [
+        'Proceso que nos permite conocernos, aceptarnos y valorarnos.',
+        'Acciones que realizamos para asegurar nuestro bienestar. Están acorde a lo que somos, lo que queremos y a nuestros planes.',
+        'Capacidad de decidir sobre los distintos aspectos de tu vida de manera libre y sin presiones de los demás.',
+        'Capacidad de conocer, respetar y comprender a los demás sin juzgarlos.',
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [3,3]
+      ]
+    },
+    adolescente_1_14: {
+      left: [
+        'No aceptes bebidas de extraños,',
+        'Si te sientes en peligro en la calle y estás solo o sola,',
+        'En caso de abuso o violación,',
+        'En caso de violencia en tu familia o de pareja, ',
+      ],
+      right: [
+        'recuerda que nadie debe obligarte a consumir alcohol o drogas.',
+        'puedes acercarte a un adulto y comentarle la situación.',
+        'recuerda no cambiarte ni bañarte, recurrir a un adulto de confianza y acudir a la defensoría o policía para realizar la denuncia.',
+        'recurre a un adulto de confianza y realiza la denuncia en una defensoría o en la policía',
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [3,3]
+      ]
+    },
     lider_1_2: {
       left: [ 'Equidad de género', 'Mecanismo de protección basado en la comunidad (MPBC)',
               'Acciones de prevención', 'Acciones de atención de casos', 'Acciones de respuesta' ],
@@ -669,6 +1022,9 @@ let banco = {
         'Realización de charlas, talleres, ferias y campañas de sensibilización sobre los derechos de las NNA.',
         'Identificación de casos de violencia, remisión de los mismos a las Defensorías y Policía y acompañamiento en el proceso de denuncia.',
         'Creación de rutas y protocolos para casos de violencia.',
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [4,4], [3,3]
       ]
     },
     lider_1_3: {
@@ -680,6 +1036,9 @@ let banco = {
         'Obligar a una persona a realizar algún acto de tipo sexual sin su consentimiento. Puede ser: acoso sexual, abuso sexual, violación. también puede estar relacionado a trata y tráfico.',
         'Es una herramienta que visibiliza los distintos pasos a tomar en caso de violencia.',
         'Reglamento que especifica las acciones que deben tomar las distintas instituciones y profesionales que atienden casos de violencia de género.',
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [4,4], [3,3]
       ]
     },
     lider_1_5: {
@@ -689,6 +1048,9 @@ let banco = {
         'Es un delito conexo a la trata y tráfico de personas, en el cual se da la comercialización sexual de personas menores de dieciocho años de edad.',
         'Es un delito en el cual se facilita la entrada ilegal de una persona a un país que no es el suyo, esto con el fin de obtener un beneficio financiero u otro beneficio de orden material.',
         'Es una norma que tiene como objetivo combatir la trata y tráfico de personas, y delitos conexos.',
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [3,3]
       ]
     },
     lider_2_1: {
@@ -899,6 +1261,209 @@ let banco = {
   },
 
   ordenar: {
+    adolescente_2_8: [{
+      label: 'Un croquis de tu casa',
+      category: 'Plan familiar de prevención'
+    }, {
+      label: 'Un dibujo de tu casa que incluya las rutas de salida',
+      category: 'Plan familiar de prevención'
+    }, {
+      label: 'Teléfonos de emergencia',
+      category: 'Plan familiar de prevención'
+    }, {
+      label: 'Teléfonos de familiares y/o vecinos ',
+      category: 'Plan familiar de prevención'
+    }, {
+      label: 'Tareas y responsabilidades de  los miembros de la familia ',
+      category: 'Plan familiar de prevención'
+    }, {
+      label: 'Botiquín de primeros auxilios',
+      category: 'Mochila de emergencias'
+    }, {
+      label: 'Comida no perecedera y agua',
+      category: 'Mochila de emergencias'
+    }, {
+      label: 'Una muda de ropa y una manta',
+      category: 'Mochila de emergencias'
+    }, {
+      label: 'Documentos personales',
+      category: 'Mochila de emergencias'
+    }, {
+      label: 'Alguna cosa importante para ti',
+      category: 'Mochila de emergencias'
+    }],
+    adolescente_2_6: [{
+      label: 'Tengo privacidad',
+      category: 'Relaciones sanas'
+    }, {
+      label: 'Puedo poner límites a mi pareja (Decirle que cosas me gustan y que no en la relación)',
+      category: 'Relaciones sanas'
+    }, {
+      label: 'Mantengo las actividades y amistades que tenía antes de estar en pareja',
+      category: 'Relaciones sanas'
+    }, {
+      label: 'Tengo derecho a estudiar, trabajar y administrar mi tiempo y mi dinero por mi cuenta',
+      category: 'Relaciones sanas'
+    }, {
+      label: 'Mi pareja respeta mis decisiones y yo las de mi pareja',
+      category: 'Relaciones sanas'
+    }, {
+      label: 'Puedo confiar en mi pareja sin controlarla o controlarlo',
+      category: 'Relaciones sanas'
+    }, {
+      label: 'Compartimos absolutamente todo , ninguno tiene su privacidad,',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Deje mis actividades y mis amistades de lado, solo paso tiempo con mi pareja',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Tengo miedo de decirle a mi pareja que algunas cosas no me gustan o no me parecen',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Tenemos acceso a las contraseñas y redes sociales del otro ',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Mi pareja me dice cómo vestir o actuar',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Tengo celos y siento que no puedo confiar en mi pareja',
+      category: 'Relaciones tóxicas'
+    }],
+    adolescente_2_5: [{
+      label: 'Tienen pene',
+      category: 'Hombres'
+    }, {
+      label: 'Tienen vagina',
+      category: 'Mujeres'
+    }, {
+      label: 'Pueden llorar',
+      category: 'Ambos'
+    }, {
+      label: 'Pueden trabajar',
+      category: 'Ambos'
+    }, {
+      label: 'Pueden realizar deportes ',
+      category: 'Ambos'
+    }, {
+      label: 'Pueden cuidar una hija o hijo',
+      category: 'Ambos'
+    }, {
+      label: 'Pueden ser jefes o líderes ',
+      category: 'Ambos'
+    }, {
+      label: 'Pueden tomar decisiones sobre su cuerpo y su vida',
+      category: 'Ambos'
+    }, {
+      label: 'Pueden realizar tareas domésticas ',
+      category: 'Ambos'
+    }, {
+      label: 'Pueden estudiar',
+      category: 'Ambos'
+    }],
+    adolescente_2_1: [{
+      label: 'Derecho a decidir de forma libre sobre mi cuerpo y mi sexualidad',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a elegir mis parejas sexuales y/o parejas amorosas',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a vivir mi sexualidad sin ningún tipo de violencia sexual',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a vivir y expresar libremente mi orientación sexual e identidad de género',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a la protección y prevención de ITS o embarazos no deseados',
+      category: 'Derechos sexuales'
+    }, {
+      label: 'Derecho a acceder a métodos anticonceptivos ',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho a decidir libremente si deseo o no tener hijas o hijos',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho a tomar decisiones sobre la reproducción sin sufrir discriminación, coerción ni violencia',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho a decidir sobre el tipo de familia que deseo formar',
+      category: 'Derechos reproductivos'
+    }, {
+      label: 'Derecho al acceso a servicios integrales de salud reproductiva',
+      category: 'Derechos reproductivos'
+    }],
+    adolescente_1_11: [{
+      label: 'Te escucha',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Te apoya para lograr tus metas',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Respeta tu espacio',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Confía en ti cuando sales con tus amigos o amigas',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Te pide tus contraseñas',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Se molesta si no quieres ser afectuoso o afectuosa en público',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Te ignora o te hace la ley del hielo cuando está enojado o enojada',
+      category: 'Relaciones tóxicas'
+    }, {
+      label: 'Es celoso o celosa',
+      category: 'Relaciones tóxicas'
+    }],
+    adolescente_1_2: [
+      {
+        label: 'Conozco las partes de mi cuerpo y sus funciones',
+        category: 'Autoconocimiento'
+      }, {
+        label: 'Conozco y acepto mis rasgos (color de piel, ojos y cabello)',
+        category: 'Autoconocimiento'
+      }, {
+        label: 'Reconozco aspectos físicos que me hacen única o único. ',
+        category: 'Autoconocimiento'
+      }, {
+        label: 'Es un proceso que se da a lo largo de la vida',
+        category: 'Autoconocimiento'
+      }, {
+        label: 'Nadie puede tocar mi cuerpo sin mi consentimiento',
+        category: 'Autocuidado'
+      }, {
+        label: 'Me alimento de manera correcta y balanceada ',
+        category: 'Autocuidado'
+      }, {
+        label: 'Realizo el ejercicio o actividad física de mi preferencia',
+        category: 'Autocuidado'
+      }, {
+        label: 'Tengo horarios de descanso regulares ',
+        category: 'Autocuidado'
+      }
+    ],
+    adolescente_1_15: [
+      {
+        label: 'Un desconocido te manda una solicitud de amistad',
+        category: 'Peligros de las  Tecnologías de Información y Comunicación (TICs) '
+      }, {
+        label: 'Alguien te pide o envía fotografías íntimas ',
+        category: 'Peligros de las  Tecnologías de Información y Comunicación (TICs) '
+      }, {
+        label: 'Cyberbullying (burlas, mensajes o comentarios violentos)',
+        category: 'Peligros de las  Tecnologías de Información y Comunicación (TICs) '
+      }, {
+        label: 'Una adolescente responde a un anuncio laboral en el que ofrecen mucho dinero por pocas horas de trabajo.',
+        category: 'Trata y tráfico'
+      }, {
+        label: 'Una adolescente se encuentra con una persona que conoció por internet, es retenida y no puede volver a casa.',
+        category: 'Trata y tráfico'
+      }, {
+        label: 'Un adolescente es llevado a otro país o ciudad para realizar trabajos forzados.',
+        category: 'Trata y tráfico'
+      },
+    ],
     lider_2_1: [
       {
         category: 'Se garantiza el derecho a la participación',
@@ -1169,6 +1734,9 @@ lider_3_2: '{"words":[{"capsule":{"origin":{"r":3,"c":9},"end":{"r":10,"c":9}},"
   },
 
   palabrasFaltantes : {
+    adolescente_1_5: "La violencia sexual se refiere a cualquier \ncontacto _no deseado_. Sucede cuando alguien\n te fuerza o presiona física o \nemocionalmente (_amenazas_, chantajes) a que hagas alguna cosa de tipo sexual.\n\n" +
+      "Dentro de lo que se considera violencia sexual se encuentra el abuso sexual y la _violación_. El abuso sexual refiere a varias situaciones como: toques, frotes, mostrar las partes íntimas, mostrar pornografía, etc. Todas estas _sin consentimiento_. La violación tiene que ver con tener una relación sexual forzada.\n\n" +
+      "Si vives una situación de violencia sexual debes: buscar un lugar seguro, contarle lo sucedido a \nun _adulto_, no cambiarte de ropa o bañarte (en caso de violación) y realizar la _denuncia_ en la policía o en la defensoría de la Niñez y Adolescencia.",
     cuidador_1_2: "1. Las Infecciones de _transmisión_ sexual son enfermedades que se contagian durante las relaciones _sexuales_ sin protección.\n\n" +
       "2. La mejor forma de prevenir las ITS y el embarazo es el correcto uso del _condón_.\n\n" +
       "3. Violencia sexual es:\n" +
