@@ -920,6 +920,26 @@ let banco = {
   },
 
   unir: {
+    puber_1_7: {
+      dir: 'img/unir/puber_1_7/',
+      left: [
+        '¿Qué debo alistar?',
+        'Respirar hondo y pensar que hacer',
+        'Respirar y buscar a mamá o papá lo antes posible',
+        'Ahora que todo pasó puedo llorar',
+        'Sentirse un poco temeroso al principio también está bien'
+      ],
+      right: [
+        'anclaje-anuncio terremoto.png',
+        'Anclaje-Desborde rio.png',
+        'Anclaje-incendio.png',
+        'Anclaje-Momento desahogo.png',
+        'Anclaje-Momento emergencia.png'
+      ],
+      answers: [
+        [0,0], [1,1], [2,2], [3,3], [4,4]
+      ]
+    },
     adolescente_3_7: {
       left: [
         'Violencia de género',
@@ -1261,6 +1281,155 @@ let banco = {
   },
 
   ordenar: {
+    puber_3_7: [{
+      label: '1.png',
+      category: 'Antes de una emergencia'
+    }, {
+      label: '2.png',
+      category: 'Antes de una emergencia'
+    }, {
+      label: '3.png',
+      category: 'Antes de una emergencia'
+    }, {
+      label: '4.png',
+      category: 'Durante una emergencia'
+    }, {
+      label: '5.png',
+      category: 'Durante una emergencia'
+    }, {
+      label: '6.png',
+      category: 'Durante una emergencia'
+    }, {
+      label: '7.png',
+      category: 'Después de la emergencia'
+    }, {
+    }],
+    puber_2_7: [{
+      label: 'coordinar.png',
+      category: 'Antes de una emergencia'
+    }, {
+      label: 'plan.png',
+      category: 'Antes de una emergencia'
+    }, {
+      label: 'mochila.png',
+      category: 'Antes de una emergencia'
+    }, {
+      label: 'aiuda.png',
+      category: 'Durante una emergencia'
+    }, {
+      label: 'cuidarse.png',
+      category: 'Durante una emergencia'
+    }, {
+      label: 'vamoacalmarno.png',
+      category: 'Durante una emergencia'
+    }, {
+      label: 'aceptar.png',
+      category: 'Después de la emergencia'
+    }, {
+    }],
+    puber_2_5: [{
+      label: 'hermana.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'hermano.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'mama.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'papa.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'policia.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'profesor.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'tias.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'tios.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'vecina.png',
+      category: 'Relaciones Positivas, me siento seguro, alegre y tengo confianza',
+    }, {
+      label: 'vecino.png',
+      category: 'Relaciones Negativas, No me siento seguro ni tampoco tengo confianza.'
+    }, {
+      anythingGoes: true
+    }],
+    puber_2_4: [{
+      label: 'Anclaje-Arreglar ducha.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-Arreglar electricidad.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-cocinar.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-Conducir auto.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-desiciones.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-jugar futbol.png',
+      category: 'Ambos'
+    }, {
+      label: 'anclaje-lavar platos.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-lavar ropa.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-Mover muebles.png',
+      category: 'Ambos'
+    }, {
+      label: 'Anclaje-Trabajar.png',
+      category: 'Ambos'
+    }, {
+      category: 'Mamá'
+    }, {
+      category: 'Papá'
+    }],
+    puber_2_2: [{
+      label: 'Me lastiman mi cuerpo',
+      category: 'No lo permitoo'
+    }, {
+      label: 'Me gritan',
+      category: 'No lo permitoo'
+    }, {
+      label: 'Me piden un favor amablemente',
+      category: 'Lo permito'
+    }],
+    puber_1_5: [{
+      label: 'Anclaje-familia comiendo conversando.png',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Anclaje-ninos jugando.png',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Anclaje-nino profesor.png',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Anclaje-nina padre parque.png',
+      category: 'Relaciones positivas'
+    }, {
+      label: 'Anclaje-familia comiendo enojada.png',
+      category: 'Relaciones negativas'
+    }, {
+      label: 'Anclaje-nina enojada.png',
+      category: 'Relaciones negativas'
+    }, {
+      label: 'Anclaje-nino gritando mascota.png',
+      category: 'Relaciones negativas'
+    }, {
+      label: 'Anclaje-padres gritando.png',
+      category: 'Relaciones negativas'
+    }],
     adolescente_2_8: [{
       label: 'Un croquis de tu casa',
       category: 'Plan familiar de prevención'
@@ -1712,6 +1881,7 @@ let banco = {
   },
 
   sopa: {
+    adolescente_1_3: '[{"capsule":{"origin":{"r":7,"c":2},"end":{"r":7,"c":9}},"word":"GONORREA"},{"capsule":{"origin":{"r":0,"c":5},"end":{"r":8,"c":5}},"word":"SECRECION"},{"capsule":{"origin":{"r":0,"c":5},"end":{"r":6,"c":11}},"word":"SIFILIS"},{"capsule":{"origin":{"r":6,"c":9},"end":{"r":4,"c":11}},"word":"VIH"},{"capsule":{"origin":{"r":8,"c":0},"end":{"r":8,"c":5}},"word":"CONDON"},{"capsule":{"origin":{"r":5,"c":1},"end":{"r":9,"c":1}},"word":"ARDOR"},{"capsule":{"origin":{"r":6,"c":8},"end":{"r":11,"c":8}},"word":"HERPES"},{"capsule":{"origin":{"r":11,"c":0},"end":{"r":11,"c":8}},"word":"HEPATITIS"},{"capsule":{"origin":{"r":4,"c":2},"end":{"r":4,"c":8}},"word":"ULCERAS"}]',
     lider_1_1: '[{"capsule":{"origin":{"r":0,"c":0},"end":{"r":12,"c":12}},"word":"PARTICIPACION"},{"capsule":{"origin":{"r":5,"c":0},"end":{"r":5,"c":9}},"word":"PROTECCION"},{"capsule":{"origin":{"r":4,"c":11},"end":{"r":12,"c":11}},"word":"EDUCACION"},{"capsule":{"origin":{"r":8,"c":1},"end":{"r":8,"c":9}},"word":"IDENTIDAD"},{"capsule":{"origin":{"r":12,"c":2},"end":{"r":8,"c":2}},"word":"SALUD"},{"capsule":{"origin":{"r":1,"c":4},"end":{"r":1,"c":11}},"word":"LIBERTAD"}]',
     puber_1_3: '[{"capsule":{"origin":{"r":7,"c":2},"end":{"r":7,"c":9}},"word":"GONORREA"},{"capsule":{"origin":{"r":0,"c":5},"end":{"r":8,"c":5}},"word":"SECRECION"},{"capsule":{"origin":{"r":0,"c":5},"end":{"r":6,"c":11}},"word":"SIFILIS"},{"capsule":{"origin":{"r":6,"c":9},"end":{"r":4,"c":11}},"word":"VIH"},{"capsule":{"origin":{"r":8,"c":0},"end":{"r":8,"c":5}},"word":"CONDON"},{"capsule":{"origin":{"r":5,"c":1},"end":{"r":9,"c":1}},"word":"ARDOR"},{"capsule":{"origin":{"r":6,"c":8},"end":{"r":11,"c":8}},"word":"HERPES"},{"capsule":{"origin":{"r":11,"c":0},"end":{"r":11,"c":8}},"word":"HEPATITIS"},{"capsule":{"origin":{"r":4,"c":2},"end":{"r":4,"c":8}},"word":"ULCERAS"}]',
     lider_2_2: '[{"capsule":{"origin":{"r":0,"c":12},"end":{"r":7,"c":12}},"word":"PREVENIR"},{"capsule":{"origin":{"r":12,"c":0},"end":{"r":12,"c":8}},"word":"ACOMPAÑAR"},{"capsule":{"origin":{"r":5,"c":8},"end":{"r":12,"c":8}},"word":"INFORMAR"},{"capsule":{"origin":{"r":0,"c":0},"end":{"r":8,"c":0}},"word":"DENUNCIAR"}]',

@@ -4,28 +4,37 @@ var Word = {
   createWords : function () {
     let marginY = Container.endingPosY();
     Word.marginY = marginY;
+    Word.posY = 1 + marginY;
     for (var i=0; i<config.words.fakeBackend.length; i++) {
-      let word = this.gimmieWord(1 + marginY + i * config.words.yOffset,
+      let word = this.gimmieWord(Word.posY,
                                  config.words.fakeBackend[i]);
     }
     Word.totalWords = config.words.fakeBackend.length;
   },
 
   gimmieWord : function (positionY, info) {
-    var word = {
-      sprite : scene.add.nineslice(phaserConfig.width/2, positionY, 340, 50, 'info-box-fill', 5).
-        setOrigin(0.5, 0).
-        setDepth(10).
-        setTint(gameStatus.colors.stroke).
-        setInteractive(),
-      info : info
-    };
+    if (!info.label) return;
+    var word = {};
+    if (info.label.indexOf('.png') >= 0) {
+      word.sprite = scene.add.image(phaserConfig.width/2, positionY, info.label);
+    } else {
+      word.sprite = scene.add.nineslice(phaserConfig.width/2, positionY, 340, 50, 'info-box-fill', 5).
+        setTint(gameStatus.colors.stroke);
+    }
+    word.sprite.
+      setOrigin(0.5, 0).
+      setDepth(10).
+      setInteractive();
+    word.info = info;
+    Word.posY += word.sprite.height + 1;
+
     word.destroy = function () {
       let index = Word.instances.indexOf(this);
+      let offset = word.sprite.height + 2;
       Word.instances.splice(index, 1);
       word.sprite.destroy();
       word.label.destroy();
-      let offset = (config.words.yOffset);
+      // let offset = (config.words.yOffset);
       for (let i=index; i<Word.instances.length; i++) {
         Word.instances[i].sprite.y -= offset;
         Word.instances[i].label.y -= offset;
@@ -40,6 +49,9 @@ var Word = {
       wordWrap: { width: 320 },
       align: 'left',
     });
+    if (word.info.label.indexOf('.png') >= 0) {
+      word.label.setAlpha(0);
+    }
 
     scene.input.setDraggable(word.sprite);
 

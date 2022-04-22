@@ -75,7 +75,7 @@ var Container = {
           delay: 50,
           duration: 250,
           onComplete: function () {
-            let image = isOk? 'ok': 'oknt';
+            let image = isOk || config.anythingGoes? 'ok': 'oknt';
             let feedback = scene.add.image(gameObject.x, gameObject.y + 5, image).
                 setAlpha(0).
                 setTint('0xaaaaaa').

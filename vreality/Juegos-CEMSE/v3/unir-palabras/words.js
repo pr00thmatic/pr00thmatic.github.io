@@ -30,6 +30,8 @@ var Words = (() => {
 
     var sum = 0;
     for (let i=0; i<data[columnName].length; i++) {
+      if (!data[columnName].statement) continue;
+      
       let width = config.width * (columnName === 'left'? 0.8: 1.2);
       var option = {};
       var pos = { x: posX, y: config.margins.y + sum };
