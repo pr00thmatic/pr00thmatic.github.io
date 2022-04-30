@@ -5,11 +5,14 @@ var Word = {
     let marginY = Container.endingPosY();
     Word.marginY = marginY;
     Word.posY = 1 + marginY;
+    Word.totalWords = 0;
     for (var i=0; i<config.words.fakeBackend.length; i++) {
-      let word = this.gimmieWord(Word.posY,
-                                 config.words.fakeBackend[i]);
+      if (config.words.fakeBackend[i].label) {
+        Word.totalWords++;
+        let word = this.gimmieWord(Word.posY,
+                                   config.words.fakeBackend[i]);
+      }
     }
-    Word.totalWords = config.words.fakeBackend.length;
   },
 
   gimmieWord : function (positionY, info) {

@@ -35,7 +35,7 @@ function preload () {
   config.words.fakeBackend = [];
   for (let i=0; i<banco.ordenar[gameStatus.capsulaID].length; i++) {
     let entry = banco.ordenar[gameStatus.capsulaID][i];
-    if (entry.label && entry.category) {
+    if (entry.label || entry.category) {
       config.words.fakeBackend.push(entry);
     } else {
       config.anythingGoes = entry.anythingGoes;

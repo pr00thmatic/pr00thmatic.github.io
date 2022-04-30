@@ -1955,3 +1955,30 @@ lider_3_2: '{"words":[{"capsule":{"origin":{"r":3,"c":9},"end":{"r":10,"c":9}},"
     ]
   }
 };
+
+banco.ordenar.puber_2_3 = [{
+  label: 'Anclaje-barrer.png',
+  category: 'Ambos'
+}, {
+  label: 'Anclaje-dar-de-comer.png',
+  category: 'Ambos'
+}, {
+  label: 'Anclaje-desempolvar.png',
+  category: 'Ambos'
+}, {
+  label: 'Anclaje-lavar-platos.png',
+  category: 'Ambos'
+}, {
+  label: 'Anclaje-lavar-ropa.png',
+  category: 'Ambos'
+}, {
+  label: 'Anclaje-planchar.png',
+  category: 'Ambos'
+}, {
+  label: 'Anclaje-sacar-la-basura.png',
+  category: 'Ambos'
+}, {
+  category: 'Mamá'
+}, {
+  category: 'Papá'
+}];
