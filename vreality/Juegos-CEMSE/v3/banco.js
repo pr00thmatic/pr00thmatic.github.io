@@ -1983,7 +1983,6 @@ banco.ordenar.puber_2_3 = [{
   category: 'Papá'
 }];
 
-console.log('DX');
 banco.ordenar.puber_1_6 = [{
   label: 'Anclaje-francito morete.png',
   category: 'Situaciones de Violencia'

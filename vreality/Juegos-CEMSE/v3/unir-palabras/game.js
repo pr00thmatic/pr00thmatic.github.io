@@ -14,6 +14,7 @@ var mainState = ( function () {
     gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
     gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
     data = banco.unir[gameStatus.capsulaID];
+    console.log(data);
     utils.preloadSharedAssets(scene);
     scene.load.image('left', assets + 'left.png');
     scene.load.image('right', assets + 'right.png');

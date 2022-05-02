@@ -30,8 +30,8 @@ var Words = (() => {
 
     var sum = 0;
     for (let i=0; i<data[columnName].length; i++) {
-      if (!data[columnName].statement) continue;
-      
+      if (!data[columnName][i].statement) continue;
+
       let width = config.width * (columnName === 'left'? 0.8: 1.2);
       var option = {};
       var pos = { x: posX, y: config.margins.y + sum };
@@ -57,6 +57,7 @@ var Words = (() => {
 
       if (data[columnName][i].statement.indexOf('.png') >= 0) {
         option.text = scene.add.image(pos.x, pos.y, data[columnName][i].statement);
+        console.log('twas animage', option.text);
         let size = 200;
         option.textHeight = size * (option.text.height/option.text.width)
         option.text.setDisplaySize(size, option.textHeight);
@@ -70,6 +71,7 @@ var Words = (() => {
           }
         }).setOrigin(0.5, 0.5);
         option.textHeight = option.text.height;
+        console.log('twas text', option.text);
       }
 
       option.id = data[columnName][i].id;
