@@ -24,12 +24,15 @@ var mainState = ( function () {
   var create = function () {
     gameStatus.emitter = new Phaser.Events.EventEmitter();
     puzzles = banco.ahorcado[gameStatus.capsulaID];
-    if (order.length != puzzles) {
-      for (let i=0; i<puzzles.length; i++) {
-        order[i] = i;
-      }
+    if (!gameStatus.shuffled) {
+      if (order.length != puzzles) {
+        for (let i=0; i<puzzles.length; i++) {
+          order[i] = i;
+        }
 
-      utils.shuffle(order);
+        utils.shuffle(order);
+        gameStatus.shuffled = true;
+      }
     }
     utils.createBackground();
 
@@ -70,11 +73,12 @@ var mainState = ( function () {
       gameStatus.results = utils.createResults(text, text, colors.global.wrong, colors.global.right, true);
       gameStatus.emitter.off('keyboard.keyPress', onKeyPress);
       setTimeout(() => {
-        if (mainState.next()) {
+        if (mainState.hasNext()) {
           gameStatus.emitter.on('keyboard.keyPress', onKeyPress);
           gameStatus.results.label.destroy();
           gameStatus.results.background.destroy();
           gameStatus.results = undefined;
+          mainState.next();
         }
       }, 2000);
     });
@@ -100,12 +104,16 @@ var mainState = ( function () {
     gameStatus.knownSolvedBlanks = 0;
   }
 
+  let hasNext = function () {
+    return !(gameStatus.currentPuzzle + 1 >= puzzles.length);
+  };
+
   var next = function () {
     if (++gameStatus.currentPuzzle === puzzles.length) {
       return false;
     }
     KeyboardExtension.reset(gameStatus.keyboard);
-    createBlanks();
+    // createBlanks();
     scene.scene.restart();
     return true;
   }
@@ -115,14 +123,15 @@ var mainState = ( function () {
            height: 600,
            transparent: true,
            plugins: {
-             global: [ NineSlice.Plugin.DefaultCfg ]
+             l: [ NineSlice.Plugin.DefaultCfg ]
            },
            scene: {
              preload : preload,
              create : create,
              update : update
            },
-           next
+           next,
+           hasNext
          };
 
 })();

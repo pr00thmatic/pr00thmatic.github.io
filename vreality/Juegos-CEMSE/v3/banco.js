@@ -1982,3 +1982,24 @@ banco.ordenar.puber_2_3 = [{
 }, {
   category: 'Papá'
 }];
+
+console.log('DX');
+banco.ordenar.puber_1_6 = [{
+  label: 'Anclaje-francito morete.png',
+  category: 'Situaciones de Violencia'
+}, {
+  label: 'Anclaje-papa gritando.png',
+  category: 'Situaciones de Violencia'
+}, {
+  label: 'Anclaje-llamita llorando.png',
+  category: 'Situaciones de Violencia'
+}, {
+  label: 'Anclaje-llamitas escuchando hijo.png',
+  category: 'Situaciones de la vida cotidiana y toma de decisiones'
+}, {
+  label: 'Anclaje-llamita cambiandose.png',
+  category: 'Situaciones de la vida cotidiana y toma de decisiones'
+}, {
+  label: 'Anclaje-pensando en padres.png',
+  category: 'Situaciones de la vida cotidiana y toma de decisiones'
+}];
