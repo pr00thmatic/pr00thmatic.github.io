@@ -1930,7 +1930,7 @@ lider_3_2: '{"words":[{"capsule":{"origin":{"r":3,"c":9},"end":{"r":10,"c":9}},"
       "Identificar personas de _confianza_. Enseñarles que una persona de confianza es quien te escucha, \nte _respeta_ y te trata con cariño, por tanto, puede ser mamá, papá, cuidadores, profesores, etc. Especialmente estas personas te \nhacen _sentir_ segura, escuchada y te orientan.\n\n" +
       "Enseñarles sobre sus _derechos_ y a expresar sus _emociones_.",
 
-    nino_2_6: "El internet es una _herramienta.png_ muy útil, que nospermite _aprender.png_, informarnos y _divertirnos.png_, pero no podemos utilizarla todo el tiempo, tenemos que tener horarios establecidos, cuidarnos de _informacion.png_ falsa y no dar nuestros nombre ni subir _fotos.png_, así podremos disfrutar del internet."
+    nino_2_6: "El internet es \nuna _herramienta.png_ muy útil, que nos\npermite _aprender.png_, informarnos \ny _divertirnos.png_, pero no podemos utilizarla todo el tiempo, tenemos que tener horarios establecidos, cuidarnos de _informacion.png_ falsa y no dar nuestros nombre ni subir _fotos.png_, así podremos disfrutar del internet."
   },
 
   ahorcado: {
