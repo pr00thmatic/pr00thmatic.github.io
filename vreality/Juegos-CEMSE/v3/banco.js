@@ -1907,31 +1907,30 @@ lider_3_2: '{"words":[{"capsule":{"origin":{"r":3,"c":9},"end":{"r":10,"c":9}},"
   },
 
   palabrasFaltantes : {
-    adolescente_1_5: "La violencia sexual se refiere a cualquier \ncontacto _no deseado_. Sucede cuando alguien\n te fuerza o presiona física o \nemocionalmente (_amenazas_, chantajes) a que hagas alguna cosa de tipo sexual.\n\n" +
-      "Dentro de lo que se considera violencia sexual se encuentra el abuso sexual y la _violación_. El abuso sexual refiere a varias situaciones como: toques, frotes, mostrar las partes íntimas, mostrar pornografía, etc. Todas estas _sin consentimiento_. La violación tiene que ver con tener una relación sexual forzada.\n\n" +
-      "Si vives una situación de violencia sexual debes: buscar un lugar seguro, contarle lo sucedido a \nun _adulto_, no cambiarte de ropa o bañarte (en caso de violación) y realizar la _denuncia_ en la policía o en la defensoría de la Niñez y Adolescencia.",
+    adolescente_1_5: "La violencia sexual se refiere a\n cualquier contacto _no deseado_. Sucede cuando alguien te fuerza o presiona física o emocionalmente (_amenazas_, chantajes) a que hagas alguna cosa de tipo sexual.\n\n" +
+      "Dentro de lo que se considera violencia sexual se encuentra el abuso sexual y\nla _violación_. El abuso sexual refiere a varias situaciones como: toques, frotes, mostrar las partes íntimas, mostrar pornografía, etc. Todas \nestas _sin consentimiento_. La violación tiene que ver con tener una relación sexual forzada.\n\n" +
+      "Si vives una situación de violencia sexual debes: buscar un lugar seguro, contarle lo sucedido a un _adulto_, no cambiarte de ropa o bañarte (en caso de violación) y realizar la _denuncia_ en la policía o en la defensoría de la Niñez y Adolescencia.",
     cuidador_1_2: "1. Las Infecciones de _transmisión_ sexual son enfermedades que se contagian durante las relaciones _sexuales_ sin protección.\n\n" +
-      "2. La mejor forma de prevenir las ITS y el embarazo es el correcto uso del _condón_.\n\n" +
+      "2. La mejor forma de prevenir las ITS y el embarazo es el correcto uso \ndel _condón_.\n\n" +
       "3. Violencia sexual es:\n" +
       "   - Si alguien toca tus pechos, nalgas, boca o genitales sin tu _consentimiento_.\n" +
       "   - Si alguien te fuerza a que lo _beses_.\n" +
-      "   - Si alguien te obliga a sacarte _fotografías_ sin ropa o en posiciones eróticas.",
+      "   - Si alguien te obliga a \nsacarte _fotografías_ sin ropa o en posiciones eróticas.",
 
-    cuidador_1_7: "Hace mucho tiempo cerca a un lago se inundaron varias casas, entre ellas la casa de Pedro y Fabiola. Durante todo el día no había parado de _llover_. Entonces, Pedro y Fabiola sintieron mucha _preocupación_ porque su casa y su familia estaban en riesgo. A pesar de esta emoción, Pedro trató de _calmarse_, para ello _respiró_ profundamente y de esa manera pudo sacar de su _casa_, sanos y salvos a sus dos hijas e hijo, quienes estaban con mucho _miedo_. Llegaron a un lugar _seguro_ pero Pedro y Fabiola sabían que tenían que estar alerta para _cuidar_ y _proteger_ a su familia, porque en estas situaciones las _niñas, niños y adolescentes_ son más _vulnerables_ y corren más peligro." +
-      "Durante varios días tuvieron que vivir en un _Refugio_, por eso Fabiola les explicó a sus hijas e hijos que ahora más que nunca se tenían que _cuidar_ entre todos, porque hay mucha gente que puede aprovechar esta situación para cometer _abuso sexual_. Y les recordaron que como su madre y padre estaban para _cuidarlos_ y _amarlos_,  y que entre todos resolverán cualquier problema.",
+    cuidador_1_7: "Hace mucho tiempo cerca a un lago se inundaron varias casas, entre ellas la casa de Pedro y Fabiola. Durante todo el día no había parado de _llover_. Entonces, Pedro y Fabiola sintieron mucha _preocupación_ porque su casa y su familia estaban en riesgo. A pesar de esta emoción, Pedro trató de _calmarse_, para ello _respiró_ profundamente y de esa manera pudo sacar de su _casa_, sanos y salvos a sus dos hijas e hijo, quienes estaban con mucho _miedo_. Llegaron a un lugar _seguro_ pero Pedro y Fabiola sabían que tenían que estar alerta para _cuidar_ y _proteger_ a su familia, porque en estas situaciones \nlas _niñas, niños y adolescentes_ son \nmás _vulnerables_ y corren más peligro.",
 
     puber_1_5: "La violencia sexual se refiere a cualquier\n contacto _no deseado_. Sucede cuando alguien te fuerza o presiona física o \nemocionalmente (_amenazas_, chantajes) a que hagas alguna cosa de tipo sexual.\n\n" +
-      "Dentro de lo que se considera violencia sexual se encuentra el abuso sexual y la _violación_. El abuso sexual refiere a varias situaciones como: toques, frotes, mostrar las partes íntimas, mostrar pornografía, etc. Todas estas _sin consentimiento_. La violación tiene que ver con tener una relación sexual forzada.\n\n" +
+      "Dentro de lo que se considera violencia sexual se encuentra el abuso sexual y \nla _violación_. El abuso sexual refiere a varias situaciones como: toques, frotes, mostrar las partes íntimas, mostrar pornografía, etc. Todas \nestas _sin consentimiento_. La violación tiene que ver con tener una relación sexual forzada.\n\n" +
       "Si vives una situación de violencia sexual debes: buscar un lugar seguro, contarle lo sucedido a \nun _adulto_, no cambiarte de ropa o bañarte (en caso de violación) y realizar la _denuncia_ en la policía o en la defensoría de la Niñez y Adolescencia.",
 
     cuidador_2_1: "Las mamás, papás, cuidadores, comunidad y el estado tenemos la responsabilidad de _proteger_ a las niñas, niños y adolescentes.\n\n" +
       "Los derechos de las niñas, niños y adolescentes están plenamente estipulados en el _código_ niña, niño y adolescente.",
 
-    cuidador_2_4: "Como adultos nuestra responsabilidad es asegurar el _cuidado_ y protección de nuestras hijas e hijos. Sin embargo, también tenemos que enseñarles a _enfrentar_ posibles situaciones de riesgo y el mejor mecanismo de enseñanza es el ejemplo, por lo que el _autocuidado_ lo deben ver en nosotras y nosotros.\n\n" +
-      "Identificar personas de _confianza_. Enseñarles\nque una persona de confianza es quien te escucha, te _respeta_ y te trata con cariño, por tanto, puede ser mamá, papá, cuidadores, profesores, etc. Especialmente estas personas te hacen _sentir_ segura, escuchada y te orientan.\n\n" +
-      "Enseñarles sobre sus _derechos_ y a expresar\nsus _emociones_.",
+    cuidador_2_4: "Como adultos nuestra responsabilidad es asegurar el _cuidado_ y protección de nuestras hijas e hijos. Sin embargo, también tenemos que enseñarles \na _enfrentar_ posibles situaciones de riesgo y el mejor mecanismo de enseñanza es el ejemplo, por lo que \nel _autocuidado_ lo deben ver en nosotras y nosotros.\n\n" +
+      "Identificar personas de _confianza_. Enseñarles que una persona de confianza es quien te escucha, \nte _respeta_ y te trata con cariño, por tanto, puede ser mamá, papá, cuidadores, profesores, etc. Especialmente estas personas te \nhacen _sentir_ segura, escuchada y te orientan.\n\n" +
+      "Enseñarles sobre sus _derechos_ y a expresar sus _emociones_.",
 
-    nino_2_6: "El internet es\nuna _herramienta.png_ muy\nútil, que nos\npermite _aprender.png_, informarnos\ny _divertirnos.png_, pero no podemos utilizarla todo el tiempo, tenemos que tener horarios establecidos, cuidarnos de _informacion.png_ falsa y no dar nuestros nombre ni subir _fotos.png_, así podremos disfrutar del internet."
+    nino_2_6: "El internet es una _herramienta.png_ muy útil, que nospermite _aprender.png_, informarnos y _divertirnos.png_, pero no podemos utilizarla todo el tiempo, tenemos que tener horarios establecidos, cuidarnos de _informacion.png_ falsa y no dar nuestros nombre ni subir _fotos.png_, así podremos disfrutar del internet."
   },
 
   ahorcado: {

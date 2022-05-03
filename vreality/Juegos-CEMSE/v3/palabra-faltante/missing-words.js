@@ -3,7 +3,7 @@ var MissingWords = (() => {
 
   var gimmieMissingWords = function () {
     var bottom = gameStatus.story.text.getBottomLeft();
-    var offset = { x: 100, y: 20 };
+    var offset = { x: 112, y: 40 };
 
     utils.shuffle(gameStatus.story.missingWords);
     for (let i=0; i<gameStatus.story.missingWords.length; i++) {
@@ -42,8 +42,10 @@ var MissingWords = (() => {
         gameStatus.emitter.emit('word completed');
       }; })(word));
 
+      let height = 110;
       let space = { x: (Story.children? 20 + 110 * (i%3): bottom.x + offset.x * (i % 3)),
-                    y: (Story.children? mainState.height - 110*2 + 110 * Math.floor(i/3): bottom.y + offset.y * Math.floor(i/3)) };
+                    y: (Story.children? mainState.height - height*2 + height * Math.floor(i/3): bottom.y + offset.y * Math.floor(i/3)) };
+      console.log(space.y);
       word.container = {
         sprite: scene.add.sprite(space.x, space.y,
                                  Story.children? word.word: 'word container').
@@ -54,7 +56,9 @@ var MissingWords = (() => {
       word.container.sprite.word = word;
       word.container.originalPosition = { x: word.container.sprite.x, y: word.container.sprite.y };
       word.container.label = Label.gimmieLabel(word.container.sprite, word.word, {
-        color: '#ffffff', font: '11px Helvetica', align: 'center'
+        color: '#ffffff', font: '14px Helvetica', align: 'center',
+        wordWrap: { width: 110 },
+        fixedWidth: 110
       });
       if (Story.children) {
         word.container.label.setAlpha(0);
