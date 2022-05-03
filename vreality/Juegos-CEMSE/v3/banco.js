@@ -1954,6 +1954,12 @@ lider_3_2: '{"words":[{"capsule":{"origin":{"r":3,"c":9},"end":{"r":10,"c":9}},"
       'Respeto',
       'Violencia',
       'Desconfianza'
+    ],
+    adolescente_1_10: [
+      'Buena comunicacion',
+      'Respeto',
+      'Violencia',
+      'Desconfianza'
     ]
   }
 };
