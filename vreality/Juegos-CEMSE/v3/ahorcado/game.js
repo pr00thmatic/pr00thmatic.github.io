@@ -123,7 +123,7 @@ var mainState = ( function () {
            height: 600,
            transparent: true,
            plugins: {
-             l: [ NineSlice.Plugin.DefaultCfg ]
+             global: [ NineSlice.Plugin.DefaultCfg ]
            },
            scene: {
              preload : preload,
