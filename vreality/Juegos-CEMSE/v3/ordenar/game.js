@@ -47,6 +47,8 @@ function preload () {
   gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
   scene.load.spritesheet('word', 'ordenar/assets/word.png', {frameWidth: 130, frameHeight: 40});
   scene.load.spritesheet('container', 'ordenar/assets/container.png', { frameWidth: 140, frameHeight: 160 });
+  scene.load.image('box1', 'ordenar/assets/box1.png');
+  scene.load.image('box2', 'ordenar/assets/box2.png');
   scene.load.image('background', 'ordenar/assets/background.png');
   let data = config.words.fakeBackend;
   for (let i=0; i<data.length; i++) {

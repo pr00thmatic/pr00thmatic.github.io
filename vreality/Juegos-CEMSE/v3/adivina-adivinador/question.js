@@ -11,6 +11,7 @@ var Question = (() => {
                                                     {x:config.width, y:config.height}, 'info-box', 10).
         setOrigin(0.5, 0);
       instance.holder.stroke.setTint(colors.global.right);
+      instance.holder.fill.setTint(colors.global.right);
     }
 
     if (instance.label) {
@@ -24,8 +25,9 @@ var Question = (() => {
         setDisplaySize(size * 1.29, size);
     } else {
       instance.label = Label.gimmieLabel(instance.holder, '', {
-        color: '#000',
-        font: 'bold 14px Montserrat',
+        color: '#fff',
+        font: 'bold 15px Montserrat',
+        width: Question.config.width,
         wordWrap: {
           width: 250
         },
@@ -37,6 +39,7 @@ var Question = (() => {
 
   return {
     instance,
-    load
+    load,
+    config
   };
 })();

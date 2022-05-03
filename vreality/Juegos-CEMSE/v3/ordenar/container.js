@@ -105,11 +105,12 @@ var Container = {
   },
 
   initialize : function (container, pos, size, category) {
-    container.sprite = scene.add.nineslice(pos.x, pos.y, size.x, size.y, 'info-box-fill', 5).
+    // container.sprite = scene.add.nineslice(pos.x, pos.y, size.x, size.y, 'info-box-fill', 5).
+    // setTint(colors.global.right).
+    container.sprite = scene.add.image(pos.x, pos.y, 'box1').
       setOrigin(0.5, 0).
       setDepth(0).
-      setTint(colors.global.right).
-      setInteractive();
+    setInteractive();
     container.category = category;
     container.words = [];
     container.isOk = () => {
@@ -122,14 +123,15 @@ var Container = {
   },
 
   createLabel : function (container) {
-    container.label = scene.add.text(container.sprite.getTopLeft().x + 10,
-                                     container.sprite.getTopLeft().y + 10,
+    container.label = scene.add.text(container.sprite.getCenter().x,
+                                     container.sprite.getCenter().y,
                                      container.category, {
-                                       color: '#ffffff',
-                                       font: 'bold 12px Montserrat',
-                                       width: this.config.size.x,
-                                       wordWrap: { width: this.config.size.x }
-                                     });
+                                       align: 'center',
+                                       color: '#000',
+                                       font: 'bold 18px Montserrat',
+                                       width: phaserConfig.width - 40,
+                                       wordWrap: { width: phaserConfig.width - 40 }
+                                     }).setOrigin(0.5, 0.5);
   },
 
   updateWordsPosition : function (container) {

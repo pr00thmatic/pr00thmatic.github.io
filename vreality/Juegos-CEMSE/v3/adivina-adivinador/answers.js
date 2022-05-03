@@ -30,7 +30,8 @@ var Answers = (() => {
       } else {
         answer.statement = Label.gimmieLabel(answer.holder, statements[i], {
           color: '#000000',
-          font: 'bold 14px Montserrat',
+          font: '15px Montserrat',
+          width: Question.config.width,
           wordWrap: {
             width: 220
           },

@@ -63,9 +63,9 @@ var Words = (() => {
         option.text.setDisplaySize(size, option.textHeight);
       } else {
         option.text = scene.add.text(pos.x, pos.y, data[columnName][i].statement, {
-          font: '12px Montserrat',
+          font: '13px Montserrat',
           align: 'left',
-          color: '#fff',
+          color: columnName === 'right'? '#000': '#fff',
           wordWrap: {
             width: width - 20
           }
@@ -80,7 +80,7 @@ var Words = (() => {
                                           config.heightMargin * 2 + option.textHeight,
                                           'info-box-fill', 10).
         setOrigin(origin.x, origin.y).
-        setTint(gameStatus.colors.stroke).
+        setTint(columnName === 'right'? '0xffffff': gameStatus.colors.stroke).
         setInteractive();
       option.text.setPosition(option.sprite.getCenter().x, option.sprite.getCenter().y).
         setDepth(10);
