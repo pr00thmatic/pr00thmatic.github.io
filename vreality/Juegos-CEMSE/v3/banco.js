@@ -824,21 +824,21 @@ let banco = {
       ],
       correctAnswer: 0
     }, {
-      question: '2. ¿Cómo podemos superar la vulnerabilidad?',
+      question: '¿Cómo podemos superar la vulnerabilidad?',
       answers: [
         'No se puede.',
         'Desarrollando y fortaleciendo nuestras capacidades.'
       ],
       correctAnswer: 1
     }, {
-      question: '3. ¿Por qué cuidar mucho más a nuestras hijas e hijos en situaciones de amenazas o desastres?',
+      question: '¿Por qué cuidar mucho más a nuestras hijas e hijos en situaciones de amenazas o desastres?',
       answers: [
         'Porque además del riesgo del desastre natural hay mayor vulnerabilidad de sufrir algún tipo de abuso o violencia sexual.',
         'Porque estarán más tristes nuestras hijas e hijos.'
       ],
       correctAnswer: 0
     }, {
-      question: '4. ¿Por qué es importante conformar una red de apoyo entre madres, padres, cuidadores, profesores, miembros de la comunidad?',
+      question: '¿Por qué es importante conformar una red de apoyo entre madres, padres, cuidadores, profesores, miembros de la comunidad?',
       answers: [
         'No es muy importante yo puedo sola o solo con mi familia.',
         'Porque se necesita superar la amenaza de manera conjunta desde el respeto y el cariño.'
