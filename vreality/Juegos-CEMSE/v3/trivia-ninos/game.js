@@ -12,6 +12,7 @@ var mainState = ( function () {
   var preload = function () {
     scene = this;
     gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
+    let requiresAudio = banco.triviaWithVoice.indexOf(gameStatus.capsulaID) >= 0;
     utils.preloadSharedAssets(scene);
     gameStatus.colors = colors[gameStatus.capsulaID.split('_')[0]];
     data = banco.trivia[gameStatus.capsulaID];
@@ -19,9 +20,20 @@ var mainState = ( function () {
       if (data[i].question.indexOf('.png') >= 0) {
         scene.load.image(data[i].question, data[i].dir + data[i].question);
       }
+      if (requiresAudio) {
+        let code = gameStatus.capsulaID.split('_');
+        code = code[1] + '_' + code[2] + '_' + i;
+        scene.load.audio('mus_' + i, [ 'audio/' + code + '.mp3' ]);
+      }
       for (let j=0; j<data[i].answers.length; j++) {
         if (data[i].answers[j].indexOf('.png') >= 0) {
           scene.load.image(data[i].answers[j], data[i].dir + data[i].answers[j]);
+        }
+        if (requiresAudio &&
+            banco.triviaVoiceButNoAnswers.indexOf(gameStatus.capsulaID) < 0) {
+          let code = gameStatus.capsulaID.split('_');
+          code = code[1] + '_' + code[2] + '_' + i + '_' + j;
+          scene.load.audio('mus_' + i + '_' + j, [ 'audio/' + code + '.mp3' ]);
         }
       }
     }

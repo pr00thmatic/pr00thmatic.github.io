@@ -433,15 +433,6 @@ let banco = {
       correctAnswer: 1
     }, {
       dir: 'img/trivia/nino_1_6/',
-      question: 'Anclaje-nino emociones-01.png',
-      answers: [
-        'Anclaje-nino emociones-03.png',
-        'Anclaje-nino emociones-02.png',
-        'Anclaje-nino emociones-01.png',
-      ],
-      correctAnswer: 2
-    }, {
-      dir: 'img/trivia/nino_1_6/',
       question: 'Anclaje-ninos tristes-02.png',
       answers: [
         'Anclaje-ninos tristes-02.png',
@@ -449,6 +440,15 @@ let banco = {
         'Anclaje-ninos tristes-01.png',
       ],
       correctAnswer: [1,2],
+    }, {
+      dir: 'img/trivia/nino_1_6/',
+      question: 'Anclaje-nino emociones-01.png',
+      answers: [
+        'Anclaje-nino emociones-03.png',
+        'Anclaje-nino emociones-01.png',
+        'Anclaje-nino emociones-02.png',
+      ],
+      correctAnswer: 1
     }, {
       dir: 'img/trivia/nino_1_6/',
       question: 'Anclaje-nina en DNA-01.png',
@@ -2010,3 +2010,13 @@ banco.ordenar.puber_1_6 = [{
   label: 'Anclaje-pensando en padres.png',
   category: 'Situaciones de la vida cotidiana y toma de decisiones'
 }];
+
+banco.triviaWithVoice = [
+  'nino_1_6',
+  'nino_2_5',
+  'nino_2_4'
+];
+
+banco.triviaVoiceButNoAnswers = [
+  'nino_2_5'
+];

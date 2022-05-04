@@ -107,7 +107,7 @@ var Container = {
   initialize : function (container, pos, size, category) {
     // container.sprite = scene.add.nineslice(pos.x, pos.y, size.x, size.y, 'info-box-fill', 5).
     // setTint(colors.global.right).
-    container.sprite = scene.add.image(pos.x, pos.y, 'box1').
+    container.sprite = scene.add.image(pos.x, pos.y, 'box' + (Math.random() > 0.5? '1': '2')).
       setOrigin(0.5, 0).
       setDepth(0).
     setInteractive();
@@ -129,8 +129,8 @@ var Container = {
                                        align: 'center',
                                        color: '#000',
                                        font: 'bold 18px Montserrat',
-                                       width: phaserConfig.width - 40,
-                                       wordWrap: { width: phaserConfig.width - 40 }
+                                       fixedWidth: phaserConfig.width - 60,
+                                       wordWrap: { width: phaserConfig.width - 60 }
                                      }).setOrigin(0.5, 0.5);
   },
 

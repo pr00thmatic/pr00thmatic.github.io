@@ -62,6 +62,8 @@ var utils = {
   },
 
   preloadSharedAssets : function (scene) {
+    scene.load.image('play_sound', 'shared-assets/play.png');
+    scene.load.image('pause_sound', 'shared-assets/play.png');
     scene.load.image('background-fill', 'shared-assets/generic-background-fill.png');
     scene.load.image('background-stroke', 'shared-assets/generic-background-stroke.png');
     scene.load.image('button', 'shared-assets/button.png');
