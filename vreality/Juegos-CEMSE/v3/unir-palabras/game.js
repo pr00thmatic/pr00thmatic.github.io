@@ -9,6 +9,7 @@ var gameStatus = {};
 var mainState = ( function () {
 
   var preload = function () {
+    gameStatus.someTexts = [];
     scene = this;
     var assets = 'unir-palabras/assets/';
     gameStatus.capsulaID = utils.preloadCapsuleIdFromURL();
@@ -72,7 +73,7 @@ var mainState = ( function () {
 
         let hasErrors = (wrong1+wrong2) > 0;
 
-        utils.createResults('Tienes algunos errores', '¡Perfecto!',
+        utils.createResults('Tienes algunos errores\n¡Puedes volver a intentarlo!', '¡Perfecto!',
                             colors.global.wrong, colors.global.right,
                             (wrong1 + wrong2) === 0,
                             mainState.width, mainState.height, scene);
@@ -114,3 +115,4 @@ var mainState = ( function () {
 })();
 
 var game = new Phaser.Game(mainState);
+console.log('wat');

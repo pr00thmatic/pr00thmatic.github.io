@@ -21,7 +21,7 @@ var Word = {
     if (info.label.indexOf('.png') >= 0) {
       word.sprite = scene.add.image(phaserConfig.width/2, positionY, info.label);
     } else {
-      word.sprite = scene.add.nineslice(phaserConfig.width/2, positionY, 340, 50, 'info-box-fill', 5).
+      word.sprite = scene.add.nineslice(phaserConfig.width/2, positionY, 340, 65, 'info-box-fill', 5).
         setTint(gameStatus.colors.stroke);
     }
     word.sprite.
@@ -47,7 +47,7 @@ var Word = {
     word.sprite.parent = word;
     word.label = Label.gimmieLabel(word.sprite, word.info.label,{
       color: '#fff',
-      font: '12px Montserrat',
+      font: '15px Montserrat light',
       fixedWidth: 320,
       wordWrap: { width: 320 },
       align: 'left',
