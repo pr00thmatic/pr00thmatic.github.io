@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sopa de letras</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <script src="utils.js"></script>
+    <script src="label.js"></script>
+    <script src="sopa-de-letras/victory-criteria.js"></script>
+    <script src="sopa-de-letras/found.js"></script>
+    <script src="sopa-de-letras/sopa-editor.js"></script>
+    <script src="dragbox.js"></script>
+    <script src="sopa-de-letras/sopa.js"></script>
+    <script src="sopa-de-letras/game.js"></script>
+  </head>
+
+  <body>
+    <button onclick="editMode()">Modo edición</button>
+    <button onclick="print()">Obtener puzzle abreviado</button>
+    <button onclick="get()">Cargar sopa</button>
+
+    <br /><label for="json">puzzle abreviado</label><br />
+    <textarea id="json" rows="5" cols="33">[{"capsule":{"origin":{"r":7,"c":3},"end":{"r":7,"c":7}},"word":"PIOJO"},{"capsule":{"origin":{"r":12,"c":0},"end":{"r":7,"c":5}},"word":"POROTO"},{"capsule":{"origin":{"r":7,"c":4},"end":{"r":2,"c":4}},"word":"IGUANA"},{"capsule":{"origin":{"r":1,"c":1},"end":{"r":7,"c":7}},"word":"PETARDO"},{"capsule":{"origin":{"r":2,"c":10},"end":{"r":7,"c":10}},"word":"PELOTA"},{"capsule":{"origin":{"r":2,"c":10},"end":{"r":2,"c":4}},"word":"PISCINA"}]
+    </textarea><br />
+  </body>
+</html>
