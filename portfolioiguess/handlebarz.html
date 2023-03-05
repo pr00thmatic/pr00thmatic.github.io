@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="wtf.js"></script>
+  </head>
+
+  <body>
+    <!--Content div is used to render the compile code of handlebar -->
+    <div id="content"></div>
+
+    <!-- note the type attribute of script tag. Without this, code will be treated as javascript code -->
+    <script id="template1" type="text/x-handlebars-template">
+      <div>
+        Hi,This template is rendered using<b> {{templateEngine}}</b>.<br>
+        Take a look at script.js to understand the example better.<br><br>
+
+        HTML code will be rendered as it without the execution<br>
+        {{italicText}}<br><br>
+
+        <b>To explicitly execute the html code without escaping ,we just have to add one more curly brace</b>
+        {{{italicText}}}
+      </div>
+    </script>
+
+  </body>
+
+</html>
