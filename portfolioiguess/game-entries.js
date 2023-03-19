@@ -8,22 +8,31 @@ $(document).ready(() => {
       title: "Aventuras con la Patrulla Canina",
       team: "VReality - Arcor - Nickelodeon",
       platform: "Web",
-      description: "9 minigames for the pups from Paw Patrol, each of them with its own infinite runner segment."
+      description: "As the main developer on this project, I was responsible for implementing the core mechanics, the retopology of several models, level design, the creation of several graphic assets and sometimes even the game design  of 7 minigames targeted for children between 3 and 7 years old for each of the Pups of the Paw Patrol."
     }, {
       title: "Jukumari",
       team: "Untamed Fox - VReality",
       platform: "Android",
-      description: "Worked in porting the javascript version of Jukumari to Unity for its posterior release to the playstore"
+      description: "As the lead developer on this project, I was responsible for porting the original LibGDX version of Jukumari to Unity to release it on the Play Store. This involved rearranging all the graphic assets, implementing the spine animations as well as developing all of the game mechanics from scratch. With no access to the original code, I had to rely on descriptions from the original game designer to recreate the game as faithfully as possible while also making necessary modifications."
     }, {
       title: "La tierra del Ekeko",
       team: "VReality",
       platform: "Android",
-      description: "Development of 6 minigames that simulate the fair games you can find at the Bolivian Alasitas traditional anual fair."
+      description: "As a gameplay programmer and generalist, I contributed to the development of La tierra del Ekeko, a collection of 6 2D minigames that simulate the fair games of the Bolivian Alasitas. I implemented the core mechanics and level design of the minigames, integrated 3D models with 2D sprites, and worked with the team's lead programmer to integrate the levels with the economy system. This was a challenging project completed within a short development time of 1.5 months."
     }, {
       title: "Suri al Futuro",
       team: "Ancestral Gods",
       platform: "Android",
-      description: "Main developer, game designer and artist of a top-to-down adventure game featuring time travel."
+      description: "As the main developer, game designer, and artist of Suri al Futuro, an RPG adventure game, I was responsible for developing and implementing the core mechanics, including the dialogue system, inventory, and the girl's canoe, as well as designing the game and levels. I also created several graphic assets, added effects to the water, and animated jumping fishes. The game features a little girl traveling back and forth in time to prevent her village lake from drying up and convincing the villagers to care for the water and think about the future. The project was completed within three months."
+    }, {
+      title: "CybernautsDefender",
+      team: "Relativity",
+      platform: "Android",
+      description: "As the gameplay programmer for this 3D Platformer-Action game I was responsible for " +
+        "implementing the core mechanics for three levels, each featuring a challenging boss fight with " +
+        "unique attack patterns and weaknesses, as well as the final boss that culminated in an epic showdown " +
+        "in which, in addition to the final boss, all past bosses and enemies would join forces to defeat " +
+        "the player."
     } ]
   };
   var gameEntry = $("#game-entry-template").html();
