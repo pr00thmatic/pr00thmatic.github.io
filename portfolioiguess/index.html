@@ -80,57 +80,19 @@ https://templatemo.com/tm-531-reflux
             <h2>About Me</h2>
             <div class="line-dec"></div>
             <span
-              >I am an enthusiastic game developer who loves sharing knowledge and writing code that reads like poetry while creating simple solutions to complex problems in tight deadlines, and this is my portfolio :).</span
+              >I am a generalist game developer who loves sharing knowledge and writing code that reads like poetry while creating simple solutions to complex problems in tight deadlines. Welcome to my portfolio!</span
             >
           </div>
         </div>
       </section>
 
       <section class="section professional" data-section="professional">
-        <div class="container">
-          <div class="section-heading" id="game-entries">
+        <div class="container" id="game-entries">
+          <div class="section-heading">
             <h2>Professional games I've worked on...</h2>
             <div class="line-dec"></div>
-            <div class="left-image-post"> <div class="row"> <div class="col-md-6">
-                  <div class="left-image">
-                    <img src="img/placeholders.png" alt="" />
-                </div> </div>
-                <div class="col-md-6"> <div class="right-text">
-                    <h4>Aventuras con la Patrulla Canina</h4>
-                    <span>VReality - Arcor - Nickelodeon</span>
-                    <span>Web</span>
-                    <p>
-                      9 minigames for the pups at Paw Patrol.
-                    </p>
-                    <div class="white-button"> <a href="#">Read More</a> </div>
-            </div> </div> </div> </div>
-
-            <div class="right-image-post"> <div class="row"> <div class="col-md-6"> <div class="left-text">
-                    <h4>Jukumari</h4>
-                    <span>Untamed Fox - VReality</span>
-                    <span>Android</span>
-                    <p>
-                      Worked in porting the javascript version of Jukumari to Unity so it can be released to the playstore.
-                    </p>
-                    <div class="white-button"> <a href="#">Read More</a> </div> </div> </div>
-                <div class="col-md-6"> <div class="right-image">
-                    <img src="img/placeholders.png" alt="" />
-          </div> </div> </div> </div> </div>
-
-          <div class="left-image-post"> <div class="row"> <div class="col-md-6">
-                <div class="left-image">
-                  <img src="img/placeholders.png" alt="" />
-              </div> </div>
-              <div class="col-md-6"> <div class="right-text">
-                  <h4>La tierra del Ekeko</h4>
-                  <span>VReality</span>
-                  <span>Android</span>
-                  <p>
-                    Development of 6 minigames that simulate the fair games you can find at the Bolivian Alasita anual fair.
-                  </p>
-                  <div class="white-button"> <a href="#">Read More</a> </div>
-          </div> </div> </div> </div>
-
+          </div>
+        </div>
       </section>
 
       <section class="section my-work" data-section="section3">
@@ -441,19 +403,53 @@ https://templatemo.com/tm-531-reflux
       });
     </script>
     <script id="game-entry-template" type="text/x-handlebars-template">
-      <div class="left-image-post"> <div class="row"> <div class="col-md-6">
+      {{#each game}}
+      {{#if (isodd @index)}}
+      <div class="left-image-post">
+        <div class="row">
+
+          <div class="col-md-6">
             <div class="left-image">
               <img src="img/placeholders.png" alt="" />
-          </div> </div>
-          <div class="col-md-6"> <div class="right-text">
-              <h4>{{ title }}</h4>
-              <span>{{ team }}</span></br>
-              <span>{{ platform }}</span>
-              <p>
-                {{ description }}
-              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="right-text">
+              <h4>{{this.title}}</h4>
+              <span>{{this.team}}</span></br>
+              <span><i>{{this.platform}}</i></span>
+              <p>{{this.description}}</p>
               <div class="white-button"> <a href="#">Read More</a> </div>
-      </div> </div> </div> </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {{else}}
+      <div class="right-image-post">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="left-text">
+              <h4>{{this.title}}</h4>
+              <span>{{this.team}}</span></br>
+              <span><i>{{this.platform}}</i></span>
+              <p>{{this.description}}</p>
+              <div class="white-button"> <a href="#">Read More</a> </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="img/placeholders.png" alt="" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {{/if}}
+      {{/each}}
     </script>
     <script src="game-entries.js"></script>
   </body>

@@ -1,6 +1,8 @@
 :root {
     --accent: #C04734;
     --background: #3d4d5b;
+    --subtle: #486763;
+    --strong-accent: #ddcd89;
 }
 
 /*
@@ -132,7 +134,7 @@ html {
 .main-nav li:hover a,
 .main-nav li.active a {
     background: #fff;
-    color: #C04734;
+    color: var(--accent);
 }
 
 /* Sidebar Menu */
@@ -295,7 +297,7 @@ html {
     right: 10%;
     left: 35%;
     position: relative;
-    border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+    border-bottom: 3px solid var(--strong-accent);
 }
 
 .section-heading {
@@ -312,7 +314,7 @@ html {
 .section-heading .line-dec {
     width: 60px;
     height: 3px;
-    background-color: var(--accent);
+    background-color: var(--strong-accent);
     margin: 10px auto;
 }
 
@@ -367,10 +369,10 @@ button:hover {
 
 /* Left & Right Post */
 
-.right-image-post {
-    margin-top: 60px;
-    padding-top: 60px;
-    border-top: 2px solid rgba(250, 250, 250, 0.1);
+.right-image-post, .left-image-post {
+    margin-top: 10px;
+    padding-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .left-image img,
@@ -389,7 +391,7 @@ button:hover {
 }
 
 .right-image-post .white-button,
-.left-image-post .white-button {
+.white-button {
     margin-top: 30px;
 }
 
@@ -501,8 +503,8 @@ section.my-work .section-heading {
 }
 
 .isotope-toolbar input[type="radio"]:checked + span {
-    color: var(--accent);
-    border-bottom: 2px solid var(--accent);
+    color: var(--strong-accent);
+    border-bottom: 2px solid var(--strong-accent);
 }
 
 .isotope-box {
