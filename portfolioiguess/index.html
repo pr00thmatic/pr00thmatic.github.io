@@ -22,6 +22,7 @@ https://templatemo.com/tm-531-reflux
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="own.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <link rel="stylesheet" href="assets/css/templatemo-style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
@@ -79,17 +80,19 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2>About Me</h2>
             <div class="line-dec"></div>
-            <span>As a generalist game developer, I have experience in a variety of areas, from game design to programming to art. I love collaborating with teams and taking on new challenges, even in tight deadlines. My passion for sharing knowledge has led me to continuously learn and grow in my field, always striving to write code that reads like poetry and create elegant solutions to complex problems. I'm excited to showcase my work in this portfolio and hope you enjoy exploring my projects</span>
+            <span>I'm an enthusiastic generalist game developer, with experience in several areas: from game design to programming to art. Readability! everyone loves it, right? I put my heart into writing code that reads like poetry, I also enjoy collaborating and tight deadlines. So, here's my portfolio! please feel free to lurk around :3</span>
           </div>
         </div>
       </section>
 
       <section class="section professional" data-section="professional">
+        <div class="section-heading">
+          <h2>Projects for clients</h2>
+          <div class="line-dec"></div>
+          <p>I've been working professionally on game development since 2016, here are some of my most remarkable collaborations</p>
+        </div>
+
         <div class="container" id="game-entries">
-          <div class="section-heading">
-            <h2>Professional games I've worked on...</h2>
-            <div class="line-dec"></div>
-          </div>
         </div>
       </section>
 
@@ -408,7 +411,11 @@ https://templatemo.com/tm-531-reflux
 
           <div class="col-md-6">
             <div class="left-image">
-              <img src="img/placeholders.png" alt="" />
+              <div class="clipped-image-info">
+                <span class="dev-span">{{this.devSpan}}</span>
+                <img src="img/placeholders.png" alt="" />
+                <span class="year">{{this.year}}</span>
+              </div>
             </div>
           </div>
 
@@ -440,7 +447,11 @@ https://templatemo.com/tm-531-reflux
 
           <div class="col-md-6">
             <div class="right-image">
-              <img src="img/placeholders.png" alt="" />
+              <div class="clipped-image-info">
+                <span class="dev-span">{{this.devSpan}}</span>
+                <img src="img/placeholders.png" alt="" />
+                <span class="year">{{this.year}}</span>
+              </div>
             </div>
           </div>
 
