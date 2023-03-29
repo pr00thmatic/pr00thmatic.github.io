@@ -24,7 +24,7 @@ $(document).ready(() => {
       title: "La tierra del Ekeko",
       team: "VReality",
       platform: "Android",
-      devSpan: "1 month of development",
+      devSpan: "1.5 months of development",
       year: "2023",
       img: "img/ekeko/all-the-minigames.png",
       description: "As a gameplay programmer and generalist, I contributed to the development of La tierra del Ekeko, a collection of 6 2D minigames that simulate the fair games of the Bolivian Alasitas. I implemented the core mechanics and level design of the minigames, integrated 3D models with 2D sprites, and worked with the team's lead programmer to integrate the levels with the economy system. This was a challenging project completed within a short development time of 1.5 months."
