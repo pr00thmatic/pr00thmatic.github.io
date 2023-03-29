@@ -1,9 +1,18 @@
+:root {
+    --accent: #C04734;
+    --background: #3d4d5b;
+    --subtle: #486763;
+    --strong-accent: #ddcd89;
+    --shadow: black;
+    --tags: rgba(0,0,0,0.5);
+}
+
 .right-image, .left-image {
-    filter: drop-shadow(-10px 10px black);
+    filter: drop-shadow(-10px 10px var(--shadow));
 }
 
 .right-image {
-    filter: drop-shadow(10px 10px 0px black);
+    filter: drop-shadow(10px 10px 0px var(--shadow));
 }
 
 .clipped-image-info {
@@ -16,7 +25,7 @@
 
 .clipped-image-info span {
     position: absolute;
-    background-color: rgb(0,0,0,0.5);
+    background-color: var(--tags);
     padding: 10px;
 }
 
@@ -53,6 +62,6 @@
 }
 
 .menu {
-    filter: drop-shadow(-15px 0px black);
+    filter: drop-shadow(-15px 0px var(--shadow));
     /* filter: drop-shadow(15px, 0, black) !important; */
 }
