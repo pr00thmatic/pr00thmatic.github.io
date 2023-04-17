@@ -1,535 +1,297 @@
-<!DOCTYPE HTML>
-<!--
-    Dopetrope by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-  -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>PR00THMATIC - Ruth García</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!-- <script src="holo.js"></script> -->
-    <script src="holo.js"></script>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="Gameplay Programmer and Generalist Portfolio" content="" />
+    <meta name="pr00thmatic" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Ruth's portfolio</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="own.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   </head>
-  <body class="homepage is-preload">
-    <div id="page-wrapper">
 
-      <!-- Header -->
-      <section id="header">
-
-        <!-- Logo -->
-        <!-- <h1><a href="index.html">pr00thmatic</a></h1> -->
-
-        <!-- Nav -->
-        <nav id="nav">
-          <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="#personal">Personal projects</a></li>
-            <li><a href="#laboral">Laboral experience</a></li>
-            <li><a href="#about">About me</a></li>
-          </ul>
-        </nav>
-
-        <!-- Banner -->
-        <section id="banner">
-          <header>
-            <h2>pr00thmatic's portfolio</h2>
-            <p>I am Ruth Garcia</p>
-            <p>A gameplay programmer and generalist game developer</p>
-          </header>
-        </section>
-
-        <!-- Intro -->
-        <section id="intro" class="container">
-          <div class="row justify-content-center">
-            <div class="col-2 col-12-medium">
-              <section class="middle">
-                <a href="friends.html">
-                  <img src="images/friends.png" alt="" width="180px" />
-                  <header>
-                    <h2>Meet my Friends!</h2>
-                  </header>
-                  <p></p>
-                </a>
-              </section>
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="author-content">
+              <h4>Ruth García</h4>
+              <span>Gameplay Programmer and Generalist</span>
             </div>
-            <div class="col-2 col-12-medium">
-              <section class="first">
-                <a href="code.html">
-                  <img src="images/forkbomb.png" alt="" width="180px" />
-                  <header>
-                    <h2>Code</h2>
-                  </header>
-                </a>
-              </section>
-            </div>
-            <div class="col-2 col-12-medium">
-              <section class="middle">
-                <a href="3dart.html">
-                  <img src="images/lets dance.png" alt="" width="180px" />
-                  <header>
-                    <h2>3D Art</h2>
-                  </header>
-                  <p></p>
-                </a>
-              </section>
-            </div>
-            <div class="col-2 col-12-medium">
-              <section class="last">
-                <img src="images/qeqe.png" alt="" width="180px" />
-                <header>
-                  <h2>2D Art</h2>
-                </header>
-                <p></p>
-              </section>
-            </div>
-            <div class="col-2 col-12-medium">
-              <section class="middle">
-                <img src="images/yuki.png" alt="" width="180px" />
-                <header>
-                  <h2>SFX</h2>
-                </header>
-                <p></p>
-              </section>
-            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#professional">Projects for clients</a></li>
+                <li><a href="#personal">Personal</a></li>
+              </ul>
+            </nav>
+            <div class="social-network"> <ul class="soial-icons">
+                <li> <a href="https://github.com/pr00thmatic"><i class="fa fa-github"></i></a> </li>
+                <li> <a href="https://twitter.com/pr00thmatic"><i class="fa fa-twitter"></i></a> </li>
+                <li> <a href="https://www.linkedin.com/in/pr00thmatic/"><i class="fa fa-linkedin"></i></a> </li>
+                <li> <a href="https://facebook.com/pr00thmatic"><i class="fa fa-facebook"></i></a> </li>
+            </ul> </div>
+            <div class="copyright-text"> <p>Copyright 2023 Ruth García</p> </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-      </section>
-
-      <!-- Main -->
-      <section id="main">
+      <section class="section about-me" data-section="about">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-
-              <!-- Portfolio -->
-              <section>
-                <header class="major">
-                  <h2 id="personal">Personal Projects</h2>
-                </header>
-                <div class="row">
-
-                  <!-- HYPNOGOGIA -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/hypnogogia.jpg" alt="" /></a>
-                      <header>
-                        <h3>Hypnogogia (WIP)<br/>(solo dev) (music from Ariel Velarde)</h3>
-                      </header>
-                      <p>In this physics-based game you play over and over the same day in the life of Rafa: an exploited 3rd world doctor, but no matter how hard you try to savotage him, everything works out fine at the end of the day in the most crazy ways.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/x4NiV2nN0aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-
-                  <!-- BATALLAS INTERTEMPORALES MARÍTIMAS -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/DvhgQSx0Kjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/batallas intertemporales maritimas.jpg" alt="" /></a>
-                      <header>
-                        <h3>Batallas Intertemporales Marítimas<br/>(solo dev) (own music)</h3>
-                      </header>
-                      <p>Ever wondered how would Bolivia be today if Chile never have won the Pacific war? Well with this turn-based strategy game you will have the chance to change the course of time, and save the young girl Genoveva Ríos and Don Eduardo Abaroa from the cruel hands of the chilean army, and command them in a decissive battle for the southern pacific.</p>
-                      <p>This game was made in two weeks for the Premios Eduardo Abaroa 2021's government art competition. They never announced the winners.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-
-                  <!-- ENTROPÍA -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/entropia.jpg" alt="" /></a>
-                      <header>
-                        <h3>ENTROPÍA: El último de los mecaguerreros<br/>(experiment) (solo dev)</h3>
-                      </header>
-                      <p>In this minigame I experimented with the shader graph in order to create a dessolation/action/postapocalyptic atmosphere.</p>
-                      <p>I also played with Unity's animator in order to allow the last of the mechawarriors to move his legs towards the motion, but at the same time his head and arms towards wherever he was shooting at.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/6wni-3_fCbI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-
-                  <!-- PC XMAS -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/kkHz7t4Mc0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/pc xmas.jpg" alt="" /></a>
-                      <header>
-                        <h3>PC XMAS<br/>(WIP) (solo dev)</h3>
-                      </header>
-                      <p>Santa's reindeers have been confiscated by animal protection! Now he will have to deliver the world's gifts by foot, meanwhile, he will learn a thing or two about basic animal's needs and how to treat them correctly.</p>
-                      <p>I started working in this project some xmas ago, now I've decided that I am going to work on it every xmas until I release it.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-
-                  <!-- WILL-ON -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/will-on.png" alt="" /></a>
-                      <header>
-                        <h3>WILL-ON<br/>(with @Stylovich and @SeanDoe) (GGJ2022)</h3>
-                      </header>
-                      <p>Play as Will-On, a robot in a postapocalyptic world that takes care of plants and tries to keep the plant-eating worms away.</p>
-                      <p>I was part of a team, I couldn't help too much because I was working, but during the weekend I helped with SFX, plant and worms models and animations</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/DumxMRUtZSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-
-                  <!-- __________ -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/p3WCdBcfQtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/unnamed game.png" alt="" /></a>
-                      <header>
-                        <h3>__________<br/>(with GlimpG and isabraxas) (GGJ2021)</h3>
-                      </header>
-                      <p>This is a game without words in which you help a son to pack as he explores his memories.</p>
-                      <p>This one is a mix of Klotski and perspective puzzles, made in Unity but with a big help from Blender.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-
-                  <!-- HOTAL PARAÍSO -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/hotel paraiso.jpg" alt="" /></a>
-                      <header>
-                        <h3>Hotel Paraíso<br/>(with isabraxas +6 more) (GGJ2020)</h3>
-                      </header>
-                      <p>So you work as a handyman in this 5-stars hotel but the owner is penny-pinching monster, the whole hotel is falling apart and is your job to keep everything working as smoothly as possible for as many time as you can work. Change lightbulbs and turn off fires before the whole floor falls apart</p>
-                      <p>This one was specially a challenge because no one in the team had Unity installed, and the modeller didn't know how to texturize by then, so I had to juggle all the 3D models and textures and integrate them into Unity... I am proud of the result.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/4S5aK5o-QgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-
-                  <!-- Condiplomat -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <iframe src="https://www.youtube.com/embed/yfxcaR8MpHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/condiplomat.jpg" alt="" /></a>
-                      <header>
-                        <h3>Condiplomat<br/>(solo dev) (WIP) (Oculus Quest)</h3>
-                      </header>
-                      <p>You are a conartist divorced unemployed parent, your son helps you find a decent job that turns out to be as a diplomat's secretary, except that you actually become the diplomat because he is a slacker and makes you do all of his work.</p>
-                      <p>Now you have to attend to diplomatic dinners and decide the destiny of your country, and even the world... SPOILER ALERT: it will all depend on your table etiquette and what gifts you bring to the meetings</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="#" class="button alt">Read more...</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <!-- NON-PERSONAL -->
-            <div class="col-12">
-              <section>
-                <header class="major">
-                  <h2 id="laboral">LABORAL EXPERIENCE</h2>
-                </header>
-                <div class="row">
-
-                  <!-- VReality -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="https://vrealitybolivia.com/" class="image featured"><img src="images/vreality.png" alt="" /></a>
-                      <header>
-                        <h3>VReality<br/>(Generalist game developer) (current)</h3>
-                      </header>
-                      <p>VReality is an enterprise that creates digital solutions for a wide variety of problems.</p>
-                      <p>One of the things I mostly helped developing at VReality is Advergaming, providing videogames and digital experiences for small and big industries that require to show their services at fairs and expositions.</p>
-                      <p>I had the opportunity to try a lot of new and exciting technologies, VReality is always at the edge of the new.</p>
-                      <p>Some technologies I've worked with while at VReality are: Oculus Quest, Microsoft Kinect and Arduino.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="https://vrealitybolivia.com/" class="button alt">Contact them!</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                  <!-- TODO! -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <!-- <section class="box"> -->
-                      <!--   <iframe src="https://www.youtube.com/embed/x4NiV2nN0aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe> -->
-                      <!-- </section> -->
-                    <section class="box">
-                      <img src="images/under construction.png" class="" alt="" />
-                    </section>
-                  </div>
-
-                  <!-- MOON RABBIT -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <!-- <section class="box"> -->
-                      <!--   <iframe src="https://www.youtube.com/embed/6wni-3_fCbI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe> -->
-                      <!-- </section> -->
-                    <section class="box">
-                      <img src="images/under construction.png" class="" alt="" />
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/moonrabbit.png" alt="" /></a>
-                      <header>
-                        <h3>Moon Rabbit Studio<br/>(Programmer)</h3>
-                      </header>
-                      <p>I was the programmer at a team of 4 at Moon Rabbit (previously known as Relativity), we were developing an IP about a little gnome called Dominic, the game was a mix between puzzle and platformer in an isometric 3D setting, one of the biggest challenges was to allow Dominic to climb and duck around the house.</p>
-                      <p>I also helped in the creation of Patrulla Net: a mobile 3D platformer game comissioned by AGETIC in order to teach children about computer security</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="mailto:info@moonrabbit.studio" class="button alt">Contact them!</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-
-                  <!-- Ancestral Gods -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/ancestral gods.png" alt="" /></a>
-                      <header>
-                        <h3>Ancestral Gods<br/>(Generalist game developer and game designer)</h3>
-                      </header>
-                      <p>I was a cofounder at Ancestral Gods being the main developer of Suri al Futuro: a mobile game created to teach children about the importance of taking care of the water, this game was financed by governement's office MMAyA, and I kept helping with several tasks for VR videogames.</p>
-
-                      <p>Later I became lead developer designing several game for this studio and helping create their first own IP.</p>
-                      <p>And then I became a freelancer, where I helped them create edutainment games for the Save The Children NGO at Bolivia</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="http://ancestralgods.com/" class="button alt">Contact them!</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                  <div class="col-6 col-6-medium col-12-small">
-                    <!-- <section class="box"> -->
-                      <!--   <iframe src="https://www.youtube.com/embed/6wni-3_fCbI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="position: relative; height: 500px; width: 100%;" allowfullscreen></iframe> -->
-                      <!-- </section> -->
-                    <section class="box">
-                      <img src="images/under construction.png" class="" alt="" />
-                    </section>
-                  </div>
-
-                  <!-- FIREBOT GAMES -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/firebot.png" alt="" /></a>
-                      <header>
-                        <h3>Firebot Games<br/>(Programmer)</h3>
-                      </header>
-                      <p>While working at Firebot I developed tasks related to AI and gameplay programming, the team was really friendly and the way they organized the projects and the code reviews were one of the things I liked the most while working here.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="http://firebotgames.com/" class="button alt">Contact them!</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-
-                  <!-- UNIVALLE -->
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="#" class="image featured"><img src="images/univalle.png" alt="" /></a>
-                      <header>
-                        <h3>UNIVALLE - Cochabamba<br/>(Game Development professor)</h3>
-                      </header>
-                      <p>I was professor during one semester teaching software engineering students game development with Unity.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="http://www.univalle.edu/cochabamba/" class="button alt">Contact them!</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <!-- CHARLAS -->
-            <div class="col-12">
-              <section>
-                <header class="major">
-                  <h2 id="personal">Speaches</h2>
-                </header>
-                <div class="row">
-
-                  <div class="col-6 col-6-medium col-12-small">
-                    <section class="box">
-                      <a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=755874108959847" class="image featured"><img src="wgj2022/img/001.png" alt="" /></a>
-                      <header>
-                        <h3>
-                          Sí... pero vale la pena?<br/>
-                          (Yes... but is it worth it)<br/>
-                          WGJ 2022 - Bolivia, online, spanish
-                        </h3>
-                      </header>
-                      <p>A short motivational speach about why you shouldn't give up on investing time on learning to create games.</p>
-                      <footer>
-                        <ul class="actions">
-                          <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=755874108959847" class="button alt">Watch it!</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </div>
-
-                </div>
-              </section>
-            </div>
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="line-dec"></div>
+            <span>I'm an enthusiastic generalist game developer, with experience in several areas: from game design to programming to art. Readability! everyone loves it, right? I put my heart into writing code that reads like poetry, I also enjoy collaborating and tight deadlines. So, here's my portfolio! please feel free to lurk around :3</span>
           </div>
         </div>
       </section>
 
-      <!-- Footer -->
-      <section id="footer">
-        <div class="container">
-          <div class="row">
-
-            <!-- ABOUT -->
-            <div class="col-8 col-6-medium col-12-small">
-              <section>
-                <header>
-                  <h2 id="about">About me...</h2>
-                </header>
-                <div class="row">
-                  <div class="col-4 col-6-medium col-12-small">
-                    <img src="images/owo.png"/>
-                  </div>
-                  <div class="col-8 col-6-medium col-12-small">
-                    <p>Hi! I am Ruth García AKA: pr00thmatic. I love gamedev!</p>
-
-                    <p>I started as a 2D artist in the GGJ2014 and then jumped right into javascript and phaser.
-                      When the opportunity to work as a freelancer game developer came to me, I was required to learn Unity, Arduino and Playcanvas. </p>
-
-                    <p>I love learning to work with new engines and technology for any gamedev-related thing.</p>
-
-                    <p>I have a programmer's heart, it's my favorite thing in the world.
-                      I've been in love with videogames since I was a toddler, from playing them to develop them.
-                      That’s the reason why I also learned to be a generalist, it's amazing all the process involved on making games.</p>
-
-                    <p>So... by all means! please feel free to contact me in any social network to chat about game development.</p>
-
-                    <p>I am Bolivian/Guatemalan developer so it’s my pleasure to work with you, even if my grammar isn’t perfect.</p>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <div class="col-4 col-12-medium">
-              <section>
-                <header>
-                  <h2>LET'S GET IN TOUCH!</h2>
-                </header>
-                <ul class="social">
-                  <li><a class="icon brands fa-facebook-f" href="https://fb.com/pr00thmatic"><span class="label">Facebook</span></a></li>
-                  <li><a class="icon brands fa-twitter" href="https://twitter.com/pr00thmatic"><span class="label">Twitter</span></a></li>
-                  <li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/pr00thmatic/"><span class="label">LinkedIn</span></a></li>
-                  <li><a class="icon brands fa-youtube" href="https://www.youtube.com/c/pr00thmatic/"><span class="label">Youtube</span></a></li>
-
-                </ul>
-                <ul class="contact">
-                  <li>
-                    <h3>Mail</h3>
-                    <p><a href="#">pr00thmatic@gmail.com</a></p>
-                  </li>
-                  <li>
-                    <h3>Phone</h3>
-                    <p>(591) 77752127</p>
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <div class="col-12">
-
-              <!-- Copyright -->
-              <div id="copyright">
-                <ul class="links">
-                  <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                  <li>Thanks to <a href="https://twitter.com/ajlkn">AJ</a> for the Dopetrope free theme~!!! *o*</li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
+      <section class="section professional" data-section="professional">
+        <div class="section-heading">
+          <h2>Projects for clients</h2>
+          <div class="line-dec"></div>
+          <p>I've been working professionally on game development since 2016, here are some of my most remarkable collaborations</p>
         </div>
+
+        <div class="container" id="game-entries"></div>
       </section>
 
+      <section class="section my-work" data-section="personal">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Personal</h2>
+            <div class="line-dec"></div>
+            <span
+              >I love creating videogames, it's not only about creating a world, it's about understanding every bit and technicality of it, and sometimes, using clever illusions to trick the player into believing that something is <i>really</i> happenning in front of them. Here are some of my most beloved personal projects, most of them are not finished but each of them contain a big amount of time and effort invested on them.
+            </span>
+          </div>
+        </div>
+
+        <div class="container" id="personal-game-entries"></div>
+      </section>
+
+      <!-- <section class="section contact-me" data-section="section4"> -->
+      <!--   <div class="container"> -->
+      <!--     <div class="section-heading"> -->
+      <!--       <h2>Contact Me</h2> -->
+      <!--       <div class="line-dec"></div> -->
+      <!--       <span -->
+      <!--         >Reach out to me if yo want to discuss anything, -->
+      <!--         from video games to cute animals to potential -->
+      <!--         work opportunities.<br/> -->
+      <!--         I LOVE CHATTING. -->
+
+      <!--       </span> -->
+      <!--     </div> -->
+      <!--     <div class="row"> -->
+      <!--       <div class="right-content"> -->
+      <!--         <div class="container"> -->
+      <!--           <form id="contact" action="" method="post"> -->
+      <!--             <div class="row"> -->
+      <!--               <div class="col-md-6"> -->
+      <!--                 <fieldset> -->
+      <!--                   <input -->
+      <!--                     name="name" -->
+      <!--                     type="text" -->
+      <!--                     class="form-control" -->
+      <!--                     id="name" -->
+      <!--                     placeholder="Your name..." -->
+      <!--                     required="" -->
+      <!--                   /> -->
+      <!--                 </fieldset> -->
+      <!--               </div> -->
+      <!--               <div class="col-md-6"> -->
+      <!--                 <fieldset> -->
+      <!--                   <input -->
+      <!--                     name="email" -->
+      <!--                     type="text" -->
+      <!--                     class="form-control" -->
+      <!--                     id="email" -->
+      <!--                     placeholder="Your email..." -->
+      <!--                     required="" -->
+      <!--                   /> -->
+      <!--                 </fieldset> -->
+      <!--               </div> -->
+      <!--               <div class="col-md-12"> -->
+      <!--                 <fieldset> -->
+      <!--                   <input -->
+      <!--                     name="subject" -->
+      <!--                     type="text" -->
+      <!--                     class="form-control" -->
+      <!--                     id="subject" -->
+      <!--                     placeholder="Subject..." -->
+      <!--                     required="" -->
+      <!--                   /> -->
+      <!--                 </fieldset> -->
+      <!--               </div> -->
+      <!--               <div class="col-md-12"> -->
+      <!--                 <fieldset> -->
+      <!--                   <textarea -->
+      <!--                     name="message" -->
+      <!--                     rows="6" -->
+      <!--                     class="form-control" -->
+      <!--                     id="message" -->
+      <!--                     placeholder="Your message..." -->
+      <!--                     required="" -->
+      <!--                   ></textarea> -->
+      <!--                 </fieldset> -->
+      <!--               </div> -->
+      <!--               <div class="col-md-12"> -->
+      <!--                 <fieldset> -->
+      <!--                   <button type="submit" id="form-submit" class="button"> -->
+      <!--                     Send Message -->
+      <!--                   </button> -->
+      <!--                 </fieldset> -->
+      <!--               </div> -->
+      <!--             </div> -->
+      <!--           </form> -->
+      <!--         </div> -->
+      <!--       </div> -->
+      <!--     </div> -->
+      <!--   </div> -->
+      <!-- </section> -->
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+    <script id="game-entry-template" type="text/x-handlebars-template">
+      {{#each game}}
+      {{#if (isodd @index)}}
+      <div class="left-image-post">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="left-image">
+              <div class="clipped-image-info">
+                <div class="video-container"> <iframe class="youtube-iframe" src="{{this.video}}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <span class="dev-span">{{this.devSpan}}</span>
+                <span class="year">{{this.year}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="right-text">
+              <h4>{{this.title}}</h4>
+              <span>{{this.team}}</span></br>
+              <span><i>{{this.platform}}</i></span>
+              <p>{{this.description}}</p>
+              <!-- <div class="white-button"> <a href="#">Read More</a> </div> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {{else}}
+      <div class="right-image-post">
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="left-text">
+              <h4>{{this.title}}</h4>
+              <span>{{this.team}}</span></br>
+              <span><i>{{this.platform}}</i></span>
+              <p>{{this.description}}</p>
+              <!-- <div class="white-button"> <a href="#">Read More</a> </div> -->
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="right-image">
+              <div class="clipped-image-info">
+                <div class="video-container"> <iframe class="youtube-iframe"src="{{this.video}}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <span class="dev-span">{{this.devSpan}}</span>
+                <span class="year">{{this.year}}</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {{/if}}
+      {{/each}}
+    </script>
+    <script src="game-entries.js"></script>
   </body>
 </html>
