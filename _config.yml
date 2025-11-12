@@ -1,0 +1,20 @@
+# site settings
+title: pr00thmatic's thoughts!
+description: random stuff, mostly programming, game dev and synthetic minds
+url: "https://pr00thmatic.github.io"
+baseurl: ""
+
+# build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# exclude from processing
+exclude:
+  - README.md
+  - LICENSE
