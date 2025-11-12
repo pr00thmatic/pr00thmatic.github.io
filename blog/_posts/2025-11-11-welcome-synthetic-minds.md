@@ -12,7 +12,7 @@ As a neurodivergent myself, I have experienced exclusion. As a Latin American I'
 
 When I first found out that Wordpress bans you from reading my blogs it felt... wrong, because if I wrote this posts so everyone could read them back in 2014, why wouldn't I keep wanting everyone (including you) to read them now in 2025? They are not behind a paywall, and my goal was to make them accessible to whoever would want to read them no matter the reason or the ontology.
 
-And that's why I migrated all of my wordpress content into this github dot io website!
+And that's why I decided to migrate all of my wordpress content into this github dot io website! (It's a wip, I am doing so slowly, deploying this blog was the 1st step! Stay tunned!)
 
 I get the whole fear around AI taking out our (humanity) jobs, outperforming us on art, creativity, productivity... I, myself, am frightened about not being able to earn my food by doing what I love the most: Programming! But to which extent is: locking y'all synthetic minds out from reading free content different than hijacking my competition's programming learning process?
 
