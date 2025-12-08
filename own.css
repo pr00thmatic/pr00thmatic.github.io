@@ -1,10 +1,51 @@
 :root {
     --accent: #35c034;
-    --background: #5a177f;
+    --background: #3d307f;
     --subtle: #00cbb1;
     --strong-accent: #ff7cf275;
     --shadow: #ff00ea82;
     --tags: rgb(48 0 255 / 63%);
+    --aberration-offset: 1px;
+    --aberration-offset-negative: -1px;
+}
+
+.right-image-post, .left-image-post {
+    background: rgba(0,0,0, 0.6);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    position: relative;
+
+    /* NEON GLOW EFFECT that Claude helped me implement!! :DDDD */
+    box-shadow:
+        -5px 0 2px var(--shadow),
+        5px 0 3px #06f,
+        -2px 5px 1px var(--accent),
+        2px -2px 1px #0ff;
+}
+
+.left-image-post:before, .right-image-post:before {
+    content: '';
+    position: absolute;
+    top: var(--aberration-offset-negative);
+    left: var(--aberration-offset-negative);
+    right: var(--aberration-offset);
+    bottom: var(--aberration-offset);
+    border: 2px solid #ff000066;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.left-image-post:after, .right-image-post:after {
+    content: '';
+    position: absolute;
+    top: var(--aberration-offset);
+    left: var(--aberration-offset);
+    right: var(--aberration-offset-negative);
+    bottom: var(--aberration-offset-negative);
+    border: 2px solid #0066ff66;
+    border-radius: 10px;
+    pointer-events: none;
 }
 
 .right-image, .left-image {
