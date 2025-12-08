@@ -1,10 +1,10 @@
 :root {
-    --accent: #C04734;
-    --background: #3d4d5b;
-    --subtle: #486763;
-    --strong-accent: #ddcd89;
-    --shadow: black;
-    --tags: rgba(0,0,0,0.5);
+    --accent: #35c034;
+    --background: #5a177f;
+    --subtle: #00cbb1;
+    --strong-accent: #ff7cf275;
+    --shadow: #ff00ea82;
+    --tags: rgb(48 0 255 / 63%);
 }
 
 .right-image, .left-image {
